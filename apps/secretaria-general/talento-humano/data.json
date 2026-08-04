@@ -1,189 +1,296 @@
 {
   "metrics": [
     {
-      "label": "Planta activa",
-      "value": 48,
-      "hint": "92 % de ocupación",
-      "icon": "badge-check",
-      "tone": "success"
+      "label": "Personas activas",
+      "value": "74",
+      "hint": "48 planta · 26 contratistas",
+      "icon": "users",
+      "tone": "success",
+      "delta": "+3 este trimestre"
     },
     {
-      "label": "Contratistas",
-      "value": 26,
-      "hint": "5 contratos próximos a vencer",
-      "icon": "briefcase",
-      "tone": "warning"
-    },
-    {
-      "label": "Novedades del mes",
-      "value": 11,
-      "hint": "Vacaciones, permisos e incapacidades",
+      "label": "Solicitudes pendientes",
+      "value": "12",
+      "hint": "Vacaciones, permisos y certificados",
       "icon": "clipboard-list",
-      "tone": ""
+      "tone": "warning",
+      "delta": "4 vencen hoy",
+      "deltaTone": "down"
     },
     {
-      "label": "Alertas documentales",
-      "value": 7,
-      "hint": "Requieren validación",
-      "icon": "file-warning",
-      "tone": "danger"
+      "label": "Expedientes completos",
+      "value": "91%",
+      "hint": "7 personas requieren soportes",
+      "icon": "folder-check",
+      "tone": "",
+      "delta": "+6 puntos desde junio"
+    },
+    {
+      "label": "Clima institucional",
+      "value": "82%",
+      "hint": "Última encuesta de bienestar",
+      "icon": "heart",
+      "tone": "success",
+      "delta": "+4 puntos"
     }
   ],
-  "people": [
+  "modules": [
     {
-      "id": "TH-001",
-      "name": "María Fernanda López",
-      "document": "31.458.921",
-      "type": "Planta",
-      "role": "Profesional Universitario",
-      "office": "Secretaría General",
-      "status": "Activo",
-      "email": "maria.lopez@sanpedro-valle.gov.co",
-      "phone": "Ext. 112",
-      "start": "2021-02-15",
-      "contractEnd": "",
-      "documents": 100
+      "id": "mi-portal",
+      "name": "Mi portal",
+      "icon": "user",
+      "href": "mi-portal/index.html",
+      "group": "Autogestión",
+      "description": "Autogestión del funcionario: solicitudes, certificados, documentos y objetivos.",
+      "count": "Autogestión"
     },
     {
-      "id": "TH-002",
-      "name": "Carlos Andrés Gómez",
-      "document": "94.372.118",
-      "type": "Contratista",
-      "role": "Apoyo administrativo",
-      "office": "Secretaría General",
-      "status": "Activo",
-      "email": "carlos.gomez@sanpedro-valle.gov.co",
-      "phone": "Ext. 114",
-      "start": "2026-01-15",
-      "contractEnd": "2026-09-30",
-      "documents": 82
+      "id": "personas",
+      "name": "Personas",
+      "icon": "users",
+      "href": "personas/index.html",
+      "group": "Administración",
+      "description": "Expediente único, datos laborales, trayectoria, contratos y contactos.",
+      "count": "74 registros"
     },
     {
-      "id": "TH-003",
-      "name": "Dahiana Echeverry",
-      "document": "66.921.307",
-      "type": "Planta",
-      "role": "Técnico administrativo",
-      "office": "Hacienda",
-      "status": "Activo",
-      "email": "dahiana.e@sanpedro-valle.gov.co",
-      "phone": "Ext. 203",
-      "start": "2019-08-01",
-      "contractEnd": "",
-      "documents": 96
+      "id": "organizacion",
+      "name": "Organización",
+      "icon": "workflow",
+      "href": "organizacion/index.html",
+      "group": "Administración",
+      "description": "Organigrama, planta de empleos, cargos, vacantes y centros de costo.",
+      "count": "52 cargos"
     },
     {
-      "id": "TH-004",
-      "name": "Jorge Ricardo Peláez",
-      "document": "16.458.930",
-      "type": "Planta",
-      "role": "Profesional especializado",
-      "office": "Planeación",
-      "status": "Vacaciones",
-      "email": "jorge.pelaez@sanpedro-valle.gov.co",
-      "phone": "Ext. 301",
-      "start": "2017-05-11",
-      "contractEnd": "",
-      "documents": 100
+      "id": "sigep",
+      "name": "SIGEP y cumplimiento",
+      "icon": "badge-check",
+      "href": "sigep/index.html",
+      "group": "Administración",
+      "description": "Control de hojas de vida, bienes y rentas, vinculaciones y actualizaciones SIGEP.",
+      "count": "6 pendientes"
     },
     {
-      "id": "TH-005",
-      "name": "Maricel Warner Garzón",
-      "document": "38.556.712",
-      "type": "Planta",
-      "role": "Auxiliar administrativo",
-      "office": "Gobierno",
-      "status": "Activo",
-      "email": "maricel.warner@sanpedro-valle.gov.co",
-      "phone": "Ext. 405",
-      "start": "2018-03-06",
-      "contractEnd": "",
-      "documents": 93
+      "id": "seleccion",
+      "name": "Selección",
+      "icon": "search",
+      "href": "seleccion/index.html",
+      "group": "Ciclo de vida",
+      "description": "Vacantes, candidatos, etapas, entrevistas, evaluaciones y banco de elegibles.",
+      "count": "3 procesos"
     },
     {
-      "id": "TH-006",
-      "name": "Yimi Alexander Alzate",
-      "document": "94.381.527",
-      "type": "Contratista",
-      "role": "Profesional de apoyo",
-      "office": "Control Interno",
-      "status": "Activo",
-      "email": "yimi.alzate@sanpedro-valle.gov.co",
-      "phone": "Ext. 503",
-      "start": "2026-02-01",
-      "contractEnd": "2026-08-31",
-      "documents": 74
+      "id": "onboarding",
+      "name": "Incorporación",
+      "icon": "route",
+      "href": "onboarding/index.html",
+      "group": "Ciclo de vida",
+      "description": "Rutas de ingreso, documentación, inducción, activos y seguimiento inicial.",
+      "count": "4 ingresos"
     },
     {
-      "id": "TH-007",
-      "name": "Laura Sofía Ramírez",
-      "document": "1.113.945.831",
-      "type": "Contratista",
-      "role": "Apoyo TIC",
-      "office": "Secretaría General",
-      "status": "Activo",
-      "email": "laura.ramirez@sanpedro-valle.gov.co",
-      "phone": "Ext. 118",
-      "start": "2026-03-01",
-      "contractEnd": "2026-12-15",
-      "documents": 88
+      "id": "asistencia",
+      "name": "Asistencia",
+      "icon": "calendar",
+      "href": "asistencia/index.html",
+      "group": "Tiempo y pagos",
+      "description": "Jornadas, marcaciones, tardanzas, horas extra y consolidado mensual.",
+      "count": "68 presentes"
     },
     {
-      "id": "TH-008",
-      "name": "Juan Sebastián Rojas",
-      "document": "1.006.321.442",
-      "type": "Planta",
-      "role": "Secretario ejecutivo",
-      "office": "Despacho",
-      "status": "Incapacidad",
-      "email": "juan.rojas@sanpedro-valle.gov.co",
-      "phone": "Ext. 101",
-      "start": "2020-09-21",
-      "contractEnd": "",
-      "documents": 98
+      "id": "ausencias",
+      "name": "Ausencias y vacaciones",
+      "icon": "plane",
+      "href": "ausencias/index.html",
+      "group": "Tiempo y pagos",
+      "description": "Vacaciones, permisos, licencias, incapacidades y flujos de aprobación.",
+      "count": "12 solicitudes"
+    },
+    {
+      "id": "nomina",
+      "name": "Pre-nómina",
+      "icon": "wallet",
+      "href": "nomina/index.html",
+      "group": "Tiempo y pagos",
+      "description": "Preliquidación, novedades, conceptos, grupos y archivos para el sistema de nómina.",
+      "count": "Agosto abierto"
+    },
+    {
+      "id": "documentos",
+      "name": "Documentos y firma",
+      "icon": "file",
+      "href": "documentos/index.html",
+      "group": "Administración",
+      "description": "Expedientes digitales, plantillas, vencimientos y firma electrónica.",
+      "count": "284 archivos"
+    },
+    {
+      "id": "activos",
+      "name": "Activos asignados",
+      "icon": "laptop",
+      "href": "activos/index.html",
+      "group": "Administración",
+      "description": "Entrega, custodia, traslados y devolución de equipos y elementos.",
+      "count": "93 asignados"
+    },
+    {
+      "id": "desempeno",
+      "name": "Desempeño",
+      "icon": "chart",
+      "href": "desempeno/index.html",
+      "group": "Desarrollo",
+      "description": "Objetivos, competencias, evaluaciones, retroalimentación y planes de desarrollo.",
+      "count": "81% avance"
+    },
+    {
+      "id": "capacitacion",
+      "name": "Capacitación",
+      "icon": "graduation-cap",
+      "href": "capacitacion/index.html",
+      "group": "Desarrollo",
+      "description": "PIC, cursos, convocatorias, asistencia, certificados y evaluación de impacto.",
+      "count": "7 cursos"
+    },
+    {
+      "id": "bienestar-sst",
+      "name": "Bienestar y SG-SST",
+      "icon": "heart",
+      "href": "bienestar-sst/index.html",
+      "group": "Cultura y seguridad",
+      "description": "Bienestar, incentivos, medicina preventiva, incidentes y plan anual SG-SST.",
+      "count": "4 actividades"
+    },
+    {
+      "id": "comunicaciones",
+      "name": "Comunicaciones",
+      "icon": "message",
+      "href": "comunicaciones/index.html",
+      "group": "Cultura y seguridad",
+      "description": "Noticias internas, reconocimientos, encuestas y cultura institucional.",
+      "count": "2 encuestas"
+    },
+    {
+      "id": "canal-etico",
+      "name": "Canal ético",
+      "icon": "shield",
+      "href": "canal-etico/index.html",
+      "group": "Cultura y seguridad",
+      "description": "Recepción reservada de reportes con trazabilidad y protección del denunciante.",
+      "count": "1 reservado"
+    },
+    {
+      "id": "flujos",
+      "name": "Flujos y aprobaciones",
+      "icon": "workflow",
+      "href": "flujos/index.html",
+      "group": "Configuración",
+      "description": "Solicitudes, aprobadores, suplencias, tiempos y reglas por dependencia.",
+      "count": "9 activos"
+    },
+    {
+      "id": "analitica",
+      "name": "People Analytics",
+      "icon": "chart",
+      "href": "analitica/index.html",
+      "group": "Analítica",
+      "description": "Indicadores de planta, rotación, ausentismo, formación, desempeño y costos.",
+      "count": "18 indicadores"
     }
   ],
-  "novelties": [
+  "approvals": [
     {
-      "id": "NOV-2026-041",
-      "person": "Jorge Ricardo Peláez",
       "type": "Vacaciones",
-      "from": "2026-08-03",
-      "to": "2026-08-14",
-      "status": "Aprobada"
-    },
-    {
-      "id": "NOV-2026-042",
-      "person": "Juan Sebastián Rojas",
-      "type": "Incapacidad",
-      "from": "2026-08-04",
-      "to": "2026-08-06",
-      "status": "Radicada"
-    },
-    {
-      "id": "NOV-2026-043",
-      "person": "María Fernanda López",
-      "type": "Permiso",
-      "from": "2026-08-07",
-      "to": "2026-08-07",
+      "person": "Ana María Torres",
+      "detail": "5 días · inicia 10 ago",
       "status": "Pendiente"
+    },
+    {
+      "type": "Permiso remunerado",
+      "person": "Luis Fernando Ruiz",
+      "detail": "6 ago · 4 horas",
+      "status": "Pendiente"
+    },
+    {
+      "type": "Certificado laboral",
+      "person": "Sofía Martínez",
+      "detail": "Con funciones y salario",
+      "status": "Radicado"
+    },
+    {
+      "type": "Horas extra",
+      "person": "Equipo de Gobierno",
+      "detail": "12 horas consolidadas",
+      "status": "Revisión"
     }
   ],
   "alerts": [
     {
-      "title": "Contrato próximo a finalizar",
-      "detail": "Yimi Alexander Alzate · 31 de agosto",
-      "level": "Alta"
+      "title": "Contratos próximos a finalizar",
+      "detail": "5 contratistas vencen en los próximos 45 días",
+      "tone": "warning"
     },
     {
-      "title": "Documento pendiente",
-      "detail": "Carlos Gómez · Certificación de seguridad social",
-      "level": "Media"
+      "title": "Actualización SIGEP",
+      "detail": "6 hojas de vida tienen información pendiente",
+      "tone": "danger"
     },
     {
-      "title": "Evaluación pendiente",
-      "detail": "3 servidores sin evaluación semestral",
-      "level": "Media"
+      "title": "Evaluación semestral",
+      "detail": "9 servidores no han cerrado su concertación",
+      "tone": "warning"
+    },
+    {
+      "title": "Inducción institucional",
+      "detail": "2 nuevos ingresos tienen actividades vencidas",
+      "tone": "info"
+    }
+  ],
+  "birthdays": [
+    {
+      "name": "Camila Valencia",
+      "date": "06 ago",
+      "office": "Secretaría de Salud"
+    },
+    {
+      "name": "Andrés Cárdenas",
+      "date": "12 ago",
+      "office": "Planeación"
+    },
+    {
+      "name": "Luisa Fernanda Mora",
+      "date": "19 ago",
+      "office": "Hacienda"
+    }
+  ],
+  "workforce": [
+    {
+      "label": "General",
+      "value": 14
+    },
+    {
+      "label": "Gobierno",
+      "value": 12
+    },
+    {
+      "label": "Hacienda",
+      "value": 11
+    },
+    {
+      "label": "Planeación",
+      "value": 10
+    },
+    {
+      "label": "Salud",
+      "value": 16
+    },
+    {
+      "label": "Despacho",
+      "value": 5
+    },
+    {
+      "label": "Control",
+      "value": 6
     }
   ]
 }

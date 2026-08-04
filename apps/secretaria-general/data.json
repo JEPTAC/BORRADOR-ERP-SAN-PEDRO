@@ -31,12 +31,12 @@
   ],
   "modules": [
     {
-      "name": "Talento Humano",
-      "desc": "Planta, contratistas, novedades, vacaciones, bienestar y seguimiento documental.",
+      "name": "Talento Humano 360",
+      "desc": "Plataforma integral de personas, planta, SIGEP, selección, asistencia, ausencias, desempeño, capacitación, bienestar, documentos, flujos y analítica.",
       "icon": "users",
       "href": "talento-humano/index.html",
-      "value": "74 personas",
-      "progress": 86
+      "value": "19 componentes",
+      "progress": 94
     },
     {
       "name": "Sistema Integrado de Gestión",

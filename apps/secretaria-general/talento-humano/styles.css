@@ -1,11 +1,2 @@
 @import url('../../../assets/css/base.css');
-.person-summary { display:grid;grid-template-columns:90px 1fr;gap:18px;align-items:center;padding:18px;border-radius:16px;background:var(--surface-2); }
-.person-summary .avatar { width:78px;height:78px;font-size:22px; }
-.person-summary h2 { margin:0 0 4px; }
-.person-summary p { margin:0;color:var(--muted); }
-.detail-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:18px; }
-.detail-item { padding:12px;border-radius:11px;background:var(--surface-2); }
-.detail-item span { display:block;color:var(--muted);font-size:11px;margin-bottom:3px; }
-.alert-line { display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line); }
-.alert-line:last-child{border-bottom:0}
-@media(max-width:520px){.detail-grid{grid-template-columns:1fr}.person-summary{grid-template-columns:1fr}.person-summary .avatar{width:58px;height:58px}}
+@import url('shared/hr.css');
