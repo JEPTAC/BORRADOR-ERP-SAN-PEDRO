@@ -1,0 +1,43 @@
+{
+  "approvals": [
+    {
+      "id": "REQ-2026-1086",
+      "title": "Cuenta para nuevo contratista",
+      "approver": "Jefe de Planeación",
+      "age": "2 h",
+      "status": "Pendiente"
+    },
+    {
+      "id": "REQ-2026-1072",
+      "title": "Licencia de software técnico",
+      "approver": "Secretaría General",
+      "age": "1 día",
+      "status": "Pendiente"
+    },
+    {
+      "id": "REQ-2026-1068",
+      "title": "Acceso a carpeta de contratación",
+      "approver": "Oficina Jurídica",
+      "age": "3 h",
+      "status": "Aprobada"
+    }
+  ],
+  "stages": [
+    {
+      "name": "Radicadas",
+      "count": 9
+    },
+    {
+      "name": "En aprobación",
+      "count": 4
+    },
+    {
+      "name": "En cumplimiento",
+      "count": 7
+    },
+    {
+      "name": "Entregadas",
+      "count": 18
+    }
+  ]
+}

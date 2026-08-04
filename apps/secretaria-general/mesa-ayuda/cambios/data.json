@@ -1,0 +1,34 @@
+{
+  "changes": [
+    {
+      "id": "CHG-2026-034",
+      "title": "Actualización del firewall municipal",
+      "type": "Normal",
+      "risk": "Alto",
+      "status": "Pendiente CAB",
+      "date": "2026-08-07",
+      "owner": "Infraestructura TIC",
+      "rollback": "Configuración anterior exportada"
+    },
+    {
+      "id": "CHG-2026-033",
+      "title": "Despliegue de versión ERP logística",
+      "type": "Normal",
+      "risk": "Medio",
+      "status": "Programado",
+      "date": "2026-08-08",
+      "owner": "Aplicaciones",
+      "rollback": "Restaurar versión V142"
+    },
+    {
+      "id": "CHG-2026-032",
+      "title": "Renovación certificado portal web",
+      "type": "Estándar",
+      "risk": "Bajo",
+      "status": "Aprobado",
+      "date": "2026-08-06",
+      "owner": "Gobierno digital",
+      "rollback": "Certificado previo vigente"
+    }
+  ]
+}

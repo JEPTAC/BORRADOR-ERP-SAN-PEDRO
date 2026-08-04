@@ -1,0 +1,73 @@
+{
+  "metrics": [
+    {
+      "label": "Activos registrados",
+      "value": 186,
+      "hint": "152 en servicio",
+      "icon": "monitor"
+    },
+    {
+      "label": "Con garantía",
+      "value": "68 %",
+      "hint": "31 vencen este año",
+      "icon": "shield",
+      "tone": "success"
+    },
+    {
+      "label": "Sin responsable",
+      "value": 4,
+      "hint": "Requieren conciliación",
+      "icon": "users",
+      "tone": "warning"
+    },
+    {
+      "label": "Salud crítica",
+      "value": 7,
+      "hint": "2 con riesgo alto",
+      "icon": "alert",
+      "tone": "danger"
+    }
+  ],
+  "assets": [
+    {
+      "tag": "PC-SG-TH-04",
+      "name": "Portátil Dell Latitude 5440",
+      "type": "Computador",
+      "owner": "María Fernanda López",
+      "office": "Secretaría General",
+      "health": "Bueno",
+      "warranty": "2027-04-12",
+      "related": 3
+    },
+    {
+      "tag": "SRV-ERP-01",
+      "name": "Servidor aplicaciones ERP",
+      "type": "Servidor",
+      "owner": "Equipo TIC",
+      "office": "Centro de datos",
+      "health": "Atención",
+      "warranty": "2026-11-30",
+      "related": 8
+    },
+    {
+      "tag": "IMP-GOB-02",
+      "name": "Impresora HP LaserJet Pro",
+      "type": "Impresora",
+      "owner": "Recepción Gobierno",
+      "office": "Gobierno",
+      "health": "Bueno",
+      "warranty": "2026-12-19",
+      "related": 2
+    },
+    {
+      "tag": "SW-SINFA",
+      "name": "SINFA ERP",
+      "type": "Aplicación",
+      "owner": "Hacienda",
+      "office": "Hacienda",
+      "health": "Atención",
+      "warranty": "Contrato 2026",
+      "related": 11
+    }
+  ]
+}

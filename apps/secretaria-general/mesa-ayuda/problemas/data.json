@@ -1,0 +1,31 @@
+{
+  "problems": [
+    {
+      "id": "PRB-2026-017",
+      "title": "Lentitud recurrente en SINFA",
+      "status": "Investigación",
+      "owner": "Carlos Jiménez",
+      "incidents": 7,
+      "risk": "Alto",
+      "root": "Pendiente"
+    },
+    {
+      "id": "PRB-2026-016",
+      "title": "Bloqueos frecuentes de cuentas de correo",
+      "status": "Causa identificada",
+      "owner": "Laura Ramírez",
+      "incidents": 12,
+      "risk": "Medio",
+      "root": "Política de sincronización heredada"
+    },
+    {
+      "id": "PRB-2026-015",
+      "title": "Desconexiones del Wi-Fi en segundo piso",
+      "status": "Error conocido",
+      "owner": "Infraestructura TIC",
+      "incidents": 5,
+      "risk": "Medio",
+      "root": "Saturación del punto de acceso"
+    }
+  ]
+}

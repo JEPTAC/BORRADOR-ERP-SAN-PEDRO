@@ -1,0 +1,31 @@
+{
+  "metrics": [
+    {
+      "label": "Cola activa",
+      "value": "28",
+      "hint": "4 sin asignar",
+      "icon": "ticket"
+    },
+    {
+      "label": "P1 y P2",
+      "value": "6",
+      "hint": "2 incidentes mayores",
+      "icon": "alert",
+      "tone": "danger"
+    },
+    {
+      "label": "SLA en riesgo",
+      "value": "3",
+      "hint": "Atención inmediata",
+      "icon": "timer",
+      "tone": "warning"
+    },
+    {
+      "label": "Resueltos hoy",
+      "value": "11",
+      "hint": "CSAT 95 %",
+      "icon": "check",
+      "tone": "success"
+    }
+  ]
+}

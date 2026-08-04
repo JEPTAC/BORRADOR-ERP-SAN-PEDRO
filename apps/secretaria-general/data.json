@@ -15,9 +15,9 @@
       "tone": "warning"
     },
     {
-      "label": "Solicitudes TIC activas",
-      "value": 12,
-      "hint": "82 % dentro del SLA",
+      "label": "Casos TIC activos",
+      "value": 28,
+      "hint": "91 % dentro del SLA",
       "icon": "headset",
       "tone": "success"
     },
@@ -31,12 +31,12 @@
   ],
   "modules": [
     {
-      "name": "Talento Humano 360",
-      "desc": "Plataforma integral de personas, planta, SIGEP, selección, asistencia, ausencias, desempeño, capacitación, bienestar, documentos, flujos y analítica.",
+      "name": "Talento Humano",
+      "desc": "Planta, contratistas, novedades, vacaciones, bienestar y seguimiento documental.",
       "icon": "users",
       "href": "talento-humano/index.html",
-      "value": "19 componentes",
-      "progress": 94
+      "value": "74 personas",
+      "progress": 86
     },
     {
       "name": "Sistema Integrado de Gestión",
@@ -47,12 +47,12 @@
       "progress": 72
     },
     {
-      "name": "Mesa de Ayuda TIC",
-      "desc": "Radicación, priorización y seguimiento de incidentes y requerimientos tecnológicos.",
+      "name": "Mesa de Servicios TIC",
+      "desc": "ITSM institucional: portal, catálogo, tickets, incidentes, cambios, activos, conocimiento, SLA y analítica.",
       "icon": "headset",
       "href": "mesa-ayuda/index.html",
-      "value": "12 abiertas",
-      "progress": 82
+      "value": "14 componentes",
+      "progress": 91
     },
     {
       "name": "Calendario institucional",
@@ -80,7 +80,7 @@
     },
     {
       "title": "Responder solicitud TIC #TIC-1042",
-      "area": "Mesa de Ayuda",
+      "area": "Mesa de Servicios TIC",
       "due": "Hoy · 5:00 p. m.",
       "status": "En proceso",
       "statusClass": "status-info"

@@ -1,115 +1,108 @@
 {
   "metrics": [
     {
-      "label": "Solicitudes abiertas",
-      "value": 12,
-      "hint": "3 de alta prioridad",
+      "label": "Casos activos",
+      "value": "28",
+      "hint": "5 ingresaron hoy",
       "icon": "ticket",
-      "tone": "warning"
+      "tone": ""
     },
     {
-      "label": "Dentro del SLA",
-      "value": "82%",
-      "hint": "Meta institucional: 90 %",
+      "label": "SLA cumplido",
+      "value": "91 %",
+      "hint": "+4,2 % frente al mes anterior",
       "icon": "timer",
       "tone": "success"
     },
     {
-      "label": "Resueltas este mes",
-      "value": 46,
-      "hint": "Promedio 7,4 horas",
-      "icon": "circle-check-big",
-      "tone": ""
+      "label": "Tiempo medio de resolución",
+      "value": "5,8 h",
+      "hint": "Meta: menos de 8 horas",
+      "icon": "activity",
+      "tone": "success"
     },
     {
-      "label": "Equipos con alerta",
-      "value": 5,
-      "hint": "Mantenimiento requerido",
+      "label": "Activos con alerta",
+      "value": "7",
+      "hint": "2 requieren atención prioritaria",
       "icon": "monitor-alert",
+      "tone": "warning"
+    }
+  ],
+  "quick": [
+    {
+      "title": "Radicar caso",
+      "desc": "Informar una falla o solicitar un servicio.",
+      "icon": "ticket-plus",
+      "action": "modal",
+      "meta": "Disponible para todos"
+    },
+    {
+      "title": "Catálogo de servicios",
+      "desc": "Solicitudes estandarizadas con tiempos y aprobaciones.",
+      "icon": "layout-grid",
+      "href": "catalogo/index.html",
+      "meta": "18 servicios"
+    },
+    {
+      "title": "Base de conocimiento",
+      "desc": "Guías y soluciones de autoservicio.",
+      "icon": "book-open",
+      "href": "conocimiento/index.html",
+      "meta": "64 artículos"
+    },
+    {
+      "title": "Consultar mis casos",
+      "desc": "Revisar estado, SLA y respuesta del técnico.",
+      "icon": "search",
+      "href": "mi-portal/index.html",
+      "meta": "3 activos"
+    }
+  ],
+  "services": [
+    {
+      "name": "Internet y red municipal",
+      "status": "Operativo",
+      "detail": "99,98 % disponibilidad",
+      "health": "good"
+    },
+    {
+      "name": "Correo institucional",
+      "status": "Degradado",
+      "detail": "Intermitencia de autenticación",
+      "health": "warn"
+    },
+    {
+      "name": "Aplicativo financiero",
+      "status": "En observación",
+      "detail": "Rendimiento variable",
+      "health": "warn"
+    },
+    {
+      "name": "Portal institucional",
+      "status": "Operativo",
+      "detail": "Sin eventos reportados",
+      "health": "good"
+    }
+  ],
+  "alerts": [
+    {
+      "title": "2 casos P1 requieren comunicación",
+      "meta": "Actualizar interesados antes de 20 minutos",
+      "icon": "alert-triangle",
       "tone": "danger"
+    },
+    {
+      "title": "3 SLA próximos a vencer",
+      "meta": "Menos de 90 minutos restantes",
+      "icon": "timer",
+      "tone": "warning"
+    },
+    {
+      "title": "Mantenimiento de servidor pendiente",
+      "meta": "Programado para 07 de agosto",
+      "icon": "tool",
+      "tone": "info"
     }
-  ],
-  "tickets": [
-    {
-      "id": "TIC-1042",
-      "title": "No permite ingresar al correo institucional",
-      "requester": "María Fernanda López",
-      "office": "Secretaría General",
-      "category": "Accesos",
-      "priority": "Alta",
-      "status": "En proceso",
-      "created": "2026-08-04",
-      "assigned": "Laura Ramírez",
-      "description": "El usuario indica que la contraseña fue restablecida pero el acceso continúa bloqueado."
-    },
-    {
-      "id": "TIC-1041",
-      "title": "Instalación de impresora de red",
-      "requester": "Carlos Gómez",
-      "office": "Gobierno",
-      "category": "Equipos",
-      "priority": "Media",
-      "status": "Asignado",
-      "created": "2026-08-04",
-      "assigned": "Equipo TIC",
-      "description": "Configurar impresora del segundo piso en el equipo de recepción."
-    },
-    {
-      "id": "TIC-1040",
-      "title": "Lentitud en aplicativo financiero",
-      "requester": "Dahiana Echeverry",
-      "office": "Hacienda",
-      "category": "Aplicaciones",
-      "priority": "Alta",
-      "status": "En proceso",
-      "created": "2026-08-03",
-      "assigned": "Juan Esteban Pérez",
-      "description": "El aplicativo tarda más de dos minutos al consultar comprobantes."
-    },
-    {
-      "id": "TIC-1039",
-      "title": "Solicitud de cuenta institucional",
-      "requester": "Andrés Moreno",
-      "office": "Planeación",
-      "category": "Accesos",
-      "priority": "Baja",
-      "status": "Abierto",
-      "created": "2026-08-03",
-      "assigned": "Sin asignar",
-      "description": "Crear correo para contratista de apoyo del proyecto de infraestructura."
-    },
-    {
-      "id": "TIC-1038",
-      "title": "Proyector no reconoce HDMI",
-      "requester": "Maricel Warner",
-      "office": "Gobierno",
-      "category": "Equipos",
-      "priority": "Media",
-      "status": "Resuelto",
-      "created": "2026-08-02",
-      "assigned": "Laura Ramírez",
-      "description": "Falla durante reunión del comité de convivencia."
-    },
-    {
-      "id": "TIC-1037",
-      "title": "Actualización de contenido web",
-      "requester": "Secretaría de Salud",
-      "office": "Salud",
-      "category": "Portal web",
-      "priority": "Media",
-      "status": "Cerrado",
-      "created": "2026-08-01",
-      "assigned": "Comunicaciones",
-      "description": "Publicar cronograma de jornada de vacunación."
-    }
-  ],
-  "categories": [
-    "Accesos",
-    "Equipos",
-    "Aplicaciones",
-    "Conectividad",
-    "Portal web",
-    "Seguridad",
-    "Otro"
   ]
 }

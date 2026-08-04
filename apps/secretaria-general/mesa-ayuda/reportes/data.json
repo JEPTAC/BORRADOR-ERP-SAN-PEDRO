@@ -1,0 +1,70 @@
+{
+  "monthly": [
+    46,
+    52,
+    49,
+    61,
+    58,
+    73,
+    68,
+    82
+  ],
+  "labels": [
+    "Ene",
+    "Feb",
+    "Mar",
+    "Abr",
+    "May",
+    "Jun",
+    "Jul",
+    "Ago"
+  ],
+  "distribution": [
+    {
+      "name": "Incidentes",
+      "value": 58,
+      "color": "var(--brand)"
+    },
+    {
+      "name": "Solicitudes",
+      "value": 21,
+      "color": "var(--accent)"
+    },
+    {
+      "name": "Cambios",
+      "value": 12,
+      "color": "var(--warning)"
+    },
+    {
+      "name": "Problemas",
+      "value": 9,
+      "color": "var(--surface-3)"
+    }
+  ],
+  "top": [
+    {
+      "category": "Accesos y correo",
+      "count": 26,
+      "resolution": "3,2 h",
+      "satisfaction": "96 %"
+    },
+    {
+      "category": "Aplicativos misionales",
+      "count": 19,
+      "resolution": "8,7 h",
+      "satisfaction": "89 %"
+    },
+    {
+      "category": "Puesto de trabajo",
+      "count": 17,
+      "resolution": "5,1 h",
+      "satisfaction": "94 %"
+    },
+    {
+      "category": "Conectividad",
+      "count": 12,
+      "resolution": "6,4 h",
+      "satisfaction": "91 %"
+    }
+  ]
+}

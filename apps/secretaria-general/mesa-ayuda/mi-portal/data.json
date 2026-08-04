@@ -1,0 +1,45 @@
+{
+  "services": [
+    {
+      "name": "Reportar una falla",
+      "desc": "Algo dejó de funcionar o está afectando su labor.",
+      "icon": "alert-triangle",
+      "type": "Incidente"
+    },
+    {
+      "name": "Solicitar acceso",
+      "desc": "Correo, carpetas, aplicativos o permisos institucionales.",
+      "icon": "shield",
+      "type": "Solicitud"
+    },
+    {
+      "name": "Pedir equipo o software",
+      "desc": "Computador, periférico, instalación o licencia.",
+      "icon": "monitor",
+      "type": "Solicitud"
+    },
+    {
+      "name": "Publicación web",
+      "desc": "Contenido, actualización o corrección del portal.",
+      "icon": "layout-grid",
+      "type": "Solicitud"
+    }
+  ],
+  "articles": [
+    {
+      "title": "Restablecer la contraseña institucional",
+      "category": "Accesos",
+      "views": 214
+    },
+    {
+      "title": "Conectar una impresora de red",
+      "category": "Equipos",
+      "views": 138
+    },
+    {
+      "title": "Usar la VPN desde fuera de la Alcaldía",
+      "category": "Conectividad",
+      "views": 94
+    }
+  ]
+}

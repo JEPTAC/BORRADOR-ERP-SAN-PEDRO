@@ -1,0 +1,58 @@
+{
+  "agents": [
+    {
+      "name": "Juan Esteban Pérez",
+      "role": "Coordinación / Aplicaciones",
+      "online": true,
+      "open": 8,
+      "sla": 94,
+      "load": 82
+    },
+    {
+      "name": "Laura Ramírez",
+      "role": "Accesos e infraestructura",
+      "online": true,
+      "open": 6,
+      "sla": 91,
+      "load": 68
+    },
+    {
+      "name": "Carlos Jiménez",
+      "role": "Aplicaciones y proveedores",
+      "online": true,
+      "open": 7,
+      "sla": 87,
+      "load": 76
+    },
+    {
+      "name": "María López",
+      "role": "Soporte en sitio",
+      "online": false,
+      "open": 4,
+      "sla": 96,
+      "load": 54
+    }
+  ],
+  "queues": [
+    {
+      "name": "Mesa de Servicios TIC",
+      "open": 9,
+      "unassigned": 2
+    },
+    {
+      "name": "Infraestructura TIC",
+      "open": 7,
+      "unassigned": 1
+    },
+    {
+      "name": "Aplicaciones",
+      "open": 8,
+      "unassigned": 0
+    },
+    {
+      "name": "Gobierno digital",
+      "open": 4,
+      "unassigned": 1
+    }
+  ]
+}

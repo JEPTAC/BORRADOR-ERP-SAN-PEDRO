@@ -1,0 +1,56 @@
+{
+  "policies": [
+    {
+      "name": "Incidente crítico P1",
+      "response": "15 min",
+      "resolution": "2 h",
+      "calendar": "24×7",
+      "escalation": "Coordinador + Secretario General",
+      "compliance": 96
+    },
+    {
+      "name": "Incidente alto P2",
+      "response": "30 min",
+      "resolution": "5 h",
+      "calendar": "Laboral",
+      "escalation": "Líder técnico",
+      "compliance": 89
+    },
+    {
+      "name": "Caso medio P3",
+      "response": "4 h",
+      "resolution": "24 h",
+      "calendar": "Laboral",
+      "escalation": "Coordinador de mesa",
+      "compliance": 93
+    },
+    {
+      "name": "Solicitud estándar P4",
+      "response": "8 h",
+      "resolution": "48 h",
+      "calendar": "Laboral",
+      "escalation": "Responsable de cola",
+      "compliance": 91
+    }
+  ],
+  "risks": [
+    {
+      "id": "INC-2026-1087",
+      "remaining": "-6 h 52 m",
+      "state": "Vencido",
+      "owner": "Infraestructura TIC"
+    },
+    {
+      "id": "INC-2026-1085",
+      "remaining": "-4 h 25 m",
+      "state": "Vencido",
+      "owner": "Aplicaciones"
+    },
+    {
+      "id": "REQ-2026-1086",
+      "remaining": "23 h",
+      "state": "En riesgo",
+      "owner": "Soporte y accesos"
+    }
+  ]
+}

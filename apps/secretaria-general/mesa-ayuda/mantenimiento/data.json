@@ -1,0 +1,36 @@
+{
+  "plans": [
+    {
+      "asset": "SRV-ERP-01",
+      "activity": "Revisión de almacenamiento y copias",
+      "frequency": "Mensual",
+      "next": "2026-08-07",
+      "owner": "Infraestructura TIC",
+      "status": "Programado"
+    },
+    {
+      "asset": "UPS-CPD-01",
+      "activity": "Prueba de autonomía",
+      "frequency": "Trimestral",
+      "next": "2026-08-12",
+      "owner": "Proveedor eléctrico",
+      "status": "Programado"
+    },
+    {
+      "asset": "PC-LOTE-2023",
+      "activity": "Limpieza y actualización preventiva",
+      "frequency": "Semestral",
+      "next": "2026-08-19",
+      "owner": "Soporte en sitio",
+      "status": "Pendiente"
+    },
+    {
+      "asset": "FW-MUN-01",
+      "activity": "Revisión de reglas y firmware",
+      "frequency": "Mensual",
+      "next": "2026-08-05",
+      "owner": "Infraestructura TIC",
+      "status": "Vencido"
+    }
+  ]
+}

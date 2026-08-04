@@ -1,0 +1,67 @@
+{
+  "categories": [
+    {
+      "name": "Accesos",
+      "count": 14,
+      "icon": "shield"
+    },
+    {
+      "name": "Equipos",
+      "count": 12,
+      "icon": "monitor"
+    },
+    {
+      "name": "Aplicaciones",
+      "count": 16,
+      "icon": "layout-grid"
+    },
+    {
+      "name": "Conectividad",
+      "count": 9,
+      "icon": "network"
+    },
+    {
+      "name": "Gobierno digital",
+      "count": 13,
+      "icon": "building"
+    }
+  ],
+  "articles": [
+    {
+      "id": "KB-064",
+      "title": "Solucionar bloqueo de la cuenta institucional",
+      "category": "Accesos",
+      "status": "Publicado",
+      "views": 214,
+      "helpful": 94,
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "KB-063",
+      "title": "Conectar una impresora de red en Windows",
+      "category": "Equipos",
+      "status": "Publicado",
+      "views": 138,
+      "helpful": 89,
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "KB-062",
+      "title": "Acceder por VPN de forma segura",
+      "category": "Conectividad",
+      "status": "En revisión",
+      "views": 94,
+      "helpful": 86,
+      "updated": "2026-07-27"
+    },
+    {
+      "id": "KB-061",
+      "title": "Preparar contenidos para el portal institucional",
+      "category": "Gobierno digital",
+      "status": "Publicado",
+      "views": 72,
+      "helpful": 97,
+      "updated": "2026-07-25"
+    }
+  ]
+}

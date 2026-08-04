@@ -1,0 +1,25 @@
+{
+  "major": {
+    "id": "MI-2026-014",
+    "title": "Intermitencia de correo institucional",
+    "status": "En diagnóstico",
+    "started": "08:18",
+    "affected": "32 usuarios",
+    "lead": "Juan Esteban Pérez",
+    "next": "17:30"
+  },
+  "communications": [
+    {
+      "time": "16:40",
+      "text": "Proveedor confirma degradación parcial del servicio de autenticación."
+    },
+    {
+      "time": "15:55",
+      "text": "Se comunica alternativa temporal mediante correo web."
+    },
+    {
+      "time": "15:20",
+      "text": "Incidente mayor declarado y partes interesadas notificadas."
+    }
+  ]
+}

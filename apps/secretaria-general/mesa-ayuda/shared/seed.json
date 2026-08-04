@@ -1,0 +1,287 @@
+{
+  "tickets": [
+    {
+      "id": "INC-2026-1087",
+      "type": "Incidente",
+      "title": "Intermitencia general del correo institucional",
+      "requester": "Mónica Arango",
+      "office": "Secretaría General",
+      "service": "Correo y colaboración",
+      "category": "Correo institucional",
+      "subcategory": "Acceso y sincronización",
+      "impact": "Alto",
+      "urgency": "Alta",
+      "priority": "P1",
+      "status": "En diagnóstico",
+      "channel": "Portal",
+      "agent": "Juan Esteban Pérez",
+      "group": "Infraestructura TIC",
+      "created": "2026-08-04T08:18:00-05:00",
+      "responseDue": "2026-08-04T08:33:00-05:00",
+      "resolutionDue": "2026-08-04T10:18:00-05:00",
+      "asset": "Microsoft 365 institucional",
+      "sla": "Incidente crítico",
+      "description": "Varios funcionarios reportan errores de autenticación y sincronización en correo web y clientes de escritorio.",
+      "tags": [
+        "incidente-mayor",
+        "correo"
+      ],
+      "timeline": [
+        {
+          "title": "Incidente radicado",
+          "meta": "08:18 · Portal de autoservicio"
+        },
+        {
+          "title": "Declarado incidente mayor",
+          "meta": "08:24 · Coordinación TIC"
+        },
+        {
+          "title": "Proveedor notificado",
+          "meta": "08:31 · Escalamiento externo"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-1086",
+      "type": "Solicitud",
+      "title": "Creación de cuenta para nuevo contratista",
+      "requester": "Andrea Torres",
+      "office": "Planeación",
+      "service": "Identidad y accesos",
+      "category": "Cuentas institucionales",
+      "subcategory": "Alta de usuario",
+      "impact": "Bajo",
+      "urgency": "Media",
+      "priority": "P3",
+      "status": "Pendiente aprobación",
+      "channel": "Portal",
+      "agent": "Laura Ramírez",
+      "group": "Soporte y accesos",
+      "created": "2026-08-04T09:12:00-05:00",
+      "responseDue": "2026-08-04T13:12:00-05:00",
+      "resolutionDue": "2026-08-05T17:00:00-05:00",
+      "asset": "Directorio institucional",
+      "sla": "Solicitud estándar",
+      "description": "Crear correo, usuario de dominio y accesos base para contratista de apoyo a infraestructura.",
+      "tags": [
+        "onboarding",
+        "accesos"
+      ],
+      "timeline": [
+        {
+          "title": "Solicitud radicada",
+          "meta": "09:12 · Andrea Torres"
+        },
+        {
+          "title": "Enviada para aprobación",
+          "meta": "09:18 · Jefe de Planeación"
+        }
+      ]
+    },
+    {
+      "id": "INC-2026-1085",
+      "type": "Incidente",
+      "title": "Aplicativo financiero presenta lentitud",
+      "requester": "Dahiana Echeverry",
+      "office": "Hacienda",
+      "service": "Aplicativos misionales",
+      "category": "Aplicaciones",
+      "subcategory": "Rendimiento",
+      "impact": "Alto",
+      "urgency": "Media",
+      "priority": "P2",
+      "status": "En proceso",
+      "channel": "Teléfono",
+      "agent": "Carlos Jiménez",
+      "group": "Aplicaciones",
+      "created": "2026-08-04T07:45:00-05:00",
+      "responseDue": "2026-08-04T08:15:00-05:00",
+      "resolutionDue": "2026-08-04T12:45:00-05:00",
+      "asset": "SINFA ERP",
+      "sla": "Incidente alto",
+      "description": "Consultas de comprobantes y ejecución presupuestal tardan más de dos minutos.",
+      "tags": [
+        "sinfa",
+        "rendimiento"
+      ],
+      "timeline": [
+        {
+          "title": "Caso registrado",
+          "meta": "07:45 · Línea interna"
+        },
+        {
+          "title": "Asignado a Aplicaciones",
+          "meta": "07:52 · Mesa TIC"
+        },
+        {
+          "title": "Trazas solicitadas al proveedor",
+          "meta": "08:20 · Carlos Jiménez"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-1084",
+      "type": "Solicitud",
+      "title": "Instalación de impresora de red",
+      "requester": "Carlos Gómez",
+      "office": "Gobierno",
+      "service": "Puesto de trabajo",
+      "category": "Periféricos",
+      "subcategory": "Instalación",
+      "impact": "Bajo",
+      "urgency": "Baja",
+      "priority": "P4",
+      "status": "Asignado",
+      "channel": "Correo",
+      "agent": "María López",
+      "group": "Soporte en sitio",
+      "created": "2026-08-03T15:22:00-05:00",
+      "responseDue": "2026-08-04T09:22:00-05:00",
+      "resolutionDue": "2026-08-05T15:22:00-05:00",
+      "asset": "PC-GOB-REC-02",
+      "sla": "Solicitud estándar",
+      "description": "Configurar impresora del segundo piso en el equipo de recepción.",
+      "tags": [
+        "impresora",
+        "sitio"
+      ],
+      "timeline": [
+        {
+          "title": "Correo convertido en ticket",
+          "meta": "03 ago · 15:22"
+        },
+        {
+          "title": "Visita programada",
+          "meta": "04 ago · 11:00"
+        }
+      ]
+    },
+    {
+      "id": "INC-2026-1083",
+      "type": "Incidente",
+      "title": "VPN no conecta desde equipo portátil",
+      "requester": "Jorge Peláez",
+      "office": "Jurídica",
+      "service": "Conectividad",
+      "category": "VPN",
+      "subcategory": "Autenticación",
+      "impact": "Medio",
+      "urgency": "Alta",
+      "priority": "P2",
+      "status": "Esperando usuario",
+      "channel": "Portal",
+      "agent": "Laura Ramírez",
+      "group": "Infraestructura TIC",
+      "created": "2026-08-03T14:04:00-05:00",
+      "responseDue": "2026-08-03T14:34:00-05:00",
+      "resolutionDue": "2026-08-03T19:04:00-05:00",
+      "asset": "PORT-JUR-03",
+      "sla": "Incidente alto",
+      "description": "La VPN muestra error de certificado. Se solicitó confirmar actualización del cliente.",
+      "tags": [
+        "vpn",
+        "remoto"
+      ],
+      "timeline": [
+        {
+          "title": "Incidente registrado",
+          "meta": "03 ago · 14:04"
+        },
+        {
+          "title": "Diagnóstico remoto realizado",
+          "meta": "03 ago · 14:26"
+        },
+        {
+          "title": "Información solicitada",
+          "meta": "03 ago · 14:42"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-1082",
+      "type": "Solicitud",
+      "title": "Publicación de cronograma de vacunación",
+      "requester": "Secretaría de Salud",
+      "office": "Salud y Bienestar",
+      "service": "Portal web",
+      "category": "Contenido web",
+      "subcategory": "Publicación",
+      "impact": "Medio",
+      "urgency": "Media",
+      "priority": "P3",
+      "status": "Resuelto",
+      "channel": "Portal",
+      "agent": "Equipo Comunicaciones",
+      "group": "Gobierno digital",
+      "created": "2026-08-03T11:35:00-05:00",
+      "responseDue": "2026-08-03T15:35:00-05:00",
+      "resolutionDue": "2026-08-04T17:00:00-05:00",
+      "asset": "Portal institucional",
+      "sla": "Publicación web",
+      "description": "Publicar pieza y cronograma de la jornada de vacunación municipal.",
+      "tags": [
+        "web",
+        "salud"
+      ],
+      "timeline": [
+        {
+          "title": "Solicitud radicada",
+          "meta": "03 ago · 11:35"
+        },
+        {
+          "title": "Contenido validado",
+          "meta": "03 ago · 13:10"
+        },
+        {
+          "title": "Publicado y verificado",
+          "meta": "03 ago · 14:25"
+        }
+      ]
+    },
+    {
+      "id": "INC-2026-1081",
+      "type": "Incidente",
+      "title": "Proyector no reconoce señal HDMI",
+      "requester": "Maricel Warner",
+      "office": "Gobierno",
+      "service": "Salas y audiovisuales",
+      "category": "Audiovisuales",
+      "subcategory": "Proyección",
+      "impact": "Medio",
+      "urgency": "Alta",
+      "priority": "P2",
+      "status": "Cerrado",
+      "channel": "WhatsApp institucional",
+      "agent": "María López",
+      "group": "Soporte en sitio",
+      "created": "2026-08-02T08:05:00-05:00",
+      "responseDue": "2026-08-02T08:35:00-05:00",
+      "resolutionDue": "2026-08-02T13:05:00-05:00",
+      "asset": "PROY-SALA-01",
+      "sla": "Incidente alto",
+      "description": "Falla de proyección durante comité de convivencia. Se reemplazó adaptador HDMI.",
+      "tags": [
+        "audiovisual",
+        "sala"
+      ],
+      "timeline": [
+        {
+          "title": "Caso registrado",
+          "meta": "02 ago · 08:05"
+        },
+        {
+          "title": "Técnico en sitio",
+          "meta": "02 ago · 08:17"
+        },
+        {
+          "title": "Servicio restablecido",
+          "meta": "02 ago · 08:31"
+        },
+        {
+          "title": "Confirmado por usuario",
+          "meta": "02 ago · 08:36"
+        }
+      ]
+    }
+  ]
+}

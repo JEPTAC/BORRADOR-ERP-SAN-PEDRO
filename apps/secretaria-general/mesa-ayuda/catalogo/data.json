@@ -1,0 +1,50 @@
+{
+  "categories": [
+    {
+      "name": "Accesos e identidad",
+      "icon": "shield",
+      "count": 5,
+      "items": [
+        "Crear cuenta institucional",
+        "Restablecer contraseña",
+        "Acceso a carpeta compartida",
+        "Permiso en aplicativo",
+        "VPN"
+      ]
+    },
+    {
+      "name": "Equipos y puesto de trabajo",
+      "icon": "monitor",
+      "count": 4,
+      "items": [
+        "Asignación de equipo",
+        "Instalación de periférico",
+        "Instalación de software",
+        "Traslado de puesto"
+      ]
+    },
+    {
+      "name": "Conectividad y comunicaciones",
+      "icon": "network",
+      "count": 4,
+      "items": [
+        "Punto de red",
+        "Wi-Fi institucional",
+        "Telefonía",
+        "Videoconferencia"
+      ]
+    },
+    {
+      "name": "Aplicaciones y gobierno digital",
+      "icon": "layout-grid",
+      "count": 5,
+      "items": [
+        "Soporte aplicativo",
+        "Publicación web",
+        "Formulario institucional",
+        "Firma digital",
+        "Automatización"
+      ]
+    }
+  ]
+}

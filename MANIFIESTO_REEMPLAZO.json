@@ -1,0 +1,9 @@
+{
+  "version": "Mesa de Servicios TIC V04",
+  "replace_from": "apps/",
+  "main_route": "apps/secretaria-general/mesa-ayuda/index.html",
+  "modules": 14,
+  "files": 67,
+  "storage": "JSON + localStorage",
+  "backend": "Sin conexión a Supabase"
+}

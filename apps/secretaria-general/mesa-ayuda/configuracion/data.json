@@ -1,0 +1,50 @@
+{
+  "settings": [
+    {
+      "title": "Canales de entrada",
+      "value": "Portal, correo, teléfono y presencial",
+      "icon": "message"
+    },
+    {
+      "title": "Matriz de prioridad",
+      "value": "Impacto × urgencia",
+      "icon": "grid"
+    },
+    {
+      "title": "Horario de servicio",
+      "value": "Lunes a viernes · 7:00–17:30",
+      "icon": "calendar"
+    },
+    {
+      "title": "Notificaciones",
+      "value": "Correo institucional y bandeja ERP",
+      "icon": "bell"
+    }
+  ],
+  "automations": [
+    {
+      "name": "Autoasignar casos de accesos",
+      "trigger": "Categoría = Accesos",
+      "action": "Asignar a Soporte y accesos",
+      "active": true
+    },
+    {
+      "name": "Escalar P1 sin respuesta",
+      "trigger": "15 minutos sin atención",
+      "action": "Notificar coordinación",
+      "active": true
+    },
+    {
+      "name": "Cerrar casos resueltos",
+      "trigger": "3 días sin respuesta del usuario",
+      "action": "Cerrar y enviar encuesta",
+      "active": true
+    },
+    {
+      "name": "Crear problema por recurrencia",
+      "trigger": "5 incidentes similares en 30 días",
+      "action": "Abrir registro de problema",
+      "active": false
+    }
+  ]
+}
