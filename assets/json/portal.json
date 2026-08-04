@@ -1,0 +1,141 @@
+{
+  "summary": [
+    {
+      "label": "Dependencias configuradas",
+      "value": 9,
+      "hint": "Estructura inicial",
+      "icon": "building-2",
+      "tone": ""
+    },
+    {
+      "label": "Módulos funcionales",
+      "value": 4,
+      "hint": "Secretaría General",
+      "icon": "blocks",
+      "tone": "success"
+    },
+    {
+      "label": "Actividades esta semana",
+      "value": 18,
+      "hint": "6 requieren seguimiento",
+      "icon": "calendar-check",
+      "tone": "warning"
+    },
+    {
+      "label": "Solicitudes TIC abiertas",
+      "value": 12,
+      "hint": "3 de alta prioridad",
+      "icon": "headset",
+      "tone": "danger"
+    }
+  ],
+  "modules": [
+    {
+      "name": "Secretaría General",
+      "description": "Talento Humano, SIG, Mesa de Ayuda TIC y Calendario Institucional.",
+      "icon": "building-2",
+      "href": "apps/secretaria-general/index.html",
+      "status": "Funcional",
+      "statusClass": "status-success",
+      "count": "4 procesos"
+    },
+    {
+      "name": "Secretaría de Gobierno",
+      "description": "Recepción ciudadana, víctimas, convivencia, participación y procesos administrativos.",
+      "icon": "landmark",
+      "href": "apps/gobierno/index.html",
+      "status": "Estructura",
+      "statusClass": "status-info",
+      "count": "7 procesos"
+    },
+    {
+      "name": "Secretaría de Hacienda",
+      "description": "Presupuesto, tesorería, rentas, cartera y conexiones financieras.",
+      "icon": "wallet-cards",
+      "href": "apps/hacienda/index.html",
+      "status": "Estructura",
+      "statusClass": "status-info",
+      "count": "6 procesos"
+    },
+    {
+      "name": "Planeación e Infraestructura",
+      "description": "Plan de Desarrollo, proyectos, metas, obras y solicitudes técnicas.",
+      "icon": "drafting-compass",
+      "href": "apps/planeacion/index.html",
+      "status": "Estructura",
+      "statusClass": "status-info",
+      "count": "6 procesos"
+    },
+    {
+      "name": "Salud y Bienestar Social",
+      "description": "Programas sociales, salud pública, beneficiarios, visitas y seguimiento.",
+      "icon": "heart-pulse",
+      "href": "apps/salud-bienestar/index.html",
+      "status": "Estructura",
+      "statusClass": "status-info",
+      "count": "6 procesos"
+    },
+    {
+      "name": "Despacho del Alcalde",
+      "description": "Compromisos, correspondencia prioritaria, agenda directiva y seguimiento.",
+      "icon": "briefcase-business",
+      "href": "apps/despacho/index.html",
+      "status": "Estructura",
+      "statusClass": "status-neutral",
+      "count": "4 procesos"
+    },
+    {
+      "name": "Oficina Jurídica",
+      "description": "Procesos judiciales, tutelas, conceptos, actos y vencimientos.",
+      "icon": "scale",
+      "href": "apps/juridica/index.html",
+      "status": "Estructura",
+      "statusClass": "status-neutral",
+      "count": "5 procesos"
+    },
+    {
+      "name": "Contratación",
+      "description": "Planeación contractual, expedientes, supervisión y obligaciones.",
+      "icon": "file-signature",
+      "href": "apps/contratacion/index.html",
+      "status": "Estructura",
+      "statusClass": "status-neutral",
+      "count": "5 procesos"
+    },
+    {
+      "name": "Control Interno",
+      "description": "Auditorías, riesgos, hallazgos, planes de mejoramiento y evidencias.",
+      "icon": "shield-check",
+      "href": "apps/control-interno/index.html",
+      "status": "Estructura",
+      "statusClass": "status-neutral",
+      "count": "5 procesos"
+    }
+  ],
+  "activity": [
+    {
+      "title": "Revisión del Plan de Mejoramiento",
+      "module": "SIG",
+      "time": "Hoy · 10:30 a. m.",
+      "icon": "clipboard-check"
+    },
+    {
+      "title": "Inducción a contratistas nuevos",
+      "module": "Talento Humano",
+      "time": "Mañana · 8:00 a. m.",
+      "icon": "users"
+    },
+    {
+      "title": "Mantenimiento preventivo de equipos",
+      "module": "Mesa TIC",
+      "time": "06 de agosto · 2:00 p. m.",
+      "icon": "monitor-cog"
+    },
+    {
+      "title": "Comité institucional de gestión",
+      "module": "Calendario",
+      "time": "07 de agosto · 9:00 a. m.",
+      "icon": "calendar-days"
+    }
+  ]
+}

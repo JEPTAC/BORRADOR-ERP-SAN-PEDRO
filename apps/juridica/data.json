@@ -1,0 +1,50 @@
+{
+  "name": "Oficina Jurídica",
+  "description": "Defensa judicial, conceptos, actos y control de términos.",
+  "processes": [
+    {
+      "name": "Procesos judiciales",
+      "icon": "gavel",
+      "description": "Expedientes, actuaciones, apoderados y términos.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Tutelas",
+      "icon": "shield-check",
+      "description": "Recepción, respuesta y cumplimiento de fallos.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Conceptos jurídicos",
+      "icon": "book-open-check",
+      "description": "Solicitudes, análisis, revisión y emisión.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Actos administrativos",
+      "icon": "file-badge",
+      "description": "Elaboración, revisión, firma y notificación.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Conciliaciones",
+      "icon": "handshake",
+      "description": "Solicitudes, comités y acuerdos.",
+      "status": "Planeado"
+    }
+  ],
+  "indicators": [
+    {
+      "label": "Procesos definidos",
+      "value": 5
+    },
+    {
+      "label": "Conexiones previstas",
+      "value": "Pendiente"
+    },
+    {
+      "label": "Estado del módulo",
+      "value": "Diseño base"
+    }
+  ]
+}

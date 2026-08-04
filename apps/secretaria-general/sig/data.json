@@ -1,0 +1,176 @@
+{
+  "metrics": [
+    {
+      "label": "Cumplimiento institucional",
+      "value": "78%",
+      "hint": "+4 puntos frente al trimestre",
+      "icon": "gauge",
+      "tone": "success"
+    },
+    {
+      "label": "Documentos vigentes",
+      "value": 126,
+      "hint": "8 en actualización",
+      "icon": "files",
+      "tone": ""
+    },
+    {
+      "label": "Riesgos abiertos",
+      "value": 17,
+      "hint": "2 en nivel alto",
+      "icon": "shield-alert",
+      "tone": "warning"
+    },
+    {
+      "label": "Acciones pendientes",
+      "value": 9,
+      "hint": "3 próximas a vencer",
+      "icon": "list-checks",
+      "tone": "danger"
+    }
+  ],
+  "documents": [
+    {
+      "code": "SIG-PR-001",
+      "name": "Control de documentos y registros",
+      "type": "Procedimiento",
+      "process": "Gestión documental",
+      "version": "4",
+      "date": "2026-03-18",
+      "status": "Vigente"
+    },
+    {
+      "code": "TH-PR-003",
+      "name": "Vinculación y retiro de personal",
+      "type": "Procedimiento",
+      "process": "Talento Humano",
+      "version": "3",
+      "date": "2026-02-11",
+      "status": "Vigente"
+    },
+    {
+      "code": "TIC-PR-002",
+      "name": "Gestión de incidentes tecnológicos",
+      "type": "Procedimiento",
+      "process": "Gestión TIC",
+      "version": "2",
+      "date": "2026-06-20",
+      "status": "En revisión"
+    },
+    {
+      "code": "SIG-MN-001",
+      "name": "Manual del Sistema Integrado de Gestión",
+      "type": "Manual",
+      "process": "Direccionamiento",
+      "version": "5",
+      "date": "2026-01-30",
+      "status": "Vigente"
+    },
+    {
+      "code": "SIG-FO-019",
+      "name": "Formato de plan de mejoramiento",
+      "type": "Formato",
+      "process": "Evaluación",
+      "version": "6",
+      "date": "2026-04-08",
+      "status": "Vigente"
+    }
+  ],
+  "risks": [
+    {
+      "id": "R-2026-014",
+      "risk": "Pérdida de trazabilidad documental",
+      "process": "Gestión documental",
+      "level": "Alto",
+      "control": "Revisión mensual de expedientes",
+      "owner": "Secretaría General",
+      "progress": 58
+    },
+    {
+      "id": "R-2026-021",
+      "risk": "Incumplimiento de tiempos de respuesta",
+      "process": "Atención ciudadana",
+      "level": "Medio",
+      "control": "Alertas de vencimiento",
+      "owner": "Gobierno",
+      "progress": 74
+    },
+    {
+      "id": "R-2026-027",
+      "risk": "Indisponibilidad de servicios tecnológicos",
+      "process": "Gestión TIC",
+      "level": "Alto",
+      "control": "Mantenimiento y respaldos",
+      "owner": "TIC",
+      "progress": 64
+    },
+    {
+      "id": "R-2026-032",
+      "risk": "Información desactualizada en indicadores",
+      "process": "Planeación",
+      "level": "Bajo",
+      "control": "Corte mensual automático",
+      "owner": "Planeación",
+      "progress": 88
+    }
+  ],
+  "indicators": [
+    {
+      "name": "Cumplimiento del plan institucional de capacitación",
+      "owner": "Talento Humano",
+      "target": 90,
+      "actual": 82,
+      "period": "Trimestral"
+    },
+    {
+      "name": "Solicitudes TIC atendidas dentro del SLA",
+      "owner": "TIC",
+      "target": 90,
+      "actual": 86,
+      "period": "Mensual"
+    },
+    {
+      "name": "Acciones de mejoramiento cerradas oportunamente",
+      "owner": "Control Interno",
+      "target": 85,
+      "actual": 71,
+      "period": "Mensual"
+    },
+    {
+      "name": "Documentos revisados en la vigencia",
+      "owner": "Secretaría General",
+      "target": 100,
+      "actual": 76,
+      "period": "Semestral"
+    }
+  ],
+  "actions": [
+    {
+      "id": "PM-2026-018",
+      "source": "Auditoría interna",
+      "action": "Actualizar matriz de riesgos del proceso TIC",
+      "owner": "Coordinación TIC",
+      "due": "2026-08-12",
+      "status": "En proceso",
+      "progress": 65
+    },
+    {
+      "id": "PM-2026-019",
+      "source": "Revisión por la dirección",
+      "action": "Unificar formatos de inducción y reinducción",
+      "owner": "Talento Humano",
+      "due": "2026-08-20",
+      "status": "Pendiente",
+      "progress": 20
+    },
+    {
+      "id": "PM-2026-020",
+      "source": "Autocontrol",
+      "action": "Depurar documentos obsoletos del SIG",
+      "owner": "Secretaría General",
+      "due": "2026-09-05",
+      "status": "En proceso",
+      "progress": 45
+    }
+  ]
+}

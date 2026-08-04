@@ -1,0 +1,50 @@
+{
+  "name": "Contratación",
+  "description": "Planeación contractual, expedientes, supervisión y cierre.",
+  "processes": [
+    {
+      "name": "Necesidades y PAA",
+      "icon": "clipboard-list",
+      "description": "Solicitudes, validaciones y programación.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Etapa precontractual",
+      "icon": "file-search",
+      "description": "Estudios, análisis, aprobaciones y publicación.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Contratos",
+      "icon": "file-signature",
+      "description": "Registro, garantías, inicio y modificaciones.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Supervisión",
+      "icon": "clipboard-check",
+      "description": "Obligaciones, informes, actas y pagos.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Liquidación y cierre",
+      "icon": "archive-check",
+      "description": "Balance, pendientes y expediente final.",
+      "status": "Planeado"
+    }
+  ],
+  "indicators": [
+    {
+      "label": "Procesos definidos",
+      "value": 5
+    },
+    {
+      "label": "Conexiones previstas",
+      "value": "Pendiente"
+    },
+    {
+      "label": "Estado del módulo",
+      "value": "Diseño base"
+    }
+  ]
+}

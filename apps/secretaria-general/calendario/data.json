@@ -1,0 +1,119 @@
+{
+  "events": [
+    {
+      "id": "ACT-001",
+      "title": "Comité institucional de gestión",
+      "date": "2026-08-07",
+      "time": "09:00",
+      "end": "11:00",
+      "type": "Comité",
+      "office": "Todas",
+      "assigned": [
+        "Secretarios de despacho",
+        "Jefes de oficina"
+      ],
+      "priority": "Alta",
+      "status": "Programada",
+      "description": "Seguimiento a planes institucionales y compromisos de la administración."
+    },
+    {
+      "id": "ACT-002",
+      "title": "Inducción a nuevos contratistas",
+      "date": "2026-08-05",
+      "time": "08:00",
+      "end": "10:00",
+      "type": "Capacitación",
+      "office": "Secretaría General",
+      "assigned": [
+        "Contratistas nuevos"
+      ],
+      "priority": "Media",
+      "status": "Programada",
+      "description": "Inducción institucional, seguridad de la información y SIG."
+    },
+    {
+      "id": "ACT-003",
+      "title": "Cierre de indicadores mensuales",
+      "date": "2026-08-10",
+      "time": "16:00",
+      "end": "17:00",
+      "type": "Entrega",
+      "office": "Todas",
+      "assigned": [
+        "Enlaces SIG"
+      ],
+      "priority": "Alta",
+      "status": "Pendiente",
+      "description": "Cargar resultados y evidencias del corte de julio."
+    },
+    {
+      "id": "ACT-004",
+      "title": "Mantenimiento preventivo de equipos",
+      "date": "2026-08-06",
+      "time": "14:00",
+      "end": "16:30",
+      "type": "TIC",
+      "office": "Secretaría General",
+      "assigned": [
+        "Equipo TIC"
+      ],
+      "priority": "Media",
+      "status": "Programada",
+      "description": "Revisión de equipos de la sala de juntas y Despacho."
+    },
+    {
+      "id": "ACT-005",
+      "title": "Jornada de bienestar institucional",
+      "date": "2026-08-14",
+      "time": "08:30",
+      "end": "12:00",
+      "type": "Bienestar",
+      "office": "Todas",
+      "assigned": [
+        "Funcionarios y contratistas"
+      ],
+      "priority": "Baja",
+      "status": "Programada",
+      "description": "Actividad de integración y bienestar laboral."
+    },
+    {
+      "id": "ACT-006",
+      "title": "Revisión plan de mejoramiento",
+      "date": "2026-08-12",
+      "time": "10:00",
+      "end": "11:30",
+      "type": "SIG",
+      "office": "Control Interno",
+      "assigned": [
+        "Líderes de proceso"
+      ],
+      "priority": "Alta",
+      "status": "Pendiente",
+      "description": "Validación de avances y soportes de acciones abiertas."
+    },
+    {
+      "id": "ACT-007",
+      "title": "Publicación de reporte de transparencia",
+      "date": "2026-08-20",
+      "time": "15:00",
+      "end": "16:00",
+      "type": "Entrega",
+      "office": "Secretaría General",
+      "assigned": [
+        "Enlace de transparencia"
+      ],
+      "priority": "Media",
+      "status": "Programada",
+      "description": "Verificación y publicación de información periódica."
+    }
+  ],
+  "types": [
+    "Comité",
+    "Capacitación",
+    "Entrega",
+    "TIC",
+    "Bienestar",
+    "SIG",
+    "Otro"
+  ]
+}

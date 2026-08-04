@@ -1,0 +1,56 @@
+{
+  "name": "Planeación e Infraestructura",
+  "description": "Plan de Desarrollo, proyectos, ordenamiento y obras públicas.",
+  "processes": [
+    {
+      "name": "Plan de Desarrollo",
+      "icon": "route",
+      "description": "Metas, productos, indicadores y evidencias.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Banco de proyectos",
+      "icon": "folder-kanban",
+      "description": "Formulación, viabilidad, BPIN y seguimiento.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Infraestructura física",
+      "icon": "construction",
+      "description": "Obras, contratos, visitas y avance físico.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Ordenamiento territorial",
+      "icon": "map",
+      "description": "Conceptos, usos del suelo y cartografía.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Licencias y solicitudes",
+      "icon": "file-check-2",
+      "description": "Radicación y evaluación técnica.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Rendición de proyectos",
+      "icon": "presentation",
+      "description": "Informes físicos, financieros y ciudadanos.",
+      "status": "Planeado"
+    }
+  ],
+  "indicators": [
+    {
+      "label": "Procesos definidos",
+      "value": 6
+    },
+    {
+      "label": "Conexiones previstas",
+      "value": "Pendiente"
+    },
+    {
+      "label": "Estado del módulo",
+      "value": "Diseño base"
+    }
+  ]
+}

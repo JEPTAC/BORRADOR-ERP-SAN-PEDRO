@@ -1,0 +1,189 @@
+{
+  "metrics": [
+    {
+      "label": "Planta activa",
+      "value": 48,
+      "hint": "92 % de ocupación",
+      "icon": "badge-check",
+      "tone": "success"
+    },
+    {
+      "label": "Contratistas",
+      "value": 26,
+      "hint": "5 contratos próximos a vencer",
+      "icon": "briefcase",
+      "tone": "warning"
+    },
+    {
+      "label": "Novedades del mes",
+      "value": 11,
+      "hint": "Vacaciones, permisos e incapacidades",
+      "icon": "clipboard-list",
+      "tone": ""
+    },
+    {
+      "label": "Alertas documentales",
+      "value": 7,
+      "hint": "Requieren validación",
+      "icon": "file-warning",
+      "tone": "danger"
+    }
+  ],
+  "people": [
+    {
+      "id": "TH-001",
+      "name": "María Fernanda López",
+      "document": "31.458.921",
+      "type": "Planta",
+      "role": "Profesional Universitario",
+      "office": "Secretaría General",
+      "status": "Activo",
+      "email": "maria.lopez@sanpedro-valle.gov.co",
+      "phone": "Ext. 112",
+      "start": "2021-02-15",
+      "contractEnd": "",
+      "documents": 100
+    },
+    {
+      "id": "TH-002",
+      "name": "Carlos Andrés Gómez",
+      "document": "94.372.118",
+      "type": "Contratista",
+      "role": "Apoyo administrativo",
+      "office": "Secretaría General",
+      "status": "Activo",
+      "email": "carlos.gomez@sanpedro-valle.gov.co",
+      "phone": "Ext. 114",
+      "start": "2026-01-15",
+      "contractEnd": "2026-09-30",
+      "documents": 82
+    },
+    {
+      "id": "TH-003",
+      "name": "Dahiana Echeverry",
+      "document": "66.921.307",
+      "type": "Planta",
+      "role": "Técnico administrativo",
+      "office": "Hacienda",
+      "status": "Activo",
+      "email": "dahiana.e@sanpedro-valle.gov.co",
+      "phone": "Ext. 203",
+      "start": "2019-08-01",
+      "contractEnd": "",
+      "documents": 96
+    },
+    {
+      "id": "TH-004",
+      "name": "Jorge Ricardo Peláez",
+      "document": "16.458.930",
+      "type": "Planta",
+      "role": "Profesional especializado",
+      "office": "Planeación",
+      "status": "Vacaciones",
+      "email": "jorge.pelaez@sanpedro-valle.gov.co",
+      "phone": "Ext. 301",
+      "start": "2017-05-11",
+      "contractEnd": "",
+      "documents": 100
+    },
+    {
+      "id": "TH-005",
+      "name": "Maricel Warner Garzón",
+      "document": "38.556.712",
+      "type": "Planta",
+      "role": "Auxiliar administrativo",
+      "office": "Gobierno",
+      "status": "Activo",
+      "email": "maricel.warner@sanpedro-valle.gov.co",
+      "phone": "Ext. 405",
+      "start": "2018-03-06",
+      "contractEnd": "",
+      "documents": 93
+    },
+    {
+      "id": "TH-006",
+      "name": "Yimi Alexander Alzate",
+      "document": "94.381.527",
+      "type": "Contratista",
+      "role": "Profesional de apoyo",
+      "office": "Control Interno",
+      "status": "Activo",
+      "email": "yimi.alzate@sanpedro-valle.gov.co",
+      "phone": "Ext. 503",
+      "start": "2026-02-01",
+      "contractEnd": "2026-08-31",
+      "documents": 74
+    },
+    {
+      "id": "TH-007",
+      "name": "Laura Sofía Ramírez",
+      "document": "1.113.945.831",
+      "type": "Contratista",
+      "role": "Apoyo TIC",
+      "office": "Secretaría General",
+      "status": "Activo",
+      "email": "laura.ramirez@sanpedro-valle.gov.co",
+      "phone": "Ext. 118",
+      "start": "2026-03-01",
+      "contractEnd": "2026-12-15",
+      "documents": 88
+    },
+    {
+      "id": "TH-008",
+      "name": "Juan Sebastián Rojas",
+      "document": "1.006.321.442",
+      "type": "Planta",
+      "role": "Secretario ejecutivo",
+      "office": "Despacho",
+      "status": "Incapacidad",
+      "email": "juan.rojas@sanpedro-valle.gov.co",
+      "phone": "Ext. 101",
+      "start": "2020-09-21",
+      "contractEnd": "",
+      "documents": 98
+    }
+  ],
+  "novelties": [
+    {
+      "id": "NOV-2026-041",
+      "person": "Jorge Ricardo Peláez",
+      "type": "Vacaciones",
+      "from": "2026-08-03",
+      "to": "2026-08-14",
+      "status": "Aprobada"
+    },
+    {
+      "id": "NOV-2026-042",
+      "person": "Juan Sebastián Rojas",
+      "type": "Incapacidad",
+      "from": "2026-08-04",
+      "to": "2026-08-06",
+      "status": "Radicada"
+    },
+    {
+      "id": "NOV-2026-043",
+      "person": "María Fernanda López",
+      "type": "Permiso",
+      "from": "2026-08-07",
+      "to": "2026-08-07",
+      "status": "Pendiente"
+    }
+  ],
+  "alerts": [
+    {
+      "title": "Contrato próximo a finalizar",
+      "detail": "Yimi Alexander Alzate · 31 de agosto",
+      "level": "Alta"
+    },
+    {
+      "title": "Documento pendiente",
+      "detail": "Carlos Gómez · Certificación de seguridad social",
+      "level": "Media"
+    },
+    {
+      "title": "Evaluación pendiente",
+      "detail": "3 servidores sin evaluación semestral",
+      "level": "Media"
+    }
+  ]
+}

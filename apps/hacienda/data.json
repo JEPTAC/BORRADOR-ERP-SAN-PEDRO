@@ -1,0 +1,56 @@
+{
+  "name": "Secretaría de Hacienda",
+  "description": "Gestión presupuestal, financiera, tributaria y de tesorería.",
+  "processes": [
+    {
+      "name": "Presupuesto",
+      "icon": "chart-no-axes-combined",
+      "description": "CDP, RP, modificaciones y ejecución.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Tesorería",
+      "icon": "landmark",
+      "description": "Pagos, PAC, conciliaciones y flujo de caja.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Contabilidad",
+      "icon": "calculator",
+      "description": "Causaciones, comprobantes y cierres.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Rentas municipales",
+      "icon": "receipt-text",
+      "description": "Predial, ICA, retenciones y solicitudes.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Cartera y cobro",
+      "icon": "badge-dollar-sign",
+      "description": "Acuerdos, seguimiento y cobro coactivo.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Reportes externos",
+      "icon": "file-output",
+      "description": "CHIP, CUIPO y organismos de control.",
+      "status": "Planeado"
+    }
+  ],
+  "indicators": [
+    {
+      "label": "Procesos definidos",
+      "value": 6
+    },
+    {
+      "label": "Conexiones previstas",
+      "value": "Pendiente"
+    },
+    {
+      "label": "Estado del módulo",
+      "value": "Diseño base"
+    }
+  ]
+}

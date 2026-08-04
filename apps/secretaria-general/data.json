@@ -1,0 +1,96 @@
+{
+  "metrics": [
+    {
+      "label": "Servidores y contratistas",
+      "value": 74,
+      "hint": "48 planta · 26 contratistas",
+      "icon": "users",
+      "tone": ""
+    },
+    {
+      "label": "Acciones SIG abiertas",
+      "value": 9,
+      "hint": "3 próximas a vencer",
+      "icon": "workflow",
+      "tone": "warning"
+    },
+    {
+      "label": "Solicitudes TIC activas",
+      "value": 12,
+      "hint": "82 % dentro del SLA",
+      "icon": "headset",
+      "tone": "success"
+    },
+    {
+      "label": "Actividades asignadas",
+      "value": 18,
+      "hint": "Semana actual",
+      "icon": "calendar-check",
+      "tone": ""
+    }
+  ],
+  "modules": [
+    {
+      "name": "Talento Humano",
+      "desc": "Planta, contratistas, novedades, vacaciones, bienestar y seguimiento documental.",
+      "icon": "users",
+      "href": "talento-humano/index.html",
+      "value": "74 personas",
+      "progress": 86
+    },
+    {
+      "name": "Sistema Integrado de Gestión",
+      "desc": "Documentos, riesgos, indicadores, auditorías y planes de mejoramiento.",
+      "icon": "workflow",
+      "href": "sig/index.html",
+      "value": "9 acciones",
+      "progress": 72
+    },
+    {
+      "name": "Mesa de Ayuda TIC",
+      "desc": "Radicación, priorización y seguimiento de incidentes y requerimientos tecnológicos.",
+      "icon": "headset",
+      "href": "mesa-ayuda/index.html",
+      "value": "12 abiertas",
+      "progress": 82
+    },
+    {
+      "name": "Calendario institucional",
+      "desc": "Asignación y cumplimiento de actividades para funcionarios y contratistas.",
+      "icon": "calendar-days",
+      "href": "calendario/index.html",
+      "value": "18 esta semana",
+      "progress": 68
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Validar documentos de contratación",
+      "area": "Talento Humano",
+      "due": "Hoy · 4:30 p. m.",
+      "status": "Prioritario",
+      "statusClass": "status-danger"
+    },
+    {
+      "title": "Actualizar indicador de capacitación",
+      "area": "SIG",
+      "due": "05 de agosto",
+      "status": "Pendiente",
+      "statusClass": "status-warning"
+    },
+    {
+      "title": "Responder solicitud TIC #TIC-1042",
+      "area": "Mesa de Ayuda",
+      "due": "Hoy · 5:00 p. m.",
+      "status": "En proceso",
+      "statusClass": "status-info"
+    },
+    {
+      "title": "Preparar comité institucional",
+      "area": "Calendario",
+      "due": "07 de agosto",
+      "status": "Programado",
+      "statusClass": "status-neutral"
+    }
+  ]
+}

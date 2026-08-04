@@ -1,0 +1,50 @@
+{
+  "name": "Control Interno",
+  "description": "Evaluación independiente, riesgos, auditorías y mejoramiento.",
+  "processes": [
+    {
+      "name": "Plan anual de auditoría",
+      "icon": "calendar-check-2",
+      "description": "Programación, alcance y recursos.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Auditorías internas",
+      "icon": "search-check",
+      "description": "Pruebas, evidencias, observaciones y cierre.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Hallazgos",
+      "icon": "triangle-alert",
+      "description": "Clasificación, responsable y respuesta.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Planes de mejoramiento",
+      "icon": "list-checks",
+      "description": "Acciones, avances, soportes y vencimientos.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Riesgos institucionales",
+      "icon": "shield-alert",
+      "description": "Mapa, controles y seguimiento independiente.",
+      "status": "Planeado"
+    }
+  ],
+  "indicators": [
+    {
+      "label": "Procesos definidos",
+      "value": 5
+    },
+    {
+      "label": "Conexiones previstas",
+      "value": "Pendiente"
+    },
+    {
+      "label": "Estado del módulo",
+      "value": "Diseño base"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Despacho del Alcalde",
+  "description": "Agenda directiva, compromisos estratégicos y correspondencia prioritaria.",
+  "processes": [
+    {
+      "name": "Agenda del alcalde",
+      "icon": "calendar-range",
+      "description": "Eventos, reuniones y preparación documental.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Compromisos directivos",
+      "icon": "list-todo",
+      "description": "Asignación, responsables y fechas de cumplimiento.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Correspondencia prioritaria",
+      "icon": "mail-check",
+      "description": "Recepción, reparto y respuesta de alto nivel.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Consejos y comités",
+      "icon": "users",
+      "description": "Actas, decisiones y seguimiento.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Proyectos estratégicos",
+      "icon": "telescope",
+      "description": "Vista ejecutiva de iniciativas prioritarias.",
+      "status": "Planeado"
+    }
+  ],
+  "indicators": [
+    {
+      "label": "Procesos definidos",
+      "value": 5
+    },
+    {
+      "label": "Conexiones previstas",
+      "value": "Pendiente"
+    },
+    {
+      "label": "Estado del módulo",
+      "value": "Diseño base"
+    }
+  ]
+}

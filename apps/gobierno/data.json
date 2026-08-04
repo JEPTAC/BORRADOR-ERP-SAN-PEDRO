@@ -1,0 +1,56 @@
+{
+  "name": "Secretaría de Gobierno",
+  "description": "Atención ciudadana, convivencia, participación y protección de derechos.",
+  "processes": [
+    {
+      "name": "Recepción ciudadana",
+      "icon": "users-round",
+      "description": "Ingreso, clasificación y trazabilidad de ciudadanos.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Atención a víctimas",
+      "icon": "hand-heart",
+      "description": "Expedientes reservados, rutas, remisiones y seguimiento.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Seguridad y convivencia",
+      "icon": "shield",
+      "description": "Incidentes, comités y acciones territoriales.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Participación ciudadana",
+      "icon": "messages-square",
+      "description": "Organizaciones, jornadas, compromisos y convocatorias.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Inspección y espacio público",
+      "icon": "scan-line",
+      "description": "Visitas, actuaciones y procesos administrativos.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Juntas de Acción Comunal",
+      "icon": "network",
+      "description": "Registro, documentos y acompañamiento comunitario.",
+      "status": "Planeado"
+    }
+  ],
+  "indicators": [
+    {
+      "label": "Procesos definidos",
+      "value": 6
+    },
+    {
+      "label": "Conexiones previstas",
+      "value": "Pendiente"
+    },
+    {
+      "label": "Estado del módulo",
+      "value": "Diseño base"
+    }
+  ]
+}

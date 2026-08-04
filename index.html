@@ -1,0 +1,32 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Prototipo visual del ERP Municipal de San Pedro, Valle del Cauca"><title>ERP Municipal · San Pedro</title><link rel="stylesheet" href="assets/css/base.css"><link rel="stylesheet" href="assets/css/portal.css"></head>
+<body><div class="app-shell">
+<aside class="sidebar">
+  <div class="brand-block"><div class="brand-mark">SP</div><div class="brand-copy"><strong>ERP Municipal</strong><span>San Pedro · Valle</span></div></div>
+  <div class="sidebar-context"><small>Entorno</small><strong>Prototipo institucional</strong></div>
+  <nav class="sidebar-nav">
+    <div class="nav-label">Navegación</div>
+    <a class="nav-item active" href="index.html"><i data-lucide="layout-dashboard"></i><span class="nav-text">Inicio institucional</span></a>
+    <div class="nav-label">Dependencias</div>
+    <a class="nav-item" href="apps/secretaria-general/index.html"><i data-lucide="building-2"></i><span class="nav-text">Secretaría General</span><span class="nav-badge">4</span></a>
+    <a class="nav-item" href="apps/gobierno/index.html"><i data-lucide="landmark"></i><span class="nav-text">Gobierno</span></a>
+    <a class="nav-item" href="apps/hacienda/index.html"><i data-lucide="wallet-cards"></i><span class="nav-text">Hacienda</span></a>
+    <a class="nav-item" href="apps/planeacion/index.html"><i data-lucide="drafting-compass"></i><span class="nav-text">Planeación e Infraestructura</span></a>
+    <a class="nav-item" href="apps/salud-bienestar/index.html"><i data-lucide="heart-pulse"></i><span class="nav-text">Salud y Bienestar</span></a>
+    <div class="nav-label">Oficinas técnicas</div>
+    <a class="nav-item" href="apps/despacho/index.html"><i data-lucide="briefcase-business"></i><span class="nav-text">Despacho del Alcalde</span></a>
+    <a class="nav-item" href="apps/juridica/index.html"><i data-lucide="scale"></i><span class="nav-text">Jurídica</span></a>
+    <a class="nav-item" href="apps/contratacion/index.html"><i data-lucide="file-signature"></i><span class="nav-text">Contratación</span></a>
+    <a class="nav-item" href="apps/control-interno/index.html"><i data-lucide="shield-check"></i><span class="nav-text">Control Interno</span></a>
+  </nav>
+  <div class="sidebar-footer"><div class="user-mini"><div class="avatar">JP</div><div><strong>Usuario institucional</strong><span>Modo demostración</span></div></div></div>
+</aside><main class="main-area">
+<header class="topbar">
+  <div class="topbar-left"><button class="icon-btn menu-btn" data-menu-toggle aria-label="Abrir menú"><i data-lucide="menu"></i></button><div class="topbar-title"><strong>Portal institucional</strong><span data-today></span></div></div>
+  <div class="topbar-actions"><button class="icon-btn" data-theme-toggle aria-label="Cambiar tema"><i data-lucide="sun-moon"></i></button><button class="icon-btn" aria-label="Notificaciones"><i data-lucide="bell"></i><span class="notify-dot"></span></button></div>
+</header><div class="content">
+<section class="hero-panel"><div class="hero-copy"><span class="hero-kicker"><i data-lucide="sparkles"></i> Diseño inicial · Sin conexión a base de datos</span><h1>Un solo entorno para gestionar la Alcaldía.</h1><p>Portal modular, ligero y corporativo. Cada secretaría cuenta con su propio aplicativo y cada proceso conserva archivos independientes para facilitar mantenimiento y crecimiento.</p><div class="hero-actions"><a class="btn btn-primary" href="apps/secretaria-general/index.html"><i data-lucide="arrow-right"></i> Explorar Secretaría General</a><a class="btn btn-secondary" href="README.md"><i data-lucide="book-open"></i> Ver estructura</a></div></div></section>
+<section id="metrics" class="grid grid-4"></section>
+<div class="section-heading"><div><h2>Aplicaciones institucionales</h2><p>Acceso organizado por secretaría y oficina técnica.</p></div><div class="portal-search"><i data-lucide="search"></i><input id="portalSearch" placeholder="Buscar dependencia o proceso..."><div id="searchResults" class="quick-search-results hidden"></div></div></div>
+<section id="moduleGrid" class="module-grid"></section>
+<section class="portal-two-col"><div class="card"><div class="card-header"><div><h2>Modelo de organización</h2><p>Separación clara sin perder la experiencia unificada.</p></div><span class="status status-success">Arquitectura modular</span></div><div class="card-body grid grid-3"><div><div class="list-icon"><i data-lucide="folder-tree"></i></div><h3>Una carpeta por proceso</h3><p style="color:var(--muted)">Cada proceso dispone de HTML, CSS, JavaScript y JSON propios.</p></div><div><div class="list-icon"><i data-lucide="panels-top-left"></i></div><h3>Interfaz coherente</h3><p style="color:var(--muted)">Un núcleo visual común evita duplicar estilos y mantiene el ERP consistente.</p></div><div><div class="list-icon"><i data-lucide="database-zap"></i></div><h3>Preparado para integrar</h3><p style="color:var(--muted)">La capa de datos podrá reemplazarse por Supabase sin rediseñar las pantallas.</p></div></div></div><div class="card"><div class="card-header"><div><h2>Agenda próxima</h2><p>Vista institucional de demostración.</p></div><a href="apps/secretaria-general/calendario/index.html" class="btn btn-secondary btn-sm">Abrir</a></div><div class="card-body"><div id="activityList" class="list"></div></div></div></section>
+</div></main></div><script src="assets/js/icons.js"></script><script src="assets/js/shell.js"></script><script src="assets/js/portal.js"></script></body></html>

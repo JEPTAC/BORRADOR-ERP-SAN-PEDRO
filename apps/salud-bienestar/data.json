@@ -1,0 +1,56 @@
+{
+  "name": "Salud, Protección y Bienestar Social",
+  "description": "Salud pública, programas sociales y atención a población priorizada.",
+  "processes": [
+    {
+      "name": "Recepción social",
+      "icon": "user-round-check",
+      "description": "Caracterización y direccionamiento de solicitudes.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Programas sociales",
+      "icon": "hand-coins",
+      "description": "Convocatorias, beneficiarios y entregas.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Salud pública",
+      "icon": "activity",
+      "description": "Planes, jornadas, vigilancia y seguimiento.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Adulto mayor",
+      "icon": "person-standing",
+      "description": "Beneficiarios, novedades y actividades.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Discapacidad",
+      "icon": "accessibility",
+      "description": "Caracterización, apoyos y remisiones.",
+      "status": "Planeado"
+    },
+    {
+      "name": "Visitas y seguimiento",
+      "icon": "house-heart",
+      "description": "Agenda territorial, evidencias y resultados.",
+      "status": "Planeado"
+    }
+  ],
+  "indicators": [
+    {
+      "label": "Procesos definidos",
+      "value": 6
+    },
+    {
+      "label": "Conexiones previstas",
+      "value": "Pendiente"
+    },
+    {
+      "label": "Estado del módulo",
+      "value": "Diseño base"
+    }
+  ]
+}
