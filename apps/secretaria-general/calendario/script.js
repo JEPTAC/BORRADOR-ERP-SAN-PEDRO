@@ -65,6 +65,7 @@ function bindEvents(){
   document.getElementById('eventSearch').oninput=e=>setFilter('query',e.target.value);
   document.getElementById('clearFilters').onclick=clearFilters;
   document.getElementById('toggleWeekends').onclick=()=>{STATE.showWeekends=!STATE.showWeekends;persistPrefs();renderStage();ERP.toast(STATE.showWeekends?'Fines de semana visibles':'Fines de semana ocultos')};
+  bindWorkspaceNavigation();
   document.getElementById('viewSwitch').onclick=e=>{const b=e.target.closest('[data-view]');if(b)setView(b.dataset.view)};
   document.getElementById('closeDrawer').onclick=closeDrawer;
   document.getElementById('eventDrawerBackdrop').onclick=closeDrawer;
@@ -84,6 +85,33 @@ function bindEvents(){
   document.addEventListener('click',e=>{if(!e.target.closest('.popover')&&!e.target.closest('#exportMenuBtn')&&!e.target.closest('#moreMenuBtn'))hidePopovers()});
   document.addEventListener('keydown',keyboardShortcuts);
 }
+
+function bindWorkspaceNavigation(){
+  const workspace=document.getElementById('agendaWorkspace');
+  const filterBtn=document.getElementById('toggleFilterPanel');
+  const dayBtn=document.getElementById('toggleDayPanel');
+  const focusBtn=document.getElementById('focusCalendar');
+  if(!workspace||!filterBtn||!dayBtn||!focusBtn)return;
+  let layout={filters:true,details:true,focus:false};
+  try{layout={...layout,...JSON.parse(localStorage.getItem('agenda360-layout')||'{}')}}catch(_){ }
+  const apply=()=>{
+    workspace.classList.toggle('filters-collapsed',!layout.filters&&!layout.focus);
+    workspace.classList.toggle('details-collapsed',!layout.details&&!layout.focus);
+    workspace.classList.toggle('focus-mode',layout.focus);
+    filterBtn.classList.toggle('active',layout.filters&&!layout.focus);
+    dayBtn.classList.toggle('active',layout.details&&!layout.focus);
+    focusBtn.classList.toggle('active',layout.focus);
+    filterBtn.setAttribute('aria-pressed',String(layout.filters&&!layout.focus));
+    dayBtn.setAttribute('aria-pressed',String(layout.details&&!layout.focus));
+    focusBtn.setAttribute('aria-pressed',String(layout.focus));
+    localStorage.setItem('agenda360-layout',JSON.stringify(layout));
+  };
+  filterBtn.onclick=()=>{layout.focus=false;layout.filters=!layout.filters;apply()};
+  dayBtn.onclick=()=>{layout.focus=false;layout.details=!layout.details;apply()};
+  focusBtn.onclick=()=>{layout.focus=!layout.focus;apply();ERP.toast(layout.focus?'Modo enfoque activado':'Modo enfoque desactivado')};
+  apply();
+}
+
 function persistPrefs(){Agenda.setPrefs({view:STATE.view,focusDate:STATE.focusDate,office:STATE.filters.office,person:STATE.filters.person,query:STATE.filters.query,showWeekends:STATE.showWeekends})}
 function setFilter(key,value){STATE.filters[key]=value;persistPrefs();renderAll()}
 function clearFilters(){

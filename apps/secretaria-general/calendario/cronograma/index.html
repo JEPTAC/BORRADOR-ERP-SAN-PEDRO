@@ -2,7 +2,7 @@
 <title>Cronograma institucional · Agenda 360</title><link rel="stylesheet" href="styles.css"></head><body><div class="app-shell">
   <aside class="sidebar">
     <div class="brand-block"><a class="brand-mark" href="../../../../index.html">SP</a><div class="brand-copy"><strong>Agenda 360</strong><span>ERP Municipal</span></div></div>
-    <div class="sidebar-context"><small>Secretaría General</small><strong>Agenda Institucional · Diseño V07</strong></div>
+    <div class="sidebar-context"><small>Secretaría General</small><strong>Agenda Institucional · Diseño V08</strong></div>
     <nav class="sidebar-nav"><div class="nav-label">Agenda institucional</div><a class="nav-item " href="../index.html"><i data-lucide="calendar-days"></i><span class="nav-text">Centro de agenda</span></a><a class="nav-item " href="../actividades/index.html"><i data-lucide="list-checks"></i><span class="nav-text">Actividades</span></a><a class="nav-item " href="../disponibilidad/index.html"><i data-lucide="clock"></i><span class="nav-text">Disponibilidad</span></a><a class="nav-item " href="../carga-trabajo/index.html"><i data-lucide="gauge"></i><span class="nav-text">Carga de trabajo</span></a><a class="nav-item active" href="index.html"><i data-lucide="git-branch"></i><span class="nav-text">Cronograma</span></a><a class="nav-item " href="../automatizaciones/index.html"><i data-lucide="workflow"></i><span class="nav-text">Automatizaciones</span></a><a class="nav-item " href="../configuracion/index.html"><i data-lucide="settings"></i><span class="nav-text">Configuración</span></a>
       <div class="nav-label">Secretaría General</div>
       <a class="nav-item" href="../../index.html"><i data-lucide="layout-dashboard"></i><span class="nav-text">Panel general</span></a>
@@ -17,12 +17,40 @@
 <div class="page-heading"><div><h1>Cronograma institucional</h1><p>Relaciona actividades, dependencias, hitos y ruta crítica para anticipar retrasos y reprogramaciones.</p></div><div class="heading-actions"></div></div>
 <div class="calendar-subnav"><a href="../index.html"><i data-lucide="calendar"></i> Agenda</a><a class="" href="../actividades/index.html"><i data-lucide="check-square"></i> Actividades</a><a class="" href="../disponibilidad/index.html"><i data-lucide="users"></i> Disponibilidad</a><a class="" href="../carga-trabajo/index.html"><i data-lucide="gauge"></i> Carga</a><a class="active" href="../cronograma/index.html"><i data-lucide="git-branch"></i> Cronograma</a><a class="" href="../automatizaciones/index.html"><i data-lucide="workflow"></i> Reglas</a><a class="" href="../configuracion/index.html"><i data-lucide="settings"></i> Ajustes</a></div>
 
-<div class="timeline-toolbar">
-  <div class="toolbar-group"><select id="timelineOffice"><option value="">Toda la Alcaldía</option></select><select id="timelineScale"><option value="day">Días</option><option value="week" selected>Semanas</option><option value="month">Meses</option></select><input id="timelineFrom" type="date"><input id="timelineTo" type="date"></div>
-  <div class="toolbar-group"><button class="btn btn-secondary" id="criticalPath"><i data-lucide="route"></i> Ruta crítica</button><button class="btn btn-secondary" id="exportTimeline"><i data-lucide="download"></i> Exportar</button><button class="btn btn-primary" id="newMilestone"><i data-lucide="flag"></i> Nuevo hito</button></div>
-</div>
+<section class="timeline-control-center" aria-label="Controles del cronograma">
+  <div class="timeline-search-row">
+    <label class="timeline-search"><i data-lucide="search"></i><input id="timelineSearch" type="search" placeholder="Buscar actividad, responsable o dependencia"></label>
+    <div class="timeline-quick-actions">
+      <button class="btn btn-secondary btn-sm" id="timelineToday"><i data-lucide="locate-fixed"></i> Centrar en hoy</button>
+      <button class="btn btn-secondary btn-sm" id="timelineFocus"><i data-lucide="maximize-2"></i> Enfocar cronograma</button>
+    </div>
+  </div>
+  <div class="timeline-filter-row">
+    <div class="timeline-filter-group">
+      <label><span>Dependencia</span><select id="timelineOffice"><option value="">Toda la Alcaldía</option></select></label>
+      <label><span>Estado</span><select id="timelineStatus"><option value="">Todos los estados</option><option value="Programada">Programada</option><option value="En curso">En curso</option><option value="En riesgo">En riesgo</option><option value="Cumplida">Cumplida</option></select></label>
+      <label><span>Escala</span><select id="timelineScale"><option value="day">Días</option><option value="week" selected>Semanas</option><option value="month">Meses</option></select></label>
+      <label><span>Desde</span><input id="timelineFrom" type="date"></label>
+      <label><span>Hasta</span><input id="timelineTo" type="date"></label>
+    </div>
+    <div class="timeline-action-group">
+      <div class="zoom-control" aria-label="Zoom del cronograma">
+        <button class="icon-btn" id="zoomOut" title="Alejar"><i data-lucide="minus"></i></button>
+        <span id="zoomValue">100%</span>
+        <button class="icon-btn" id="zoomIn" title="Acercar"><i data-lucide="plus"></i></button>
+      </div>
+      <button class="btn btn-secondary" id="criticalPath"><i data-lucide="route"></i> Ruta crítica</button>
+      <button class="btn btn-secondary" id="exportTimeline"><i data-lucide="download"></i> Exportar</button>
+      <button class="btn btn-primary" id="newMilestone"><i data-lucide="flag"></i> Nuevo hito</button>
+    </div>
+  </div>
+</section>
 <div class="kpi-row" id="timelineKpis"></div>
-<section class="card gantt-card">
+<div class="timeline-guide">
+  <div><strong>Lectura rápida</strong><span>Las columnas de actividad y responsable permanecen visibles mientras recorres el tiempo.</span></div>
+  <div class="timeline-legend"><span><i class="legend-line today"></i>Hoy</span><span><i class="legend-box critical"></i>Crítica</span><span><i class="legend-diamond"></i>Hito</span></div>
+</div>
+<section class="card gantt-card" id="ganttCard">
   <div class="gantt-wrap"><div id="gantt" class="gantt"></div></div>
 </section>
 <div class="timeline-bottom">

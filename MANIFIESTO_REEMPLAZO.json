@@ -1,12 +1,14 @@
 {
-  "name": "Reemplazo_DESDE_RAIZ_Agenda_Institucional_360_v07",
-  "version": "v07",
-  "replace": [
-    "apps/secretaria-general/calendario"
-  ],
-  "notes": [
-    "Mejora visual y de navegabilidad del calendario",
-    "No modifica Supabase ni backend",
-    "Conserva funcionalidades existentes"
+  "name": "Reemplazo_DESDE_RAIZ_Calendario_Navegable_v08",
+  "version": "v08",
+  "base_visual": "V06 original",
+  "replace": ["apps/secretaria-general/calendario"],
+  "changed_files": [
+    "apps/secretaria-general/calendario/index.html",
+    "apps/secretaria-general/calendario/styles.css",
+    "apps/secretaria-general/calendario/script.js",
+    "apps/secretaria-general/calendario/cronograma/index.html",
+    "apps/secretaria-general/calendario/cronograma/styles.css",
+    "apps/secretaria-general/calendario/cronograma/script.js"
   ]
 }
