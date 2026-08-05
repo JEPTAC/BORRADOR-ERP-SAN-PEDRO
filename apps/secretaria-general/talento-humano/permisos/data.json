@@ -1,0 +1,285 @@
+{
+  "moduleId": "permisos",
+  "metrics": [
+    {
+      "label": "Roles configurados",
+      "value": "12",
+      "hint": "7 operativos · 5 de consulta",
+      "icon": "key"
+    },
+    {
+      "label": "Usuarios activos",
+      "value": "82",
+      "hint": "74 personas · 8 externos",
+      "icon": "users"
+    },
+    {
+      "label": "Accesos sensibles",
+      "value": "9",
+      "hint": "Revisión trimestral",
+      "icon": "shield"
+    },
+    {
+      "label": "Conflictos detectados",
+      "value": "2",
+      "hint": "Segregación de funciones",
+      "icon": "alert"
+    }
+  ],
+  "sections": [
+    {
+      "id": "roles",
+      "label": "Roles",
+      "icon": "users",
+      "description": "Perfiles funcionales, alcance y responsables.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "Administrador de Talento Humano",
+          "description": "Configura procesos y consulta expedientes administrativos.",
+          "alcance": "Toda la entidad",
+          "acciones": "Crear, revisar, aprobar",
+          "datos_sensibles": "Limitado",
+          "status": "Activo"
+        },
+        {
+          "title": "Gestor de nómina",
+          "description": "Gestiona novedades, preliquidación y conciliaciones.",
+          "alcance": "Nómina",
+          "acciones": "Crear, validar, exportar",
+          "datos_sensibles": "Salarial",
+          "status": "Activo"
+        },
+        {
+          "title": "Jefe inmediato",
+          "description": "Consulta su equipo y decide solicitudes y evaluaciones.",
+          "alcance": "Dependencia asignada",
+          "acciones": "Aprobar, devolver, evaluar",
+          "datos_sensibles": "No",
+          "status": "Activo"
+        },
+        {
+          "title": "Auditor autorizado",
+          "description": "Consulta trazabilidad sin alterar información operativa.",
+          "alcance": "Según auditoría",
+          "acciones": "Solo lectura y exportación",
+          "datos_sensibles": "Con autorización",
+          "status": "Activo"
+        }
+      ]
+    },
+    {
+      "id": "matriz",
+      "label": "Matriz de permisos",
+      "icon": "grid",
+      "description": "Acciones permitidas por módulo y rol.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "module",
+          "label": "Módulo",
+          "type": "primary"
+        },
+        {
+          "key": "role",
+          "label": "Rol"
+        },
+        {
+          "key": "view",
+          "label": "Consultar"
+        },
+        {
+          "key": "create",
+          "label": "Crear"
+        },
+        {
+          "key": "approve",
+          "label": "Aprobar"
+        },
+        {
+          "key": "export",
+          "label": "Exportar"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "module": "Expediente laboral",
+          "role": "Administrador TH",
+          "view": "Todos",
+          "create": "Sí",
+          "approve": "Sí",
+          "export": "Controlado",
+          "status": "Activo"
+        },
+        {
+          "module": "Nómina pública",
+          "role": "Gestor de nómina",
+          "view": "Todos los registros",
+          "create": "Sí",
+          "approve": "No",
+          "export": "Sí",
+          "status": "Activo"
+        },
+        {
+          "module": "Desempeño",
+          "role": "Jefe inmediato",
+          "view": "Equipo asignado",
+          "create": "Sí",
+          "approve": "Sí",
+          "export": "No",
+          "status": "Activo"
+        },
+        {
+          "module": "SG-SST",
+          "role": "Responsable SST",
+          "view": "Información autorizada",
+          "create": "Sí",
+          "approve": "Sí",
+          "export": "Controlado",
+          "status": "Activo"
+        }
+      ]
+    },
+    {
+      "id": "segregacion",
+      "label": "Segregación de funciones",
+      "icon": "shield-alert",
+      "description": "Conflictos y controles compensatorios.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "conflict",
+          "label": "Conflicto",
+          "type": "primary"
+        },
+        {
+          "key": "user",
+          "label": "Usuario"
+        },
+        {
+          "key": "roles",
+          "label": "Roles relacionados"
+        },
+        {
+          "key": "risk",
+          "label": "Riesgo",
+          "type": "priority"
+        },
+        {
+          "key": "control",
+          "label": "Control requerido"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "conflict": "Crear y aprobar novedad de nómina",
+          "subtitle": "Regla SOD-004",
+          "user": "Usuario de prueba",
+          "roles": "Gestor nómina + aprobador",
+          "risk": "Crítica",
+          "control": "Retirar aprobación",
+          "status": "Pendiente"
+        },
+        {
+          "conflict": "Administrar y auditar expedientes",
+          "subtitle": "Regla SOD-009",
+          "user": "Coordinador TH",
+          "roles": "Administrador + auditor",
+          "risk": "Alta",
+          "control": "Auditor externo",
+          "status": "En proceso"
+        }
+      ]
+    },
+    {
+      "id": "revisiones",
+      "label": "Revisiones de acceso",
+      "icon": "check-circle",
+      "description": "Recertificación periódica de permisos.",
+      "layout": "timeline",
+      "rows": [
+        {
+          "title": "Revisión trimestral · Secretaría General",
+          "description": "26 accesos confirmados y 2 revocados por cambio de funciones.",
+          "date": "31 jul 2026",
+          "status": "Completado"
+        },
+        {
+          "title": "Acceso temporal a expediente",
+          "description": "Autorización para auditoría con vencimiento automático.",
+          "date": "05–12 ago 2026",
+          "status": "Activo"
+        },
+        {
+          "title": "Revisión de usuarios retirados",
+          "description": "Validación cruzada con procesos de retiro y mesa TIC.",
+          "date": "30 jun 2026",
+          "status": "Completado"
+        }
+      ]
+    }
+  ],
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
+  ],
+  "form": {
+    "title": "Crear rol o permiso",
+    "sectionId": "roles",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Nombre del rol",
+        "required": true
+      },
+      {
+        "key": "description",
+        "label": "Descripción",
+        "type": "textarea",
+        "full": true
+      },
+      {
+        "key": "alcance",
+        "label": "Alcance",
+        "required": true
+      },
+      {
+        "key": "acciones",
+        "label": "Acciones permitidas",
+        "required": true
+      },
+      {
+        "key": "datos_sensibles",
+        "label": "Datos sensibles",
+        "type": "select",
+        "options": [
+          "No",
+          "Limitado",
+          "Con autorización",
+          "Sí"
+        ]
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Activo",
+          "Pendiente",
+          "Vencido"
+        ]
+      }
+    ]
+  }
+}

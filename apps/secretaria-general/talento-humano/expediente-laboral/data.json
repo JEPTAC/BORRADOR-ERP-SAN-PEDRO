@@ -1,0 +1,270 @@
+{
+  "moduleId": "expediente-laboral",
+  "metrics": [
+    {
+      "label": "Expedientes activos",
+      "value": "74",
+      "hint": "48 planta · 26 contratistas",
+      "icon": "folder"
+    },
+    {
+      "label": "Completitud promedio",
+      "value": "92%",
+      "hint": "Meta institucional 98%",
+      "icon": "check"
+    },
+    {
+      "label": "Documentos pendientes",
+      "value": "18",
+      "hint": "6 vencen este mes",
+      "icon": "file"
+    },
+    {
+      "label": "Accesos sensibles",
+      "value": "4",
+      "hint": "Revisiones registradas",
+      "icon": "shield"
+    }
+  ],
+  "sections": [
+    {
+      "id": "personas",
+      "label": "Expedientes",
+      "icon": "users",
+      "description": "Ficha única, completitud, reserva y responsable.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "name",
+          "label": "Persona",
+          "type": "primary"
+        },
+        {
+          "key": "document",
+          "label": "Documento"
+        },
+        {
+          "key": "employment",
+          "label": "Vinculación"
+        },
+        {
+          "key": "office",
+          "label": "Dependencia"
+        },
+        {
+          "key": "completion",
+          "label": "Completitud",
+          "type": "progress"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "name": "Ana María Torres",
+          "subtitle": "Profesional universitario 219-02",
+          "document": "CC 1.111.222.333",
+          "employment": "Carrera administrativa",
+          "office": "Secretaría General",
+          "completion": 96,
+          "status": "Activo"
+        },
+        {
+          "name": "Luis Fernando Ruiz",
+          "subtitle": "Técnico administrativo 367-01",
+          "document": "CC 94.512.340",
+          "employment": "Provisional",
+          "office": "Gobierno",
+          "completion": 84,
+          "status": "En proceso"
+        },
+        {
+          "name": "Sofía Martínez",
+          "subtitle": "Contratista de apoyo",
+          "document": "CC 1.006.450.219",
+          "employment": "Prestación de servicios",
+          "office": "Planeación",
+          "completion": 91,
+          "status": "Activo"
+        }
+      ]
+    },
+    {
+      "id": "documentos",
+      "label": "Control documental",
+      "icon": "file",
+      "description": "Documentos, versiones, vigencias y validaciones.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "person",
+          "label": "Persona",
+          "type": "primary"
+        },
+        {
+          "key": "document",
+          "label": "Documento"
+        },
+        {
+          "key": "version",
+          "label": "Versión"
+        },
+        {
+          "key": "expires",
+          "label": "Vence",
+          "type": "date"
+        },
+        {
+          "key": "validator",
+          "label": "Validador"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "person": "Ana María Torres",
+          "document": "Acta de posesión",
+          "version": "Definitiva",
+          "expires": "",
+          "validator": "Talento Humano",
+          "status": "Completado"
+        },
+        {
+          "person": "Luis Fernando Ruiz",
+          "document": "Certificado de experiencia",
+          "version": "2",
+          "expires": "2026-08-20",
+          "validator": "Gestor TH",
+          "status": "Pendiente"
+        },
+        {
+          "person": "Sofía Martínez",
+          "document": "Afiliación ARL",
+          "version": "2026",
+          "expires": "2026-12-31",
+          "validator": "SG-SST",
+          "status": "Activo"
+        }
+      ]
+    },
+    {
+      "id": "historial",
+      "label": "Historial laboral",
+      "icon": "history",
+      "description": "Movimientos y actuaciones asociados al expediente.",
+      "layout": "timeline",
+      "rows": [
+        {
+          "title": "Encargo registrado · Ana María Torres",
+          "description": "Encargo como Profesional Especializado por vacancia temporal.",
+          "date": "04 ago 2026",
+          "status": "Completado"
+        },
+        {
+          "title": "Documento devuelto · Luis Fernando Ruiz",
+          "description": "Certificado de experiencia requiere aclarar funciones.",
+          "date": "03 ago 2026",
+          "status": "Pendiente"
+        },
+        {
+          "title": "Consulta de expediente reservado",
+          "description": "Acceso realizado por el responsable autorizado de Talento Humano.",
+          "date": "02 ago 2026",
+          "status": "Completado"
+        }
+      ]
+    },
+    {
+      "id": "reservas",
+      "label": "Confidencialidad",
+      "icon": "lock",
+      "description": "Clasificación y registro de accesos sensibles.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "Información salarial",
+          "description": "Acceso exclusivo para nómina, Talento Humano y auditor autorizado.",
+          "nivel": "Reservado",
+          "retención": "Expediente laboral",
+          "auditoría": "Obligatoria",
+          "status": "Activo"
+        },
+        {
+          "title": "Información SG-SST",
+          "description": "Solo conceptos de aptitud, restricciones y seguimientos autorizados.",
+          "nivel": "Sensible",
+          "retención": "Según TRD",
+          "auditoría": "Obligatoria",
+          "status": "Activo"
+        },
+        {
+          "title": "Evaluación de desempeño",
+          "description": "Visible por evaluado, evaluador y administradores EDL.",
+          "nivel": "Restringido",
+          "retención": "Historia laboral",
+          "auditoría": "Obligatoria",
+          "status": "Activo"
+        }
+      ]
+    }
+  ],
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
+  ],
+  "form": {
+    "title": "Crear expediente",
+    "sectionId": "personas",
+    "fields": [
+      {
+        "key": "name",
+        "label": "Nombre completo",
+        "required": true
+      },
+      {
+        "key": "document",
+        "label": "Documento",
+        "required": true
+      },
+      {
+        "key": "employment",
+        "label": "Vinculación",
+        "type": "select",
+        "options": [
+          "Carrera administrativa",
+          "Libre nombramiento",
+          "Provisional",
+          "Prestación de servicios"
+        ]
+      },
+      {
+        "key": "office",
+        "label": "Dependencia",
+        "required": true
+      },
+      {
+        "key": "completion",
+        "label": "Completitud inicial",
+        "type": "number"
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Activo",
+          "En proceso",
+          "Pendiente"
+        ]
+      }
+    ]
+  }
+}

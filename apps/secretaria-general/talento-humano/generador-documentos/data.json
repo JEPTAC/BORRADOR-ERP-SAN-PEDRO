@@ -1,0 +1,271 @@
+{
+  "moduleId": "generador-documentos",
+  "metrics": [
+    {
+      "label": "Plantillas vigentes",
+      "value": "18",
+      "hint": "3 requieren revisión jurídica",
+      "icon": "file-text"
+    },
+    {
+      "label": "Generados este mes",
+      "value": "46",
+      "hint": "32 firmados",
+      "icon": "file"
+    },
+    {
+      "label": "Pendientes de firma",
+      "value": "7",
+      "hint": "2 vencen hoy",
+      "icon": "pen-tool"
+    },
+    {
+      "label": "Tiempo ahorrado",
+      "value": "31 h",
+      "hint": "Estimación mensual",
+      "icon": "clock"
+    }
+  ],
+  "sections": [
+    {
+      "id": "plantillas",
+      "label": "Plantillas",
+      "icon": "layout-template",
+      "description": "Formatos institucionales versionados y parametrizables.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "Resolución de vacaciones",
+          "description": "Genera proyecto con fechas, saldo, servidor, empleo y fundamento.",
+          "código": "TH-PLA-001",
+          "versión": "4.2",
+          "aprobador": "Jurídica / Secretaría General",
+          "status": "Activo"
+        },
+        {
+          "title": "Certificado laboral con funciones",
+          "description": "Combina empleo, manual vigente, vinculación y tiempo de servicio.",
+          "código": "TH-PLA-006",
+          "versión": "3.0",
+          "aprobador": "Talento Humano",
+          "status": "Activo"
+        },
+        {
+          "title": "Acta de posesión",
+          "description": "Datos del nombramiento, juramento, documentos y empleo.",
+          "código": "TH-PLA-009",
+          "versión": "2.4",
+          "aprobador": "Secretaría General",
+          "status": "Activo"
+        },
+        {
+          "title": "Acta de entrega del cargo",
+          "description": "Inventario, asuntos pendientes, archivos, accesos y compromisos.",
+          "código": "TH-PLA-014",
+          "versión": "1.6",
+          "aprobador": "Jefe inmediato",
+          "status": "Activo"
+        }
+      ]
+    },
+    {
+      "id": "generados",
+      "label": "Documentos generados",
+      "icon": "files",
+      "description": "Control de elaboración, revisión, firma y notificación.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "code",
+          "label": "Radicado",
+          "type": "primary"
+        },
+        {
+          "key": "document",
+          "label": "Documento"
+        },
+        {
+          "key": "person",
+          "label": "Persona"
+        },
+        {
+          "key": "created",
+          "label": "Generado",
+          "type": "date"
+        },
+        {
+          "key": "owner",
+          "label": "Responsable"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "code": "DOC-2026-0046",
+          "subtitle": "Versión 1",
+          "document": "Resolución de vacaciones",
+          "person": "Ana María Torres",
+          "created": "2026-08-04",
+          "owner": "María López",
+          "status": "Pendiente"
+        },
+        {
+          "code": "DOC-2026-0045",
+          "subtitle": "Firma completada",
+          "document": "Certificado laboral",
+          "person": "Luis Fernando Ruiz",
+          "created": "2026-08-04",
+          "owner": "Sistema",
+          "status": "Completado"
+        },
+        {
+          "code": "DOC-2026-0043",
+          "subtitle": "Devuelto con observación",
+          "document": "Acta de posesión",
+          "person": "Camila Valencia",
+          "created": "2026-08-01",
+          "owner": "Secretaría General",
+          "status": "En proceso"
+        }
+      ]
+    },
+    {
+      "id": "versiones",
+      "label": "Versiones y vigencia",
+      "icon": "git-branch",
+      "description": "Historial de cambios y bloqueo de formatos obsoletos.",
+      "layout": "timeline",
+      "rows": [
+        {
+          "title": "Resolución de vacaciones · versión 4.2",
+          "description": "Se actualizó fundamento normativo y bloque de notificación.",
+          "date": "01 jul 2026",
+          "status": "Activo"
+        },
+        {
+          "title": "Certificado laboral · versión 3.0",
+          "description": "Se incorporó validación automática del manual de funciones vigente.",
+          "date": "18 jun 2026",
+          "status": "Activo"
+        },
+        {
+          "title": "Formato de permiso · versión 1.7",
+          "description": "Versión retirada; no puede utilizarse en nuevas actuaciones.",
+          "date": "31 may 2026",
+          "status": "Vencido"
+        }
+      ]
+    },
+    {
+      "id": "firmas",
+      "label": "Firma y notificación",
+      "icon": "pen-tool",
+      "description": "Rutas de firma, constancia de envío y aceptación.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "document",
+          "label": "Documento",
+          "type": "primary"
+        },
+        {
+          "key": "signer",
+          "label": "Firmante"
+        },
+        {
+          "key": "method",
+          "label": "Método"
+        },
+        {
+          "key": "due",
+          "label": "Plazo",
+          "type": "date"
+        },
+        {
+          "key": "notification",
+          "label": "Notificación"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "document": "Resolución de vacaciones 102-2026",
+          "signer": "Secretario General",
+          "method": "Firma electrónica",
+          "due": "2026-08-05",
+          "notification": "Pendiente",
+          "status": "Pendiente"
+        },
+        {
+          "document": "Certificado laboral DOC-0045",
+          "signer": "Coordinador TH",
+          "method": "Firma mecánica autorizada",
+          "due": "2026-08-04",
+          "notification": "Correo institucional",
+          "status": "Completado"
+        }
+      ]
+    }
+  ],
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
+  ],
+  "form": {
+    "title": "Generar documento",
+    "sectionId": "generados",
+    "fields": [
+      {
+        "key": "code",
+        "label": "Código",
+        "required": true
+      },
+      {
+        "key": "document",
+        "label": "Plantilla",
+        "type": "select",
+        "options": [
+          "Resolución de vacaciones",
+          "Certificado laboral",
+          "Acta de posesión",
+          "Acta de entrega del cargo"
+        ]
+      },
+      {
+        "key": "person",
+        "label": "Persona",
+        "required": true
+      },
+      {
+        "key": "created",
+        "label": "Fecha",
+        "type": "date",
+        "required": true
+      },
+      {
+        "key": "owner",
+        "label": "Responsable",
+        "required": true
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Pendiente",
+          "En proceso",
+          "Completado"
+        ]
+      }
+    ]
+  }
+}

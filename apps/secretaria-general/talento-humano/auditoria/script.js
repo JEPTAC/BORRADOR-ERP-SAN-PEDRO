@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>HR.init({init:()=>HROps.init()}));

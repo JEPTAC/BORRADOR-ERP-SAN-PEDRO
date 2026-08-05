@@ -1,0 +1,161 @@
+{
+  "metrics": [
+    {
+      "label": "Pendientes totales",
+      "value": "27",
+      "hint": "9 asignados a mí",
+      "icon": "inbox"
+    },
+    {
+      "label": "Vencen hoy",
+      "value": "6",
+      "hint": "2 críticos",
+      "icon": "alarm-clock"
+    },
+    {
+      "label": "Fuera de SLA",
+      "value": "3",
+      "hint": "Escalamiento activo",
+      "icon": "alert"
+    },
+    {
+      "label": "Cumplimiento semanal",
+      "value": "94%",
+      "hint": "112 actuaciones cerradas",
+      "icon": "check"
+    }
+  ],
+  "queue": [
+    {
+      "id": "TH-2026-0221",
+      "type": "Vacaciones",
+      "person": "Ana María Torres",
+      "office": "Secretaría General",
+      "step": "Aprobación jefe inmediato",
+      "owner": "Juan Pérez",
+      "due": "Hoy · 11:30",
+      "priority": "Alta",
+      "status": "Pendiente"
+    },
+    {
+      "id": "TH-2026-0218",
+      "type": "Certificado con funciones",
+      "person": "Sofía Martínez",
+      "office": "Planeación",
+      "step": "Elaboración documento",
+      "owner": "María López",
+      "due": "Hoy · 15:00",
+      "priority": "Normal",
+      "status": "En proceso"
+    },
+    {
+      "id": "EDL-2026-0042",
+      "type": "Evaluación periodo de prueba",
+      "person": "Camila Valencia",
+      "office": "Salud",
+      "step": "Calificación definitiva",
+      "owner": "Jefe Salud",
+      "due": "Hoy",
+      "priority": "Crítica",
+      "status": "Pendiente"
+    },
+    {
+      "id": "NOM-2026-0081",
+      "type": "Novedad de encargo",
+      "person": "Luis Fernando Ruiz",
+      "office": "Gobierno",
+      "step": "Validación de nómina",
+      "owner": "Gestor Nómina",
+      "due": "06 ago",
+      "priority": "Alta",
+      "status": "Devuelto"
+    },
+    {
+      "id": "RET-2026-0012",
+      "type": "Retiro",
+      "person": "Andrés Cárdenas",
+      "office": "Hacienda",
+      "step": "Paz y salvo TIC",
+      "owner": "Mesa TIC",
+      "due": "09 ago",
+      "priority": "Normal",
+      "status": "En proceso"
+    },
+    {
+      "id": "SIG-2026-0106",
+      "type": "Actualización SIGEP",
+      "person": "6 servidores",
+      "office": "Varias",
+      "step": "Corrección de diferencias",
+      "owner": "Gestor SIGEP",
+      "due": "12 ago",
+      "priority": "Normal",
+      "status": "En proceso"
+    }
+  ],
+  "quick": [
+    {
+      "title": "Radicar solicitud",
+      "detail": "Vacaciones, permiso, certificado o novedad",
+      "icon": "plus"
+    },
+    {
+      "title": "Generar documento",
+      "detail": "Actos y certificados institucionales",
+      "icon": "file-text"
+    },
+    {
+      "title": "Abrir expediente",
+      "detail": "Consulta consolidada y reservada",
+      "icon": "folder"
+    },
+    {
+      "title": "Conciliar SIGEP",
+      "detail": "Diferencias y constancias oficiales",
+      "icon": "refresh"
+    }
+  ],
+  "alerts": [
+    {
+      "title": "Evaluación de periodo de prueba vence hoy",
+      "detail": "Camila Valencia · responsable Jefe Salud",
+      "tone": "danger"
+    },
+    {
+      "title": "Tres flujos fuera del tiempo objetivo",
+      "detail": "Vacaciones, nómina y retiro",
+      "tone": "warning"
+    },
+    {
+      "title": "Dos documentos fueron devueltos",
+      "detail": "Requieren corrección por Talento Humano",
+      "tone": "warning"
+    }
+  ],
+  "workload": [
+    {
+      "name": "María López",
+      "role": "Gestor TH",
+      "open": 7,
+      "capacity": 78
+    },
+    {
+      "name": "Carlos Méndez",
+      "role": "Nómina",
+      "open": 5,
+      "capacity": 63
+    },
+    {
+      "name": "Laura Gómez",
+      "role": "SG-SST",
+      "open": 4,
+      "capacity": 52
+    },
+    {
+      "name": "Juan Pérez",
+      "role": "Coordinación",
+      "open": 9,
+      "capacity": 91
+    }
+  ]
+}

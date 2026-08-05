@@ -1,0 +1,268 @@
+{
+  "moduleId": "auditoria",
+  "metrics": [
+    {
+      "label": "Eventos hoy",
+      "value": "1.284",
+      "hint": "Acciones registradas",
+      "icon": "history"
+    },
+    {
+      "label": "Eventos sensibles",
+      "value": "19",
+      "hint": "Nómina, expedientes y permisos",
+      "icon": "shield"
+    },
+    {
+      "label": "Alertas activas",
+      "value": "3",
+      "hint": "Descarga y cambios masivos",
+      "icon": "alert"
+    },
+    {
+      "label": "Integridad",
+      "value": "100%",
+      "hint": "Sin eventos eliminados",
+      "icon": "check"
+    }
+  ],
+  "sections": [
+    {
+      "id": "eventos",
+      "label": "Registro de eventos",
+      "icon": "list",
+      "description": "Trazabilidad de consultas y modificaciones.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "time",
+          "label": "Fecha y hora",
+          "type": "primary"
+        },
+        {
+          "key": "user",
+          "label": "Usuario"
+        },
+        {
+          "key": "module",
+          "label": "Módulo"
+        },
+        {
+          "key": "action",
+          "label": "Acción"
+        },
+        {
+          "key": "record",
+          "label": "Registro"
+        },
+        {
+          "key": "device",
+          "label": "Origen"
+        },
+        {
+          "key": "status",
+          "label": "Resultado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "time": "05 ago 2026 · 09:42",
+          "subtitle": "EVT-88421",
+          "user": "María López",
+          "module": "Expediente laboral",
+          "action": "Actualizó documento",
+          "record": "TH-PER-0012",
+          "device": "10.10.4.18 · Chrome",
+          "status": "Completado"
+        },
+        {
+          "time": "05 ago 2026 · 09:36",
+          "subtitle": "EVT-88420",
+          "user": "Carlos Méndez",
+          "module": "Nómina",
+          "action": "Exportó novedades",
+          "record": "Periodo 2026-08",
+          "device": "10.10.3.22 · Edge",
+          "status": "Completado"
+        },
+        {
+          "time": "05 ago 2026 · 09:20",
+          "subtitle": "EVT-88418",
+          "user": "Usuario temporal",
+          "module": "Permisos",
+          "action": "Intento de acceso",
+          "record": "Rol nómina",
+          "device": "190.24.18.3 · Chrome",
+          "status": "Bloqueado"
+        }
+      ]
+    },
+    {
+      "id": "cambios",
+      "label": "Cambios antes / después",
+      "icon": "git-compare",
+      "description": "Detalle de campos modificados y motivo.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "event",
+          "label": "Evento",
+          "type": "primary"
+        },
+        {
+          "key": "field",
+          "label": "Campo"
+        },
+        {
+          "key": "before",
+          "label": "Valor anterior"
+        },
+        {
+          "key": "after",
+          "label": "Valor nuevo"
+        },
+        {
+          "key": "user",
+          "label": "Usuario"
+        },
+        {
+          "key": "reason",
+          "label": "Motivo"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "event": "EVT-88421",
+          "subtitle": "Expediente TH-PER-0012",
+          "field": "Estado documento",
+          "before": "Pendiente",
+          "after": "Validado",
+          "user": "María López",
+          "reason": "Soporte verificado",
+          "status": "Completado"
+        },
+        {
+          "event": "EVT-88392",
+          "subtitle": "Empleo 219-02",
+          "field": "Estado de provisión",
+          "before": "Vacante",
+          "after": "Encargo",
+          "user": "Gestor planta",
+          "reason": "Resolución 098-2026",
+          "status": "Completado"
+        }
+      ]
+    },
+    {
+      "id": "alertas",
+      "label": "Alertas de seguridad",
+      "icon": "shield-alert",
+      "description": "Comportamientos que requieren revisión.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "Descarga masiva de expedientes",
+          "description": "Un usuario exportó 48 registros en un periodo corto.",
+          "usuario": "Auditor autorizado",
+          "fecha": "04 ago 2026",
+          "tratamiento": "Verificar alcance de auditoría",
+          "status": "En proceso"
+        },
+        {
+          "title": "Intentos de acceso bloqueados",
+          "description": "Tres intentos a información salarial fuera del rol asignado.",
+          "usuario": "Usuario temporal",
+          "fecha": "05 ago 2026",
+          "tratamiento": "Revisar permisos",
+          "status": "Pendiente"
+        },
+        {
+          "title": "Cambio masivo de estado",
+          "description": "Actualización de 18 novedades de nómina mediante importación.",
+          "usuario": "Gestor nómina",
+          "fecha": "01 ago 2026",
+          "tratamiento": "Validado con archivo fuente",
+          "status": "Completado"
+        }
+      ]
+    },
+    {
+      "id": "retencion",
+      "label": "Retención y evidencias",
+      "icon": "archive",
+      "description": "Políticas de conservación y exportación probatoria.",
+      "layout": "timeline",
+      "rows": [
+        {
+          "title": "Cierre de bitácora julio 2026",
+          "description": "Archivo de eventos firmado digitalmente y almacenado en repositorio institucional.",
+          "date": "01 ago 2026",
+          "status": "Completado"
+        },
+        {
+          "title": "Prueba de restauración",
+          "description": "Se verificó consulta de eventos y diferencias del trimestre anterior.",
+          "date": "15 jul 2026",
+          "status": "Completado"
+        },
+        {
+          "title": "Revisión política de retención",
+          "description": "Pendiente armonizar con las tablas de retención documental.",
+          "date": "30 sep 2026",
+          "status": "Pendiente"
+        }
+      ]
+    }
+  ],
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
+  ],
+  "form": {
+    "title": "Registrar observación de auditoría",
+    "sectionId": "alertas",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Alerta u observación",
+        "required": true
+      },
+      {
+        "key": "description",
+        "label": "Descripción",
+        "type": "textarea",
+        "full": true
+      },
+      {
+        "key": "usuario",
+        "label": "Usuario relacionado"
+      },
+      {
+        "key": "fecha",
+        "label": "Fecha",
+        "type": "date"
+      },
+      {
+        "key": "tratamiento",
+        "label": "Tratamiento"
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Pendiente",
+          "En proceso",
+          "Completado"
+        ]
+      }
+    ]
+  }
+}

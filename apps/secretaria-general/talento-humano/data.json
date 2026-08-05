@@ -3,38 +3,100 @@
     {
       "label": "Personas activas",
       "value": "74",
-      "hint": "48 planta · 26 contratistas · 52 empleos",
+      "hint": "48 planta · 26 contratistas",
       "icon": "users",
       "tone": "success",
       "delta": "+3 este trimestre"
     },
     {
-      "label": "Solicitudes pendientes",
-      "value": "12",
-      "hint": "Vacaciones, permisos y certificados",
-      "icon": "clipboard-list",
+      "label": "Pendientes operativos",
+      "value": "27",
+      "hint": "6 vencen hoy",
+      "icon": "inbox",
       "tone": "warning",
-      "delta": "4 vencen hoy",
-      "deltaTone": "down"
+      "delta": "9 asignados a mí"
     },
     {
       "label": "Expedientes completos",
-      "value": "91%",
-      "hint": "7 personas requieren soportes",
-      "icon": "folder-check",
-      "tone": "",
-      "delta": "+6 puntos desde junio"
+      "value": "92%",
+      "hint": "Meta institucional 98%",
+      "icon": "folder",
+      "tone": "success",
+      "delta": "+2 puntos"
     },
     {
-      "label": "Clima institucional",
-      "value": "82%",
-      "hint": "Última encuesta de bienestar",
-      "icon": "heart",
+      "label": "Cumplimiento semanal",
+      "value": "94%",
+      "hint": "112 actuaciones cerradas",
+      "icon": "check",
       "tone": "success",
-      "delta": "+4 puntos"
+      "delta": "+4%"
     }
   ],
   "modules": [
+    {
+      "id": "centro-operaciones",
+      "name": "Centro de Operaciones",
+      "icon": "layout-dashboard",
+      "href": "centro-operaciones/index.html",
+      "group": "Operación y control",
+      "description": "Bandeja única de tareas, solicitudes, aprobaciones, alertas y vencimientos.",
+      "count": "27 pendientes"
+    },
+    {
+      "id": "expediente-laboral",
+      "name": "Expediente laboral electrónico",
+      "icon": "folder",
+      "href": "expediente-laboral/index.html",
+      "group": "Administración",
+      "description": "Historia laboral consolidada, documentos, actuaciones, reserva y control de acceso.",
+      "count": "92% completo"
+    },
+    {
+      "id": "generador-documentos",
+      "name": "Generador de actos",
+      "icon": "file-text",
+      "href": "generador-documentos/index.html",
+      "group": "Administración",
+      "description": "Plantillas, actos, certificados, firma, notificación y archivo automático.",
+      "count": "18 plantillas"
+    },
+    {
+      "id": "vencimientos",
+      "name": "Vencimientos y obligaciones",
+      "icon": "alarm-clock",
+      "href": "vencimientos/index.html",
+      "group": "Tiempo y pagos",
+      "description": "Calendario legal, laboral, contractual, SIGEP, EDL y SG-SST con escalamiento.",
+      "count": "6 vencen hoy"
+    },
+    {
+      "id": "integraciones-oficiales",
+      "name": "Integraciones oficiales",
+      "icon": "plug",
+      "href": "integraciones-oficiales/index.html",
+      "group": "Operación y control",
+      "description": "Conciliación y paquetes para SIGEP II, SIMO/OPEC, EDL, SG-SST y nómina.",
+      "count": "21 diferencias"
+    },
+    {
+      "id": "permisos",
+      "name": "Roles y permisos",
+      "icon": "key",
+      "href": "permisos/index.html",
+      "group": "Operación y control",
+      "description": "Acceso por rol, dependencia, registro, acción y confidencialidad.",
+      "count": "12 roles"
+    },
+    {
+      "id": "auditoria",
+      "name": "Auditoría del sistema",
+      "icon": "history",
+      "href": "auditoria/index.html",
+      "group": "Operación y control",
+      "description": "Bitácora inalterable, cambios antes/después, accesos sensibles y alertas.",
+      "count": "1.284 eventos"
+    },
     {
       "id": "mi-portal",
       "name": "Mi portal",

@@ -2,106 +2,133 @@
   "metrics": [
     {
       "label": "Flujos activos",
-      "value": "9",
-      "hint": "Solicitudes configuradas",
+      "value": "14",
+      "hint": "8 públicos · 6 administrativos",
       "icon": "workflow"
     },
     {
       "label": "Aprobaciones hoy",
       "value": "16",
       "hint": "12 completadas",
-      "icon": "check",
-      "tone": "success"
+      "icon": "check"
     },
     {
-      "label": "Fuera de tiempo",
+      "label": "Fuera de SLA",
       "value": "3",
       "hint": "Escalamiento requerido",
-      "icon": "alert",
-      "tone": "danger"
+      "icon": "alert"
     },
     {
       "label": "Tiempo promedio",
-      "value": "1.8 días",
+      "value": "1,8 días",
       "hint": "Solicitud a decisión",
-      "icon": "chart"
+      "icon": "clock"
     }
   ],
   "flows": [
     {
+      "id": "FL-001",
       "name": "Solicitud de vacaciones",
       "owner": "Talento Humano",
-      "requests": 38,
       "sla": "3 días",
+      "requests": 38,
       "status": "Activo",
       "steps": [
         "Funcionario",
         "Jefe inmediato",
         "Talento Humano",
         "Secretaría General"
+      ],
+      "rules": [
+        "Validar saldo",
+        "Evitar cruce con vacaciones del equipo",
+        "Generar resolución"
       ]
     },
     {
-      "name": "Permiso remunerado",
+      "id": "FL-004",
+      "name": "Situación administrativa",
       "owner": "Talento Humano",
-      "requests": 24,
-      "sla": "2 días",
+      "sla": "5 días",
+      "requests": 12,
       "status": "Activo",
       "steps": [
         "Funcionario",
         "Jefe inmediato",
-        "Talento Humano"
-      ]
-    },
-    {
-      "name": "Horas extra",
-      "owner": "Talento Humano",
-      "requests": 12,
-      "sla": "4 días",
-      "status": "Activo",
-      "steps": [
-        "Líder",
-        "Secretario",
         "Talento Humano",
-        "Hacienda"
+        "Jurídica",
+        "Ordenador"
+      ],
+      "rules": [
+        "Validar soporte",
+        "Determinar afectación de nómina",
+        "Generar acto"
       ]
     },
     {
-      "name": "Certificado laboral",
-      "owner": "Talento Humano",
-      "requests": 31,
-      "sla": "1 día",
+      "id": "FL-009",
+      "name": "Novedad de nómina",
+      "owner": "Nómina",
+      "sla": "2 días",
+      "requests": 54,
       "status": "Activo",
       "steps": [
-        "Funcionario",
-        "Talento Humano"
+        "Dependencia",
+        "Gestor nómina",
+        "Revisor",
+        "Cierre"
+      ],
+      "rules": [
+        "Segregación crear/aprobar",
+        "Fecha de corte",
+        "Conciliación presupuestal"
       ]
     }
   ],
   "inbox": [
     {
-      "id": "SOL-881",
+      "id": "TH-2026-0221",
       "type": "Vacaciones",
       "person": "Ana María Torres",
       "step": "Jefe inmediato",
-      "age": "6 horas",
+      "age": "4 horas",
+      "priority": "Alta",
       "status": "Pendiente"
     },
     {
-      "id": "SOL-882",
-      "type": "Permiso",
+      "id": "NOM-2026-0081",
+      "type": "Novedad de encargo",
       "person": "Luis Fernando Ruiz",
-      "step": "Talento Humano",
+      "step": "Validación nómina",
       "age": "1 día",
-      "status": "Pendiente"
+      "priority": "Alta",
+      "status": "Devuelto"
     },
     {
-      "id": "SOL-883",
-      "type": "Horas extra",
-      "person": "Equipo Gobierno",
-      "step": "Secretario",
-      "age": "3 días",
-      "status": "Vencida"
+      "id": "RET-2026-0012",
+      "type": "Retiro",
+      "person": "Andrés Cárdenas",
+      "step": "Paz y salvo TIC",
+      "age": "2 días",
+      "priority": "Normal",
+      "status": "En proceso"
+    }
+  ],
+  "rules": [
+    {
+      "title": "Escalamiento automático",
+      "description": "Escalar al suplente cuando el aprobador no actúe dentro del 80% del SLA.",
+      "status": "Activo"
+    },
+    {
+      "title": "Aprobación automática de certificados",
+      "description": "Generar certificados básicos sin intervención cuando el expediente esté completo.",
+      "status": "Activo"
+    },
+    {
+      "title": "Bloqueo por documento faltante",
+      "description": "No permitir posesión o vinculación sin lista documental completa.",
+      "status": "Activo"
     }
   ]
 }

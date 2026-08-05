@@ -1,18 +1,15 @@
 {
-  "title": "Mi portal del funcionario",
-  "subtitle": "Autogestión de solicitudes, certificados, comprobantes, documentos, actividades, activos, formación, desempeño e integridad.",
-  "eyebrow": "Experiencia digital del servidor",
   "metrics": [
     {
       "label": "Solicitudes activas",
       "value": "3",
       "hint": "1 requiere respuesta",
-      "icon": "file"
+      "icon": "inbox"
     },
     {
       "label": "Vacaciones disponibles",
       "value": "12 días",
-      "hint": "Corte al 31 de julio",
+      "hint": "Corte 31 de julio",
       "icon": "calendar"
     },
     {
@@ -25,327 +22,111 @@
       "label": "Ruta de formación",
       "value": "78%",
       "hint": "2 cursos pendientes",
-      "icon": "chart"
+      "icon": "graduation-cap"
     }
   ],
-  "insights": [
+  "services": [
     {
-      "label": "Próximo pago",
-      "value": "30 de agosto",
-      "detail": "Comprobante disponible después del cierre."
+      "title": "Vacaciones y permisos",
+      "detail": "Consulta saldo, selecciona fechas y adjunta soportes.",
+      "icon": "calendar",
+      "sla": "1–3 días"
     },
     {
-      "label": "Documento pendiente",
-      "value": "Bienes y rentas",
-      "detail": "Vence el 31 de agosto de 2026."
+      "title": "Certificados laborales",
+      "detail": "Generación inmediata o solicitud con funciones y salario.",
+      "icon": "file-text",
+      "sla": "Inmediato / 3 días"
     },
     {
-      "label": "Próxima actividad",
-      "value": "Comité institucional",
-      "detail": "7 de agosto · 9:00 a. m."
+      "title": "Actualizar información",
+      "detail": "Datos personales, contacto, emergencia y documentos.",
+      "icon": "user",
+      "sla": "Inmediato"
+    },
+    {
+      "title": "Novedad o situación administrativa",
+      "detail": "Comisión, licencia, trabajo en casa, traslado o encargo.",
+      "icon": "briefcase",
+      "sla": "3–5 días"
+    },
+    {
+      "title": "Soporte de nómina",
+      "detail": "Consulta de comprobante, descuento o inconsistencia.",
+      "icon": "wallet",
+      "sla": "2 días"
+    },
+    {
+      "title": "Solicitud SG-SST",
+      "detail": "Reporte de condición, incidente, EPP o acompañamiento.",
+      "icon": "heart",
+      "sla": "1 día"
     }
   ],
-  "sections": [
+  "requests": [
     {
-      "id": "servicios",
-      "label": "Servicios y solicitudes",
-      "icon": "file",
-      "description": "Trámites de autogestión y seguimiento de radicados.",
-      "layout": "cards",
-      "rows": [
-        {
-          "title": "Solicitar vacaciones",
-          "description": "Consulta saldo, selecciona fechas y envía a aprobación.",
-          "status": "Activo",
-          "tiempo": "2 días hábiles",
-          "aprobador": "Jefe inmediato",
-          "canal": "Digital",
-          "soporte": "Resolución"
-        },
-        {
-          "title": "Solicitar permiso",
-          "description": "Permiso remunerado, no remunerado o por calamidad.",
-          "status": "Activo",
-          "tiempo": "1 día hábil",
-          "aprobador": "Jefe inmediato",
-          "canal": "Digital",
-          "soporte": "Según tipo"
-        },
-        {
-          "title": "Certificado laboral",
-          "description": "Genera certificado básico o solicita uno con funciones y salario.",
-          "status": "Activo",
-          "tiempo": "Inmediato / 3 días",
-          "aprobador": "Talento Humano",
-          "canal": "Digital",
-          "soporte": "PDF"
-        },
-        {
-          "title": "Actualizar datos personales",
-          "description": "Dirección, contacto, beneficiarios y datos de emergencia.",
-          "status": "Activo",
-          "tiempo": "Inmediato",
-          "aprobador": "Talento Humano",
-          "canal": "Digital",
-          "soporte": "Según dato"
-        }
-      ]
+      "id": "TH-2026-0218",
+      "type": "Certificado laboral con funciones",
+      "created": "04 ago",
+      "owner": "Talento Humano",
+      "next": "Entrega 07 ago",
+      "status": "En proceso"
     },
     {
-      "id": "solicitudes",
-      "label": "Mis solicitudes",
-      "icon": "clipboard-list",
-      "description": "Radicados, estado, responsables y respuesta.",
-      "layout": "table",
-      "columns": [
-        {
-          "key": "code",
-          "label": "Solicitud",
-          "type": "primary"
-        },
-        {
-          "key": "type",
-          "label": "Tipo"
-        },
-        {
-          "key": "created",
-          "label": "Radicada",
-          "type": "date"
-        },
-        {
-          "key": "owner",
-          "label": "Responsable"
-        },
-        {
-          "key": "response",
-          "label": "Respuesta"
-        },
-        {
-          "key": "status",
-          "label": "Estado",
-          "type": "status"
-        }
-      ],
-      "rows": [
-        {
-          "code": "TH-2026-0218",
-          "subtitle": "Radicada desde Mi Portal",
-          "type": "Certificado laboral con funciones",
-          "created": "2026-08-04",
-          "owner": "Talento Humano",
-          "response": "Vence 7 ago",
-          "status": "En proceso"
-        },
-        {
-          "code": "TH-2026-0201",
-          "subtitle": "Vacaciones",
-          "type": "Vacaciones 10–14 agosto",
-          "created": "2026-07-28",
-          "owner": "Jefe inmediato",
-          "response": "Resolución 091",
-          "status": "Completado"
-        },
-        {
-          "code": "TIC-2026-1042",
-          "subtitle": "Mesa TIC",
-          "type": "Restablecimiento de acceso",
-          "created": "2026-08-03",
-          "owner": "Mesa TIC",
-          "response": "En diagnóstico",
-          "status": "En proceso"
-        }
-      ]
+      "id": "TH-2026-0201",
+      "type": "Vacaciones 10–14 agosto",
+      "created": "28 jul",
+      "owner": "Secretaría General",
+      "next": "Resolución 091",
+      "status": "Completado"
     },
     {
-      "id": "documentos",
-      "label": "Mis documentos",
-      "icon": "file",
-      "description": "Certificados, comprobantes, actos, expediente y documentos por firmar.",
-      "layout": "checklist",
-      "rows": [
-        {
-          "title": "Comprobante de nómina · Julio 2026",
-          "description": "Documento generado por el sistema de nómina.",
-          "owner": "Nómina",
-          "due": "Disponible",
-          "status": "Completado"
-        },
-        {
-          "title": "Resolución de vacaciones 091-2026",
-          "description": "Acto administrativo firmado y notificado.",
-          "owner": "Talento Humano",
-          "due": "Disponible",
-          "status": "Completado"
-        },
-        {
-          "title": "Declaración anual de bienes y rentas",
-          "description": "Carga la constancia generada en SIGEP II.",
-          "owner": "Funcionario",
-          "due": "31 ago",
-          "status": "Pendiente"
-        },
-        {
-          "title": "Compromisos de desempeño 2026",
-          "description": "Documento pendiente de aceptación electrónica.",
-          "owner": "Funcionario",
-          "due": "10 ago",
-          "status": "En proceso"
-        }
-      ]
-    },
-    {
-      "id": "desarrollo",
-      "label": "Mi desarrollo",
-      "icon": "chart",
-      "description": "Objetivos, evaluaciones, cursos, habilidades y plan individual.",
-      "layout": "matrix",
-      "rows": [
-        {
-          "title": "Evaluación de desempeño",
-          "description": "Ciclo anual 2026 y evidencias asociadas.",
-          "progress": 65,
-          "responsable": "Jefe inmediato"
-        },
-        {
-          "title": "Ruta de formación",
-          "description": "Cursos obligatorios y electivos del PIC.",
-          "progress": 78,
-          "responsable": "Talento Humano"
-        },
-        {
-          "title": "Plan individual de desarrollo",
-          "description": "Acciones de aprendizaje y mejora acordadas.",
-          "progress": 55,
-          "responsable": "Funcionario / líder"
-        },
-        {
-          "title": "Inducción y reinducción",
-          "description": "Contenidos institucionales y evaluación de apropiación.",
-          "progress": 100,
-          "responsable": "Talento Humano"
-        }
-      ]
-    },
-    {
-      "id": "activos",
-      "label": "Mis activos y accesos",
-      "icon": "monitor",
-      "description": "Equipos, elementos, cuentas, aplicaciones y responsabilidades.",
-      "layout": "table",
-      "columns": [
-        {
-          "key": "asset",
-          "label": "Activo o acceso",
-          "type": "primary"
-        },
-        {
-          "key": "type",
-          "label": "Tipo"
-        },
-        {
-          "key": "assigned",
-          "label": "Asignado"
-        },
-        {
-          "key": "condition",
-          "label": "Estado físico"
-        },
-        {
-          "key": "owner",
-          "label": "Responsable técnico"
-        },
-        {
-          "key": "status",
-          "label": "Estado",
-          "type": "status"
-        }
-      ],
-      "rows": [
-        {
-          "asset": "Portátil Dell Latitude 5440",
-          "subtitle": "Placa SP-TI-0248",
-          "type": "Equipo",
-          "assigned": "12 mar 2026",
-          "condition": "Bueno",
-          "owner": "Almacén / TIC",
-          "status": "Activo"
-        },
-        {
-          "asset": "Correo institucional",
-          "subtitle": "usuario@sanpedro-valle.gov.co",
-          "type": "Cuenta",
-          "assigned": "24 mar 2026",
-          "condition": "N/A",
-          "owner": "Mesa TIC",
-          "status": "Activo"
-        },
-        {
-          "asset": "Acceso SIGEP II",
-          "subtitle": "Rol servidor público",
-          "type": "Aplicación",
-          "assigned": "25 mar 2026",
-          "condition": "N/A",
-          "owner": "Administrador SIGEP",
-          "status": "Activo"
-        }
-      ]
+      "id": "TIC-2026-1042",
+      "type": "Restablecimiento de acceso",
+      "created": "03 ago",
+      "owner": "Mesa TIC",
+      "next": "En diagnóstico",
+      "status": "En proceso"
     }
   ],
-  "form": {
-    "title": "Crear solicitud de autogestión",
-    "sectionId": "solicitudes",
-    "fields": [
-      {
-        "key": "code",
-        "label": "Radicado",
-        "required": true
-      },
-      {
-        "key": "type",
-        "label": "Tipo de solicitud",
-        "type": "select",
-        "options": [
-          "Vacaciones",
-          "Permiso",
-          "Certificado laboral",
-          "Actualización de datos",
-          "Soporte TIC",
-          "Otro"
-        ]
-      },
-      {
-        "key": "created",
-        "label": "Fecha",
-        "type": "date",
-        "required": true
-      },
-      {
-        "key": "owner",
-        "label": "Dependencia responsable",
-        "required": true
-      },
-      {
-        "key": "response",
-        "label": "Detalle de la solicitud",
-        "type": "textarea",
-        "full": true
-      },
-      {
-        "key": "status",
-        "label": "Estado",
-        "type": "select",
-        "options": [
-          "Pendiente",
-          "En proceso",
-          "Completado"
-        ]
-      }
-    ]
-  },
-  "moduleId": "mi-portal",
-  "statusCycle": [
-    "Pendiente",
-    "En proceso",
-    "Completado"
+  "tasks": [
+    {
+      "title": "Presentar bienes y rentas",
+      "detail": "Cargar constancia de SIGEP II",
+      "due": "31 ago",
+      "status": "Pendiente"
+    },
+    {
+      "title": "Aceptar compromisos de desempeño",
+      "detail": "Periodo anual 2026",
+      "due": "10 ago",
+      "status": "En proceso"
+    },
+    {
+      "title": "Curso de integridad",
+      "detail": "Módulo virtual obligatorio",
+      "due": "20 ago",
+      "status": "Pendiente"
+    }
+  ],
+  "documents": [
+    {
+      "title": "Comprobante de nómina · Julio",
+      "type": "Nómina",
+      "date": "30 jul",
+      "status": "Disponible"
+    },
+    {
+      "title": "Resolución de vacaciones 091-2026",
+      "type": "Acto administrativo",
+      "date": "31 jul",
+      "status": "Disponible"
+    },
+    {
+      "title": "Certificado laboral básico",
+      "type": "Certificado",
+      "date": "05 ago",
+      "status": "Generable"
+    }
   ]
 }

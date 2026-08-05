@@ -1,0 +1,2 @@
+@import url('../shared/operations.css');
+#quickActions{margin-bottom:2px}.queue-check{width:16px;height:16px}.load-copy{min-width:0}.load-copy strong{display:block}.load-copy small{display:block;color:var(--muted)}.load-value{font-size:9px;color:var(--muted);text-align:right}.load-value strong{font-size:11px;color:var(--text)}

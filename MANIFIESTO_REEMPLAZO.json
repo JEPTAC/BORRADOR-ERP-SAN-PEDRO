@@ -1,48 +1,29 @@
 {
-  "name": "Talento Humano Público 360",
-  "version": "V13",
-  "files": [
-    "LEEME_REEMPLAZO.txt",
-    "apps/secretaria-general/talento-humano/VERSION_PUBLICO_V13.txt",
-    "apps/secretaria-general/talento-humano/bienestar-sst/data.json",
-    "apps/secretaria-general/talento-humano/bienestar-sst/index.html",
-    "apps/secretaria-general/talento-humano/bienestar-sst/script.js",
-    "apps/secretaria-general/talento-humano/bienestar-sst/styles.css",
-    "apps/secretaria-general/talento-humano/data.json",
-    "apps/secretaria-general/talento-humano/desempeno/data.json",
-    "apps/secretaria-general/talento-humano/desempeno/index.html",
-    "apps/secretaria-general/talento-humano/desempeno/script.js",
-    "apps/secretaria-general/talento-humano/desempeno/styles.css",
-    "apps/secretaria-general/talento-humano/empleo-publico/data.json",
-    "apps/secretaria-general/talento-humano/empleo-publico/index.html",
-    "apps/secretaria-general/talento-humano/empleo-publico/script.js",
-    "apps/secretaria-general/talento-humano/empleo-publico/styles.css",
-    "apps/secretaria-general/talento-humano/integridad-publica/data.json",
-    "apps/secretaria-general/talento-humano/integridad-publica/index.html",
-    "apps/secretaria-general/talento-humano/integridad-publica/script.js",
-    "apps/secretaria-general/talento-humano/integridad-publica/styles.css",
-    "apps/secretaria-general/talento-humano/mi-portal/data.json",
-    "apps/secretaria-general/talento-humano/mi-portal/index.html",
-    "apps/secretaria-general/talento-humano/mi-portal/script.js",
-    "apps/secretaria-general/talento-humano/mi-portal/styles.css",
-    "apps/secretaria-general/talento-humano/nomina/data.json",
-    "apps/secretaria-general/talento-humano/nomina/index.html",
-    "apps/secretaria-general/talento-humano/nomina/script.js",
-    "apps/secretaria-general/talento-humano/nomina/styles.css",
-    "apps/secretaria-general/talento-humano/planeacion-th/data.json",
-    "apps/secretaria-general/talento-humano/planeacion-th/index.html",
-    "apps/secretaria-general/talento-humano/planeacion-th/script.js",
-    "apps/secretaria-general/talento-humano/planeacion-th/styles.css",
-    "apps/secretaria-general/talento-humano/retiro/data.json",
-    "apps/secretaria-general/talento-humano/retiro/index.html",
-    "apps/secretaria-general/talento-humano/retiro/script.js",
-    "apps/secretaria-general/talento-humano/retiro/styles.css",
-    "apps/secretaria-general/talento-humano/shared/hr-app.js",
-    "apps/secretaria-general/talento-humano/shared/public-hr.css",
-    "apps/secretaria-general/talento-humano/shared/public-hr.js",
-    "apps/secretaria-general/talento-humano/situaciones-administrativas/data.json",
-    "apps/secretaria-general/talento-humano/situaciones-administrativas/index.html",
-    "apps/secretaria-general/talento-humano/situaciones-administrativas/script.js",
-    "apps/secretaria-general/talento-humano/situaciones-administrativas/styles.css"
+  "version": "V14",
+  "scope": "apps/secretaria-general/talento-humano",
+  "new_modules": [
+    "centro-operaciones",
+    "expediente-laboral",
+    "generador-documentos",
+    "vencimientos",
+    "integraciones-oficiales",
+    "permisos",
+    "auditoria"
+  ],
+  "replaced_modules": [
+    "flujos",
+    "mi-portal",
+    "analitica"
+  ],
+  "modified_shared": [
+    "shared/hr-app.js"
+  ],
+  "new_shared": [
+    "shared/operations.css",
+    "shared/operations.js"
+  ],
+  "modified_dashboard": [
+    "index.html",
+    "data.json"
   ]
 }

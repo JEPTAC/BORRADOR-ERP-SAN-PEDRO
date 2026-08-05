@@ -1,0 +1,288 @@
+{
+  "moduleId": "vencimientos",
+  "metrics": [
+    {
+      "label": "Vencen hoy",
+      "value": "6",
+      "hint": "2 críticos",
+      "icon": "alarm-clock"
+    },
+    {
+      "label": "Próximos 7 días",
+      "value": "18",
+      "hint": "Evaluaciones y contratos",
+      "icon": "calendar"
+    },
+    {
+      "label": "Vencidos",
+      "value": "4",
+      "hint": "Escalamiento activo",
+      "icon": "alert"
+    },
+    {
+      "label": "Cumplimiento",
+      "value": "94%",
+      "hint": "Obligaciones atendidas a tiempo",
+      "icon": "check"
+    }
+  ],
+  "sections": [
+    {
+      "id": "agenda",
+      "label": "Agenda de obligaciones",
+      "icon": "calendar",
+      "description": "Vencimientos ordenados por criticidad y responsable.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "code",
+          "label": "Obligación",
+          "type": "primary"
+        },
+        {
+          "key": "type",
+          "label": "Tipo"
+        },
+        {
+          "key": "person",
+          "label": "Persona o proceso"
+        },
+        {
+          "key": "due",
+          "label": "Vence",
+          "type": "date"
+        },
+        {
+          "key": "priority",
+          "label": "Prioridad",
+          "type": "priority"
+        },
+        {
+          "key": "owner",
+          "label": "Responsable"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "code": "OBL-2026-112",
+          "subtitle": "Periodo de prueba",
+          "type": "Evaluación EDL",
+          "person": "Camila Valencia",
+          "due": "2026-08-05",
+          "priority": "Crítica",
+          "owner": "Jefe inmediato",
+          "status": "Pendiente"
+        },
+        {
+          "code": "OBL-2026-109",
+          "subtitle": "Contrato CPS-041",
+          "type": "Terminación contractual",
+          "person": "Sofía Martínez",
+          "due": "2026-08-10",
+          "priority": "Alta",
+          "owner": "Supervisor",
+          "status": "En proceso"
+        },
+        {
+          "code": "OBL-2026-104",
+          "subtitle": "SIGEP II",
+          "type": "Bienes y rentas",
+          "person": "6 servidores",
+          "due": "2026-08-31",
+          "priority": "Normal",
+          "owner": "Talento Humano",
+          "status": "En proceso"
+        },
+        {
+          "code": "OBL-2026-097",
+          "subtitle": "SG-SST",
+          "type": "Examen periódico",
+          "person": "Grupo operativo",
+          "due": "2026-08-03",
+          "priority": "Alta",
+          "owner": "Responsable SST",
+          "status": "Vencido"
+        }
+      ]
+    },
+    {
+      "id": "reglas",
+      "label": "Reglas y recordatorios",
+      "icon": "bell",
+      "description": "Recordatorios, escalamiento y responsables de respaldo.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "Evaluación de periodo de prueba",
+          "description": "Avisar 30, 15, 7 y 1 día antes; escalar al jefe de dependencia.",
+          "frecuencia": "Diaria",
+          "canal": "Correo + ERP",
+          "escalamiento": "Secretaría General",
+          "status": "Activo"
+        },
+        {
+          "title": "Terminación de contratos",
+          "description": "Avisar al supervisor, contratista, contratación y TIC.",
+          "frecuencia": "45, 30, 15 y 5 días",
+          "canal": "Correo + ERP",
+          "escalamiento": "Supervisor",
+          "status": "Activo"
+        },
+        {
+          "title": "Declaraciones SIGEP",
+          "description": "Recordatorio individual y tablero de cumplimiento institucional.",
+          "frecuencia": "Semanal",
+          "canal": "Correo institucional",
+          "escalamiento": "Talento Humano",
+          "status": "Activo"
+        }
+      ]
+    },
+    {
+      "id": "calendario",
+      "label": "Calendario consolidado",
+      "icon": "calendar-days",
+      "description": "Hitos obligatorios del ciclo anual.",
+      "layout": "timeline",
+      "rows": [
+        {
+          "title": "Cierre de novedades de nómina",
+          "description": "Validación, devolución y cierre de novedades del periodo.",
+          "date": "08 ago 2026",
+          "status": "En proceso"
+        },
+        {
+          "title": "Seguimiento trimestral PETH",
+          "description": "Consolidar evidencias, indicadores y avance presupuestal.",
+          "date": "30 sep 2026",
+          "status": "Pendiente"
+        },
+        {
+          "title": "Autoevaluación estándares SG-SST",
+          "description": "Evaluación anual y formulación del plan de mejora.",
+          "date": "15 dic 2026",
+          "status": "Pendiente"
+        }
+      ]
+    },
+    {
+      "id": "escalados",
+      "label": "Escalamientos",
+      "icon": "arrow-up",
+      "description": "Obligaciones fuera de plazo o sin responsable efectivo.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "obligation",
+          "label": "Obligación",
+          "type": "primary"
+        },
+        {
+          "key": "age",
+          "label": "Retraso"
+        },
+        {
+          "key": "owner",
+          "label": "Responsable actual"
+        },
+        {
+          "key": "escalated",
+          "label": "Escalado a"
+        },
+        {
+          "key": "action",
+          "label": "Acción requerida"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "obligation": "Examen médico periódico",
+          "subtitle": "Grupo operativo",
+          "age": "2 días",
+          "owner": "Responsable SST",
+          "escalated": "Secretaría General",
+          "action": "Reprogramar jornada",
+          "status": "Vencido"
+        },
+        {
+          "obligation": "Cierre de evaluación parcial",
+          "subtitle": "Funcionario 367-01",
+          "age": "1 día",
+          "owner": "Jefe inmediato",
+          "escalated": "Talento Humano",
+          "action": "Registrar evaluación",
+          "status": "Vencido"
+        }
+      ]
+    }
+  ],
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
+  ],
+  "form": {
+    "title": "Crear obligación",
+    "sectionId": "agenda",
+    "fields": [
+      {
+        "key": "code",
+        "label": "Código",
+        "required": true
+      },
+      {
+        "key": "type",
+        "label": "Tipo",
+        "required": true
+      },
+      {
+        "key": "person",
+        "label": "Persona o proceso",
+        "required": true
+      },
+      {
+        "key": "due",
+        "label": "Fecha límite",
+        "type": "date",
+        "required": true
+      },
+      {
+        "key": "priority",
+        "label": "Prioridad",
+        "type": "select",
+        "options": [
+          "Crítica",
+          "Alta",
+          "Normal",
+          "Baja"
+        ]
+      },
+      {
+        "key": "owner",
+        "label": "Responsable",
+        "required": true
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Pendiente",
+          "En proceso",
+          "Completado",
+          "Vencido"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "moduleId": "integraciones-oficiales",
+  "metrics": [
+    {
+      "label": "Sistemas controlados",
+      "value": "5",
+      "hint": "SIGEP, SIMO, EDL, SG-SST y nómina",
+      "icon": "plug"
+    },
+    {
+      "label": "Registros por conciliar",
+      "value": "21",
+      "hint": "8 de alta prioridad",
+      "icon": "refresh"
+    },
+    {
+      "label": "Última verificación",
+      "value": "Hoy",
+      "hint": "08:15 a. m.",
+      "icon": "clock"
+    },
+    {
+      "label": "Consistencia general",
+      "value": "96%",
+      "hint": "Meta 99%",
+      "icon": "check"
+    }
+  ],
+  "sections": [
+    {
+      "id": "sistemas",
+      "label": "Sistemas oficiales",
+      "icon": "server",
+      "description": "Estado, responsable y método de intercambio.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "SIGEP II",
+          "description": "Hojas de vida, bienes y rentas, conflictos de interés y datos institucionales.",
+          "método": "Control asistido",
+          "responsable": "Talento Humano",
+          "última_verificación": "05 ago 2026",
+          "status": "Activo"
+        },
+        {
+          "title": "SIMO / OPEC",
+          "description": "Preparación y control de vacantes de carrera administrativa.",
+          "método": "Archivo / operación manual",
+          "responsable": "Administrador OPEC",
+          "última_verificación": "04 ago 2026",
+          "status": "Activo"
+        },
+        {
+          "title": "EDL APP",
+          "description": "Compromisos y evaluación del desempeño laboral.",
+          "método": "Control asistido",
+          "responsable": "Administrador EDL",
+          "última_verificación": "05 ago 2026",
+          "status": "Activo"
+        },
+        {
+          "title": "SG-SST",
+          "description": "Estándares mínimos, autoevaluación y plan de mejora.",
+          "método": "Reporte oficial",
+          "responsable": "Responsable SST",
+          "última_verificación": "31 jul 2026",
+          "status": "En proceso"
+        },
+        {
+          "title": "Sistema de nómina",
+          "description": "Novedades, preliquidación, PILA y conciliación financiera.",
+          "método": "CSV / API pendiente",
+          "responsable": "Nómina",
+          "última_verificación": "05 ago 2026",
+          "status": "Activo"
+        }
+      ]
+    },
+    {
+      "id": "diferencias",
+      "label": "Diferencias detectadas",
+      "icon": "git-compare",
+      "description": "Datos que requieren corrección antes de reportar.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "person",
+          "label": "Persona o registro",
+          "type": "primary"
+        },
+        {
+          "key": "system",
+          "label": "Sistema"
+        },
+        {
+          "key": "field",
+          "label": "Campo"
+        },
+        {
+          "key": "erpValue",
+          "label": "Valor ERP"
+        },
+        {
+          "key": "externalValue",
+          "label": "Valor externo"
+        },
+        {
+          "key": "owner",
+          "label": "Responsable"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "person": "Luis Fernando Ruiz",
+          "subtitle": "CC 94.512.340",
+          "system": "SIGEP II",
+          "field": "Denominación del empleo",
+          "erpValue": "Técnico administrativo",
+          "externalValue": "Auxiliar administrativo",
+          "owner": "Gestor SIGEP",
+          "status": "Pendiente"
+        },
+        {
+          "person": "Vacante 219-02",
+          "subtitle": "Planeación",
+          "system": "SIMO / OPEC",
+          "field": "Experiencia requerida",
+          "erpValue": "24 meses",
+          "externalValue": "No publicada",
+          "owner": "Administrador OPEC",
+          "status": "En proceso"
+        },
+        {
+          "person": "Ana María Torres",
+          "subtitle": "Evaluación 2026",
+          "system": "EDL APP",
+          "field": "Compromisos",
+          "erpValue": "5 registrados",
+          "externalValue": "4 registrados",
+          "owner": "Administrador EDL",
+          "status": "Pendiente"
+        }
+      ]
+    },
+    {
+      "id": "paquetes",
+      "label": "Paquetes de reporte",
+      "icon": "package",
+      "description": "Archivos y listas de verificación preparados para transmisión.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "package",
+          "label": "Paquete",
+          "type": "primary"
+        },
+        {
+          "key": "period",
+          "label": "Periodo"
+        },
+        {
+          "key": "records",
+          "label": "Registros"
+        },
+        {
+          "key": "validation",
+          "label": "Validación"
+        },
+        {
+          "key": "owner",
+          "label": "Responsable"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "package": "Actualización hojas de vida",
+          "subtitle": "SIGEP II",
+          "period": "Agosto 2026",
+          "records": "6",
+          "validation": "4 correctos · 2 pendientes",
+          "owner": "Gestor SIGEP",
+          "status": "En proceso"
+        },
+        {
+          "package": "Vacantes definitivas",
+          "subtitle": "SIMO / OPEC",
+          "period": "III trimestre",
+          "records": "3",
+          "validation": "Completo",
+          "owner": "Administrador OPEC",
+          "status": "Completado"
+        },
+        {
+          "package": "Novedades de nómina",
+          "subtitle": "Sistema financiero",
+          "period": "Agosto 2026",
+          "records": "18",
+          "validation": "2 advertencias",
+          "owner": "Nómina",
+          "status": "En proceso"
+        }
+      ]
+    },
+    {
+      "id": "historial",
+      "label": "Historial de intercambio",
+      "icon": "history",
+      "description": "Registro de validación, transmisión y constancias.",
+      "layout": "timeline",
+      "rows": [
+        {
+          "title": "Paquete OPEC validado",
+          "description": "Tres vacantes definitivas revisadas contra manual y planta.",
+          "date": "04 ago 2026 · 16:40",
+          "status": "Completado"
+        },
+        {
+          "title": "Conciliación SIGEP ejecutada",
+          "description": "Se detectaron seis diferencias en hojas de vida y empleo.",
+          "date": "04 ago 2026 · 08:10",
+          "status": "En proceso"
+        },
+        {
+          "title": "Novedades de nómina exportadas",
+          "description": "Archivo CSV generado y constancia de entrega registrada.",
+          "date": "01 ago 2026 · 17:05",
+          "status": "Completado"
+        }
+      ]
+    }
+  ],
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
+  ],
+  "form": {
+    "title": "Registrar diferencia",
+    "sectionId": "diferencias",
+    "fields": [
+      {
+        "key": "person",
+        "label": "Persona o registro",
+        "required": true
+      },
+      {
+        "key": "system",
+        "label": "Sistema",
+        "type": "select",
+        "options": [
+          "SIGEP II",
+          "SIMO / OPEC",
+          "EDL APP",
+          "SG-SST",
+          "Sistema de nómina"
+        ]
+      },
+      {
+        "key": "field",
+        "label": "Campo",
+        "required": true
+      },
+      {
+        "key": "erpValue",
+        "label": "Valor ERP"
+      },
+      {
+        "key": "externalValue",
+        "label": "Valor externo"
+      },
+      {
+        "key": "owner",
+        "label": "Responsable"
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Pendiente",
+          "En proceso",
+          "Completado"
+        ]
+      }
+    ]
+  }
+}
