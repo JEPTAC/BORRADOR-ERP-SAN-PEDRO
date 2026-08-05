@@ -1,0 +1,34 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Configuración de agenda · Agenda 360</title><link rel="stylesheet" href="styles.css"></head><body><div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand-block"><a class="brand-mark" href="../../../../index.html">SP</a><div class="brand-copy"><strong>Agenda 360</strong><span>ERP Municipal</span></div></div>
+    <div class="sidebar-context"><small>Secretaría General</small><strong>Agenda Institucional · Diseño V06</strong></div>
+    <nav class="sidebar-nav"><div class="nav-label">Agenda institucional</div><a class="nav-item " href="../index.html"><i data-lucide="calendar-days"></i><span class="nav-text">Centro de agenda</span></a><a class="nav-item " href="../actividades/index.html"><i data-lucide="list-checks"></i><span class="nav-text">Actividades</span></a><a class="nav-item " href="../disponibilidad/index.html"><i data-lucide="clock"></i><span class="nav-text">Disponibilidad</span></a><a class="nav-item " href="../carga-trabajo/index.html"><i data-lucide="gauge"></i><span class="nav-text">Carga de trabajo</span></a><a class="nav-item " href="../cronograma/index.html"><i data-lucide="git-branch"></i><span class="nav-text">Cronograma</span></a><a class="nav-item " href="../automatizaciones/index.html"><i data-lucide="workflow"></i><span class="nav-text">Automatizaciones</span></a><a class="nav-item active" href="index.html"><i data-lucide="settings"></i><span class="nav-text">Configuración</span></a>
+      <div class="nav-label">Secretaría General</div>
+      <a class="nav-item" href="../../index.html"><i data-lucide="layout-dashboard"></i><span class="nav-text">Panel general</span></a>
+      <a class="nav-item" href="../../talento-humano/index.html"><i data-lucide="users"></i><span class="nav-text">Talento Humano</span></a>
+      <a class="nav-item" href="../../mesa-ayuda/index.html"><i data-lucide="headset"></i><span class="nav-text">Mesa TIC</span></a>
+    </nav>
+    <div class="sidebar-footer"><div class="user-mini"><div class="avatar">JP</div><div><strong>Usuario institucional</strong><span>Agenda compartida</span></div></div></div>
+  </aside>
+<main class="main-area"><header class="topbar"><div class="topbar-left"><button class="icon-btn menu-btn" data-menu-toggle><i data-lucide="menu"></i></button><div class="topbar-title"><strong>Configuración de agenda</strong><span data-today></span></div></div>
+<div class="topbar-actions"><button class="icon-btn" data-theme-toggle><i data-lucide="sun-moon"></i></button><button class="icon-btn"><i data-lucide="bell"></i><span class="notify-dot"></span></button></div></header>
+<div class="content"><div class="breadcrumb"><a href="../../../../index.html">ERP</a><span>/</span><a href="../index.html">Agenda 360</a><span>/</span><span>Configuración de agenda</span></div>
+<div class="page-heading"><div><h1>Configuración de agenda</h1><p>Define jornada, vistas, alertas, permisos, calendarios compartidos e integraciones del módulo.</p></div><div class="heading-actions"><button class="btn btn-primary" id="saveSettings"><i data-lucide="save"></i> Guardar cambios</button></div></div>
+<div class="calendar-subnav"><a href="../index.html"><i data-lucide="calendar"></i> Agenda</a><a class="" href="../actividades/index.html"><i data-lucide="check-square"></i> Actividades</a><a class="" href="../disponibilidad/index.html"><i data-lucide="users"></i> Disponibilidad</a><a class="" href="../carga-trabajo/index.html"><i data-lucide="gauge"></i> Carga</a><a class="" href="../cronograma/index.html"><i data-lucide="git-branch"></i> Cronograma</a><a class="" href="../automatizaciones/index.html"><i data-lucide="workflow"></i> Reglas</a><a class="active" href="../configuracion/index.html"><i data-lucide="settings"></i> Ajustes</a></div>
+
+<div class="settings-layout">
+  <aside class="settings-nav card">
+    <button class="active" data-section="general"><i data-lucide="calendar-cog"></i><span>Configuración general</span></button>
+    <button data-section="calendars"><i data-lucide="calendar-range"></i><span>Calendarios y colores</span></button>
+    <button data-section="notifications"><i data-lucide="bell"></i><span>Notificaciones</span></button>
+    <button data-section="permissions"><i data-lucide="shield-check"></i><span>Roles y permisos</span></button>
+    <button data-section="integrations"><i data-lucide="plug"></i><span>Integraciones</span></button>
+    <button data-section="data"><i data-lucide="database"></i><span>Datos y respaldo</span></button>
+  </aside>
+  <section class="card settings-content">
+    <div id="settingsPanel"></div>
+  </section>
+</div>
+</div></main></div>
+<script src="../../../../assets/js/icons.js"></script><script src="../../../../assets/js/shell.js"></script><script src="../shared/calendar-core.js"></script><script src="script.js"></script></body></html>

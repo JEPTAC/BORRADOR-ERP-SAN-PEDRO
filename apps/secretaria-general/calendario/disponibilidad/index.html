@@ -1,0 +1,40 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Disponibilidad y reservas · Agenda 360</title><link rel="stylesheet" href="styles.css"></head><body><div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand-block"><a class="brand-mark" href="../../../../index.html">SP</a><div class="brand-copy"><strong>Agenda 360</strong><span>ERP Municipal</span></div></div>
+    <div class="sidebar-context"><small>Secretaría General</small><strong>Agenda Institucional · Diseño V06</strong></div>
+    <nav class="sidebar-nav"><div class="nav-label">Agenda institucional</div><a class="nav-item " href="../index.html"><i data-lucide="calendar-days"></i><span class="nav-text">Centro de agenda</span></a><a class="nav-item " href="../actividades/index.html"><i data-lucide="list-checks"></i><span class="nav-text">Actividades</span></a><a class="nav-item active" href="index.html"><i data-lucide="clock"></i><span class="nav-text">Disponibilidad</span></a><a class="nav-item " href="../carga-trabajo/index.html"><i data-lucide="gauge"></i><span class="nav-text">Carga de trabajo</span></a><a class="nav-item " href="../cronograma/index.html"><i data-lucide="git-branch"></i><span class="nav-text">Cronograma</span></a><a class="nav-item " href="../automatizaciones/index.html"><i data-lucide="workflow"></i><span class="nav-text">Automatizaciones</span></a><a class="nav-item " href="../configuracion/index.html"><i data-lucide="settings"></i><span class="nav-text">Configuración</span></a>
+      <div class="nav-label">Secretaría General</div>
+      <a class="nav-item" href="../../index.html"><i data-lucide="layout-dashboard"></i><span class="nav-text">Panel general</span></a>
+      <a class="nav-item" href="../../talento-humano/index.html"><i data-lucide="users"></i><span class="nav-text">Talento Humano</span></a>
+      <a class="nav-item" href="../../mesa-ayuda/index.html"><i data-lucide="headset"></i><span class="nav-text">Mesa TIC</span></a>
+    </nav>
+    <div class="sidebar-footer"><div class="user-mini"><div class="avatar">JP</div><div><strong>Usuario institucional</strong><span>Agenda compartida</span></div></div></div>
+  </aside>
+<main class="main-area"><header class="topbar"><div class="topbar-left"><button class="icon-btn menu-btn" data-menu-toggle><i data-lucide="menu"></i></button><div class="topbar-title"><strong>Disponibilidad y reservas</strong><span data-today></span></div></div>
+<div class="topbar-actions"><button class="icon-btn" data-theme-toggle><i data-lucide="sun-moon"></i></button><button class="icon-btn"><i data-lucide="bell"></i><span class="notify-dot"></span></button></div></header>
+<div class="content"><div class="breadcrumb"><a href="../../../../index.html">ERP</a><span>/</span><a href="../index.html">Agenda 360</a><span>/</span><span>Disponibilidad y reservas</span></div>
+<div class="page-heading"><div><h1>Disponibilidad y reservas</h1><p>Compara agendas, evita dobles asignaciones y encuentra el mejor momento para reuniones institucionales.</p></div><div class="heading-actions"><button class="btn btn-secondary" id="previousWeek"><i data-lucide="chevron-left"></i></button><button class="btn btn-secondary" id="nextWeek"><i data-lucide="chevron-right"></i></button></div></div>
+<div class="calendar-subnav"><a href="../index.html"><i data-lucide="calendar"></i> Agenda</a><a class="" href="../actividades/index.html"><i data-lucide="check-square"></i> Actividades</a><a class="active" href="../disponibilidad/index.html"><i data-lucide="users"></i> Disponibilidad</a><a class="" href="../carga-trabajo/index.html"><i data-lucide="gauge"></i> Carga</a><a class="" href="../cronograma/index.html"><i data-lucide="git-branch"></i> Cronograma</a><a class="" href="../automatizaciones/index.html"><i data-lucide="workflow"></i> Reglas</a><a class="" href="../configuracion/index.html"><i data-lucide="settings"></i> Ajustes</a></div>
+
+<div class="availability-layout">
+  <section class="card">
+    <div class="card-header"><div><h2>Comparador de disponibilidad</h2><p>Selecciona personas y duración para encontrar espacios comunes.</p></div><button class="btn btn-primary" id="createFromSlot"><i data-lucide="calendar-plus"></i> Programar reunión</button></div>
+    <div class="card-body">
+      <div class="availability-controls">
+        <div class="form-group people-control"><label>Participantes</label><div id="peopleSelection" class="people-selector"></div></div>
+        <label class="form-group"><span>Semana desde</span><input id="weekDate" type="date"></label>
+        <label class="form-group"><span>Duración</span><select id="duration"><option value="30">30 min</option><option value="45">45 min</option><option value="60" selected>1 hora</option><option value="90">1 h 30</option><option value="120">2 horas</option></select></label>
+        <button class="btn btn-secondary" id="findSlots"><i data-lucide="sparkles"></i> Encontrar espacios</button>
+      </div>
+      <div class="availability-legend"><span><i class="free"></i>Disponible</span><span><i class="busy"></i>Ocupado</span><span><i class="partial"></i>Disponibilidad parcial</span><span><i class="selected"></i>Espacio sugerido</span></div>
+      <div class="availability-grid-wrap"><div id="availabilityGrid" class="availability-grid"></div></div>
+    </div>
+  </section>
+  <aside class="availability-side">
+    <div class="card"><div class="card-header"><div><h3>Mejores espacios</h3><p>Ordenados por disponibilidad.</p></div></div><div class="card-body" id="bestSlots"></div></div>
+    <div class="card"><div class="card-header"><div><h3>Horario institucional</h3><p>Reglas aplicadas al cálculo.</p></div></div><div class="card-body" id="workRules"></div></div>
+  </aside>
+</div>
+</div></main></div>
+<script src="../../../../assets/js/icons.js"></script><script src="../../../../assets/js/shell.js"></script><script src="../shared/calendar-core.js"></script><script src="script.js"></script></body></html>

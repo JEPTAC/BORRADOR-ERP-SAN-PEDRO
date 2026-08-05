@@ -1,0 +1,43 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Automatizaciones · Agenda 360</title><link rel="stylesheet" href="styles.css"></head><body><div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand-block"><a class="brand-mark" href="../../../../index.html">SP</a><div class="brand-copy"><strong>Agenda 360</strong><span>ERP Municipal</span></div></div>
+    <div class="sidebar-context"><small>Secretaría General</small><strong>Agenda Institucional · Diseño V06</strong></div>
+    <nav class="sidebar-nav"><div class="nav-label">Agenda institucional</div><a class="nav-item " href="../index.html"><i data-lucide="calendar-days"></i><span class="nav-text">Centro de agenda</span></a><a class="nav-item " href="../actividades/index.html"><i data-lucide="list-checks"></i><span class="nav-text">Actividades</span></a><a class="nav-item " href="../disponibilidad/index.html"><i data-lucide="clock"></i><span class="nav-text">Disponibilidad</span></a><a class="nav-item " href="../carga-trabajo/index.html"><i data-lucide="gauge"></i><span class="nav-text">Carga de trabajo</span></a><a class="nav-item " href="../cronograma/index.html"><i data-lucide="git-branch"></i><span class="nav-text">Cronograma</span></a><a class="nav-item active" href="index.html"><i data-lucide="workflow"></i><span class="nav-text">Automatizaciones</span></a><a class="nav-item " href="../configuracion/index.html"><i data-lucide="settings"></i><span class="nav-text">Configuración</span></a>
+      <div class="nav-label">Secretaría General</div>
+      <a class="nav-item" href="../../index.html"><i data-lucide="layout-dashboard"></i><span class="nav-text">Panel general</span></a>
+      <a class="nav-item" href="../../talento-humano/index.html"><i data-lucide="users"></i><span class="nav-text">Talento Humano</span></a>
+      <a class="nav-item" href="../../mesa-ayuda/index.html"><i data-lucide="headset"></i><span class="nav-text">Mesa TIC</span></a>
+    </nav>
+    <div class="sidebar-footer"><div class="user-mini"><div class="avatar">JP</div><div><strong>Usuario institucional</strong><span>Agenda compartida</span></div></div></div>
+  </aside>
+<main class="main-area"><header class="topbar"><div class="topbar-left"><button class="icon-btn menu-btn" data-menu-toggle><i data-lucide="menu"></i></button><div class="topbar-title"><strong>Automatizaciones</strong><span data-today></span></div></div>
+<div class="topbar-actions"><button class="icon-btn" data-theme-toggle><i data-lucide="sun-moon"></i></button><button class="icon-btn"><i data-lucide="bell"></i><span class="notify-dot"></span></button></div></header>
+<div class="content"><div class="breadcrumb"><a href="../../../../index.html">ERP</a><span>/</span><a href="../index.html">Agenda 360</a><span>/</span><span>Automatizaciones</span></div>
+<div class="page-heading"><div><h1>Automatizaciones</h1><p>Configura recordatorios, escalamiento, resúmenes y acciones automáticas que reduzcan el seguimiento manual.</p></div><div class="heading-actions"><button class="btn btn-secondary" id="testRules"><i data-lucide="play"></i> Ejecutar prueba</button></div></div>
+<div class="calendar-subnav"><a href="../index.html"><i data-lucide="calendar"></i> Agenda</a><a class="" href="../actividades/index.html"><i data-lucide="check-square"></i> Actividades</a><a class="" href="../disponibilidad/index.html"><i data-lucide="users"></i> Disponibilidad</a><a class="" href="../carga-trabajo/index.html"><i data-lucide="gauge"></i> Carga</a><a class="" href="../cronograma/index.html"><i data-lucide="git-branch"></i> Cronograma</a><a class="active" href="../automatizaciones/index.html"><i data-lucide="workflow"></i> Reglas</a><a class="" href="../configuracion/index.html"><i data-lucide="settings"></i> Ajustes</a></div>
+
+<div class="kpi-row" id="automationKpis"></div>
+<div class="automation-layout">
+  <section class="card">
+    <div class="card-header"><div><h2>Reglas activas</h2><p>Acciones automáticas para recordatorios, vencimientos y conflictos.</p></div>
+      <div class="toolbar-group"><div class="search-box"><i data-lucide="search"></i><input id="ruleSearch" placeholder="Buscar automatización"></div><button class="btn btn-primary" id="newRule"><i data-lucide="plus"></i> Nueva regla</button></div></div>
+    <div class="card-body"><div id="ruleList" class="rule-list"></div></div>
+  </section>
+  <aside class="automation-side">
+    <div class="card"><div class="card-header"><div><h3>Actividad reciente</h3><p>Últimas ejecuciones simuladas.</p></div></div><div class="card-body" id="runHistory"></div></div>
+    <div class="card"><div class="card-header"><div><h3>Plantillas sugeridas</h3><p>Reglas listas para activar.</p></div></div><div class="card-body" id="templates"></div></div>
+  </aside>
+</div>
+<div id="ruleModal" class="modal-backdrop hidden"><div class="modal">
+ <div class="modal-header"><div><h2>Nueva automatización</h2><p>Define el evento que dispara la regla y la acción posterior.</p></div><button class="icon-btn" data-close="ruleModal"><i data-lucide="x"></i></button></div>
+ <form id="ruleForm"><div class="modal-body form-grid"><div class="form-group full"><label>Nombre de la regla</label><input name="name" required></div>
+ <div class="form-group"><label>Cuando ocurra</label><select name="trigger"><option>24 horas antes</option><option>Al superar la fecha límite</option><option>Al crear una actividad crítica</option><option>Al detectar doble asignación</option><option>Al completar una actividad</option><option>Cada día a las 06:30</option></select></div>
+ <div class="form-group"><label>Aplicar a</label><select name="scope"><option>Toda la Alcaldía</option><option>Secretaría General</option><option>Actividades críticas</option><option>Mi agenda</option></select></div>
+ <div class="form-group full"><label>Entonces ejecutar</label><select name="action"><option>Enviar notificación al responsable</option><option>Avisar al responsable y jefe de dependencia</option><option>Sugerir tres espacios disponibles</option><option>Crear actividad de seguimiento</option><option>Solicitar evidencia de cumplimiento</option><option>Enviar resumen diario</option></select></div>
+ <div class="form-group"><label>Canal</label><select name="channel"><option>Dentro del ERP</option><option>Correo institucional</option><option>ERP y correo</option></select></div>
+ <div class="form-group"><label>Estado</label><select name="state"><option value="true">Activa</option><option value="false">Inactiva</option></select></div></div>
+ <div class="modal-footer"><button type="button" class="btn btn-secondary" data-close="ruleModal">Cancelar</button><button class="btn btn-primary">Guardar regla</button></div></form>
+</div></div>
+</div></main></div>
+<script src="../../../../assets/js/icons.js"></script><script src="../../../../assets/js/shell.js"></script><script src="../shared/calendar-core.js"></script><script src="script.js"></script></body></html>

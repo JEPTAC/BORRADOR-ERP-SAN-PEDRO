@@ -1,0 +1,41 @@
+{
+  "templates": [
+    {
+      "name": "Avisar actividades críticas sin responsable",
+      "trigger": "Al crear una actividad crítica",
+      "action": "Avisar al coordinador de dependencia"
+    },
+    {
+      "name": "Resumen semanal de compromisos",
+      "trigger": "Cada lunes a las 06:30",
+      "action": "Enviar resumen por dependencia"
+    },
+    {
+      "name": "Crear seguimiento de reuniones",
+      "trigger": "Al finalizar una reunión",
+      "action": "Crear actividad de compromisos"
+    }
+  ],
+  "history": [
+    {
+      "rule": "Recordatorio de actividad próxima",
+      "at": "2026-08-05 06:30",
+      "result": "12 notificaciones enviadas"
+    },
+    {
+      "rule": "Escalar actividad vencida",
+      "at": "2026-08-05 06:35",
+      "result": "2 actividades escaladas"
+    },
+    {
+      "rule": "Reprogramar por conflicto",
+      "at": "2026-08-04 16:10",
+      "result": "3 espacios sugeridos"
+    },
+    {
+      "rule": "Resumen diario personal",
+      "at": "2026-08-04 06:30",
+      "result": "10 resúmenes generados"
+    }
+  ]
+}

@@ -1,119 +1,1006 @@
 {
-  "events": [
+  "version": "6.0.0",
+  "today": "2026-08-05",
+  "offices": [
     {
-      "id": "ACT-001",
-      "title": "Comité institucional de gestión",
-      "date": "2026-08-07",
-      "time": "09:00",
-      "end": "11:00",
-      "type": "Comité",
-      "office": "Todas",
-      "assigned": [
-        "Secretarios de despacho",
-        "Jefes de oficina"
-      ],
-      "priority": "Alta",
-      "status": "Programada",
-      "description": "Seguimiento a planes institucionales y compromisos de la administración."
+      "id": "SG",
+      "name": "Secretaría General",
+      "color": "#0f4c81"
     },
     {
-      "id": "ACT-002",
-      "title": "Inducción a nuevos contratistas",
-      "date": "2026-08-05",
-      "time": "08:00",
-      "end": "10:00",
-      "type": "Capacitación",
-      "office": "Secretaría General",
-      "assigned": [
-        "Contratistas nuevos"
-      ],
-      "priority": "Media",
-      "status": "Programada",
-      "description": "Inducción institucional, seguridad de la información y SIG."
+      "id": "GOB",
+      "name": "Secretaría de Gobierno",
+      "color": "#7257c8"
     },
     {
-      "id": "ACT-003",
-      "title": "Cierre de indicadores mensuales",
-      "date": "2026-08-10",
-      "time": "16:00",
-      "end": "17:00",
-      "type": "Entrega",
-      "office": "Todas",
-      "assigned": [
-        "Enlaces SIG"
-      ],
-      "priority": "Alta",
-      "status": "Pendiente",
-      "description": "Cargar resultados y evidencias del corte de julio."
+      "id": "HAC",
+      "name": "Secretaría de Hacienda",
+      "color": "#16835f"
     },
     {
-      "id": "ACT-004",
-      "title": "Mantenimiento preventivo de equipos",
-      "date": "2026-08-06",
-      "time": "14:00",
-      "end": "16:30",
-      "type": "TIC",
-      "office": "Secretaría General",
-      "assigned": [
-        "Equipo TIC"
-      ],
-      "priority": "Media",
-      "status": "Programada",
-      "description": "Revisión de equipos de la sala de juntas y Despacho."
+      "id": "PLA",
+      "name": "Planeación e Infraestructura",
+      "color": "#d17a22"
     },
     {
-      "id": "ACT-005",
-      "title": "Jornada de bienestar institucional",
-      "date": "2026-08-14",
-      "time": "08:30",
-      "end": "12:00",
-      "type": "Bienestar",
-      "office": "Todas",
-      "assigned": [
-        "Funcionarios y contratistas"
-      ],
-      "priority": "Baja",
-      "status": "Programada",
-      "description": "Actividad de integración y bienestar laboral."
+      "id": "SAL",
+      "name": "Salud, Protección y Bienestar",
+      "color": "#c74667"
     },
     {
-      "id": "ACT-006",
-      "title": "Revisión plan de mejoramiento",
-      "date": "2026-08-12",
-      "time": "10:00",
-      "end": "11:30",
-      "type": "SIG",
-      "office": "Control Interno",
-      "assigned": [
-        "Líderes de proceso"
-      ],
-      "priority": "Alta",
-      "status": "Pendiente",
-      "description": "Validación de avances y soportes de acciones abiertas."
+      "id": "DES",
+      "name": "Despacho del Alcalde",
+      "color": "#2176ae"
     },
     {
-      "id": "ACT-007",
-      "title": "Publicación de reporte de transparencia",
-      "date": "2026-08-20",
-      "time": "15:00",
-      "end": "16:00",
-      "type": "Entrega",
-      "office": "Secretaría General",
-      "assigned": [
-        "Enlace de transparencia"
-      ],
-      "priority": "Media",
-      "status": "Programada",
-      "description": "Verificación y publicación de información periódica."
+      "id": "JUR",
+      "name": "Oficina Jurídica",
+      "color": "#596579"
+    },
+    {
+      "id": "CI",
+      "name": "Control Interno",
+      "color": "#0f8b8d"
     }
   ],
-  "types": [
-    "Comité",
-    "Capacitación",
-    "Entrega",
-    "TIC",
-    "Bienestar",
-    "SIG",
-    "Otro"
+  "people": [
+    {
+      "id": "P001",
+      "name": "María Fernanda Rojas",
+      "role": "Secretaria General",
+      "office": "SG",
+      "avatar": "MR",
+      "capacity": 40,
+      "workload": 31,
+      "workday": {
+        "start": "07:00",
+        "end": "17:30"
+      }
+    },
+    {
+      "id": "P002",
+      "name": "Carlos Andrés Molina",
+      "role": "Profesional de Talento Humano",
+      "office": "SG",
+      "avatar": "CM",
+      "capacity": 40,
+      "workload": 37,
+      "workday": {
+        "start": "07:00",
+        "end": "17:30"
+      }
+    },
+    {
+      "id": "P003",
+      "name": "Laura Vanessa García",
+      "role": "Líder SIG",
+      "office": "SG",
+      "avatar": "LG",
+      "capacity": 40,
+      "workload": 26,
+      "workday": {
+        "start": "07:00",
+        "end": "17:30"
+      }
+    },
+    {
+      "id": "P004",
+      "name": "Juan Esteban Pérez",
+      "role": "Administrador TIC",
+      "office": "SG",
+      "avatar": "JP",
+      "capacity": 40,
+      "workload": 34,
+      "workday": {
+        "start": "07:00",
+        "end": "17:30"
+      }
+    },
+    {
+      "id": "P005",
+      "name": "Diana Marcela Torres",
+      "role": "Enlace de Víctimas",
+      "office": "GOB",
+      "avatar": "DT",
+      "capacity": 40,
+      "workload": 28,
+      "workday": {
+        "start": "07:00",
+        "end": "17:30"
+      }
+    },
+    {
+      "id": "P006",
+      "name": "Andrés Felipe Castro",
+      "role": "Profesional de Planeación",
+      "office": "PLA",
+      "avatar": "AC",
+      "capacity": 40,
+      "workload": 41,
+      "workday": {
+        "start": "07:00",
+        "end": "17:30"
+      }
+    },
+    {
+      "id": "P007",
+      "name": "Paola Andrea Silva",
+      "role": "Profesional de Salud",
+      "office": "SAL",
+      "avatar": "PS",
+      "capacity": 40,
+      "workload": 24,
+      "workday": {
+        "start": "07:00",
+        "end": "17:30"
+      }
+    },
+    {
+      "id": "P008",
+      "name": "Ricardo Gómez",
+      "role": "Tesorero Municipal",
+      "office": "HAC",
+      "avatar": "RG",
+      "capacity": 40,
+      "workload": 35,
+      "workday": {
+        "start": "07:00",
+        "end": "17:30"
+      }
+    },
+    {
+      "id": "P009",
+      "name": "Natalia López",
+      "role": "Profesional Jurídica",
+      "office": "JUR",
+      "avatar": "NL",
+      "capacity": 40,
+      "workload": 29,
+      "workday": {
+        "start": "07:00",
+        "end": "17:30"
+      }
+    },
+    {
+      "id": "P010",
+      "name": "Santiago Mendoza",
+      "role": "Asesor de Despacho",
+      "office": "DES",
+      "avatar": "SM",
+      "capacity": 40,
+      "workload": 32,
+      "workday": {
+        "start": "07:00",
+        "end": "17:30"
+      }
+    }
+  ],
+  "calendars": [
+    {
+      "id": "CAL-INST",
+      "name": "Agenda institucional",
+      "color": "#0f4c81",
+      "visible": true,
+      "scope": "Todos"
+    },
+    {
+      "id": "CAL-COM",
+      "name": "Comités y reuniones",
+      "color": "#7257c8",
+      "visible": true,
+      "scope": "Todos"
+    },
+    {
+      "id": "CAL-LIM",
+      "name": "Fechas límite",
+      "color": "#c74667",
+      "visible": true,
+      "scope": "Todos"
+    },
+    {
+      "id": "CAL-FOR",
+      "name": "Capacitaciones",
+      "color": "#16835f",
+      "visible": true,
+      "scope": "Todos"
+    },
+    {
+      "id": "CAL-TER",
+      "name": "Visitas y territorio",
+      "color": "#d17a22",
+      "visible": true,
+      "scope": "Todos"
+    },
+    {
+      "id": "CAL-PER",
+      "name": "Mi agenda",
+      "color": "#2176ae",
+      "visible": true,
+      "scope": "Personal"
+    }
+  ],
+  "eventTypes": [
+    {
+      "id": "meeting",
+      "name": "Reunión",
+      "icon": "users",
+      "color": "#7257c8"
+    },
+    {
+      "id": "task",
+      "name": "Actividad",
+      "icon": "check-square",
+      "color": "#0f4c81"
+    },
+    {
+      "id": "deadline",
+      "name": "Fecha límite",
+      "icon": "alert-triangle",
+      "color": "#c74667"
+    },
+    {
+      "id": "focus",
+      "name": "Tiempo de enfoque",
+      "icon": "target",
+      "color": "#2176ae"
+    },
+    {
+      "id": "training",
+      "name": "Capacitación",
+      "icon": "graduation-cap",
+      "color": "#16835f"
+    },
+    {
+      "id": "field",
+      "name": "Visita de campo",
+      "icon": "map-pin",
+      "color": "#d17a22"
+    },
+    {
+      "id": "out",
+      "name": "Fuera de oficina",
+      "icon": "plane",
+      "color": "#596579"
+    },
+    {
+      "id": "reminder",
+      "name": "Recordatorio",
+      "icon": "bell",
+      "color": "#b7791f"
+    }
+  ],
+  "events": [
+    {
+      "id": "EVT-260805-001",
+      "title": "Comité institucional de gestión y desempeño",
+      "date": "2026-08-05",
+      "endDate": "2026-08-05",
+      "start": "08:00",
+      "end": "09:30",
+      "allDay": false,
+      "type": "meeting",
+      "calendar": "CAL-COM",
+      "office": "SG",
+      "assignees": [
+        "P001",
+        "P003",
+        "P004",
+        "P010"
+      ],
+      "attendees": [
+        "P006",
+        "P008"
+      ],
+      "status": "En curso",
+      "priority": "Alta",
+      "location": "Sala de juntas · Segundo piso",
+      "meetingUrl": "",
+      "description": "Revisión de avances MIPG, riesgos institucionales y compromisos del trimestre.",
+      "progress": 35,
+      "visibility": "Institucional",
+      "reminders": [
+        30,
+        1440
+      ],
+      "recurrence": "No se repite",
+      "checklist": [
+        {
+          "text": "Consolidar indicadores",
+          "done": true
+        },
+        {
+          "text": "Revisar compromisos anteriores",
+          "done": true
+        },
+        {
+          "text": "Registrar nueva acta",
+          "done": false
+        }
+      ],
+      "comments": [
+        {
+          "author": "Laura Vanessa García",
+          "at": "2026-08-04T16:20:00",
+          "text": "Indicadores cargados para revisión."
+        }
+      ],
+      "dependencies": [],
+      "attachments": [
+        {
+          "name": "Orden del día.pdf",
+          "size": "540 KB"
+        }
+      ],
+      "estimatedHours": 1.5,
+      "actualHours": 0.5
+    },
+    {
+      "id": "EVT-260805-002",
+      "title": "Cierre de novedades de nómina",
+      "date": "2026-08-05",
+      "endDate": "2026-08-05",
+      "start": "10:00",
+      "end": "11:00",
+      "allDay": false,
+      "type": "deadline",
+      "calendar": "CAL-LIM",
+      "office": "SG",
+      "assignees": [
+        "P002"
+      ],
+      "attendees": [
+        "P001"
+      ],
+      "status": "Pendiente",
+      "priority": "Crítica",
+      "location": "Talento Humano",
+      "meetingUrl": "",
+      "description": "Validar incapacidades, permisos, horas adicionales y novedades para pre-nómina.",
+      "progress": 70,
+      "visibility": "Dependencia",
+      "reminders": [
+        60,
+        1440
+      ],
+      "recurrence": "Mensual",
+      "checklist": [
+        {
+          "text": "Validar novedades recibidas",
+          "done": true
+        },
+        {
+          "text": "Solicitar correcciones",
+          "done": true
+        },
+        {
+          "text": "Cerrar consolidado",
+          "done": false
+        }
+      ],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [],
+      "estimatedHours": 2,
+      "actualHours": 1.4
+    },
+    {
+      "id": "EVT-260805-003",
+      "title": "Bloque de enfoque · Arquitectura ERP",
+      "date": "2026-08-05",
+      "endDate": "2026-08-05",
+      "start": "13:40",
+      "end": "15:10",
+      "allDay": false,
+      "type": "focus",
+      "calendar": "CAL-PER",
+      "office": "SG",
+      "assignees": [
+        "P004"
+      ],
+      "attendees": [],
+      "status": "Programada",
+      "priority": "Media",
+      "location": "Oficina TIC",
+      "meetingUrl": "",
+      "description": "Documentar arquitectura modular y criterios de integración del ERP municipal.",
+      "progress": 0,
+      "visibility": "Privada",
+      "reminders": [
+        10
+      ],
+      "recurrence": "Semanal",
+      "checklist": [],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [],
+      "estimatedHours": 1.5,
+      "actualHours": 0
+    },
+    {
+      "id": "EVT-260805-004",
+      "title": "Visita técnica a sede comunitaria",
+      "date": "2026-08-05",
+      "endDate": "2026-08-05",
+      "start": "15:30",
+      "end": "17:00",
+      "allDay": false,
+      "type": "field",
+      "calendar": "CAL-TER",
+      "office": "PLA",
+      "assignees": [
+        "P006",
+        "P004"
+      ],
+      "attendees": [],
+      "status": "Programada",
+      "priority": "Alta",
+      "location": "Centro poblado Todos los Santos",
+      "meetingUrl": "",
+      "description": "Levantamiento de necesidades de conectividad y adecuaciones locativas.",
+      "progress": 0,
+      "visibility": "Institucional",
+      "reminders": [
+        60,
+        1440
+      ],
+      "recurrence": "No se repite",
+      "checklist": [
+        {
+          "text": "Confirmar transporte",
+          "done": true
+        },
+        {
+          "text": "Preparar formato de visita",
+          "done": false
+        }
+      ],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [],
+      "estimatedHours": 2,
+      "actualHours": 0
+    },
+    {
+      "id": "EVT-260806-001",
+      "title": "Capacitación en seguridad de la información",
+      "date": "2026-08-06",
+      "endDate": "2026-08-06",
+      "start": "08:30",
+      "end": "10:00",
+      "allDay": false,
+      "type": "training",
+      "calendar": "CAL-FOR",
+      "office": "SG",
+      "assignees": [
+        "P004"
+      ],
+      "attendees": [
+        "P001",
+        "P002",
+        "P003",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010"
+      ],
+      "status": "Programada",
+      "priority": "Alta",
+      "location": "Auditorio municipal",
+      "meetingUrl": "",
+      "description": "Jornada institucional sobre contraseñas, phishing, protección de datos y reporte de incidentes.",
+      "progress": 0,
+      "visibility": "Institucional",
+      "reminders": [
+        60,
+        1440
+      ],
+      "recurrence": "No se repite",
+      "checklist": [
+        {
+          "text": "Publicar convocatoria",
+          "done": true
+        },
+        {
+          "text": "Confirmar asistencia",
+          "done": false
+        },
+        {
+          "text": "Preparar evaluación",
+          "done": false
+        }
+      ],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [
+        {
+          "name": "Presentación base.pptx",
+          "size": "4.2 MB"
+        }
+      ],
+      "estimatedHours": 1.5,
+      "actualHours": 0
+    },
+    {
+      "id": "EVT-260806-002",
+      "title": "Seguimiento a plan de mejoramiento",
+      "date": "2026-08-06",
+      "endDate": "2026-08-06",
+      "start": "10:30",
+      "end": "11:30",
+      "allDay": false,
+      "type": "task",
+      "calendar": "CAL-INST",
+      "office": "CI",
+      "assignees": [
+        "P003"
+      ],
+      "attendees": [
+        "P001"
+      ],
+      "status": "Programada",
+      "priority": "Media",
+      "location": "Control Interno",
+      "meetingUrl": "",
+      "description": "Consolidar evidencias y actualización de acciones abiertas.",
+      "progress": 20,
+      "visibility": "Dependencia",
+      "reminders": [
+        30
+      ],
+      "recurrence": "Quincenal",
+      "checklist": [],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [],
+      "estimatedHours": 1,
+      "actualHours": 0
+    },
+    {
+      "id": "EVT-260807-001",
+      "title": "Mesa de coordinación de atención a víctimas",
+      "date": "2026-08-07",
+      "endDate": "2026-08-07",
+      "start": "09:00",
+      "end": "10:30",
+      "allDay": false,
+      "type": "meeting",
+      "calendar": "CAL-COM",
+      "office": "GOB",
+      "assignees": [
+        "P005"
+      ],
+      "attendees": [
+        "P007",
+        "P009"
+      ],
+      "status": "Programada",
+      "priority": "Alta",
+      "location": "Secretaría de Gobierno",
+      "meetingUrl": "",
+      "description": "Revisión de rutas, casos remitidos y jornadas de atención.",
+      "progress": 0,
+      "visibility": "Restringida",
+      "reminders": [
+        60,
+        1440
+      ],
+      "recurrence": "Mensual",
+      "checklist": [],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [],
+      "estimatedHours": 1.5,
+      "actualHours": 0
+    },
+    {
+      "id": "EVT-260807-002",
+      "title": "Entrega de informe de ejecución presupuestal",
+      "date": "2026-08-07",
+      "endDate": "2026-08-07",
+      "start": "16:00",
+      "end": "17:00",
+      "allDay": false,
+      "type": "deadline",
+      "calendar": "CAL-LIM",
+      "office": "HAC",
+      "assignees": [
+        "P008"
+      ],
+      "attendees": [
+        "P010"
+      ],
+      "status": "En riesgo",
+      "priority": "Crítica",
+      "location": "Secretaría de Hacienda",
+      "meetingUrl": "",
+      "description": "Remitir consolidado de ejecución con observaciones y variaciones relevantes.",
+      "progress": 55,
+      "visibility": "Institucional",
+      "reminders": [
+        120,
+        1440
+      ],
+      "recurrence": "Mensual",
+      "checklist": [],
+      "comments": [],
+      "dependencies": [
+        "EVT-260806-002"
+      ],
+      "attachments": [],
+      "estimatedHours": 4,
+      "actualHours": 2.2
+    },
+    {
+      "id": "EVT-260810-001",
+      "title": "Revisión semanal de compromisos",
+      "date": "2026-08-10",
+      "endDate": "2026-08-10",
+      "start": "07:30",
+      "end": "08:15",
+      "allDay": false,
+      "type": "meeting",
+      "calendar": "CAL-COM",
+      "office": "SG",
+      "assignees": [
+        "P001",
+        "P002",
+        "P003",
+        "P004"
+      ],
+      "attendees": [],
+      "status": "Programada",
+      "priority": "Media",
+      "location": "Sala de Secretaría General",
+      "meetingUrl": "",
+      "description": "Revisión rápida de pendientes, riesgos y responsables de la semana.",
+      "progress": 0,
+      "visibility": "Dependencia",
+      "reminders": [
+        15
+      ],
+      "recurrence": "Semanal",
+      "checklist": [],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [],
+      "estimatedHours": 0.75,
+      "actualHours": 0
+    },
+    {
+      "id": "EVT-260811-001",
+      "title": "Cierre de actualización SIGEP",
+      "date": "2026-08-11",
+      "endDate": "2026-08-11",
+      "start": "00:00",
+      "end": "23:59",
+      "allDay": true,
+      "type": "deadline",
+      "calendar": "CAL-LIM",
+      "office": "SG",
+      "assignees": [
+        "P002"
+      ],
+      "attendees": [],
+      "status": "Programada",
+      "priority": "Alta",
+      "location": "",
+      "meetingUrl": "",
+      "description": "Verificar hojas de vida, contratos, declaraciones y datos de vinculación.",
+      "progress": 45,
+      "visibility": "Dependencia",
+      "reminders": [
+        1440,
+        2880
+      ],
+      "recurrence": "No se repite",
+      "checklist": [],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [],
+      "estimatedHours": 5,
+      "actualHours": 2
+    },
+    {
+      "id": "EVT-260812-001",
+      "title": "Audiencia pública de rendición de cuentas",
+      "date": "2026-08-12",
+      "endDate": "2026-08-12",
+      "start": "14:00",
+      "end": "17:00",
+      "allDay": false,
+      "type": "meeting",
+      "calendar": "CAL-INST",
+      "office": "DES",
+      "assignees": [
+        "P010",
+        "P003",
+        "P004"
+      ],
+      "attendees": [
+        "P001",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009"
+      ],
+      "status": "Programada",
+      "priority": "Crítica",
+      "location": "Auditorio municipal",
+      "meetingUrl": "",
+      "description": "Presentación de resultados, diálogo ciudadano y registro de compromisos.",
+      "progress": 35,
+      "visibility": "Pública",
+      "reminders": [
+        1440,
+        10080
+      ],
+      "recurrence": "No se repite",
+      "checklist": [],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [],
+      "estimatedHours": 3,
+      "actualHours": 0
+    },
+    {
+      "id": "EVT-260813-001",
+      "title": "Jornada de bienestar institucional",
+      "date": "2026-08-13",
+      "endDate": "2026-08-13",
+      "start": "13:40",
+      "end": "16:30",
+      "allDay": false,
+      "type": "training",
+      "calendar": "CAL-FOR",
+      "office": "SG",
+      "assignees": [
+        "P002"
+      ],
+      "attendees": [
+        "P001",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010"
+      ],
+      "status": "Programada",
+      "priority": "Media",
+      "location": "Parque recreacional",
+      "meetingUrl": "",
+      "description": "Actividad de bienestar y fortalecimiento del clima organizacional.",
+      "progress": 10,
+      "visibility": "Institucional",
+      "reminders": [
+        1440
+      ],
+      "recurrence": "No se repite",
+      "checklist": [],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [],
+      "estimatedHours": 3,
+      "actualHours": 0
+    },
+    {
+      "id": "EVT-260814-001",
+      "title": "Mantenimiento preventivo de red",
+      "date": "2026-08-14",
+      "endDate": "2026-08-14",
+      "start": "12:00",
+      "end": "13:30",
+      "allDay": false,
+      "type": "task",
+      "calendar": "CAL-INST",
+      "office": "SG",
+      "assignees": [
+        "P004"
+      ],
+      "attendees": [],
+      "status": "Programada",
+      "priority": "Alta",
+      "location": "Centro de datos",
+      "meetingUrl": "",
+      "description": "Verificar respaldos, switches y estabilidad de enlaces.",
+      "progress": 0,
+      "visibility": "Dependencia",
+      "reminders": [
+        60,
+        1440
+      ],
+      "recurrence": "Mensual",
+      "checklist": [],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [],
+      "estimatedHours": 1.5,
+      "actualHours": 0
+    },
+    {
+      "id": "EVT-260817-001",
+      "title": "Planeación de actividades de septiembre",
+      "date": "2026-08-17",
+      "endDate": "2026-08-17",
+      "start": "09:30",
+      "end": "11:00",
+      "allDay": false,
+      "type": "meeting",
+      "calendar": "CAL-COM",
+      "office": "SG",
+      "assignees": [
+        "P001",
+        "P002",
+        "P003",
+        "P004"
+      ],
+      "attendees": [
+        "P010"
+      ],
+      "status": "Programada",
+      "priority": "Media",
+      "location": "Sala de juntas",
+      "meetingUrl": "",
+      "description": "Programación consolidada de hitos, capacitaciones y vencimientos.",
+      "progress": 0,
+      "visibility": "Dependencia",
+      "reminders": [
+        60
+      ],
+      "recurrence": "Mensual",
+      "checklist": [],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [],
+      "estimatedHours": 1.5,
+      "actualHours": 0
+    },
+    {
+      "id": "EVT-260804-001",
+      "title": "Publicar circular de actualización documental",
+      "date": "2026-08-04",
+      "endDate": "2026-08-04",
+      "start": "09:00",
+      "end": "09:45",
+      "allDay": false,
+      "type": "task",
+      "calendar": "CAL-INST",
+      "office": "SG",
+      "assignees": [
+        "P002"
+      ],
+      "attendees": [],
+      "status": "Cumplida",
+      "priority": "Media",
+      "location": "Talento Humano",
+      "meetingUrl": "",
+      "description": "Enviar circular institucional y registrar evidencia.",
+      "progress": 100,
+      "visibility": "Institucional",
+      "reminders": [],
+      "recurrence": "No se repite",
+      "checklist": [
+        {
+          "text": "Circular enviada",
+          "done": true
+        }
+      ],
+      "comments": [],
+      "dependencies": [],
+      "attachments": [],
+      "estimatedHours": 0.75,
+      "actualHours": 0.6
+    }
+  ],
+  "availability": {
+    "workingDays": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "lunch": {
+      "start": "12:00",
+      "end": "13:40"
+    },
+    "defaultDuration": 30,
+    "bufferMinutes": 10,
+    "holidays": [
+      "2026-08-07"
+    ]
+  },
+  "settings": {
+    "weekStartsOn": 1,
+    "timeFormat": "24h",
+    "defaultView": "month",
+    "workingStart": "07:00",
+    "workingEnd": "17:30",
+    "slotMinutes": 30,
+    "showWeekends": true,
+    "compactMode": true,
+    "notifications": {
+      "email": true,
+      "inApp": true,
+      "dailyDigest": true,
+      "overdue": true
+    },
+    "permissions": [
+      {
+        "role": "Administrador de agenda",
+        "create": true,
+        "editAll": true,
+        "viewPrivate": true,
+        "manageSettings": true
+      },
+      {
+        "role": "Coordinador de dependencia",
+        "create": true,
+        "editAll": false,
+        "viewPrivate": false,
+        "manageSettings": false
+      },
+      {
+        "role": "Funcionario",
+        "create": true,
+        "editAll": false,
+        "viewPrivate": false,
+        "manageSettings": false
+      },
+      {
+        "role": "Consulta",
+        "create": false,
+        "editAll": false,
+        "viewPrivate": false,
+        "manageSettings": false
+      }
+    ]
+  },
+  "automations": [
+    {
+      "id": "AUT-001",
+      "name": "Recordatorio de actividad próxima",
+      "trigger": "24 horas antes",
+      "action": "Notificación al responsable y asistentes",
+      "active": true,
+      "runs": 184
+    },
+    {
+      "id": "AUT-002",
+      "name": "Escalar actividad vencida",
+      "trigger": "Al superar la fecha límite",
+      "action": "Avisar al responsable y jefe de dependencia",
+      "active": true,
+      "runs": 26
+    },
+    {
+      "id": "AUT-003",
+      "name": "Resumen diario personal",
+      "trigger": "Cada día a las 06:30",
+      "action": "Enviar agenda, vencimientos y cambios",
+      "active": true,
+      "runs": 310
+    },
+    {
+      "id": "AUT-004",
+      "name": "Solicitar evidencia de cumplimiento",
+      "trigger": "Al marcar una actividad como cumplida",
+      "action": "Abrir solicitud de soporte cuando sea obligatorio",
+      "active": false,
+      "runs": 8
+    },
+    {
+      "id": "AUT-005",
+      "name": "Reprogramar por conflicto",
+      "trigger": "Al detectar doble asignación",
+      "action": "Sugerir tres espacios disponibles",
+      "active": true,
+      "runs": 41
+    }
   ]
 }

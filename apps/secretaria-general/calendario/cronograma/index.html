@@ -1,0 +1,35 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cronograma institucional · Agenda 360</title><link rel="stylesheet" href="styles.css"></head><body><div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand-block"><a class="brand-mark" href="../../../../index.html">SP</a><div class="brand-copy"><strong>Agenda 360</strong><span>ERP Municipal</span></div></div>
+    <div class="sidebar-context"><small>Secretaría General</small><strong>Agenda Institucional · Diseño V06</strong></div>
+    <nav class="sidebar-nav"><div class="nav-label">Agenda institucional</div><a class="nav-item " href="../index.html"><i data-lucide="calendar-days"></i><span class="nav-text">Centro de agenda</span></a><a class="nav-item " href="../actividades/index.html"><i data-lucide="list-checks"></i><span class="nav-text">Actividades</span></a><a class="nav-item " href="../disponibilidad/index.html"><i data-lucide="clock"></i><span class="nav-text">Disponibilidad</span></a><a class="nav-item " href="../carga-trabajo/index.html"><i data-lucide="gauge"></i><span class="nav-text">Carga de trabajo</span></a><a class="nav-item active" href="index.html"><i data-lucide="git-branch"></i><span class="nav-text">Cronograma</span></a><a class="nav-item " href="../automatizaciones/index.html"><i data-lucide="workflow"></i><span class="nav-text">Automatizaciones</span></a><a class="nav-item " href="../configuracion/index.html"><i data-lucide="settings"></i><span class="nav-text">Configuración</span></a>
+      <div class="nav-label">Secretaría General</div>
+      <a class="nav-item" href="../../index.html"><i data-lucide="layout-dashboard"></i><span class="nav-text">Panel general</span></a>
+      <a class="nav-item" href="../../talento-humano/index.html"><i data-lucide="users"></i><span class="nav-text">Talento Humano</span></a>
+      <a class="nav-item" href="../../mesa-ayuda/index.html"><i data-lucide="headset"></i><span class="nav-text">Mesa TIC</span></a>
+    </nav>
+    <div class="sidebar-footer"><div class="user-mini"><div class="avatar">JP</div><div><strong>Usuario institucional</strong><span>Agenda compartida</span></div></div></div>
+  </aside>
+<main class="main-area"><header class="topbar"><div class="topbar-left"><button class="icon-btn menu-btn" data-menu-toggle><i data-lucide="menu"></i></button><div class="topbar-title"><strong>Cronograma institucional</strong><span data-today></span></div></div>
+<div class="topbar-actions"><button class="icon-btn" data-theme-toggle><i data-lucide="sun-moon"></i></button><button class="icon-btn"><i data-lucide="bell"></i><span class="notify-dot"></span></button></div></header>
+<div class="content"><div class="breadcrumb"><a href="../../../../index.html">ERP</a><span>/</span><a href="../index.html">Agenda 360</a><span>/</span><span>Cronograma institucional</span></div>
+<div class="page-heading"><div><h1>Cronograma institucional</h1><p>Relaciona actividades, dependencias, hitos y ruta crítica para anticipar retrasos y reprogramaciones.</p></div><div class="heading-actions"></div></div>
+<div class="calendar-subnav"><a href="../index.html"><i data-lucide="calendar"></i> Agenda</a><a class="" href="../actividades/index.html"><i data-lucide="check-square"></i> Actividades</a><a class="" href="../disponibilidad/index.html"><i data-lucide="users"></i> Disponibilidad</a><a class="" href="../carga-trabajo/index.html"><i data-lucide="gauge"></i> Carga</a><a class="active" href="../cronograma/index.html"><i data-lucide="git-branch"></i> Cronograma</a><a class="" href="../automatizaciones/index.html"><i data-lucide="workflow"></i> Reglas</a><a class="" href="../configuracion/index.html"><i data-lucide="settings"></i> Ajustes</a></div>
+
+<div class="timeline-toolbar">
+  <div class="toolbar-group"><select id="timelineOffice"><option value="">Toda la Alcaldía</option></select><select id="timelineScale"><option value="day">Días</option><option value="week" selected>Semanas</option><option value="month">Meses</option></select><input id="timelineFrom" type="date"><input id="timelineTo" type="date"></div>
+  <div class="toolbar-group"><button class="btn btn-secondary" id="criticalPath"><i data-lucide="route"></i> Ruta crítica</button><button class="btn btn-secondary" id="exportTimeline"><i data-lucide="download"></i> Exportar</button><button class="btn btn-primary" id="newMilestone"><i data-lucide="flag"></i> Nuevo hito</button></div>
+</div>
+<div class="kpi-row" id="timelineKpis"></div>
+<section class="card gantt-card">
+  <div class="gantt-wrap"><div id="gantt" class="gantt"></div></div>
+</section>
+<div class="timeline-bottom">
+  <section class="card"><div class="card-header"><div><h2>Dependencias y bloqueos</h2><p>Actividades que no pueden avanzar por compromisos previos.</p></div></div><div class="card-body" id="dependencyList"></div></section>
+  <section class="card"><div class="card-header"><div><h2>Hitos próximos</h2><p>Entregas, comités y fechas límite institucionales.</p></div></div><div class="card-body" id="milestoneList"></div></section>
+</div>
+<div id="milestoneModal" class="modal-backdrop hidden"><div class="modal"><div class="modal-header"><div><h2>Nuevo hito</h2><p>Registra una fecha clave dentro del cronograma.</p></div><button class="icon-btn" data-close="milestoneModal"><i data-lucide="x"></i></button></div>
+<form id="milestoneForm"><div class="modal-body form-grid"><div class="form-group full"><label>Nombre</label><input name="title" required></div><div class="form-group"><label>Fecha</label><input type="date" name="date" required></div><div class="form-group"><label>Dependencia</label><select name="office" id="milestoneOffice"></select></div><div class="form-group"><label>Responsable</label><select name="person" id="milestonePerson"></select></div><div class="form-group"><label>Prioridad</label><select name="priority"><option>Alta</option><option>Crítica</option><option>Media</option></select></div><div class="form-group full"><label>Descripción</label><textarea name="description"></textarea></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-close="milestoneModal">Cancelar</button><button class="btn btn-primary">Crear hito</button></div></form></div></div>
+</div></main></div>
+<script src="../../../../assets/js/icons.js"></script><script src="../../../../assets/js/shell.js"></script><script src="../shared/calendar-core.js"></script><script src="script.js"></script></body></html>

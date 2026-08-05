@@ -1,0 +1,39 @@
+{
+  "integrations": [
+    {
+      "id": "google",
+      "name": "Google Calendar",
+      "description": "Sincronización de eventos, disponibilidad y calendarios compartidos.",
+      "icon": "calendar",
+      "status": "Disponible al conectar backend"
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft Outlook / 365",
+      "description": "Reuniones, salas, disponibilidad y calendario institucional.",
+      "icon": "mail",
+      "status": "Disponible al conectar backend"
+    },
+    {
+      "id": "email",
+      "name": "Correo institucional",
+      "description": "Invitaciones, recordatorios y resúmenes de agenda.",
+      "icon": "send",
+      "status": "Pendiente de servidor de correo"
+    },
+    {
+      "id": "meet",
+      "name": "Videoconferencia",
+      "description": "Generación automática de enlaces para reuniones virtuales.",
+      "icon": "video",
+      "status": "Pendiente de proveedor"
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase por dependencia",
+      "description": "Persistencia, permisos y sincronización federada de actividades.",
+      "icon": "database",
+      "status": "Fase posterior"
+    }
+  ]
+}

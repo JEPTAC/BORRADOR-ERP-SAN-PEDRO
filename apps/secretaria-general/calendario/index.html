@@ -1,1 +1,244 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calendario institucional · ERP San Pedro</title><link rel="stylesheet" href="styles.css"></head><body><div class="app-shell"><aside class="sidebar"><div class="brand-block"><a class="brand-mark" href="../../../index.html">SP</a><div class="brand-copy"><strong>Secretaría General</strong><span>ERP Municipal</span></div></div><div class="sidebar-context"><small>Proceso</small><strong>Calendario institucional</strong></div><nav class="sidebar-nav"><div class="nav-label">Módulos</div><a class="nav-item " href="../index.html"><i data-lucide="layout-dashboard"></i><span class="nav-text">Panel general</span></a><a class="nav-item " href="../talento-humano/index.html"><i data-lucide="users"></i><span class="nav-text">Talento Humano</span></a><a class="nav-item " href="../sig/index.html"><i data-lucide="workflow"></i><span class="nav-text">Sistema Integrado de Gestión</span></a><a class="nav-item " href="../mesa-ayuda/index.html"><i data-lucide="headset"></i><span class="nav-text">Mesa de Ayuda TIC</span></a><a class="nav-item active" href="../calendario/index.html"><i data-lucide="calendar-days"></i><span class="nav-text">Calendario institucional</span></a><div class="nav-label">Portal</div><a class="nav-item" href="../../../index.html"><i data-lucide="layout-grid"></i><span class="nav-text">Todas las dependencias</span></a></nav><div class="sidebar-footer"><div class="user-mini"><div class="avatar">JP</div><div><strong>Usuario institucional</strong><span>Modo demostración</span></div></div></div></aside><main class="main-area"><header class="topbar"><div class="topbar-left"><button class="icon-btn menu-btn" data-menu-toggle><i data-lucide="menu"></i></button><div class="topbar-title"><strong>Calendario institucional</strong><span data-today></span></div></div><div class="topbar-actions"><button class="icon-btn" data-theme-toggle><i data-lucide="sun-moon"></i></button><button class="icon-btn"><i data-lucide="bell"></i><span class="notify-dot"></span></button></div></header><div class="content"><div class="breadcrumb"><a href="../../../index.html">ERP</a><span>/</span><a href="../index.html">Secretaría General</a><span>/</span><span>Calendario institucional</span></div><div class="page-heading"><div><h1>Calendario institucional</h1><p>Asigna actividades, responsables, fechas límite y registra su cumplimiento.</p></div><div class="heading-actions"><select id="officeFilter"><option value="">Toda la Alcaldía</option><option>Secretaría General</option><option>Gobierno</option><option>Hacienda</option><option>Planeación</option><option>Salud</option><option>Control Interno</option><option>Despacho</option></select><button class="btn btn-primary" onclick="ERP.open('eventModal')"><i data-lucide="calendar-plus"></i> Asignar actividad</button></div></div><div class="calendar-layout"><section class="card calendar-card"><div class="calendar-toolbar"><div><div id="calendarTitle" class="calendar-title"></div><div class="legend"><span><i></i> Programada</span><span class="urgent"><i></i> Prioridad alta</span><span class="done"><i></i> Cumplida</span></div></div><div class="calendar-nav"><button class="btn btn-secondary btn-sm" onclick="moveMonth(-1)"><i data-lucide="chevron-left"></i></button><button class="btn btn-secondary btn-sm" onclick="goToday()">Hoy</button><button class="btn btn-secondary btn-sm" onclick="moveMonth(1)"><i data-lucide="chevron-right"></i></button></div></div><div class="weekdays"><div>Dom</div><div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div></div><div id="calendarGrid" class="calendar-grid"></div></section><aside class="card"><div class="card-header"><div><h2>Próximas actividades</h2><p>Agenda consolidada.</p></div></div><div class="card-body" id="agenda"></div></aside></div></div></main></div><div id="eventModal" class="modal-backdrop hidden"><div class="modal"><div class="modal-header"><div><h2>Asignar actividad</h2><p>Los usuarios institucionales podrán visualizar sus compromisos.</p></div><button class="icon-btn" data-close="eventModal"><i data-lucide="x"></i></button></div><form id="eventForm"><div class="modal-body form-grid"><div class="form-group full"><label>Actividad</label><input name="title" required placeholder="Nombre claro de la actividad"></div><div class="form-group"><label>Fecha</label><input type="date" name="date" required></div><div class="form-group"><label>Tipo</label><select id="eventType" name="type"></select></div><div class="form-group"><label>Hora inicial</label><input type="time" name="time" required></div><div class="form-group"><label>Hora final</label><input type="time" name="end" required></div><div class="form-group"><label>Dependencia</label><select name="office"><option>Todas</option><option>Secretaría General</option><option>Gobierno</option><option>Hacienda</option><option>Planeación</option><option>Salud</option><option>Control Interno</option><option>Despacho</option></select></div><div class="form-group"><label>Prioridad</label><select name="priority"><option>Baja</option><option selected>Media</option><option>Alta</option></select></div><div class="form-group full"><label>Responsables</label><input name="assigned" required placeholder="Nombres, cargos o grupos separados por coma"></div><div class="form-group full"><label>Descripción</label><textarea name="description" required placeholder="Resultado esperado, instrucciones o entregable"></textarea></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-close="eventModal">Cancelar</button><button class="btn btn-primary">Asignar actividad</button></div></form></div></div><div id="eventDrawerBackdrop" class="drawer-backdrop hidden" onclick="closeEvent()"></div><aside id="eventDrawer" class="drawer hidden"><div class="drawer-head"><div><h2 style="margin:0">Detalle de actividad</h2><p style="margin:3px 0 0;color:var(--muted)">Asignación y cumplimiento</p></div><button class="icon-btn" onclick="closeEvent()"><i data-lucide="x"></i></button></div><div class="drawer-body" id="eventDetail"></div></aside><script src="../../../assets/js/icons.js"></script><script src="../../../assets/js/shell.js"></script><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Agenda Institucional 360 del ERP Municipal de San Pedro">
+  <title>Agenda Institucional 360 · ERP San Pedro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand-block">
+      <a class="brand-mark" href="../../../index.html">SP</a>
+      <div class="brand-copy"><strong>Agenda 360</strong><span>ERP Municipal</span></div>
+    </div>
+    <div class="sidebar-context"><small>Secretaría General</small><strong>Agenda Institucional · Diseño V06</strong></div>
+    <nav class="sidebar-nav">
+      <div class="nav-label">Agenda institucional</div>
+      <a class="nav-item active" href="index.html"><i data-lucide="calendar-days"></i><span class="nav-text">Centro de agenda</span><span class="nav-badge" id="todayBadge">0</span></a>
+      <a class="nav-item" href="actividades/index.html"><i data-lucide="list-checks"></i><span class="nav-text">Actividades</span></a>
+      <a class="nav-item" href="disponibilidad/index.html"><i data-lucide="clock"></i><span class="nav-text">Disponibilidad</span></a>
+      <a class="nav-item" href="carga-trabajo/index.html"><i data-lucide="gauge"></i><span class="nav-text">Carga de trabajo</span></a>
+      <a class="nav-item" href="cronograma/index.html"><i data-lucide="git-branch"></i><span class="nav-text">Cronograma</span></a>
+      <a class="nav-item" href="automatizaciones/index.html"><i data-lucide="workflow"></i><span class="nav-text">Automatizaciones</span></a>
+      <a class="nav-item" href="configuracion/index.html"><i data-lucide="settings"></i><span class="nav-text">Configuración</span></a>
+      <div class="nav-label">Secretaría General</div>
+      <a class="nav-item" href="../index.html"><i data-lucide="layout-dashboard"></i><span class="nav-text">Panel general</span></a>
+      <a class="nav-item" href="../talento-humano/index.html"><i data-lucide="users"></i><span class="nav-text">Talento Humano</span></a>
+      <a class="nav-item" href="../sig/index.html"><i data-lucide="workflow"></i><span class="nav-text">SIG</span></a>
+      <a class="nav-item" href="../mesa-ayuda/index.html"><i data-lucide="headset"></i><span class="nav-text">Mesa TIC</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-mini"><div class="avatar">JP</div><div><strong>Usuario institucional</strong><span>Agenda compartida</span></div></div>
+    </div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="icon-btn menu-btn" data-menu-toggle aria-label="Abrir menú"><i data-lucide="menu"></i></button>
+        <div class="topbar-title"><strong>Agenda Institucional 360</strong><span data-today></span></div>
+      </div>
+      <div class="topbar-actions">
+        <button class="top-search" id="openCommand"><i data-lucide="search"></i><span>Buscar o ejecutar</span><kbd>Ctrl K</kbd></button>
+        <button class="icon-btn" id="exportMenuBtn" title="Exportar agenda"><i data-lucide="download"></i></button>
+        <button class="icon-btn" data-theme-toggle title="Cambiar tema"><i data-lucide="sun-moon"></i></button>
+        <button class="icon-btn" title="Notificaciones"><i data-lucide="bell"></i><span class="notify-dot"></span></button>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="breadcrumb"><a href="../../../index.html">ERP</a><span>/</span><a href="../index.html">Secretaría General</a><span>/</span><span>Agenda 360</span></div>
+
+      <div class="page-heading">
+        <div>
+          <h1>Centro de agenda</h1>
+          <p>Coordina compromisos, reuniones, fechas límite y bloques de trabajo con una vista institucional unificada.</p>
+        </div>
+        <div class="heading-actions">
+          <button class="btn btn-secondary" id="availabilityBtn"><i data-lucide="clock-3"></i> Buscar horario</button>
+          <button class="btn btn-primary" id="newEventBtn"><i data-lucide="plus"></i> Nueva actividad</button>
+        </div>
+      </div>
+
+      <div class="kpi-row" id="kpiRow"></div>
+
+      <div class="calendar-subnav" aria-label="Secciones del calendario">
+        <a class="active" href="index.html"><i data-lucide="calendar"></i> Agenda</a>
+        <a href="actividades/index.html"><i data-lucide="check-square"></i> Actividades</a>
+        <a href="disponibilidad/index.html"><i data-lucide="users"></i> Disponibilidad</a>
+        <a href="carga-trabajo/index.html"><i data-lucide="gauge"></i> Carga</a>
+        <a href="cronograma/index.html"><i data-lucide="git-branch"></i> Cronograma</a>
+        <a href="automatizaciones/index.html"><i data-lucide="workflow"></i> Reglas</a>
+        <a href="configuracion/index.html"><i data-lucide="settings"></i> Ajustes</a>
+      </div>
+
+      <section class="agenda-workspace">
+        <aside class="agenda-left">
+          <div class="agenda-card mini-calendar-card">
+            <div class="mini-head">
+              <button class="icon-btn mini-btn" id="miniPrev"><i data-lucide="chevron-left"></i></button>
+              <strong id="miniTitle"></strong>
+              <button class="icon-btn mini-btn" id="miniNext"><i data-lucide="chevron-right"></i></button>
+            </div>
+            <div class="mini-weekdays"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+            <div class="mini-grid" id="miniGrid"></div>
+          </div>
+
+          <div class="agenda-card filter-card">
+            <div class="filter-head"><strong>Mis calendarios</strong><button class="icon-btn mini-btn" title="Administrar calendarios"><i data-lucide="settings"></i></button></div>
+            <div id="calendarList" class="calendar-list"></div>
+          </div>
+
+          <div class="agenda-card filter-card">
+            <div class="filter-head"><strong>Filtros</strong><button class="text-btn" id="clearFilters">Limpiar</button></div>
+            <label class="compact-field"><span>Dependencia</span><select id="officeFilter"><option value="">Toda la Alcaldía</option></select></label>
+            <label class="compact-field"><span>Persona</span><select id="personFilter"><option value="">Todos los usuarios</option></select></label>
+            <label class="compact-field"><span>Buscar</span><input id="eventSearch" type="search" placeholder="Actividad, lugar…"></label>
+          </div>
+
+          <div class="agenda-card smart-card">
+            <div class="smart-icon"><i data-lucide="sparkles"></i></div>
+            <strong>Planificación inteligente</strong>
+            <p id="smartMessage">Analizando la carga y los espacios disponibles…</p>
+            <button class="btn btn-soft btn-sm" id="smartAction">Ver sugerencia</button>
+          </div>
+        </aside>
+
+        <div class="calendar-main">
+          <div class="calendar-topbar">
+            <div class="date-navigation">
+              <button class="icon-btn" id="prevPeriod"><i data-lucide="chevron-left"></i></button>
+              <button class="btn btn-secondary btn-sm" id="todayBtn">Hoy</button>
+              <button class="icon-btn" id="nextPeriod"><i data-lucide="chevron-right"></i></button>
+              <div><strong id="periodTitle"></strong><span id="periodSubtitle"></span></div>
+            </div>
+            <div class="calendar-actions">
+              <button class="icon-btn" id="toggleWeekends" title="Mostrar u ocultar fines de semana"><i data-lucide="calendar-range"></i></button>
+              <div class="view-switch" id="viewSwitch">
+                <button data-view="month">Mes</button>
+                <button data-view="week">Semana</button>
+                <button data-view="day">Día</button>
+                <button data-view="agenda">Agenda</button>
+              </div>
+              <button class="icon-btn" id="moreMenuBtn"><i data-lucide="more-horizontal"></i></button>
+            </div>
+          </div>
+          <div class="calendar-stage" id="calendarStage"></div>
+        </div>
+
+        <aside class="agenda-right">
+          <div class="right-panel-head">
+            <div><strong id="selectedDateTitle">Hoy</strong><span id="selectedDateMeta">Agenda consolidada</span></div>
+            <button class="icon-btn mini-btn" id="quickAdd" title="Crear en esta fecha"><i data-lucide="plus"></i></button>
+          </div>
+          <div class="day-summary" id="daySummary"></div>
+          <div class="section-caption">Próximas fechas límite</div>
+          <div class="deadline-list" id="deadlineList"></div>
+          <div class="section-caption">Carga de hoy</div>
+          <div class="capacity-mini" id="capacityMini"></div>
+        </aside>
+      </section>
+    </div>
+  </main>
+</div>
+
+<div id="eventModal" class="modal-backdrop hidden">
+  <div class="modal event-modal">
+    <div class="modal-header">
+      <div><h2 id="eventModalTitle">Nueva actividad</h2><p>Programa el compromiso y define responsables, seguimiento y alertas.</p></div>
+      <button class="icon-btn" data-close="eventModal"><i data-lucide="x"></i></button>
+    </div>
+    <form id="eventForm">
+      <input type="hidden" name="id">
+      <div class="modal-body">
+        <div id="conflictAlert" class="conflict-alert hidden"></div>
+        <div class="form-grid">
+          <div class="form-group full"><label>Nombre de la actividad</label><input name="title" required placeholder="Ej. Comité de seguimiento institucional"></div>
+          <div class="form-group"><label>Tipo</label><select name="type" id="eventType"></select></div>
+          <div class="form-group"><label>Calendario</label><select name="calendar" id="eventCalendar"></select></div>
+          <div class="form-group"><label>Fecha inicial</label><input name="date" type="date" required></div>
+          <div class="form-group"><label>Fecha final</label><input name="endDate" type="date" required></div>
+          <div class="form-group inline-check"><label><input name="allDay" type="checkbox"> Todo el día</label></div>
+          <div class="form-group"><label>Repetición</label><select name="recurrence"><option>No se repite</option><option>Diario</option><option>Semanal</option><option>Quincenal</option><option>Mensual</option></select></div>
+          <div class="form-group time-field"><label>Hora inicial</label><input name="start" type="time" required></div>
+          <div class="form-group time-field"><label>Hora final</label><input name="end" type="time" required></div>
+          <div class="form-group"><label>Dependencia</label><select name="office" id="eventOffice"></select></div>
+          <div class="form-group"><label>Prioridad</label><select name="priority"><option>Baja</option><option selected>Media</option><option>Alta</option><option>Crítica</option></select></div>
+          <div class="form-group full"><label>Responsables</label><div id="assigneePicker" class="people-picker"></div></div>
+          <div class="form-group full"><label>Asistentes</label><div id="attendeePicker" class="people-picker"></div></div>
+          <div class="form-group"><label>Lugar</label><input name="location" placeholder="Oficina, sala o dirección"></div>
+          <div class="form-group"><label>Enlace virtual</label><input name="meetingUrl" type="text" placeholder="Enlace de videollamada"></div>
+          <div class="form-group"><label>Visibilidad</label><select name="visibility"><option>Institucional</option><option>Dependencia</option><option>Privada</option><option>Restringida</option><option>Pública</option></select></div>
+          <div class="form-group"><label>Recordatorio</label><select name="reminder"><option value="10">10 minutos antes</option><option value="30" selected>30 minutos antes</option><option value="60">1 hora antes</option><option value="1440">1 día antes</option></select></div>
+          <div class="form-group"><label>Horas estimadas</label><input name="estimatedHours" type="number" min="0" step=".25" value="1"></div>
+          <div class="form-group"><label>Estado inicial</label><select name="status"><option>Programada</option><option>Pendiente</option><option>En curso</option><option>En riesgo</option></select></div>
+          <div class="form-group full"><label>Descripción / resultado esperado</label><textarea name="description" placeholder="Incluye instrucciones, entregable esperado y observaciones relevantes"></textarea></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-close="eventModal">Cancelar</button>
+        <button type="button" class="btn btn-soft" id="suggestSlotInForm"><i data-lucide="sparkles"></i> Sugerir horario</button>
+        <button class="btn btn-primary"><i data-lucide="calendar-check"></i> Guardar actividad</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="availabilityModal" class="modal-backdrop hidden">
+  <div class="modal availability-modal">
+    <div class="modal-header">
+      <div><h2>Encontrar horario disponible</h2><p>Compara agendas y propone espacios sin conflictos.</p></div>
+      <button class="icon-btn" data-close="availabilityModal"><i data-lucide="x"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-grid">
+        <div class="form-group full"><label>Participantes</label><div id="slotPeoplePicker" class="people-picker"></div></div>
+        <div class="form-group"><label>Desde</label><input id="slotDate" type="date"></div>
+        <div class="form-group"><label>Duración</label><select id="slotDuration"><option value="30">30 minutos</option><option value="45">45 minutos</option><option value="60" selected>1 hora</option><option value="90">1 hora 30</option><option value="120">2 horas</option></select></div>
+      </div>
+      <div class="split-line"></div>
+      <div class="section-caption">Espacios sugeridos</div>
+      <div id="slotResults" class="slot-results"></div>
+    </div>
+    <div class="modal-footer"><button class="btn btn-secondary" data-close="availabilityModal">Cerrar</button><button class="btn btn-primary" id="searchSlotsBtn">Buscar disponibilidad</button></div>
+  </div>
+</div>
+
+<div id="eventDrawerBackdrop" class="drawer-backdrop hidden"></div>
+<aside id="eventDrawer" class="drawer hidden">
+  <div class="drawer-head">
+    <div><h2 id="drawerTitle">Detalle de actividad</h2><p>Seguimiento y cumplimiento</p></div>
+    <button class="icon-btn" id="closeDrawer"><i data-lucide="x"></i></button>
+  </div>
+  <div class="drawer-body" id="eventDetail"></div>
+</aside>
+
+<div id="commandBackdrop" class="modal-backdrop hidden">
+  <div class="command-palette">
+    <div class="command-input"><i data-lucide="search"></i><input id="commandInput" autocomplete="off" placeholder="Escribe una acción o busca una actividad…"><kbd>Esc</kbd></div>
+    <div class="command-list" id="commandList"></div>
+  </div>
+</div>
+
+<div id="exportMenu" class="popover hidden">
+  <button id="exportCsv"><i data-lucide="file-spreadsheet"></i><span>Exportar CSV</span></button>
+  <button id="exportIcs"><i data-lucide="calendar-down"></i><span>Exportar ICS</span></button>
+  <button id="importIcsBtn"><i data-lucide="upload"></i><span>Importar ICS</span></button>
+  <input id="importIcs" type="file" accept=".ics,text/calendar" hidden>
+</div>
+
+<div id="moreMenu" class="popover hidden">
+  <button id="printAgenda"><i data-lucide="printer"></i><span>Imprimir agenda</span></button>
+  <button id="resetDemo"><i data-lucide="rotate-ccw"></i><span>Restablecer demo</span></button>
+  <button id="shortcutHelp"><i data-lucide="keyboard"></i><span>Atajos del teclado</span></button>
+</div>
+
+<script src="../../../assets/js/icons.js"></script>
+<script src="../../../assets/js/shell.js"></script>
+<script src="shared/calendar-core.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

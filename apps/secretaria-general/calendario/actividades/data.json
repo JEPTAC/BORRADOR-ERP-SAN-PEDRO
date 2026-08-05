@@ -1,0 +1,14 @@
+{
+  "views": [
+    "table",
+    "board"
+  ],
+  "statuses": [
+    "Programada",
+    "Pendiente",
+    "En curso",
+    "En riesgo",
+    "Cumplida"
+  ],
+  "defaultOwner": "P004"
+}

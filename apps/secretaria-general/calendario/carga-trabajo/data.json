@@ -1,0 +1,5 @@
+{
+  "warningThreshold": 85,
+  "criticalThreshold": 100,
+  "defaultPeriod": "week"
+}

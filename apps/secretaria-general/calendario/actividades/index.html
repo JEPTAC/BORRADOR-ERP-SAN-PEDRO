@@ -1,0 +1,49 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gestión de actividades · Agenda 360</title><link rel="stylesheet" href="styles.css"></head><body><div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand-block"><a class="brand-mark" href="../../../../index.html">SP</a><div class="brand-copy"><strong>Agenda 360</strong><span>ERP Municipal</span></div></div>
+    <div class="sidebar-context"><small>Secretaría General</small><strong>Agenda Institucional · Diseño V06</strong></div>
+    <nav class="sidebar-nav"><div class="nav-label">Agenda institucional</div><a class="nav-item " href="../index.html"><i data-lucide="calendar-days"></i><span class="nav-text">Centro de agenda</span></a><a class="nav-item active" href="index.html"><i data-lucide="list-checks"></i><span class="nav-text">Actividades</span></a><a class="nav-item " href="../disponibilidad/index.html"><i data-lucide="clock"></i><span class="nav-text">Disponibilidad</span></a><a class="nav-item " href="../carga-trabajo/index.html"><i data-lucide="gauge"></i><span class="nav-text">Carga de trabajo</span></a><a class="nav-item " href="../cronograma/index.html"><i data-lucide="git-branch"></i><span class="nav-text">Cronograma</span></a><a class="nav-item " href="../automatizaciones/index.html"><i data-lucide="workflow"></i><span class="nav-text">Automatizaciones</span></a><a class="nav-item " href="../configuracion/index.html"><i data-lucide="settings"></i><span class="nav-text">Configuración</span></a>
+      <div class="nav-label">Secretaría General</div>
+      <a class="nav-item" href="../../index.html"><i data-lucide="layout-dashboard"></i><span class="nav-text">Panel general</span></a>
+      <a class="nav-item" href="../../talento-humano/index.html"><i data-lucide="users"></i><span class="nav-text">Talento Humano</span></a>
+      <a class="nav-item" href="../../mesa-ayuda/index.html"><i data-lucide="headset"></i><span class="nav-text">Mesa TIC</span></a>
+    </nav>
+    <div class="sidebar-footer"><div class="user-mini"><div class="avatar">JP</div><div><strong>Usuario institucional</strong><span>Agenda compartida</span></div></div></div>
+  </aside>
+<main class="main-area"><header class="topbar"><div class="topbar-left"><button class="icon-btn menu-btn" data-menu-toggle><i data-lucide="menu"></i></button><div class="topbar-title"><strong>Gestión de actividades</strong><span data-today></span></div></div>
+<div class="topbar-actions"><button class="icon-btn" data-theme-toggle><i data-lucide="sun-moon"></i></button><button class="icon-btn"><i data-lucide="bell"></i><span class="notify-dot"></span></button></div></header>
+<div class="content"><div class="breadcrumb"><a href="../../../../index.html">ERP</a><span>/</span><a href="../index.html">Agenda 360</a><span>/</span><span>Gestión de actividades</span></div>
+<div class="page-heading"><div><h1>Gestión de actividades</h1><p>Administra compromisos, responsables, fechas límite, avance y evidencias desde una sola bandeja.</p></div><div class="heading-actions"><button class="btn btn-secondary" id="mineBtn"><i data-lucide="user-check"></i> Mis actividades</button></div></div>
+<div class="calendar-subnav"><a href="../index.html"><i data-lucide="calendar"></i> Agenda</a><a class="active" href="../actividades/index.html"><i data-lucide="check-square"></i> Actividades</a><a class="" href="../disponibilidad/index.html"><i data-lucide="users"></i> Disponibilidad</a><a class="" href="../carga-trabajo/index.html"><i data-lucide="gauge"></i> Carga</a><a class="" href="../cronograma/index.html"><i data-lucide="git-branch"></i> Cronograma</a><a class="" href="../automatizaciones/index.html"><i data-lucide="workflow"></i> Reglas</a><a class="" href="../configuracion/index.html"><i data-lucide="settings"></i> Ajustes</a></div>
+
+<div class="kpi-row" id="activityKpis"></div>
+<section class="card activity-shell">
+  <div class="activity-toolbar">
+    <div class="toolbar-group"><div class="search-box"><i data-lucide="search"></i><input id="activitySearch" placeholder="Buscar actividad o responsable"></div>
+      <select id="activityStatus"><option value="">Todos los estados</option><option>Programada</option><option>Pendiente</option><option>En curso</option><option>En riesgo</option><option>Cumplida</option></select>
+      <select id="activityOffice"><option value="">Todas las dependencias</option></select></div>
+    <div class="toolbar-group"><div class="tabs" id="activityViews"><button class="tab-btn active" data-mode="table">Lista</button><button class="tab-btn" data-mode="board">Tablero</button></div>
+      <button class="btn btn-secondary" id="exportActivities"><i data-lucide="download"></i> Exportar</button>
+      <button class="btn btn-primary" id="newActivity"><i data-lucide="plus"></i> Nueva actividad</button></div>
+  </div>
+  <div id="activityContent"></div>
+</section>
+
+<div id="activityModal" class="modal-backdrop hidden"><div class="modal">
+  <div class="modal-header"><div><h2>Nueva actividad</h2><p>Registra un compromiso con fecha, responsables y resultado esperado.</p></div><button class="icon-btn" data-close="activityModal"><i data-lucide="x"></i></button></div>
+  <form id="activityForm"><div class="modal-body form-grid">
+    <div class="form-group full"><label>Actividad</label><input name="title" required></div>
+    <div class="form-group"><label>Fecha</label><input name="date" type="date" required></div>
+    <div class="form-group"><label>Fecha límite</label><input name="endDate" type="date" required></div>
+    <div class="form-group"><label>Inicio</label><input name="start" type="time" value="08:00"></div>
+    <div class="form-group"><label>Fin</label><input name="end" type="time" value="09:00"></div>
+    <div class="form-group"><label>Dependencia</label><select name="office" id="newActivityOffice"></select></div>
+    <div class="form-group"><label>Responsable</label><select name="assignee" id="newActivityPerson"></select></div>
+    <div class="form-group"><label>Prioridad</label><select name="priority"><option>Media</option><option>Alta</option><option>Crítica</option><option>Baja</option></select></div>
+    <div class="form-group"><label>Horas estimadas</label><input name="estimatedHours" type="number" step=".25" value="1"></div>
+    <div class="form-group full"><label>Resultado esperado</label><textarea name="description"></textarea></div>
+  </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-close="activityModal">Cancelar</button><button class="btn btn-primary">Crear actividad</button></div></form>
+</div></div>
+</div></main></div>
+<script src="../../../../assets/js/icons.js"></script><script src="../../../../assets/js/shell.js"></script><script src="../shared/calendar-core.js"></script><script src="script.js"></script></body></html>
