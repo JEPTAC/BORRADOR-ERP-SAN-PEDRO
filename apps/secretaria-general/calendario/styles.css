@@ -67,58 +67,15 @@
 @media(max-width:520px){.agenda-left{grid-template-columns:1fr}.month-weekdays span{font-size:7px}.month-day{padding:3px}.month-grid{grid-auto-rows:72px}.day-number{width:18px;height:18px;font-size:8px}.view-switch button{padding:5px 6px}.detail-grid{grid-template-columns:1fr}}
 @media print{.sidebar,.topbar,.agenda-left,.agenda-right,.page-heading,.kpi-row,.calendar-subnav,.calendar-topbar .calendar-actions{display:none!important}.main-area{margin:0}.content{padding:0}.agenda-workspace{display:block}.calendar-main{border:0}.calendar-stage{overflow:visible}.month-grid{grid-auto-rows:120px}}
 
-/* V08: navegación del Centro de Agenda. Conserva la identidad visual original del ERP. */
-.workspace-commandbar{
-  display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;padding:7px 8px;
-  border:1px solid var(--line);border-radius:11px;background:var(--surface);overflow:hidden
-}
-.workspace-command-group{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
-.workspace-command{
-  min-height:31px;border:0;border-radius:8px;background:transparent;color:var(--muted);padding:6px 9px;
-  display:inline-flex;align-items:center;gap:6px;font-size:9.5px;font-weight:750;white-space:nowrap
-}
-.workspace-command:hover{background:var(--surface-3);color:var(--text)}
-.workspace-command.active{background:var(--brand-soft);color:var(--brand)}
-.workspace-command svg{width:13px;height:13px}
-.workspace-command-tip{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:8.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.workspace-command-tip svg{width:13px;height:13px;flex:0 0 auto}
+/* Diseño institucional unificado */
+.agenda-left>.card,.agenda-right,.calendar-main,.filter-card,.mini-calendar-card,.smart-card{box-shadow:var(--shadow-xs)}
+.calendar-main{border-radius:15px;background:linear-gradient(180deg,var(--surface),var(--surface-2))}
+.calendar-topbar{background:linear-gradient(180deg,var(--surface-2),var(--surface))}
+.mini-calendar-card,.filter-card,.agenda-right{background:linear-gradient(180deg,var(--surface),var(--surface-2));border-color:var(--line)}
+.smart-card{background:linear-gradient(145deg,var(--brand-soft),var(--surface));border:1px solid color-mix(in srgb,var(--brand) 12%,var(--line))}
+.smart-icon{box-shadow:0 8px 17px rgba(13,42,74,.08),inset 0 1px 0 rgba(255,255,255,.75)}
+.month-event,.time-event,.day-event,.deadline-item,.agenda-event-row,.slot-card{transition:transform .15s var(--ease),box-shadow .15s var(--ease),border-color .15s var(--ease),background .15s var(--ease)}
+.month-event:hover,.time-event:hover,.day-event:hover,.deadline-item:hover,.agenda-event-row:hover,.slot-card:hover{transform:translateY(-1px);box-shadow:var(--shadow-xs)}
+.view-switch{border:1px solid var(--line)}
+.popover{border-radius:12px;box-shadow:var(--shadow)}
 
-.agenda-workspace{grid-template-columns:220px minmax(0,1fr) 278px;gap:12px;margin-top:10px}
-.agenda-left,.agenda-right{gap:8px}
-.agenda-left .agenda-card,.agenda-right{box-shadow:var(--shadow-sm)}
-.calendar-main{border-radius:15px;min-height:735px;box-shadow:var(--shadow-sm)}
-.calendar-topbar{padding:0 12px;background:var(--surface)}
-.calendar-stage{min-height:678px}
-.month-day{padding:6px}
-.month-event{padding:4px 5px;border-radius:6px}
-.day-summary{padding-top:4px}
-.right-panel-head{position:sticky;top:0;background:var(--surface);z-index:2}
-
-.agenda-workspace.filters-collapsed{grid-template-columns:minmax(0,1fr) 278px}
-.agenda-workspace.filters-collapsed .agenda-left{display:none}
-.agenda-workspace.details-collapsed{grid-template-columns:220px minmax(0,1fr)}
-.agenda-workspace.details-collapsed .agenda-right{display:none}
-.agenda-workspace.filters-collapsed.details-collapsed,
-.agenda-workspace.focus-mode{grid-template-columns:minmax(0,1fr)}
-.agenda-workspace.focus-mode .agenda-left,
-.agenda-workspace.focus-mode .agenda-right{display:none}
-.agenda-workspace.focus-mode .calendar-main{min-height:calc(100vh - var(--topbar) - 205px)}
-.agenda-workspace.focus-mode .calendar-stage{min-height:calc(100vh - var(--topbar) - 262px)}
-
-@media(max-width:1280px){
-  .workspace-command-tip{display:none}
-  .agenda-workspace{grid-template-columns:215px minmax(0,1fr)}
-  .agenda-right{display:none}
-  .workspace-command#toggleDayPanel{display:none}
-}
-@media(max-width:1050px){
-  .workspace-commandbar{align-items:flex-start}
-  .agenda-workspace,.agenda-workspace.filters-collapsed,.agenda-workspace.details-collapsed{grid-template-columns:1fr}
-  .agenda-left{display:grid}
-  .agenda-workspace.filters-collapsed .agenda-left{display:none}
-}
-@media(max-width:760px){
-  .workspace-commandbar{padding:6px}
-  .workspace-command{font-size:0;width:32px;padding:0;justify-content:center}
-  .workspace-command svg{width:14px;height:14px}
-}

@@ -424,3 +424,18 @@ body{font-size:13px;overflow-x:hidden}
     gap:10px;
   }
 }
+
+/* Diseño nativo institucional */
+.att-heading h1{color:var(--text-strong)}
+.att-kpi,.att-card,.att-quick-card,.att-item,.att-counter,.att-profile,.att-contact-card{background:linear-gradient(180deg,var(--surface),var(--surface-2));border-color:var(--line);box-shadow:var(--shadow-xs)}
+.att-kpi,.att-quick-card,.att-item,.att-counter,.att-profile,.att-contact-card{transition:transform .18s var(--ease),box-shadow .18s var(--ease),border-color .18s var(--ease)}
+.att-kpi:hover,.att-quick-card:hover,.att-item:hover,.att-counter:hover,.att-profile:hover,.att-contact-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm);border-color:color-mix(in srgb,var(--brand) 22%,var(--line))}
+.att-card{border-radius:16px}.att-card-head{background:linear-gradient(180deg,var(--surface-2),var(--surface))}
+.att-kpi-icon,.att-item-icon{background:linear-gradient(145deg,var(--brand-soft),var(--surface));border:1px solid color-mix(in srgb,var(--brand) 10%,var(--line));box-shadow:0 8px 17px rgba(13,42,74,.08)}
+.att-subnav{border:1px solid var(--line);background:var(--surface-3);padding:4px;border-radius:12px}.att-subnav a{padding:7px 10px;border-radius:8px}.att-subnav a.active,.att-subnav a:hover{background:var(--surface);color:var(--text-strong);box-shadow:var(--shadow-xs)}
+.att-table-wrap{border-radius:12px;box-shadow:var(--shadow-xs)}
+.att-tabs{border:1px solid color-mix(in srgb,var(--line) 72%,transparent)}
+.att-progress span{background:linear-gradient(90deg,var(--brand),var(--accent))}
+.att-appt{background:linear-gradient(180deg,var(--brand-soft),var(--surface));box-shadow:var(--shadow-xs)}
+.att-legal{background:linear-gradient(145deg,var(--brand-soft),var(--surface));border-color:color-mix(in srgb,var(--brand) 13%,var(--line))}
+

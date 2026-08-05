@@ -27,3 +27,20 @@
 @media(max-width:1280px){.hr-module-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.person-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.org-branches{grid-template-columns:repeat(2,minmax(0,1fr))}.hr-summary-grid{grid-template-columns:1fr}.payroll-breakdown{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.hr-shell .sidebar{transform:translateX(-100%)}body.sidebar-open .hr-shell .sidebar{transform:translateX(0)}.hr-shell .main-area{margin-left:0}.hr-hero-grid{grid-template-columns:1fr}.hr-hero-actions{justify-content:flex-start}.hr-module-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.analytics-grid{grid-template-columns:1fr}.self-hero{grid-template-columns:auto 1fr}.self-hero .self-balance{grid-column:1/-1}.heatmap{grid-template-columns:90px repeat(12,28px);overflow-x:auto}}
 @media(max-width:620px){.hr-module-grid,.person-card-grid,.org-branches{grid-template-columns:1fr}.hr-detail-grid,.payroll-breakdown{grid-template-columns:1fr}.month-strip{grid-template-columns:repeat(2,1fr)}.month-day{min-height:62px}.self-hero{grid-template-columns:1fr}.self-balance{grid-template-columns:1fr}.hr-hero{padding:20px}.hr-hero-actions .btn{width:100%}}
+
+/* Diseño nativo institucional */
+.hr-shell .content{max-width:1680px}
+.hr-hero{color:#fff;background:linear-gradient(125deg,#092f52 0%,#0d5c91 58%,#118a93 112%);border:1px solid rgba(255,255,255,.12);box-shadow:0 22px 50px rgba(9,55,91,.22),inset 0 1px 0 rgba(255,255,255,.14)}
+.hr-hero h1{color:#fff}.hr-hero p{color:#d9eaf4}.hr-overline{color:#d9eef8}.hr-overline:before{background:#72e0d3}
+.hr-module-grid{gap:13px}.hr-module-card{min-height:160px;padding:16px;border-radius:15px;background:linear-gradient(180deg,var(--surface),var(--surface-2));box-shadow:var(--shadow-xs);transition:transform .18s var(--ease),box-shadow .18s var(--ease),border-color .18s var(--ease)}
+.hr-module-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--brand) 24%,var(--line))}
+.hr-module-card .module-icon{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,var(--brand-soft),var(--surface));border:1px solid color-mix(in srgb,var(--brand) 10%,var(--line));box-shadow:0 8px 17px rgba(13,42,74,.08)}
+.hr-panel,.person-card,.goal-card,.course-card,.document-card,.announcement,.recognition-card,.candidate-card,.org-node,.check-item,.month-day{background:linear-gradient(180deg,var(--surface),var(--surface-2));border-color:var(--line);box-shadow:var(--shadow-xs)}
+.hr-list-row,.org-person,.hr-detail-item{background:var(--surface);border-color:var(--line)}
+.person-card,.goal-card,.course-card,.document-card,.announcement,.recognition-card{transition:transform .18s var(--ease),box-shadow .18s var(--ease),border-color .18s var(--ease)}
+.person-card:hover,.goal-card:hover,.course-card:hover,.document-card:hover,.announcement:hover,.recognition-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm);border-color:color-mix(in srgb,var(--brand) 20%,var(--line))}
+.hr-detail-hero{background:linear-gradient(145deg,var(--brand-soft),var(--surface));border:1px solid color-mix(in srgb,var(--brand) 12%,var(--line))}
+.kanban-column{background:var(--surface-2);border-color:var(--line)}
+.course-cover{background:linear-gradient(135deg,var(--action-start),var(--action-mid),var(--action-end));color:#fff}
+.payroll-summary{background:linear-gradient(145deg,var(--surface),var(--brand-soft));box-shadow:var(--shadow-xs)}
+

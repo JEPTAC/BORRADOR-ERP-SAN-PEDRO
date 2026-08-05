@@ -1,224 +1,160 @@
 {
-  "version": "24.0.0",
-  "name": "Acceso y Launcher ERP Municipal San Pedro",
-  "supabase": false,
-  "existing_files_modified": [
-    "index.html"
-  ],
-  "new_directories": [
-    "acceso",
-    "launcher",
-    "perfil",
-    "assets/branding",
-    "assets/icons/erp"
-  ],
-  "package_file_count_including_manifest": 42,
-  "manifest_self_excluded_from_hash_list": true,
+  "version": "25.0.0",
+  "name": "Sistema visual nativo ERP Municipal San Pedro",
+  "generated_at": "2026-08-05",
+  "project_files_modified_or_new": 27,
+  "documentation_files": 3,
+  "total_files_before_manifest": 30,
   "files": [
     {
-      "path": "ARCHIVOS_ANTIGUOS_OPCIONALES_PARA_ELIMINAR.txt",
-      "bytes": 251,
-      "sha256": "2709a863a697a7815d307b4d4b40b804212c771539ae2eaad72fe912302127da"
+      "path": "ARCHIVO_ANTIGUO_PARA_ELIMINAR.txt",
+      "bytes": 228,
+      "sha256": "fa6a76c7524acdab797f0fc74ae52ee898d94a09e8723b32cf63308ab4e07946"
     },
     {
       "path": "LEEME_REEMPLAZO.txt",
-      "bytes": 1198,
-      "sha256": "5d9c94146bed4e65f512a9be4aa9875d243d8c0f5d6a8b0f5099092a350a845b"
+      "bytes": 1301,
+      "sha256": "5f40e72b3d5c1a7d2faa190cc38c14e9594619a0e3c8cb14b9b867303b55f50e"
     },
     {
       "path": "VALIDACION.txt",
-      "bytes": 604,
-      "sha256": "da58b0392e788c0e1b863dcf984ba7620519ac2d0217d8ad3245b9dfc9f1a73d"
+      "bytes": 726,
+      "sha256": "e677fd82371928222bb1318e53eeb0642248d574edaa1d111ec2d521ec6b344e"
     },
     {
-      "path": "acceso/data.json",
-      "bytes": 2360,
-      "sha256": "755d2b7649e2417fdce8c595a0de5729907b3f247c0ca45cedbee92f91833210"
+      "path": "apps/contratacion/styles.css",
+      "bytes": 124,
+      "sha256": "14c0ebedc3179e20ff82461026e341e281563f14734c7c915932fb3b1d80d37e"
     },
     {
-      "path": "acceso/index.html",
-      "bytes": 5442,
-      "sha256": "d1083d4c12f077cd4b861b384d0930c755aff87ac1d48df14684a8cd38eaa6e9"
+      "path": "apps/control-interno/styles.css",
+      "bytes": 124,
+      "sha256": "9678a65de081361bc08517d18187fcd533a3e10e8c2162403b497e0cf9479b8d"
     },
     {
-      "path": "acceso/script.js",
-      "bytes": 5451,
-      "sha256": "e296a1d699154a8f8bdf1cd54ea465ba488dd1eab8deab680a1446e8dd10f02a"
+      "path": "apps/despacho/styles.css",
+      "bytes": 124,
+      "sha256": "2235c525ba21687b9e6a82a5d5c641144a7ab20ae7d8cba4c3a4e37153b14dbb"
     },
     {
-      "path": "acceso/styles.css",
-      "bytes": 10634,
-      "sha256": "07b993fd83c9f21888e64fce0b3ffcc868d85a36fd30877cd1f48570224d8f93"
+      "path": "apps/gobierno/styles.css",
+      "bytes": 124,
+      "sha256": "1dd9a740a589812b9359bcc9d602f6a3787a3cda384b23e56f3a97014af05b38"
     },
     {
-      "path": "assets/branding/san-pedro.svg",
-      "bytes": 1443990,
-      "sha256": "0f9268559825a0bfd81f4670df54380b45e8ec797907cf6ee6b3b9b3d2a0abd5"
+      "path": "apps/hacienda/styles.css",
+      "bytes": 124,
+      "sha256": "5f1cfaf12bef29f041ac8b5021b9a1d576ca5b350f04f85044ce860e66beed9e"
     },
     {
-      "path": "assets/icons/erp/actions/add.svg",
-      "bytes": 757,
-      "sha256": "5625c866733d19fedfdcc18f0b06250d0400de86ea6a1e331ff627448f860e76"
+      "path": "apps/juridica/styles.css",
+      "bytes": 124,
+      "sha256": "313158435a16ceed4011bed34cbba3bc7a61b0282268014c7757a9478420eb24"
     },
     {
-      "path": "assets/icons/erp/actions/arrow-right.svg",
-      "bytes": 748,
-      "sha256": "5ad982a9692530a0da23aca1f436414d520e500370ce8703252b6216ee82fd33"
+      "path": "apps/planeacion/styles.css",
+      "bytes": 124,
+      "sha256": "6113d5b7c27fbc3e322765ca97912bac99fe1e63cb7bf7ba9aa523e4fd24738f"
     },
     {
-      "path": "assets/icons/erp/actions/back.svg",
-      "bytes": 715,
-      "sha256": "4e52d5599c43c929b0e7d1675eea957747347a4138f39b63479bca85ee12bb33"
+      "path": "apps/salud-bienestar/styles.css",
+      "bytes": 124,
+      "sha256": "23be74e93384166a865af706de53f052ab2dabd7a915533a24098e027b69801c"
     },
     {
-      "path": "assets/icons/erp/actions/check.svg",
-      "bytes": 809,
-      "sha256": "3197d66548c70e6e6920f214d519043db39585f94df5cc0be1389c7c27090e47"
+      "path": "apps/secretaria-general/calendario/shared/calendar-shared.css",
+      "bytes": 9768,
+      "sha256": "40e297b5ff5a77ae3d17be1e6c25a68460fd55cb3baa96979b0c75978c6a56f7"
     },
     {
-      "path": "assets/icons/erp/actions/close.svg",
-      "bytes": 724,
-      "sha256": "a75d671f865337af6dce4368ce547eba7f1bb1d59fe9316d1896bb02c54cc789"
+      "path": "apps/secretaria-general/calendario/styles.css",
+      "bytes": 16239,
+      "sha256": "9a20f94f7e2f25eb1451cbcd1b14287cc8ccf3c0e159aca4084127ee9aa3a147"
     },
     {
-      "path": "assets/icons/erp/actions/edit.svg",
-      "bytes": 765,
-      "sha256": "e77ec0b7aafeefb5bc15fb980383c99e70f0ca5e3eac8a0957ef10abf2319a44"
+      "path": "apps/secretaria-general/mesa-ayuda/shared/itsm.css",
+      "bytes": 13911,
+      "sha256": "241272623a00fe1b6dc6d52c01bf13289f9df43fb85a3beef3fa1f645665f578"
     },
     {
-      "path": "assets/icons/erp/actions/save.svg",
-      "bytes": 792,
-      "sha256": "d0da2f3d5795ea9d0766f6bfa1bb4fd7861a8c93f7f858b946e2b31ebdd8d4b9"
+      "path": "apps/secretaria-general/mesa-ayuda/styles.css",
+      "bytes": 2279,
+      "sha256": "bab9d1da9737792fea21c09ce0dd3e7293c8fb67a3863c5bf4e22e52aafbdb6a"
     },
     {
-      "path": "assets/icons/erp/actions/search.svg",
-      "bytes": 760,
-      "sha256": "403e4181b05de66ad383d669a1e706c03a045d6436ec4a6460fc9552149e1598"
+      "path": "apps/secretaria-general/registro-atenciones/checkin/styles.css",
+      "bytes": 3290,
+      "sha256": "b68dfa1c68e30f5cb41f56c31906b077d6b3bc74b86173477a13d5e846fd9940"
     },
     {
-      "path": "assets/icons/erp/modules/analytics.svg",
-      "bytes": 1171,
-      "sha256": "9d07725894f944fea99ba7e8df148449bcc0e7e26a92a89ab530837546163d43"
+      "path": "apps/secretaria-general/registro-atenciones/portal-citas/styles.css",
+      "bytes": 9419,
+      "sha256": "acf30868632d5802d08e364492f095c3987b4aa757b62847cd9a3b68e5846530"
     },
     {
-      "path": "assets/icons/erp/modules/audit.svg",
-      "bytes": 1296,
-      "sha256": "1faff927ded58091c07be447b077891df55d8373ab7b3912ec73f644860b1c43"
+      "path": "apps/secretaria-general/registro-atenciones/shared/attention-core.css",
+      "bytes": 25151,
+      "sha256": "44dda81a3a3d78893dd7eca55a40e6b8ee38f240359ad32436089d22ea66a0fa"
     },
     {
-      "path": "assets/icons/erp/modules/calendar.svg",
-      "bytes": 1340,
-      "sha256": "36443bccff4de00647aed6f71aa1ba868c0f281fda0a299785cb0377a46436dc"
+      "path": "apps/secretaria-general/sig/shared/sig-core.css",
+      "bytes": 16967,
+      "sha256": "959e717481ba4e6c1526a059715acd85eabcca26bea06e7cd08109abe590658d"
     },
     {
-      "path": "assets/icons/erp/modules/customers.svg",
-      "bytes": 1259,
-      "sha256": "2986bb7afa706626d01462cdd4a08ad9eb78ce1deb60ebd6e47e8b3a984cf43d"
+      "path": "apps/secretaria-general/styles.css",
+      "bytes": 2353,
+      "sha256": "15a75f15bf63ff21c6897e9b86052169c981bdc6ce2ef385559e92460aeb528a"
     },
     {
-      "path": "assets/icons/erp/modules/dashboard.svg",
-      "bytes": 1506,
-      "sha256": "e3fdac8cc4cb781db9638e99afd3df67df352fa13a736f23ae885999a9ceec72"
+      "path": "apps/secretaria-general/talento-humano/shared/hr.css",
+      "bytes": 18675,
+      "sha256": "ae4a77d9d84de30935c8015024e1d659df46f276299ea7d09bacab2888354577"
     },
     {
-      "path": "assets/icons/erp/modules/documents.svg",
-      "bytes": 1234,
-      "sha256": "369632ab1f96d471513633c7de8f1d1199318c6903defa365bf4afeb8aadb5c6"
+      "path": "apps/secretaria-general/talento-humano/shared/operations.css",
+      "bytes": 13637,
+      "sha256": "cc5a045cbc78867585f868e3e4f0798982f8d18d3dcec5139cacceb056254ec2"
     },
     {
-      "path": "assets/icons/erp/modules/functions.svg",
-      "bytes": 1185,
-      "sha256": "2cab59fabcbbcf0ecd80ba0376de17c8de2133f58968f167f43a7bb63bd60735"
+      "path": "apps/secretaria-general/talento-humano/shared/public-hr.css",
+      "bytes": 10458,
+      "sha256": "b381b754d82e224f039c1a49f94b9dcc13e78f78d769d9a055d03dc2f3349c15"
     },
     {
-      "path": "assets/icons/erp/modules/helpdesk.svg",
-      "bytes": 1190,
-      "sha256": "7b44d66576b4335515b0b02c1eca67132f049dd2752d9a2815b98b5d595dd0bb"
+      "path": "apps/secretaria-general/talento-humano/styles.css",
+      "bytes": 1181,
+      "sha256": "f1439539e98b2dce472b09dc31c08ebe4c4db84242602fc163b00835bb52204e"
     },
     {
-      "path": "assets/icons/erp/modules/integrations.svg",
-      "bytes": 1320,
-      "sha256": "c769f57f1df8ba70493a0ebf20a24b8554fcd979391835035a762eab454903a4"
+      "path": "assets/css/base.css",
+      "bytes": 24240,
+      "sha256": "10d42db315cac1b2a00f23c8d4148190d6ac1f5ffc70c1db19f7f63621b1bdd8"
     },
     {
-      "path": "assets/icons/erp/modules/notifications.svg",
-      "bytes": 1213,
-      "sha256": "3e89bee8084631bb6059c636dc6dead29ff426ae2d6d77f1567f3a0cb2558888"
+      "path": "assets/css/module-shell.css",
+      "bytes": 2792,
+      "sha256": "35b27ac54ac74883150bf8678857f9690c4fa664da53e3e8faa19bbc5e7f8fe4"
     },
     {
-      "path": "assets/icons/erp/modules/quality.svg",
-      "bytes": 1155,
-      "sha256": "d810bbaac1c7e803b4c808071e383d5e867f71d71f684a77d6f860a9caba8c9d"
+      "path": "assets/css/portal.css",
+      "bytes": 2421,
+      "sha256": "e7012baab85dfd657c0032336edea8e6fbbd153197b80a2861b7291eda580552"
     },
     {
-      "path": "assets/icons/erp/modules/reports.svg",
-      "bytes": 1182,
-      "sha256": "0210e14f76fdc2ab3de76022650ef03efc8c700cc7d57f69edc6d945d0726af6"
-    },
-    {
-      "path": "assets/icons/erp/modules/roles.svg",
-      "bytes": 1290,
-      "sha256": "27706d3254905bad609a3eef949b6bf2a0c80fffb02c603faed936011ea0fb46"
-    },
-    {
-      "path": "assets/icons/erp/modules/security.svg",
-      "bytes": 1135,
-      "sha256": "4256d29bd7fe4bbe8ded047a8520c0541c9647ce39b27d1c446ec0343035fa14"
-    },
-    {
-      "path": "assets/icons/erp/modules/settings.svg",
-      "bytes": 1219,
-      "sha256": "f7333e09ab92cfb181aea2f1ce5a062621084d4d8acbad41e631db7395b550f6"
-    },
-    {
-      "path": "assets/icons/erp/modules/users.svg",
-      "bytes": 1212,
-      "sha256": "9700f8bbfebc4020e195668c6387ae9802affd9d4ac8c2d48f3b89bbc7b90301"
-    },
-    {
-      "path": "index.html",
-      "bytes": 611,
-      "sha256": "5da384c02eaaecb62bef02befbce1b1d6d8fe788c8d9bf6e28d57f3a98231744"
-    },
-    {
-      "path": "launcher/data.json",
-      "bytes": 7404,
-      "sha256": "34a6ea9fd6efa75efd035486fb318b5545bae0af942e9809314a7956ebc8817d"
-    },
-    {
-      "path": "launcher/index.html",
-      "bytes": 6760,
-      "sha256": "d9fea376aa0ab96be54505f89da82833d333da476133f986acabefbe82477f41"
-    },
-    {
-      "path": "launcher/script.js",
-      "bytes": 14774,
-      "sha256": "5b57293957d9eb2c2313b54101a7303893924ca69a2a1ce29199a8a798bd409d"
+      "path": "assets/js/shell.js",
+      "bytes": 6230,
+      "sha256": "49040aef80fc79da99603beb7fe56d7303dde1532524ed1189260b1800ac6d92"
     },
     {
       "path": "launcher/styles.css",
-      "bytes": 20612,
-      "sha256": "b96032d0cdd6b180caa16baf8f63efa218cec831be9e5d339323b43edb5e3c01"
-    },
-    {
-      "path": "perfil/data.json",
-      "bytes": 980,
-      "sha256": "b3fc2109e65d46e5ef102036c1339babcf572db1d65f1e99f80e65bda0a3fd9f"
-    },
-    {
-      "path": "perfil/index.html",
-      "bytes": 4699,
-      "sha256": "6d28affd66ac28353deec3ec695fc6c64f6013e2a2571e6a1b9f13f3b9635259"
-    },
-    {
-      "path": "perfil/script.js",
-      "bytes": 8791,
-      "sha256": "e19e2775c9637d3e1743dbc9b8301d1763a9d049bf17f00fc29b6d302d486e4a"
+      "bytes": 23213,
+      "sha256": "56c26375affb01d1e71ac7484cf7fb2fdeb0e159c722a3c52a97806c2eb292f1"
     },
     {
       "path": "perfil/styles.css",
-      "bytes": 9021,
-      "sha256": "3fcb8e0e80e871d2b65e37a10a9567cfe06e1e0244f92284791fa9544b6f195f"
+      "bytes": 10401,
+      "sha256": "6e021057a8ba37513a45c12f00d0bab59a6a4020ce5217f353feb632c73695a8"
     }
   ]
 }

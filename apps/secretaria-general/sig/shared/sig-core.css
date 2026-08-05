@@ -30,3 +30,18 @@ body{font-size:14px;overflow-x:hidden}
 @media(max-width:1280px){.standard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sig-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.process-lane-body{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-layout{grid-template-columns:1fr}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.risk-layout{grid-template-columns:1fr}}
 @media(max-width:980px){.sidebar{width:var(--sig-sidebar)}.main-area{margin-left:0}.content{padding:18px}.sig-grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.review-agenda,.audit-timeline,.special-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.page-heading{flex-direction:column}.heading-actions{width:100%}.heading-actions .btn{flex:1}.page-heading h1{font-size:24px}.sig-kpis{grid-template-columns:1fr 1fr}.standard-grid,.sig-grid-2,.sig-grid-3,.sig-grid-4,.quick-grid,.review-agenda,.audit-timeline,.special-summary{grid-template-columns:1fr}.process-lane-body{grid-template-columns:1fr}.sig-search{min-width:100%;width:100%}.sig-toolbar-group{width:100%}.sig-toolbar select{flex:1}.req-card{grid-template-columns:42px minmax(0,1fr)}.req-score{grid-column:2}.req-evidence{grid-column:2}.sig-form-grid{grid-template-columns:1fr}.sig-form-group.full{grid-column:auto}.sig-table{min-width:820px}}
+
+/* Diseño nativo institucional */
+.sig-kpis{gap:11px}.sig-kpi{min-height:86px;padding:13px 14px;border-radius:14px;background:linear-gradient(180deg,var(--surface),var(--surface-2));box-shadow:var(--shadow-xs);transition:transform .17s var(--ease),box-shadow .17s var(--ease),border-color .17s var(--ease)}
+.sig-kpi:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm);border-color:color-mix(in srgb,var(--brand) 20%,var(--line))}
+.sig-kpi-icon{width:36px;height:36px;border-radius:12px;background:linear-gradient(145deg,var(--brand-soft),var(--surface));border:1px solid color-mix(in srgb,var(--brand) 10%,var(--line));box-shadow:0 8px 17px rgba(13,42,74,.08)}
+.sig-subnav{padding:4px;border:1px solid var(--line);border-radius:12px;background:var(--surface-3)}.sig-subnav a{padding:7px 10px;border-radius:8px}.sig-subnav a.active,.sig-subnav a:hover{background:var(--surface);color:var(--text-strong);box-shadow:var(--shadow-xs)}
+.sig-card{border-radius:15px;background:linear-gradient(180deg,var(--surface),var(--surface-2));box-shadow:var(--shadow-xs);transition:box-shadow .18s var(--ease),border-color .18s var(--ease)}.sig-card:hover{box-shadow:var(--shadow-sm);border-color:color-mix(in srgb,var(--brand) 16%,var(--line))}
+.sig-card-head{background:linear-gradient(180deg,var(--surface-2),var(--surface))}
+.standard-card,.req-card,.process-card,.risk-card,.objective-card,.audit-card,.action-card,.document-card,.party-card,.supplier-card{background:linear-gradient(180deg,var(--surface),var(--surface-2));border:1px solid var(--line);box-shadow:var(--shadow-xs);transition:transform .18s var(--ease),box-shadow .18s var(--ease),border-color .18s var(--ease)}
+.standard-card:hover,.req-card:hover,.process-card:hover,.risk-card:hover,.objective-card:hover,.audit-card:hover,.action-card:hover,.document-card:hover,.party-card:hover,.supplier-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm);border-color:color-mix(in srgb,var(--brand) 22%,var(--line))}
+.standard-code,.sig-kpi-icon,.quick-icon{box-shadow:0 8px 17px rgba(13,42,74,.08),inset 0 1px 0 rgba(255,255,255,.75)}
+.sig-table-wrap{border-radius:12px;box-shadow:var(--shadow-xs)}
+.sig-progress-line span{background:linear-gradient(90deg,var(--brand),var(--accent))}
+.sig-badge{background:var(--surface-3);color:var(--muted-strong);border:1px solid var(--line)}
+

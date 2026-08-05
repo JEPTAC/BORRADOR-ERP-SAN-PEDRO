@@ -111,3 +111,19 @@ table{min-width:720px}th{padding:8px 10px;font-size:8.5px}td{padding:9px 10px;fo
   .form-grid{grid-template-columns:1fr}.form-group.full{grid-column:auto}
   .search-box{min-width:100%;width:100%}.toolbar{align-items:stretch}.toolbar-group{width:100%}
 }
+
+/* Diseño nativo institucional */
+.calendar-subnav{border:1px solid var(--line);background:var(--surface-3);padding:4px;border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.55)}
+.calendar-subnav a{padding:7px 10px;border-radius:8px;transition:background .15s var(--ease),color .15s var(--ease),box-shadow .15s var(--ease)}
+.calendar-subnav a:hover,.calendar-subnav a.active{background:var(--surface);color:var(--text-strong);box-shadow:var(--shadow-xs)}
+.kpi-row{gap:10px}.kpi{min-height:72px;padding:11px 12px;border-radius:13px;background:linear-gradient(180deg,var(--surface),var(--surface-2));box-shadow:var(--shadow-xs);transition:transform .17s var(--ease),box-shadow .17s var(--ease),border-color .17s var(--ease)}
+.kpi:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm);border-color:color-mix(in srgb,var(--brand) 18%,var(--line))}
+.kpi-icon{width:34px;height:34px;border-radius:11px;background:linear-gradient(145deg,var(--brand-soft),var(--surface));border:1px solid color-mix(in srgb,var(--brand) 10%,var(--line));box-shadow:0 7px 15px rgba(13,42,74,.08)}
+.agenda-card{border-radius:14px;box-shadow:var(--shadow-xs);background:var(--surface)}
+.person-chip{background:var(--surface-3);border:1px solid color-mix(in srgb,var(--line) 75%,transparent)}
+.note{border:1px solid color-mix(in srgb,var(--brand) 12%,var(--line));background:linear-gradient(145deg,var(--brand-soft),var(--surface));color:var(--brand-strong)}
+.dropzone{background:var(--surface-2);border-color:var(--line-strong)}
+.command-palette{border-radius:17px;box-shadow:var(--shadow-lg)}
+.command-item{transition:background .14s var(--ease),transform .14s var(--ease)}
+.command-item:hover,.command-item.active{background:var(--brand-soft);transform:translateX(2px)}
+
