@@ -265,3 +265,162 @@ body{font-size:13px;overflow-x:hidden}
   .att-kpi{min-height:76px;padding:12px}
   .att-kpi-copy strong{font-size:19px}
 }
+
+
+/* =========================================================
+   V21 — ajuste fino de tarjetas e iconografía interna
+   Mantiene sidebar/topbar/colores globales.
+   ========================================================= */
+
+/* Tarjetas generales con sensación más premium */
+.att-card,
+.att-kpi,
+.att-quick-card,
+.att-counter,
+.att-profile,
+.att-contact-card{
+  position:relative;
+  overflow:hidden;
+}
+.att-card::before,
+.att-kpi::before,
+.att-quick-card::before,
+.att-counter::before,
+.att-profile::before,
+.att-contact-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  border-radius:inherit;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.75), inset 0 -1px 0 rgba(15,23,42,.03);
+}
+.att-card,
+.att-profile,
+.att-contact-card,
+.att-counter{
+  box-shadow:
+    0 12px 28px rgba(15,23,42,.07),
+    0 2px 6px rgba(15,23,42,.04);
+}
+.att-kpi,
+.att-quick-card{
+  box-shadow:
+    0 10px 22px rgba(15,23,42,.065),
+    0 2px 6px rgba(15,23,42,.035);
+}
+.att-card:hover,
+.att-profile:hover,
+.att-contact-card:hover,
+.att-counter:hover{
+  box-shadow:
+    0 16px 32px rgba(15,23,42,.085),
+    0 3px 8px rgba(15,23,42,.045);
+}
+.att-kpi:hover,
+.att-quick-card:hover{
+  box-shadow:
+    0 14px 26px rgba(15,23,42,.08),
+    0 3px 8px rgba(15,23,42,.04);
+}
+
+/* Íconos y "dibujos" mejor centrados y con relieve 3D suave */
+.att-kpi-icon,
+.att-item-icon,
+.att-quick-card .att-item-icon,
+.att-counter .att-item-icon{
+  display:grid;
+  place-items:center;
+  align-self:center;
+  justify-self:center;
+  background:linear-gradient(180deg, color-mix(in srgb,var(--brand-soft) 75%, white 25%), color-mix(in srgb,var(--brand-soft) 90%, var(--surface) 10%));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.85),
+    inset 0 -1px 0 rgba(15,23,42,.04),
+    0 8px 18px rgba(15,23,42,.08);
+}
+.att-kpi-icon svg,
+.att-item-icon svg,
+.att-quick-card .att-item-icon svg{
+  display:block;
+  margin:0;
+}
+
+/* KPI más balanceadas visualmente */
+.att-kpi{
+  align-items:center;
+  gap:12px;
+  min-height:88px;
+}
+.att-kpi-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* Acciones rápidas mejor alineadas */
+.att-quick-card{
+  align-items:center;
+  grid-template-columns:36px minmax(0,1fr);
+}
+.att-quick-card .att-item-icon{
+  width:36px;
+  height:36px;
+  border-radius:11px;
+}
+.att-quick-card strong,
+.att-kpi-copy strong,
+.att-item strong,
+.att-contact-head strong,
+.att-profile h3,
+.att-counter h3{
+  letter-spacing:-.01em;
+}
+
+/* Tarjetas operativas */
+.att-item{
+  grid-template-columns:34px minmax(0,1fr) auto;
+  align-items:center;
+}
+.att-item-icon{
+  width:34px;
+  height:34px;
+  border-radius:11px;
+}
+
+/* Directorio y perfiles */
+.att-profile,
+.att-contact-card{
+  background:linear-gradient(180deg, var(--surface), color-mix(in srgb,var(--surface-2) 72%, white 28%));
+}
+.att-contact-head,
+.att-profile{
+  align-items:center;
+}
+.att-contact-head .avatar,
+.att-profile .avatar{
+  box-shadow:
+    0 8px 18px rgba(15,23,42,.08),
+    inset 0 1px 0 rgba(255,255,255,.65);
+}
+
+/* Contadores/puestos con un poco más de presencia */
+.att-counter{
+  background:linear-gradient(180deg,var(--surface), color-mix(in srgb,var(--surface-2) 78%, white 22%));
+}
+.att-counter .ticket{
+  text-shadow:0 1px 0 rgba(255,255,255,.55);
+}
+
+/* Cabeceras internas un poco más elegantes */
+.att-card-head{
+  background:linear-gradient(180deg, color-mix(in srgb,var(--surface-2) 50%, white 50%), var(--surface));
+}
+
+@media(max-width:620px){
+  .att-kpi,
+  .att-quick-card,
+  .att-item{
+    gap:10px;
+  }
+}
