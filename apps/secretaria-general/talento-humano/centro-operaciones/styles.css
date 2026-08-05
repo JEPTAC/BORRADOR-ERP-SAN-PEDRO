@@ -1,2 +1,7 @@
-@import url('../shared/operations.css');
-#quickActions{margin-bottom:2px}.queue-check{width:16px;height:16px}.load-copy{min-width:0}.load-copy strong{display:block}.load-copy small{display:block;color:var(--muted)}.load-value{font-size:9px;color:var(--muted);text-align:right}.load-value strong{font-size:11px;color:var(--text)}
+@import url('../shared/operations.css?v=15.0.0');
+#quickActions{margin-bottom:12px}
+.queue-check{width:15px;height:15px}
+.load-copy{min-width:0}.load-copy strong{display:block}.load-copy small{display:block;color:var(--muted)}
+.load-value{font-size:8px;color:var(--muted);text-align:right}.load-value strong{font-size:10.5px;color:var(--text)}
+#centerAlerts .ops-item,#teamLoad .ops-item{grid-template-columns:30px minmax(0,1fr) auto}
+@media(min-width:1281px){.ops-grid-2{grid-template-columns:minmax(0,1.72fr) 310px}}

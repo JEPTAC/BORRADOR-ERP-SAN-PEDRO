@@ -1,1 +1,3 @@
-@import url('../shared/operations.css');
+@import url('../shared/operations.css?v=15.0.0');
+.ops-table{min-width:980px}
+.ops-table td:nth-child(4),.ops-table th:nth-child(4){white-space:nowrap}
