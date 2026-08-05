@@ -1,0 +1,258 @@
+{
+  "title": "Integridad y declaraciones",
+  "subtitle": "Controla hojas de vida, bienes y rentas, conflictos de interés, impedimentos, código de integridad y evidencias de cumplimiento.",
+  "eyebrow": "Transparencia y cumplimiento individual",
+  "metrics": [
+    {
+      "label": "Obligaciones vigentes",
+      "value": "148",
+      "hint": "Servidores y contratistas",
+      "icon": "shield"
+    },
+    {
+      "label": "Pendientes SIGEP",
+      "value": "11",
+      "hint": "Actualización o evidencia",
+      "icon": "alert"
+    },
+    {
+      "label": "Conflictos declarados",
+      "value": "3",
+      "hint": "Todos con tratamiento activo",
+      "icon": "scale"
+    },
+    {
+      "label": "Cobertura de integridad",
+      "value": "94%",
+      "hint": "Compromisos y capacitación",
+      "icon": "check"
+    }
+  ],
+  "insights": [
+    {
+      "label": "Próximo vencimiento masivo",
+      "value": "31 de agosto",
+      "detail": "Actualización anual de bienes y rentas."
+    },
+    {
+      "label": "Declaraciones verificadas",
+      "value": "137",
+      "detail": "Evidencia revisada por Talento Humano."
+    },
+    {
+      "label": "Capacitación en integridad",
+      "value": "91%",
+      "detail": "67 de 74 personas completaron la ruta."
+    }
+  ],
+  "sections": [
+    {
+      "id": "obligaciones",
+      "label": "Obligaciones individuales",
+      "icon": "clipboard-list",
+      "description": "Calendario de deberes, responsables y evidencias.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "person",
+          "label": "Persona",
+          "type": "primary"
+        },
+        {
+          "key": "obligation",
+          "label": "Obligación"
+        },
+        {
+          "key": "due",
+          "label": "Vencimiento",
+          "type": "date"
+        },
+        {
+          "key": "system",
+          "label": "Sistema oficial"
+        },
+        {
+          "key": "evidence",
+          "label": "Evidencia"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "person": "Laura Mendoza",
+          "subtitle": "Servidora de carrera",
+          "obligation": "Bienes y rentas anual",
+          "due": "2026-08-31",
+          "system": "SIGEP II",
+          "evidence": "Constancia pendiente",
+          "status": "Pendiente"
+        },
+        {
+          "person": "Carlos Ramírez",
+          "subtitle": "Secretario de despacho",
+          "obligation": "Conflictos de interés",
+          "due": "2026-07-31",
+          "system": "Aplicativo de Integridad",
+          "evidence": "Constancia 2026-071",
+          "status": "Completado"
+        },
+        {
+          "person": "Ana Torres",
+          "subtitle": "Contratista",
+          "obligation": "Hoja de vida y bienes y rentas",
+          "due": "2026-08-15",
+          "system": "SIGEP II",
+          "evidence": "En revisión",
+          "status": "En proceso"
+        }
+      ]
+    },
+    {
+      "id": "conflictos",
+      "label": "Conflictos e impedimentos",
+      "icon": "scale",
+      "description": "Declaraciones, análisis, tratamiento, impedimentos y recusaciones.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "CI-2026-003 · Proceso contractual",
+          "description": "Vínculo familiar declarado con potencial oferente. Se asignó servidor sustituto.",
+          "status": "En proceso",
+          "persona": "Servidor reservado",
+          "riesgo": "Alto",
+          "tratamiento": "Impedimento aceptado",
+          "fecha": "2026-07-29"
+        },
+        {
+          "title": "CI-2026-002 · Supervisión",
+          "description": "Relación profesional previa con contratista. Se documentó análisis.",
+          "status": "Completado",
+          "persona": "Servidor reservado",
+          "riesgo": "Medio",
+          "tratamiento": "Control reforzado",
+          "fecha": "2026-06-18"
+        }
+      ]
+    },
+    {
+      "id": "integridad",
+      "label": "Código de integridad",
+      "icon": "heart",
+      "description": "Valores, compromisos, capacitaciones, reconocimientos y apropiación.",
+      "layout": "matrix",
+      "rows": [
+        {
+          "title": "Honestidad",
+          "description": "Actuar con fundamento en la verdad, transparencia y rectitud.",
+          "progress": 96,
+          "responsable": "Secretaría General"
+        },
+        {
+          "title": "Respeto",
+          "description": "Reconocer, valorar y tratar dignamente a todas las personas.",
+          "progress": 92,
+          "responsable": "Talento Humano"
+        },
+        {
+          "title": "Compromiso",
+          "description": "Comprender la importancia del rol como servidor público.",
+          "progress": 94,
+          "responsable": "Líderes de proceso"
+        },
+        {
+          "title": "Diligencia",
+          "description": "Cumplir deberes y funciones con atención, prontitud y eficiencia.",
+          "progress": 89,
+          "responsable": "Líderes de proceso"
+        }
+      ]
+    },
+    {
+      "id": "verificacion",
+      "label": "Verificación y alertas",
+      "icon": "search",
+      "description": "Control de completitud, consistencia, constancias y pendientes.",
+      "layout": "checklist",
+      "rows": [
+        {
+          "title": "Cruzar personas activas contra SIGEP II",
+          "description": "Validar que todas las vinculaciones vigentes estén reflejadas.",
+          "owner": "Administrador SIGEP",
+          "due": "10 ago",
+          "status": "En proceso"
+        },
+        {
+          "title": "Verificar constancias de bienes y rentas",
+          "description": "Revisión documental de servidores obligados.",
+          "owner": "Talento Humano",
+          "due": "31 ago",
+          "status": "Pendiente"
+        },
+        {
+          "title": "Cerrar ruta de integridad 2026",
+          "description": "Completar capacitación y aceptación de compromisos.",
+          "owner": "Equipo de Integridad",
+          "due": "15 sep",
+          "status": "En proceso"
+        }
+      ]
+    }
+  ],
+  "form": {
+    "title": "Registrar obligación o declaración",
+    "sectionId": "obligaciones",
+    "fields": [
+      {
+        "key": "person",
+        "label": "Persona",
+        "required": true
+      },
+      {
+        "key": "obligation",
+        "label": "Obligación",
+        "required": true
+      },
+      {
+        "key": "due",
+        "label": "Vencimiento",
+        "type": "date",
+        "required": true
+      },
+      {
+        "key": "system",
+        "label": "Sistema oficial",
+        "type": "select",
+        "options": [
+          "SIGEP II",
+          "Aplicativo de Integridad",
+          "ERP Municipal",
+          "Otro"
+        ]
+      },
+      {
+        "key": "evidence",
+        "label": "Evidencia o constancia"
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Pendiente",
+          "En proceso",
+          "Completado"
+        ]
+      }
+    ]
+  },
+  "moduleId": "integridad-publica",
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
+  ]
+}

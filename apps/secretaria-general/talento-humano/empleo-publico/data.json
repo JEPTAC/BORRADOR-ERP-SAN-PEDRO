@@ -1,0 +1,322 @@
+{
+  "title": "Planta y empleo público",
+  "subtitle": "Administra la planta, empleos, vacancias, provisión, manuales de funciones y preparación de información para OPEC y SIMO.",
+  "eyebrow": "Carrera administrativa y mérito",
+  "metrics": [
+    {
+      "label": "Empleos de planta",
+      "value": "52",
+      "hint": "48 provistos · 4 vacantes",
+      "icon": "briefcase"
+    },
+    {
+      "label": "Vacancias definitivas",
+      "value": "3",
+      "hint": "2 pendientes de reporte OPEC",
+      "icon": "alert"
+    },
+    {
+      "label": "Encargos vigentes",
+      "value": "6",
+      "hint": "1 finaliza este mes",
+      "icon": "route"
+    },
+    {
+      "label": "Perfiles compatibles",
+      "value": "92%",
+      "hint": "4 brechas de requisitos",
+      "icon": "shield"
+    }
+  ],
+  "insights": [
+    {
+      "label": "Costo anual estimado",
+      "value": "$4.280 millones",
+      "detail": "Asignación básica y factores salariales de la planta."
+    },
+    {
+      "label": "Cobertura del manual",
+      "value": "100%",
+      "detail": "Todos los empleos tienen ficha de funciones vigente."
+    },
+    {
+      "label": "Actualización OPEC",
+      "value": "2 pendientes",
+      "detail": "Vacantes definitivas listas para validación institucional."
+    }
+  ],
+  "sections": [
+    {
+      "id": "empleos",
+      "label": "Planta de empleos",
+      "icon": "briefcase",
+      "description": "Inventario institucional de cargos, códigos, grados, naturaleza y provisión.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "code",
+          "label": "Empleo",
+          "type": "primary"
+        },
+        {
+          "key": "level",
+          "label": "Nivel"
+        },
+        {
+          "key": "office",
+          "label": "Dependencia"
+        },
+        {
+          "key": "nature",
+          "label": "Naturaleza"
+        },
+        {
+          "key": "holder",
+          "label": "Titular"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "code": "219-03 · Profesional Universitario",
+          "subtitle": "Planta global",
+          "level": "Profesional",
+          "office": "Planeación",
+          "nature": "Carrera administrativa",
+          "holder": "Laura Mendoza",
+          "status": "Activo",
+          "grade": "03",
+          "annualCost": "$98.400.000"
+        },
+        {
+          "code": "407-02 · Auxiliar Administrativo",
+          "subtitle": "Planta global",
+          "level": "Asistencial",
+          "office": "Secretaría General",
+          "nature": "Carrera administrativa",
+          "holder": "Vacante",
+          "status": "Pendiente",
+          "grade": "02",
+          "annualCost": "$55.200.000"
+        },
+        {
+          "code": "020-01 · Secretario de Despacho",
+          "subtitle": "Nivel directivo",
+          "level": "Directivo",
+          "office": "Gobierno",
+          "nature": "Libre nombramiento",
+          "holder": "Carlos Ramírez",
+          "status": "Activo",
+          "grade": "01",
+          "annualCost": "$164.000.000"
+        }
+      ]
+    },
+    {
+      "id": "vacantes",
+      "label": "Vacantes y provisión",
+      "icon": "search",
+      "description": "Vacancias, encargos, provisionales, periodo de prueba y movimientos de mérito.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "Auxiliar Administrativo 407-02",
+          "description": "Vacancia definitiva pendiente de reporte y validación OPEC.",
+          "status": "Pendiente",
+          "tipo": "Definitiva",
+          "dependencia": "Secretaría General",
+          "provision": "OPEC/SIMO",
+          "fecha": "2026-07-18"
+        },
+        {
+          "title": "Profesional Universitario 219-04",
+          "description": "Encargo temporal mientras se surte el proceso definitivo.",
+          "status": "En proceso",
+          "tipo": "Temporal",
+          "dependencia": "Hacienda",
+          "provision": "Encargo",
+          "fecha": "2026-06-01"
+        },
+        {
+          "title": "Técnico Administrativo 367-01",
+          "description": "Servidor en periodo de prueba con seguimiento de evaluación.",
+          "status": "Activo",
+          "tipo": "Periodo de prueba",
+          "dependencia": "Salud",
+          "provision": "Lista de elegibles",
+          "fecha": "2026-04-15"
+        }
+      ]
+    },
+    {
+      "id": "movimientos",
+      "label": "Movimientos de planta",
+      "icon": "route",
+      "description": "Nombramientos, encargos, traslados, reubicaciones, comisiones y retiros.",
+      "layout": "timeline",
+      "rows": [
+        {
+          "title": "Encargo Profesional Universitario 219-04",
+          "description": "Acto administrativo 084 de 2026.",
+          "date": "2026-08-01",
+          "status": "Activo",
+          "persona": "María Fernanda Gómez"
+        },
+        {
+          "title": "Traslado Auxiliar Administrativo",
+          "description": "De Gobierno a Secretaría General por necesidad del servicio.",
+          "date": "2026-07-22",
+          "status": "Completado",
+          "persona": "Diana Torres"
+        },
+        {
+          "title": "Nombramiento provisional Técnico 367-01",
+          "description": "Mientras se realiza provisión definitiva.",
+          "date": "2026-07-05",
+          "status": "Completado",
+          "persona": "Santiago López"
+        }
+      ]
+    },
+    {
+      "id": "manual",
+      "label": "Manual de funciones",
+      "icon": "file",
+      "description": "Propósito, funciones, competencias, requisitos y equivalencias por empleo.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "job",
+          "label": "Empleo",
+          "type": "primary"
+        },
+        {
+          "key": "purpose",
+          "label": "Propósito principal"
+        },
+        {
+          "key": "education",
+          "label": "Estudios"
+        },
+        {
+          "key": "experience",
+          "label": "Experiencia"
+        },
+        {
+          "key": "version",
+          "label": "Versión"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "job": "Profesional Universitario 219-03",
+          "subtitle": "Planeación",
+          "purpose": "Apoyar la formulación y seguimiento de proyectos.",
+          "education": "Título profesional",
+          "experience": "24 meses profesional",
+          "version": "V5 · 2026",
+          "status": "Vigente"
+        },
+        {
+          "job": "Auxiliar Administrativo 407-02",
+          "subtitle": "Secretaría General",
+          "purpose": "Apoyar la gestión documental y administrativa.",
+          "education": "Bachiller",
+          "experience": "12 meses laboral",
+          "version": "V4 · 2025",
+          "status": "Vigente"
+        }
+      ]
+    },
+    {
+      "id": "opec",
+      "label": "OPEC y SIMO",
+      "icon": "upload",
+      "description": "Control interno de campos, documentos y estados antes del registro oficial.",
+      "layout": "checklist",
+      "rows": [
+        {
+          "title": "Validar propósito y funciones",
+          "description": "Revisión contra el Manual Específico de Funciones vigente.",
+          "owner": "Talento Humano",
+          "due": "08 ago",
+          "status": "Completado"
+        },
+        {
+          "title": "Confirmar vacancia definitiva",
+          "description": "Cruce de planta, nómina y acto de retiro.",
+          "owner": "Talento Humano",
+          "due": "08 ago",
+          "status": "En proceso"
+        },
+        {
+          "title": "Revisar requisitos y equivalencias",
+          "description": "Control de educación, experiencia y competencias.",
+          "owner": "Comité técnico",
+          "due": "12 ago",
+          "status": "Pendiente"
+        },
+        {
+          "title": "Registrar y certificar OPEC",
+          "description": "Actividad final en el aplicativo oficial de la CNSC.",
+          "owner": "Jefe de TH",
+          "due": "15 ago",
+          "status": "Pendiente"
+        }
+      ]
+    }
+  ],
+  "form": {
+    "title": "Registrar movimiento de planta",
+    "sectionId": "movimientos",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Tipo de movimiento",
+        "required": true
+      },
+      {
+        "key": "persona",
+        "label": "Servidor o empleo",
+        "required": true
+      },
+      {
+        "key": "date",
+        "label": "Fecha",
+        "type": "date",
+        "required": true
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Pendiente",
+          "En proceso",
+          "Completado"
+        ]
+      },
+      {
+        "key": "description",
+        "label": "Detalle y acto administrativo",
+        "type": "textarea",
+        "full": true
+      }
+    ]
+  },
+  "moduleId": "empleo-publico",
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
+  ]
+}

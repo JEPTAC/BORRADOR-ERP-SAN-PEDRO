@@ -1,105 +1,298 @@
 {
+  "title": "Bienestar y SG-SST",
+  "subtitle": "Integra bienestar, incentivos, estándares mínimos, peligros, incidentes, inspecciones, comités, emergencias, EPP y seguimiento de salud ocupacional.",
+  "eyebrow": "Calidad de vida y trabajo seguro",
   "metrics": [
     {
-      "label": "Ejecución bienestar",
-      "value": "63%",
-      "hint": "Plan anual 2026",
-      "icon": "heart",
-      "tone": "success"
+      "label": "Estándares mínimos",
+      "value": "86%",
+      "hint": "Autoevaluación vigente",
+      "icon": "shield"
     },
     {
-      "label": "Actividades próximas",
+      "label": "Peligros críticos",
       "value": "4",
-      "hint": "Agosto y septiembre",
+      "hint": "Con controles en seguimiento",
+      "icon": "alert"
+    },
+    {
+      "label": "Incidentes del año",
+      "value": "6",
+      "hint": "0 accidentes graves",
+      "icon": "heart"
+    },
+    {
+      "label": "Bienestar ejecutado",
+      "value": "70%",
+      "hint": "Plan anual 2026",
       "icon": "calendar"
+    }
+  ],
+  "insights": [
+    {
+      "label": "Ausentismo acumulado",
+      "value": "2,8%",
+      "detail": "Incapacidad común y eventos laborales."
     },
     {
-      "label": "Incidentes abiertos",
-      "value": "2",
-      "hint": "En investigación",
+      "label": "COPASST",
+      "value": "Activo",
+      "detail": "Próxima reunión: 14 de agosto."
+    },
+    {
+      "label": "Evaluación de clima",
+      "value": "82%",
+      "detail": "Favorabilidad institucional."
+    }
+  ],
+  "sections": [
+    {
+      "id": "bienestar",
+      "label": "Bienestar e incentivos",
+      "icon": "heart",
+      "description": "Programas, actividades, participación, presupuesto y satisfacción.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "Jornada de bienestar familiar",
+          "description": "Actividad de integración para servidores y familias.",
+          "status": "En proceso",
+          "fecha": "24 ago 2026",
+          "cobertura": "74 personas",
+          "presupuesto": "$18.000.000",
+          "avance": "45%"
+        },
+        {
+          "title": "Programa de reconocimiento",
+          "description": "Reconocimiento trimestral a buenas prácticas de servicio.",
+          "status": "Activo",
+          "fecha": "30 sep 2026",
+          "cobertura": "Toda la entidad",
+          "presupuesto": "$8.000.000",
+          "avance": "60%"
+        },
+        {
+          "title": "Semana de hábitos saludables",
+          "description": "Actividad física, nutrición y salud mental.",
+          "status": "Pendiente",
+          "fecha": "19 oct 2026",
+          "cobertura": "74 personas",
+          "presupuesto": "$12.000.000",
+          "avance": "20%"
+        }
+      ]
+    },
+    {
+      "id": "estandares",
+      "label": "Estándares mínimos",
+      "icon": "check",
+      "description": "Autoevaluación, plan de mejora, responsables y evidencias.",
+      "layout": "matrix",
+      "rows": [
+        {
+          "title": "Recursos",
+          "description": "Responsable, capacitación, presupuesto y afiliación.",
+          "progress": 92,
+          "responsable": "Secretaría General"
+        },
+        {
+          "title": "Gestión integral",
+          "description": "Política, objetivos, evaluación inicial y plan anual.",
+          "progress": 88,
+          "responsable": "Responsable SST"
+        },
+        {
+          "title": "Gestión de la salud",
+          "description": "Condiciones de salud, vigilancia y ausentismo.",
+          "progress": 82,
+          "responsable": "Medicina laboral"
+        },
+        {
+          "title": "Gestión de peligros",
+          "description": "Identificación, controles, inspecciones y EPP.",
+          "progress": 79,
+          "responsable": "Responsable SST"
+        },
+        {
+          "title": "Gestión de amenazas",
+          "description": "Plan de emergencias, brigada y simulacros.",
+          "progress": 84,
+          "responsable": "Brigada"
+        },
+        {
+          "title": "Verificación y mejora",
+          "description": "Auditoría, revisión y acciones correctivas.",
+          "progress": 83,
+          "responsable": "COPASST"
+        }
+      ]
+    },
+    {
+      "id": "peligros",
+      "label": "Peligros y controles",
       "icon": "alert",
-      "tone": "danger"
+      "description": "Identificación, valoración, intervención y seguimiento.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "hazard",
+          "label": "Peligro",
+          "type": "primary"
+        },
+        {
+          "key": "office",
+          "label": "Área"
+        },
+        {
+          "key": "classification",
+          "label": "Clasificación"
+        },
+        {
+          "key": "level",
+          "label": "Nivel"
+        },
+        {
+          "key": "controls",
+          "label": "Controles"
+        },
+        {
+          "key": "owner",
+          "label": "Responsable"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "hazard": "Posturas prolongadas",
+          "subtitle": "Trabajo administrativo",
+          "office": "Todas las oficinas",
+          "classification": "Biomecánico",
+          "level": "Alto",
+          "controls": "Pausas, ergonomía, inspección",
+          "owner": "SST",
+          "status": "En proceso"
+        },
+        {
+          "hazard": "Desplazamiento en vía",
+          "subtitle": "Visitas y comisiones",
+          "office": "Planeación y Gobierno",
+          "classification": "Seguridad vial",
+          "level": "Alto",
+          "controls": "Plan vial, mantenimiento, capacitación",
+          "owner": "SST / Conductores",
+          "status": "En proceso"
+        },
+        {
+          "hazard": "Carga mental y atención al público",
+          "subtitle": "Demanda emocional",
+          "office": "Ventanilla y Gobierno",
+          "classification": "Psicosocial",
+          "level": "Medio",
+          "controls": "Intervención, rotación, acompañamiento",
+          "owner": "Bienestar",
+          "status": "Activo"
+        }
+      ]
     },
     {
-      "label": "Cumplimiento SG-SST",
-      "value": "89%",
-      "hint": "Estándares mínimos",
-      "icon": "shield",
-      "tone": "warning"
+      "id": "incidentes",
+      "label": "Incidentes e investigaciones",
+      "icon": "file",
+      "description": "Reporte, investigación, causas, acciones y cierre.",
+      "layout": "timeline",
+      "rows": [
+        {
+          "title": "Incidente locativo · caída sin lesión",
+          "description": "Se corrigió desnivel y se señalizó el área.",
+          "date": "2026-07-28",
+          "status": "Completado"
+        },
+        {
+          "title": "Accidente leve en desplazamiento",
+          "description": "Investigación y plan de acción en seguridad vial.",
+          "date": "2026-07-12",
+          "status": "En proceso"
+        },
+        {
+          "title": "Incidente con elemento cortante",
+          "description": "Reentrenamiento y ajuste del procedimiento.",
+          "date": "2026-06-20",
+          "status": "Completado"
+        }
+      ]
+    },
+    {
+      "id": "comites",
+      "label": "Comités, inspecciones y EPP",
+      "icon": "users",
+      "description": "COPASST, convivencia, brigada, inspecciones y entregas.",
+      "layout": "checklist",
+      "rows": [
+        {
+          "title": "Reunión mensual COPASST",
+          "description": "Seguimiento a accidentalidad, inspecciones y plan anual.",
+          "owner": "Presidencia COPASST",
+          "due": "14 ago",
+          "status": "Pendiente"
+        },
+        {
+          "title": "Inspección locativa sede central",
+          "description": "Rutas, extintores, iluminación y condiciones de orden.",
+          "owner": "SST / Brigada",
+          "due": "09 ago",
+          "status": "En proceso"
+        },
+        {
+          "title": "Entrega de EPP a cuadrilla de infraestructura",
+          "description": "Reposición y firma de acta individual.",
+          "owner": "Almacén / SST",
+          "due": "06 ago",
+          "status": "Completado"
+        }
+      ]
     }
   ],
-  "activities": [
-    {
-      "title": "Jornada de salud cardiovascular",
-      "date": "2026-08-14",
-      "type": "Medicina preventiva",
-      "audience": "Todo el personal",
-      "status": "Programada"
-    },
-    {
-      "title": "Torneo de integración",
-      "date": "2026-08-22",
-      "type": "Bienestar",
-      "audience": "Funcionarios y familias",
-      "status": "Inscripciones"
-    },
-    {
-      "title": "Capacitación riesgo psicosocial",
-      "date": "2026-09-03",
-      "type": "SG-SST",
-      "audience": "Líderes de equipo",
-      "status": "Programada"
-    },
-    {
-      "title": "Reconocimiento al servicio público",
-      "date": "2026-09-18",
-      "type": "Incentivos",
-      "audience": "Servidores de planta",
-      "status": "Planeación"
-    }
-  ],
-  "incidents": [
-    {
-      "id": "SST-021",
-      "date": "2026-07-28",
-      "person": "Funcionario de infraestructura",
-      "type": "Incidente sin lesión",
-      "risk": "Locativo",
-      "status": "En investigación"
-    },
-    {
-      "id": "SST-022",
-      "date": "2026-08-02",
-      "person": "Contratista de apoyo",
-      "type": "Condición insegura",
-      "risk": "Eléctrico",
-      "status": "Acción abierta"
-    }
-  ],
-  "risk": [
-    [
-      "Bajo",
-      "Bajo",
-      "Medio",
-      "Medio"
-    ],
-    [
-      "Bajo",
-      "Medio",
-      "Medio",
-      "Alto"
-    ],
-    [
-      "Medio",
-      "Medio",
-      "Alto",
-      "Alto"
-    ],
-    [
-      "Medio",
-      "Alto",
-      "Alto",
-      "Crítico"
+  "form": {
+    "title": "Registrar actividad o evento SST",
+    "sectionId": "incidentes",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Evento o actividad",
+        "required": true
+      },
+      {
+        "key": "description",
+        "label": "Descripción",
+        "type": "textarea",
+        "full": true
+      },
+      {
+        "key": "date",
+        "label": "Fecha",
+        "type": "date",
+        "required": true
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Pendiente",
+          "En proceso",
+          "Completado"
+        ]
+      }
     ]
+  },
+  "moduleId": "bienestar-sst",
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
   ]
 }

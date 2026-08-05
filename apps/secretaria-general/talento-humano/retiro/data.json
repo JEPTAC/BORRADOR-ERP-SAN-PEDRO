@@ -1,0 +1,274 @@
+{
+  "title": "Retiro y transferencia de conocimiento",
+  "subtitle": "Coordina la salida del servidor o contratista, paz y salvo, activos, accesos, liquidación, entrega del cargo y transferencia de conocimiento.",
+  "eyebrow": "Offboarding institucional controlado",
+  "metrics": [
+    {
+      "label": "Retiros en curso",
+      "value": "4",
+      "hint": "2 servidores · 2 contratistas",
+      "icon": "route"
+    },
+    {
+      "label": "Listas completas",
+      "value": "75%",
+      "hint": "3 pendientes críticos",
+      "icon": "check"
+    },
+    {
+      "label": "Activos pendientes",
+      "value": "5",
+      "hint": "Equipos y elementos",
+      "icon": "monitor"
+    },
+    {
+      "label": "Accesos por cerrar",
+      "value": "3",
+      "hint": "Correo y aplicaciones",
+      "icon": "shield"
+    }
+  ],
+  "insights": [
+    {
+      "label": "Tiempo promedio de cierre",
+      "value": "4,2 días",
+      "detail": "Desde novedad hasta archivo del expediente."
+    },
+    {
+      "label": "Transferencias completas",
+      "value": "88%",
+      "detail": "Procesos y documentos entregados al sucesor o líder."
+    },
+    {
+      "label": "Entrevistas de retiro",
+      "value": "3 de 4",
+      "detail": "Una entrevista está pendiente de programación."
+    }
+  ],
+  "sections": [
+    {
+      "id": "casos",
+      "label": "Procesos de retiro",
+      "icon": "route",
+      "description": "Casos abiertos, responsables, fecha efectiva y nivel de avance.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "code",
+          "label": "Caso",
+          "type": "primary"
+        },
+        {
+          "key": "person",
+          "label": "Persona"
+        },
+        {
+          "key": "type",
+          "label": "Vinculación"
+        },
+        {
+          "key": "reason",
+          "label": "Motivo"
+        },
+        {
+          "key": "effective",
+          "label": "Fecha efectiva",
+          "type": "date"
+        },
+        {
+          "key": "progress",
+          "label": "Avance",
+          "type": "progress"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "code": "RET-2026-021",
+          "subtitle": "Planeación",
+          "person": "Santiago López",
+          "type": "Servidor provisional",
+          "reason": "Terminación de nombramiento",
+          "effective": "2026-08-15",
+          "progress": 58,
+          "status": "En proceso"
+        },
+        {
+          "code": "RET-2026-020",
+          "subtitle": "Secretaría General",
+          "person": "Andrea Martínez",
+          "type": "Contratista",
+          "reason": "Terminación contractual",
+          "effective": "2026-08-09",
+          "progress": 82,
+          "status": "En proceso"
+        },
+        {
+          "code": "RET-2026-018",
+          "subtitle": "Hacienda",
+          "person": "Jorge Ruiz",
+          "type": "Servidor de carrera",
+          "reason": "Renuncia aceptada",
+          "effective": "2026-07-31",
+          "progress": 100,
+          "status": "Completado"
+        }
+      ]
+    },
+    {
+      "id": "checklist",
+      "label": "Lista de salida",
+      "icon": "check",
+      "description": "Actividades coordinadas entre Talento Humano, TIC, Almacén, Archivo y líder.",
+      "layout": "checklist",
+      "rows": [
+        {
+          "title": "Expedir y notificar acto de retiro",
+          "description": "Acto administrativo o soporte contractual.",
+          "owner": "Talento Humano",
+          "due": "Antes de la fecha efectiva",
+          "status": "Completado"
+        },
+        {
+          "title": "Recibir entrega del cargo",
+          "description": "Informe, procesos, compromisos, archivos y claves institucionales.",
+          "owner": "Jefe inmediato",
+          "due": "Fecha de retiro",
+          "status": "En proceso"
+        },
+        {
+          "title": "Devolver activos institucionales",
+          "description": "Equipo, carnet, llaves, elementos y documentos.",
+          "owner": "Almacén",
+          "due": "Fecha de retiro",
+          "status": "Pendiente"
+        },
+        {
+          "title": "Cerrar accesos y correo",
+          "description": "Desactivar cuentas, perfiles y sesiones institucionales.",
+          "owner": "Mesa TIC",
+          "due": "Fecha efectiva",
+          "status": "Pendiente"
+        },
+        {
+          "title": "Emitir paz y salvo y certificado",
+          "description": "Consolidar firmas, liquidación y certificación laboral.",
+          "owner": "Talento Humano",
+          "due": "Posterior al retiro",
+          "status": "Pendiente"
+        }
+      ]
+    },
+    {
+      "id": "conocimiento",
+      "label": "Transferencia de conocimiento",
+      "icon": "file",
+      "description": "Inventario de procesos, pendientes, contactos, documentos y recomendaciones.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "Planeación e infraestructura",
+          "description": "Entrega de 8 proyectos, 3 informes pendientes y matriz de compromisos.",
+          "status": "En proceso",
+          "responsable": "Santiago López",
+          "receptor": "Coordinador de Planeación",
+          "avance": "70%",
+          "documentos": "14"
+        },
+        {
+          "title": "Apoyo contractual Secretaría General",
+          "description": "Entrega de expedientes, cronograma y estado de cuentas.",
+          "status": "Completado",
+          "responsable": "Andrea Martínez",
+          "receptor": "Supervisor contractual",
+          "avance": "100%",
+          "documentos": "22"
+        }
+      ]
+    },
+    {
+      "id": "entrevistas",
+      "label": "Entrevista y cierre",
+      "icon": "message",
+      "description": "Causas de retiro, experiencia, recomendaciones y acciones institucionales.",
+      "layout": "timeline",
+      "rows": [
+        {
+          "title": "Entrevista de retiro · Jorge Ruiz",
+          "description": "Se identificaron oportunidades de mejora en movilidad y desarrollo.",
+          "date": "2026-07-30",
+          "status": "Completado"
+        },
+        {
+          "title": "Entrevista programada · Andrea Martínez",
+          "description": "Sesión virtual previa a la terminación contractual.",
+          "date": "2026-08-08",
+          "status": "Pendiente"
+        },
+        {
+          "title": "Encuesta de experiencia · Santiago López",
+          "description": "Formulario enviado al correo institucional.",
+          "date": "2026-08-12",
+          "status": "Pendiente"
+        }
+      ]
+    }
+  ],
+  "form": {
+    "title": "Iniciar proceso de retiro",
+    "sectionId": "casos",
+    "fields": [
+      {
+        "key": "code",
+        "label": "Código del caso",
+        "required": true
+      },
+      {
+        "key": "person",
+        "label": "Persona",
+        "required": true
+      },
+      {
+        "key": "type",
+        "label": "Tipo de vinculación",
+        "required": true
+      },
+      {
+        "key": "reason",
+        "label": "Motivo",
+        "required": true
+      },
+      {
+        "key": "effective",
+        "label": "Fecha efectiva",
+        "type": "date",
+        "required": true
+      },
+      {
+        "key": "progress",
+        "label": "Avance inicial (%)",
+        "type": "number"
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Pendiente",
+          "En proceso",
+          "Completado"
+        ]
+      }
+    ]
+  },
+  "moduleId": "retiro",
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
+  ]
+}

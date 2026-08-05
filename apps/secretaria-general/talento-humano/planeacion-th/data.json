@@ -1,0 +1,335 @@
+{
+  "title": "Planeación estratégica de Talento Humano",
+  "subtitle": "Integra el PETH, vacantes, previsión, capacitación, bienestar, SG-SST, integridad y autodiagnóstico MIPG.",
+  "eyebrow": "MIPG y ciclo de vida del servidor",
+  "metrics": [
+    {
+      "label": "Planes activos",
+      "value": "8",
+      "hint": "Vigencia 2026",
+      "icon": "file"
+    },
+    {
+      "label": "Avance PETH",
+      "value": "76%",
+      "hint": "Corte al tercer trimestre",
+      "icon": "chart"
+    },
+    {
+      "label": "Presupuesto ejecutado",
+      "value": "63%",
+      "hint": "$214 de $340 millones",
+      "icon": "wallet"
+    },
+    {
+      "label": "Acciones MIPG",
+      "value": "14",
+      "hint": "3 con riesgo de atraso",
+      "icon": "alert"
+    }
+  ],
+  "insights": [
+    {
+      "label": "Madurez GETH",
+      "value": "82/100",
+      "detail": "Resultado del autodiagnóstico institucional."
+    },
+    {
+      "label": "Próximo comité",
+      "value": "12 de agosto",
+      "detail": "Seguimiento trimestral del PETH y planes asociados."
+    },
+    {
+      "label": "Evidencias completas",
+      "value": "89%",
+      "detail": "11 actividades pendientes de soporte."
+    }
+  ],
+  "sections": [
+    {
+      "id": "planes",
+      "label": "Planes institucionales",
+      "icon": "file",
+      "description": "Portafolio anual de planes obligatorios y complementarios.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "Plan Estratégico de Talento Humano",
+          "description": "Integra las rutas de creación de valor del ciclo laboral.",
+          "status": "En proceso",
+          "avance": "76%",
+          "responsable": "Secretaría General",
+          "vigencia": "2026"
+        },
+        {
+          "title": "Plan Anual de Vacantes",
+          "description": "Identificación y programación de necesidades de provisión.",
+          "status": "Activo",
+          "avance": "88%",
+          "responsable": "Talento Humano",
+          "vigencia": "2026"
+        },
+        {
+          "title": "Plan de Previsión de Recursos Humanos",
+          "description": "Escenarios de necesidades, disponibilidad y financiación.",
+          "status": "Activo",
+          "avance": "72%",
+          "responsable": "Talento Humano",
+          "vigencia": "2026"
+        },
+        {
+          "title": "Plan Institucional de Capacitación",
+          "description": "Competencias, cursos y evaluación de eficacia.",
+          "status": "En proceso",
+          "avance": "67%",
+          "responsable": "Talento Humano",
+          "vigencia": "2026"
+        },
+        {
+          "title": "Plan de Bienestar e Incentivos",
+          "description": "Calidad de vida, clima, reconocimientos y estímulos.",
+          "status": "Activo",
+          "avance": "70%",
+          "responsable": "Bienestar",
+          "vigencia": "2026"
+        },
+        {
+          "title": "Plan Anual SG-SST",
+          "description": "Estándares mínimos, peligros, emergencias y mejora.",
+          "status": "En proceso",
+          "avance": "64%",
+          "responsable": "Responsable SST",
+          "vigencia": "2026"
+        }
+      ]
+    },
+    {
+      "id": "actividades",
+      "label": "Cronograma y evidencias",
+      "icon": "calendar",
+      "description": "Actividades, fechas, responsables, presupuesto y evidencia.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "activity",
+          "label": "Actividad",
+          "type": "primary"
+        },
+        {
+          "key": "plan",
+          "label": "Plan"
+        },
+        {
+          "key": "owner",
+          "label": "Responsable"
+        },
+        {
+          "key": "due",
+          "label": "Fecha",
+          "type": "date"
+        },
+        {
+          "key": "budget",
+          "label": "Presupuesto",
+          "type": "money"
+        },
+        {
+          "key": "progress",
+          "label": "Avance",
+          "type": "progress"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "activity": "Actualizar caracterización del talento",
+          "subtitle": "Producto PETH",
+          "plan": "PETH",
+          "owner": "Profesional TH",
+          "due": "2026-08-15",
+          "budget": 0,
+          "progress": 80,
+          "status": "En proceso"
+        },
+        {
+          "activity": "Ejecutar jornada de bienestar familiar",
+          "subtitle": "Programa de calidad de vida",
+          "plan": "Bienestar",
+          "owner": "Equipo de Bienestar",
+          "due": "2026-08-24",
+          "budget": 18000000,
+          "progress": 45,
+          "status": "En proceso"
+        },
+        {
+          "activity": "Cerrar evaluación de estándares mínimos",
+          "subtitle": "Ciclo PHVA",
+          "plan": "SG-SST",
+          "owner": "Responsable SST",
+          "due": "2026-09-05",
+          "budget": 4500000,
+          "progress": 55,
+          "status": "Pendiente"
+        }
+      ]
+    },
+    {
+      "id": "mipg",
+      "label": "Autodiagnóstico GETH",
+      "icon": "chart",
+      "description": "Rutas de creación de valor, puntajes, brechas y planes de acción.",
+      "layout": "matrix",
+      "rows": [
+        {
+          "title": "Ruta de la felicidad",
+          "description": "Bienestar, equilibrio y entorno laboral saludable.",
+          "progress": 84,
+          "responsable": "Bienestar",
+          "status": "Activo"
+        },
+        {
+          "title": "Ruta del crecimiento",
+          "description": "Capacitación, liderazgo y desarrollo de competencias.",
+          "progress": 77,
+          "responsable": "Capacitación",
+          "status": "En proceso"
+        },
+        {
+          "title": "Ruta del servicio",
+          "description": "Integridad, cultura y orientación al ciudadano.",
+          "progress": 88,
+          "responsable": "Secretaría General",
+          "status": "Activo"
+        },
+        {
+          "title": "Ruta de la calidad",
+          "description": "Datos, procesos y decisiones basadas en evidencia.",
+          "progress": 73,
+          "responsable": "Talento Humano",
+          "status": "En proceso"
+        }
+      ]
+    },
+    {
+      "id": "presupuesto",
+      "label": "Presupuesto y recursos",
+      "icon": "wallet",
+      "description": "Programación, compromisos y ejecución de recursos de Talento Humano.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "concept",
+          "label": "Concepto",
+          "type": "primary"
+        },
+        {
+          "key": "plan",
+          "label": "Plan"
+        },
+        {
+          "key": "budget",
+          "label": "Aprobado",
+          "type": "money"
+        },
+        {
+          "key": "committed",
+          "label": "Comprometido",
+          "type": "money"
+        },
+        {
+          "key": "executed",
+          "label": "Ejecutado",
+          "type": "money"
+        },
+        {
+          "key": "progress",
+          "label": "Ejecución",
+          "type": "progress"
+        }
+      ],
+      "rows": [
+        {
+          "concept": "Capacitación institucional",
+          "plan": "PIC",
+          "budget": 85000000,
+          "committed": 61000000,
+          "executed": 42000000,
+          "progress": 49
+        },
+        {
+          "concept": "Bienestar e incentivos",
+          "plan": "Bienestar",
+          "budget": 135000000,
+          "committed": 104000000,
+          "executed": 86000000,
+          "progress": 64
+        },
+        {
+          "concept": "Seguridad y salud en el trabajo",
+          "plan": "SG-SST",
+          "budget": 120000000,
+          "committed": 97000000,
+          "executed": 86000000,
+          "progress": 72
+        }
+      ]
+    }
+  ],
+  "form": {
+    "title": "Registrar actividad del PETH",
+    "sectionId": "actividades",
+    "fields": [
+      {
+        "key": "activity",
+        "label": "Actividad",
+        "required": true
+      },
+      {
+        "key": "plan",
+        "label": "Plan relacionado",
+        "required": true
+      },
+      {
+        "key": "owner",
+        "label": "Responsable",
+        "required": true
+      },
+      {
+        "key": "due",
+        "label": "Fecha límite",
+        "type": "date",
+        "required": true
+      },
+      {
+        "key": "budget",
+        "label": "Presupuesto",
+        "type": "number"
+      },
+      {
+        "key": "progress",
+        "label": "Avance (%)",
+        "type": "number"
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Pendiente",
+          "En proceso",
+          "Completado"
+        ]
+      }
+    ]
+  },
+  "moduleId": "planeacion-th",
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
+  ]
+}

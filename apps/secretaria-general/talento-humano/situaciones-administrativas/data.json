@@ -1,0 +1,310 @@
+{
+  "title": "Situaciones administrativas",
+  "subtitle": "Gestiona solicitudes, actos administrativos, aprobaciones, afectaciones de tiempo y novedades asociadas a la nómina pública.",
+  "eyebrow": "Trazabilidad laboral y actos administrativos",
+  "metrics": [
+    {
+      "label": "Solicitudes abiertas",
+      "value": "17",
+      "hint": "6 pendientes de aprobación",
+      "icon": "file"
+    },
+    {
+      "label": "Comisiones vigentes",
+      "value": "5",
+      "hint": "3 de servicio · 2 de estudio",
+      "icon": "briefcase"
+    },
+    {
+      "label": "Encargos activos",
+      "value": "6",
+      "hint": "Seguimiento de fechas",
+      "icon": "route"
+    },
+    {
+      "label": "Actos por expedir",
+      "value": "4",
+      "hint": "2 vencen esta semana",
+      "icon": "alert"
+    }
+  ],
+  "insights": [
+    {
+      "label": "Tiempo promedio de trámite",
+      "value": "2,8 días",
+      "detail": "Desde radicación hasta decisión."
+    },
+    {
+      "label": "Novedades a nómina",
+      "value": "9",
+      "detail": "Pendientes de consolidar para el periodo actual."
+    },
+    {
+      "label": "Cumplimiento de términos",
+      "value": "93%",
+      "detail": "Solicitudes resueltas dentro del plazo definido."
+    }
+  ],
+  "sections": [
+    {
+      "id": "solicitudes",
+      "label": "Solicitudes",
+      "icon": "file",
+      "description": "Radicación y seguimiento de situaciones administrativas.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "code",
+          "label": "Solicitud",
+          "type": "primary"
+        },
+        {
+          "key": "person",
+          "label": "Servidor"
+        },
+        {
+          "key": "type",
+          "label": "Situación"
+        },
+        {
+          "key": "start",
+          "label": "Inicio",
+          "type": "date"
+        },
+        {
+          "key": "end",
+          "label": "Fin",
+          "type": "date"
+        },
+        {
+          "key": "approver",
+          "label": "Aprobador"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "code": "SA-2026-0184",
+          "subtitle": "Radicado 5 ago",
+          "person": "Ana María Torres",
+          "type": "Comisión de servicios",
+          "start": "2026-08-12",
+          "end": "2026-08-14",
+          "approver": "Secretario General",
+          "status": "Pendiente"
+        },
+        {
+          "code": "SA-2026-0178",
+          "subtitle": "Radicado 2 ago",
+          "person": "Luis Fernando Ruiz",
+          "type": "Permiso remunerado",
+          "start": "2026-08-08",
+          "end": "2026-08-08",
+          "approver": "Jefe inmediato",
+          "status": "En proceso"
+        },
+        {
+          "code": "SA-2026-0159",
+          "subtitle": "Acto 078 de 2026",
+          "person": "Diana Torres",
+          "type": "Traslado",
+          "start": "2026-08-01",
+          "end": "Indefinido",
+          "approver": "Alcalde",
+          "status": "Completado"
+        }
+      ]
+    },
+    {
+      "id": "tipos",
+      "label": "Catálogo y reglas",
+      "icon": "clipboard-list",
+      "description": "Tipos, requisitos, aprobadores, documentos y efectos.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "Comisión de servicios",
+          "description": "Desplazamiento temporal para ejercer funciones o atender misiones oficiales.",
+          "status": "Activo",
+          "requisitos": "Solicitud + invitación",
+          "aprobacion": "Ordenador del gasto",
+          "nomina": "Viáticos y transporte"
+        },
+        {
+          "title": "Licencia no remunerada",
+          "description": "Separación temporal del servicio sin derecho a remuneración.",
+          "status": "Activo",
+          "requisitos": "Solicitud motivada",
+          "aprobacion": "Nominador",
+          "nomina": "Suspensión de pago"
+        },
+        {
+          "title": "Encargo",
+          "description": "Designación temporal para asumir funciones de otro empleo.",
+          "status": "Activo",
+          "requisitos": "Estudio de requisitos",
+          "aprobacion": "Nominador",
+          "nomina": "Diferencia salarial"
+        },
+        {
+          "title": "Trabajo en casa",
+          "description": "Habilitación temporal por circunstancias ocasionales o excepcionales.",
+          "status": "Activo",
+          "requisitos": "Solicitud y concepto",
+          "aprobacion": "Secretario General",
+          "nomina": "Sin afectación"
+        }
+      ]
+    },
+    {
+      "id": "actos",
+      "label": "Actos administrativos",
+      "icon": "file",
+      "description": "Proyectos, revisión, firma, notificación y archivo.",
+      "layout": "checklist",
+      "rows": [
+        {
+          "title": "Resolución de encargo 092-2026",
+          "description": "Pendiente de revisión jurídica y firma del nominador.",
+          "owner": "Talento Humano",
+          "due": "07 ago",
+          "status": "En proceso"
+        },
+        {
+          "title": "Resolución de vacaciones 091-2026",
+          "description": "Lista para firma y comunicación al servidor.",
+          "owner": "Secretaría General",
+          "due": "06 ago",
+          "status": "Pendiente"
+        },
+        {
+          "title": "Resolución de licencia 087-2026",
+          "description": "Firmada, notificada y trasladada a nómina.",
+          "owner": "Talento Humano",
+          "due": "02 ago",
+          "status": "Completado"
+        }
+      ]
+    },
+    {
+      "id": "novedades",
+      "label": "Afectación a nómina",
+      "icon": "wallet",
+      "description": "Novedades derivadas de actos y situaciones administrativas.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "person",
+          "label": "Servidor",
+          "type": "primary"
+        },
+        {
+          "key": "situation",
+          "label": "Situación"
+        },
+        {
+          "key": "period",
+          "label": "Periodo"
+        },
+        {
+          "key": "effect",
+          "label": "Afectación"
+        },
+        {
+          "key": "document",
+          "label": "Soporte"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "person": "María Fernanda Gómez",
+          "subtitle": "Profesional universitario",
+          "situation": "Encargo",
+          "period": "Agosto 2026",
+          "effect": "Diferencia salarial",
+          "document": "Resolución 084",
+          "status": "En proceso"
+        },
+        {
+          "person": "Carlos Alberto Díaz",
+          "subtitle": "Técnico administrativo",
+          "situation": "Licencia no remunerada",
+          "period": "Agosto 2026",
+          "effect": "5 días no laborados",
+          "document": "Resolución 079",
+          "status": "Pendiente"
+        }
+      ]
+    }
+  ],
+  "form": {
+    "title": "Radicar situación administrativa",
+    "sectionId": "solicitudes",
+    "fields": [
+      {
+        "key": "code",
+        "label": "Código o radicado",
+        "required": true
+      },
+      {
+        "key": "person",
+        "label": "Servidor",
+        "required": true
+      },
+      {
+        "key": "type",
+        "label": "Tipo",
+        "type": "select",
+        "options": [
+          "Comisión de servicios",
+          "Permiso remunerado",
+          "Licencia no remunerada",
+          "Encargo",
+          "Traslado",
+          "Trabajo en casa"
+        ]
+      },
+      {
+        "key": "start",
+        "label": "Fecha inicial",
+        "type": "date",
+        "required": true
+      },
+      {
+        "key": "end",
+        "label": "Fecha final",
+        "type": "date"
+      },
+      {
+        "key": "approver",
+        "label": "Aprobador",
+        "required": true
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Pendiente",
+          "En proceso",
+          "Completado"
+        ]
+      }
+    ]
+  },
+  "moduleId": "situaciones-administrativas",
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
+  ]
+}

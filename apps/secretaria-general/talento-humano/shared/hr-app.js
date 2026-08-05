@@ -4,9 +4,27 @@
   async init(config){
    this.config=config||{};
    this.data=await ERP.fetchJSON('data.json',{});
+   this.enhancePublicNav();
    this.renderMetrics();
    this.bindGeneric();
    if(this.config.init) this.config.init(this.data,this);
+   ERP.refreshIcons();
+  },
+
+  enhancePublicNav(){
+   const nav=document.querySelector('.hr-sidebar-nav'); if(!nav||nav.querySelector('[data-public-employment-nav]'))return;
+   const isRoot=/\/talento-humano\/?(?:index\.html)?$/.test(location.pathname);
+   const p=isRoot?'':'../';
+   const active=(slug)=>location.pathname.includes(`/talento-humano/${slug}/`)?' active':'';
+   const block=document.createElement('details');block.className='hr-nav-section';block.open=true;block.dataset.publicEmploymentNav='1';
+   block.innerHTML=`<summary>Empleo público</summary>
+    <a class="nav-item${active('empleo-publico')}" href="${p}empleo-publico/index.html"><i data-lucide="briefcase"></i><span class="nav-text">Planta y empleo público</span></a>
+    <a class="nav-item${active('planeacion-th')}" href="${p}planeacion-th/index.html"><i data-lucide="chart"></i><span class="nav-text">Planeación estratégica TH</span></a>
+    <a class="nav-item${active('situaciones-administrativas')}" href="${p}situaciones-administrativas/index.html"><i data-lucide="calendar"></i><span class="nav-text">Situaciones administrativas</span></a>
+    <a class="nav-item${active('integridad-publica')}" href="${p}integridad-publica/index.html"><i data-lucide="shield"></i><span class="nav-text">Integridad y declaraciones</span></a>
+    <a class="nav-item${active('retiro')}" href="${p}retiro/index.html"><i data-lucide="route"></i><span class="nav-text">Retiro y transferencia</span></a>`;
+   const timeSection=[...nav.querySelectorAll('details')].find(x=>x.querySelector('summary')?.textContent.trim()==='Tiempo y pagos');
+   nav.insertBefore(block,timeSection||nav.querySelector('.nav-label')||null);
    ERP.refreshIcons();
   },
   renderMetrics(){

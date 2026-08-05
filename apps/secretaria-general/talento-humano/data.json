@@ -3,7 +3,7 @@
     {
       "label": "Personas activas",
       "value": "74",
-      "hint": "48 planta · 26 contratistas",
+      "hint": "48 planta · 26 contratistas · 52 empleos",
       "icon": "users",
       "tone": "success",
       "delta": "+3 este trimestre"
@@ -41,8 +41,8 @@
       "icon": "user",
       "href": "mi-portal/index.html",
       "group": "Autogestión",
-      "description": "Autogestión del funcionario: solicitudes, certificados, documentos y objetivos.",
-      "count": "Autogestión"
+      "description": "Solicitudes, certificados, comprobantes, documentos, activos, formación e integridad.",
+      "count": "Autogestión 360"
     },
     {
       "id": "personas",
@@ -70,6 +70,51 @@
       "group": "Administración",
       "description": "Control de hojas de vida, bienes y rentas, vinculaciones y actualizaciones SIGEP.",
       "count": "6 pendientes"
+    },
+    {
+      "id": "empleo-publico",
+      "name": "Planta y empleo público",
+      "icon": "briefcase",
+      "href": "empleo-publico/index.html",
+      "group": "Empleo público",
+      "description": "Planta, empleos, vacancias, provisión, manuales de funciones y preparación OPEC/SIMO.",
+      "count": "52 empleos"
+    },
+    {
+      "id": "planeacion-th",
+      "name": "Planeación estratégica TH",
+      "icon": "chart",
+      "href": "planeacion-th/index.html",
+      "group": "Empleo público",
+      "description": "PETH, planes anuales, presupuesto, cronograma, evidencias y autodiagnóstico MIPG.",
+      "count": "8 planes"
+    },
+    {
+      "id": "situaciones-administrativas",
+      "name": "Situaciones administrativas",
+      "icon": "calendar",
+      "href": "situaciones-administrativas/index.html",
+      "group": "Empleo público",
+      "description": "Comisiones, encargos, licencias, traslados, permisos, actos y afectaciones de nómina.",
+      "count": "17 abiertas"
+    },
+    {
+      "id": "integridad-publica",
+      "name": "Integridad y declaraciones",
+      "icon": "shield",
+      "href": "integridad-publica/index.html",
+      "group": "Empleo público",
+      "description": "Bienes y rentas, conflictos de interés, impedimentos, código de integridad y evidencias.",
+      "count": "11 pendientes"
+    },
+    {
+      "id": "retiro",
+      "name": "Retiro y transferencia",
+      "icon": "route",
+      "href": "retiro/index.html",
+      "group": "Ciclo de vida",
+      "description": "Paz y salvo, activos, accesos, entrega del cargo, conocimiento y entrevista de retiro.",
+      "count": "4 en curso"
     },
     {
       "id": "seleccion",
@@ -109,11 +154,11 @@
     },
     {
       "id": "nomina",
-      "name": "Pre-nómina",
+      "name": "Nómina pública",
       "icon": "wallet",
       "href": "nomina/index.html",
       "group": "Tiempo y pagos",
-      "description": "Preliquidación, novedades, conceptos, grupos y archivos para el sistema de nómina.",
+      "description": "Novedades, preliquidación, seguridad social, PILA, conciliación y archivos para el sistema oficial.",
       "count": "Agosto abierto"
     },
     {
@@ -136,12 +181,12 @@
     },
     {
       "id": "desempeno",
-      "name": "Desempeño",
+      "name": "Desempeño público",
       "icon": "chart",
       "href": "desempeno/index.html",
       "group": "Desarrollo",
-      "description": "Objetivos, competencias, evaluaciones, retroalimentación y planes de desarrollo.",
-      "count": "81% avance"
+      "description": "EDL, compromisos, parciales, periodo de prueba, acuerdos de gestión y planes individuales.",
+      "count": "39 evaluaciones"
     },
     {
       "id": "capacitacion",
@@ -158,8 +203,8 @@
       "icon": "heart",
       "href": "bienestar-sst/index.html",
       "group": "Cultura y seguridad",
-      "description": "Bienestar, incentivos, medicina preventiva, incidentes y plan anual SG-SST.",
-      "count": "4 actividades"
+      "description": "Bienestar, incentivos, estándares mínimos, peligros, incidentes, comités y emergencias.",
+      "count": "86% estándares"
     },
     {
       "id": "comunicaciones",

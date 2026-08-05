@@ -1,88 +1,300 @@
 {
+  "title": "Desempeño público",
+  "subtitle": "Gestiona concertación, compromisos funcionales y comportamentales, evaluaciones parciales, periodo de prueba, acuerdos de gestión y planes de mejoramiento.",
+  "eyebrow": "Evaluación del desempeño laboral",
   "metrics": [
     {
-      "label": "Ciclo actual",
-      "value": "2026-I",
-      "hint": "Evaluación semestral",
-      "icon": "calendar"
+      "label": "Evaluaciones activas",
+      "value": "39",
+      "hint": "Carrera y periodo de prueba",
+      "icon": "chart"
     },
     {
-      "label": "Avance global",
-      "value": "81%",
-      "hint": "39 de 48 servidores",
-      "icon": "chart",
-      "tone": "success"
+      "label": "Concertaciones cerradas",
+      "value": "92%",
+      "hint": "3 personas pendientes",
+      "icon": "check"
     },
     {
-      "label": "Objetivos activos",
-      "value": "126",
-      "hint": "Promedio 2.6 por persona",
-      "icon": "target"
+      "label": "Evaluaciones parciales",
+      "value": "7",
+      "hint": "Por movilidad o cambio de evaluador",
+      "icon": "file"
     },
     {
       "label": "Planes de mejora",
-      "value": "6",
-      "hint": "Seguimiento mensual",
-      "icon": "alert",
-      "tone": "warning"
+      "value": "5",
+      "hint": "2 requieren seguimiento",
+      "icon": "alert"
     }
   ],
-  "cycles": [
+  "insights": [
     {
-      "name": "Evaluación semestral 2026-I",
-      "population": 48,
-      "progress": 81,
-      "status": "En proceso"
+      "label": "Calificación promedio",
+      "value": "91,4",
+      "detail": "Consolidado de evaluaciones definitivas vigentes."
     },
     {
-      "name": "Acuerdos de gestión 2026",
-      "population": 6,
-      "progress": 100,
-      "status": "Completado"
+      "label": "Acuerdos de gestión",
+      "value": "4 activos",
+      "detail": "Gerentes públicos con compromisos registrados."
     },
     {
-      "name": "Periodo de prueba",
-      "population": 2,
-      "progress": 50,
-      "status": "En proceso"
+      "label": "Periodo de prueba",
+      "value": "3 personas",
+      "detail": "Seguimiento a hitos y evidencias de evaluación."
     }
   ],
-  "goals": [
+  "sections": [
     {
-      "id": "OBJ-101",
-      "person": "Ana María Torres",
-      "title": "Actualizar expedientes laborales",
-      "weight": 35,
-      "progress": 92,
-      "due": "2026-08-31",
-      "status": "En proceso"
+      "id": "evaluaciones",
+      "label": "Evaluaciones",
+      "icon": "chart",
+      "description": "Ciclos anuales, periodo de prueba, parciales eventuales y extraordinarias.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "person",
+          "label": "Servidor",
+          "type": "primary"
+        },
+        {
+          "key": "evaluationType",
+          "label": "Tipo"
+        },
+        {
+          "key": "period",
+          "label": "Periodo"
+        },
+        {
+          "key": "evaluator",
+          "label": "Evaluador"
+        },
+        {
+          "key": "score",
+          "label": "Calificación"
+        },
+        {
+          "key": "progress",
+          "label": "Avance",
+          "type": "progress"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "person": "Laura Mendoza",
+          "subtitle": "Profesional Universitario 219-03",
+          "evaluationType": "Anual definitiva",
+          "period": "2026",
+          "evaluator": "Secretario de Planeación",
+          "score": "92,5",
+          "progress": 65,
+          "status": "En proceso"
+        },
+        {
+          "person": "Santiago López",
+          "subtitle": "Técnico Administrativo 367-01",
+          "evaluationType": "Periodo de prueba",
+          "period": "15 abr – 14 oct",
+          "evaluator": "Secretaria de Salud",
+          "score": "Pendiente",
+          "progress": 48,
+          "status": "En proceso"
+        },
+        {
+          "person": "Diana Torres",
+          "subtitle": "Auxiliar Administrativo 407-02",
+          "evaluationType": "Parcial eventual",
+          "period": "1 feb – 31 jul",
+          "evaluator": "Secretario de Gobierno",
+          "score": "94,0",
+          "progress": 100,
+          "status": "Completado"
+        }
+      ]
     },
     {
-      "id": "OBJ-102",
-      "person": "Camila Valencia",
-      "title": "Reducir tiempos de conciliación",
-      "weight": 40,
-      "progress": 78,
-      "due": "2026-09-30",
-      "status": "En proceso"
+      "id": "compromisos",
+      "label": "Compromisos",
+      "icon": "clipboard-list",
+      "description": "Compromisos funcionales, comportamentales, metas, ponderación y evidencias.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "Seguimiento a proyectos de inversión",
+          "description": "Mantener actualizada la información física y financiera del banco de proyectos.",
+          "status": "En proceso",
+          "persona": "Laura Mendoza",
+          "tipo": "Funcional",
+          "ponderacion": "35%",
+          "avance": "72%"
+        },
+        {
+          "title": "Orientación al usuario y ciudadano",
+          "description": "Aplicar protocolos de atención y medir satisfacción del servicio.",
+          "status": "Activo",
+          "persona": "Diana Torres",
+          "tipo": "Comportamental",
+          "ponderacion": "15%",
+          "avance": "80%"
+        },
+        {
+          "title": "Fortalecer control de inventarios",
+          "description": "Disminuir diferencias y completar conciliaciones mensuales.",
+          "status": "En proceso",
+          "persona": "Carlos Díaz",
+          "tipo": "Funcional",
+          "ponderacion": "30%",
+          "avance": "64%"
+        }
+      ]
     },
     {
-      "id": "OBJ-103",
-      "person": "Sofía Martínez",
-      "title": "Digitalizar archivo de Gobierno",
-      "weight": 30,
-      "progress": 100,
-      "due": "2026-07-31",
-      "status": "Completado"
+      "id": "acuerdos",
+      "label": "Acuerdos de gestión",
+      "icon": "briefcase",
+      "description": "Compromisos de gerentes públicos, indicadores, seguimiento y evaluación.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "manager",
+          "label": "Gerente público",
+          "type": "primary"
+        },
+        {
+          "key": "office",
+          "label": "Dependencia"
+        },
+        {
+          "key": "commitments",
+          "label": "Compromisos"
+        },
+        {
+          "key": "followup",
+          "label": "Último seguimiento"
+        },
+        {
+          "key": "score",
+          "label": "Resultado"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "manager": "Carlos Ramírez",
+          "subtitle": "Secretario de Gobierno",
+          "office": "Gobierno",
+          "commitments": "6",
+          "followup": "30 jun 2026",
+          "score": "88%",
+          "status": "En proceso"
+        },
+        {
+          "manager": "Marcela Gómez",
+          "subtitle": "Secretaria de Hacienda",
+          "office": "Hacienda",
+          "commitments": "5",
+          "followup": "30 jun 2026",
+          "score": "93%",
+          "status": "En proceso"
+        }
+      ]
     },
     {
-      "id": "OBJ-104",
-      "person": "Juan Pablo Rojas",
-      "title": "Mejorar control de agenda",
-      "weight": 25,
-      "progress": 64,
-      "due": "2026-08-30",
-      "status": "En proceso"
+      "id": "mejoramiento",
+      "label": "Planes individuales",
+      "icon": "route",
+      "description": "Brechas, acciones, acompañamiento y verificación de mejora.",
+      "layout": "checklist",
+      "rows": [
+        {
+          "title": "Fortalecer manejo de SECOP II",
+          "description": "Capacitación y acompañamiento en publicación contractual.",
+          "owner": "Ana Torres",
+          "due": "30 sep",
+          "status": "En proceso"
+        },
+        {
+          "title": "Mejorar oportunidad de reportes",
+          "description": "Rutina semanal y revisión con líder del proceso.",
+          "owner": "Carlos Díaz",
+          "due": "31 ago",
+          "status": "Pendiente"
+        },
+        {
+          "title": "Cierre de brecha en atención ciudadana",
+          "description": "Curso, observación en puesto y retroalimentación.",
+          "owner": "Diana Torres",
+          "due": "15 ago",
+          "status": "Completado"
+        }
+      ]
     }
+  ],
+  "form": {
+    "title": "Registrar evaluación o compromiso",
+    "sectionId": "evaluaciones",
+    "fields": [
+      {
+        "key": "person",
+        "label": "Servidor",
+        "required": true
+      },
+      {
+        "key": "evaluationType",
+        "label": "Tipo de evaluación",
+        "type": "select",
+        "options": [
+          "Anual definitiva",
+          "Periodo de prueba",
+          "Parcial eventual",
+          "Extraordinaria"
+        ]
+      },
+      {
+        "key": "period",
+        "label": "Periodo",
+        "required": true
+      },
+      {
+        "key": "evaluator",
+        "label": "Evaluador",
+        "required": true
+      },
+      {
+        "key": "score",
+        "label": "Calificación"
+      },
+      {
+        "key": "progress",
+        "label": "Avance (%)",
+        "type": "number"
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Pendiente",
+          "En proceso",
+          "Completado"
+        ]
+      }
+    ]
+  },
+  "moduleId": "desempeno",
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
   ]
 }

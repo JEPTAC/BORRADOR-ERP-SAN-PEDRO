@@ -1,104 +1,312 @@
 {
+  "title": "Nómina pública y seguridad social",
+  "subtitle": "Consolida novedades, conceptos, preliquidación, seguridad social, PILA, descuentos, conciliación presupuestal y archivos para el sistema oficial de nómina.",
+  "eyebrow": "Pre-nómina, control y conciliación",
   "metrics": [
     {
-      "label": "Periodo",
+      "label": "Devengados estimados",
+      "value": "$386,4 M",
+      "hint": "Periodo agosto 2026",
+      "icon": "wallet"
+    },
+    {
+      "label": "Novedades abiertas",
+      "value": "18",
+      "hint": "7 requieren aprobación",
+      "icon": "alert"
+    },
+    {
+      "label": "Aportes estimados",
+      "value": "$112,8 M",
+      "hint": "Seguridad social y parafiscales",
+      "icon": "shield"
+    },
+    {
+      "label": "Conciliación",
+      "value": "96%",
+      "hint": "2 diferencias por resolver",
+      "icon": "check"
+    }
+  ],
+  "insights": [
+    {
+      "label": "Periodo actual",
       "value": "Agosto 2026",
-      "hint": "Preliquidación abierta",
-      "icon": "calendar"
+      "detail": "Pre-nómina abierta hasta el 22 de agosto."
     },
     {
-      "label": "Personas incluidas",
+      "label": "Personas liquidadas",
       "value": "48",
-      "hint": "Servidores de planta",
-      "icon": "users",
-      "tone": "success"
+      "detail": "Servidores incluidos en la simulación."
     },
     {
+      "label": "Advertencia",
+      "value": "Modo preliminar",
+      "detail": "No sustituye el aplicativo oficial de nómina."
+    }
+  ],
+  "sections": [
+    {
+      "id": "novedades",
       "label": "Novedades",
-      "value": "17",
-      "hint": "12 validadas · 5 pendientes",
       "icon": "clipboard-list",
-      "tone": "warning"
+      "description": "Ingresos, retiros, incapacidades, vacaciones, horas extra, descuentos y retroactivos.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "person",
+          "label": "Persona",
+          "type": "primary"
+        },
+        {
+          "key": "concept",
+          "label": "Concepto"
+        },
+        {
+          "key": "quantity",
+          "label": "Cantidad"
+        },
+        {
+          "key": "value",
+          "label": "Valor",
+          "type": "money"
+        },
+        {
+          "key": "support",
+          "label": "Soporte"
+        },
+        {
+          "key": "approver",
+          "label": "Aprobador"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "person": "Ana María Torres",
+          "subtitle": "Auxiliar administrativo",
+          "concept": "Vacaciones disfrutadas",
+          "quantity": "5 días",
+          "value": 0,
+          "support": "Resolución 091",
+          "approver": "Talento Humano",
+          "status": "En proceso"
+        },
+        {
+          "person": "Luis Fernando Ruiz",
+          "subtitle": "Técnico administrativo",
+          "concept": "Horas extra diurnas",
+          "quantity": "12 horas",
+          "value": 438000,
+          "support": "Planilla HE-083",
+          "approver": "Secretario General",
+          "status": "Pendiente"
+        },
+        {
+          "person": "María Fernanda Gómez",
+          "subtitle": "Profesional universitario",
+          "concept": "Diferencia por encargo",
+          "quantity": "31 días",
+          "value": 1240000,
+          "support": "Resolución 084",
+          "approver": "Talento Humano",
+          "status": "En proceso"
+        }
+      ]
     },
     {
-      "label": "Alertas",
-      "value": "3",
-      "hint": "Requieren corrección",
-      "icon": "alert",
-      "tone": "danger"
+      "id": "preliquidacion",
+      "label": "Preliquidación",
+      "icon": "wallet",
+      "description": "Resumen por persona de devengados, deducciones y neto estimado.",
+      "layout": "table",
+      "columns": [
+        {
+          "key": "person",
+          "label": "Servidor",
+          "type": "primary"
+        },
+        {
+          "key": "base",
+          "label": "Asignación básica",
+          "type": "money"
+        },
+        {
+          "key": "earnings",
+          "label": "Otros devengados",
+          "type": "money"
+        },
+        {
+          "key": "deductions",
+          "label": "Deducciones",
+          "type": "money"
+        },
+        {
+          "key": "net",
+          "label": "Neto estimado",
+          "type": "money"
+        },
+        {
+          "key": "status",
+          "label": "Estado",
+          "type": "status"
+        }
+      ],
+      "rows": [
+        {
+          "person": "Laura Mendoza",
+          "subtitle": "Profesional 219-03",
+          "base": 5800000,
+          "earnings": 420000,
+          "deductions": 792000,
+          "net": 5428000,
+          "status": "En proceso"
+        },
+        {
+          "person": "Luis Fernando Ruiz",
+          "subtitle": "Técnico 367-01",
+          "base": 3600000,
+          "earnings": 438000,
+          "deductions": 512000,
+          "net": 3526000,
+          "status": "Pendiente"
+        },
+        {
+          "person": "Diana Torres",
+          "subtitle": "Auxiliar 407-02",
+          "base": 2950000,
+          "earnings": 0,
+          "deductions": 387000,
+          "net": 2563000,
+          "status": "En proceso"
+        }
+      ]
+    },
+    {
+      "id": "seguridad",
+      "label": "Seguridad social y PILA",
+      "icon": "shield",
+      "description": "Bases, aportes, novedades, validaciones y archivo preliminar.",
+      "layout": "cards",
+      "rows": [
+        {
+          "title": "Salud y pensión",
+          "description": "Validación de IBC, novedades y porcentajes por persona.",
+          "status": "En proceso",
+          "personas": "48",
+          "base": "$281,6 M",
+          "aporte": "$79,8 M",
+          "diferencias": "1"
+        },
+        {
+          "title": "Riesgos laborales",
+          "description": "Cruce de clase de riesgo, centros de trabajo y contratistas.",
+          "status": "En proceso",
+          "personas": "74",
+          "base": "$310,1 M",
+          "aporte": "$8,2 M",
+          "diferencias": "0"
+        },
+        {
+          "title": "Parafiscales",
+          "description": "Caja de compensación y demás aportes aplicables.",
+          "status": "Pendiente",
+          "personas": "48",
+          "base": "$281,6 M",
+          "aporte": "$24,8 M",
+          "diferencias": "1"
+        }
+      ]
+    },
+    {
+      "id": "conciliacion",
+      "label": "Conciliación y archivos",
+      "icon": "download",
+      "description": "Cruce con planta, presupuesto, contabilidad, tesorería y sistema externo.",
+      "layout": "checklist",
+      "rows": [
+        {
+          "title": "Cruzar nómina contra planta activa",
+          "description": "Validación de empleos, novedades de ingreso y retiro.",
+          "owner": "Talento Humano",
+          "due": "20 ago",
+          "status": "Completado"
+        },
+        {
+          "title": "Validar disponibilidad presupuestal",
+          "description": "Cruce por rubro y fuente de financiación.",
+          "owner": "Presupuesto",
+          "due": "21 ago",
+          "status": "En proceso"
+        },
+        {
+          "title": "Conciliar aportes y descuentos",
+          "description": "Revisión de salud, pensión, libranzas y embargos.",
+          "owner": "Nómina",
+          "due": "22 ago",
+          "status": "Pendiente"
+        },
+        {
+          "title": "Generar archivo para sistema financiero",
+          "description": "Exportación controlada; transmisión final en aplicativo oficial.",
+          "owner": "Nómina",
+          "due": "23 ago",
+          "status": "Pendiente"
+        }
+      ]
     }
   ],
-  "summary": {
-    "gross": 218450000,
-    "deductions": 38420000,
-    "employer": 66500000,
-    "net": 180030000
+  "form": {
+    "title": "Registrar novedad de nómina",
+    "sectionId": "novedades",
+    "fields": [
+      {
+        "key": "person",
+        "label": "Persona",
+        "required": true
+      },
+      {
+        "key": "concept",
+        "label": "Concepto",
+        "required": true
+      },
+      {
+        "key": "quantity",
+        "label": "Cantidad o periodo"
+      },
+      {
+        "key": "value",
+        "label": "Valor estimado",
+        "type": "number"
+      },
+      {
+        "key": "support",
+        "label": "Soporte"
+      },
+      {
+        "key": "approver",
+        "label": "Aprobador"
+      },
+      {
+        "key": "status",
+        "label": "Estado",
+        "type": "select",
+        "options": [
+          "Pendiente",
+          "En proceso",
+          "Completado"
+        ]
+      }
+    ]
   },
-  "concepts": [
-    {
-      "code": "DEV-001",
-      "name": "Asignación básica",
-      "type": "Devengo",
-      "people": 48,
-      "amount": 201000000,
-      "status": "Validado"
-    },
-    {
-      "code": "DEV-014",
-      "name": "Horas extra",
-      "type": "Devengo",
-      "people": 7,
-      "amount": 4450000,
-      "status": "Pendiente"
-    },
-    {
-      "code": "DEV-021",
-      "name": "Bonificación servicios",
-      "type": "Devengo",
-      "people": 4,
-      "amount": 13000000,
-      "status": "Validado"
-    },
-    {
-      "code": "DED-001",
-      "name": "Salud",
-      "type": "Deducción",
-      "people": 48,
-      "amount": 8740000,
-      "status": "Calculado"
-    },
-    {
-      "code": "DED-002",
-      "name": "Pensión",
-      "type": "Deducción",
-      "people": 48,
-      "amount": 8740000,
-      "status": "Calculado"
-    },
-    {
-      "code": "DED-010",
-      "name": "Libranzas",
-      "type": "Deducción",
-      "people": 9,
-      "amount": 6210000,
-      "status": "Pendiente"
-    }
-  ],
-  "groups": [
-    {
-      "name": "Planta mensual",
-      "people": 44,
-      "status": "Calculado"
-    },
-    {
-      "name": "Directivos",
-      "people": 4,
-      "status": "Calculado"
-    },
-    {
-      "name": "Retroactivos",
-      "people": 3,
-      "status": "Pendiente"
-    }
+  "moduleId": "nomina",
+  "statusCycle": [
+    "Pendiente",
+    "En proceso",
+    "Completado"
   ]
 }
