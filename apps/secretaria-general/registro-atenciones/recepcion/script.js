@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const item = data.visitors.find(entry => entry.id === checkin.dataset.checkin);
       if (!item) return;
       item.status = 'En sede'; item.checkin = ATT.nowTime();
+      ATT.notify(data, { title: 'Visitante en recepción', message: `${item.name} llegó para ${item.purpose}`, channel: 'Notificación interna', recipient: item.host, status: 'Pendiente', relatedType: 'Visitante', relatedId: item.id });
       ATT.audit(data, 'Recepción', 'Registrar ingreso', 'Visitante', item.id, item.host);
       save(); render(); ERP.toast('Ingreso registrado');
     }
@@ -158,6 +159,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const item = data.visitors.find(entry => entry.id === notify.dataset.notify);
       if (!item) return;
       item.hostNotifiedAt = `${ATT.nowDate()} ${ATT.nowTime()}`;
+      ATT.notify(data, { title: 'Visitante en recepción', message: `${item.name} espera para ${item.purpose}`, channel: 'Notificación interna', recipient: item.host, status: 'Pendiente', relatedType: 'Visitante', relatedId: item.id });
       ATT.audit(data, 'Recepción', 'Avisar anfitrión', 'Visitante', item.id, item.host);
       save(); ERP.toast(`Aviso registrado para ${item.host}`);
     }

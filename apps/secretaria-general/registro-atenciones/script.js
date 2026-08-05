@@ -29,8 +29,24 @@ document.addEventListener('DOMContentLoaded', async () => {
       ['calendar-plus', 'Agendar cita', 'Reservar un espacio', 'appointment'],
       ['user-plus', 'Registrar ingreso', 'Visitante o atención espontánea', 'visitor'],
       ['list-ordered', 'Generar turno', 'Añadir a sala de espera', 'ticket'],
-      ['clipboard-list', 'Registrar atención', 'Resultado, compromiso o PQRSD', 'attention']
+      ['clipboard-list', 'Registrar atención', 'Resultado y compromiso del servicio', 'attention']
     ].map(item => `<button class="att-quick-card" data-quick="${item[3]}" type="button"><span class="att-item-icon"><i data-lucide="${item[0]}"></i></span><span><strong>${item[1]}</strong><span>${item[2]}</span></span></button>`).join('');
+  }
+
+  function advancedOverview() {
+    const waiting = data.queue.filter(item => item.status === 'En espera').sort((a,b) => String(a.arrival).localeCompare(String(b.arrival)));
+    const oldest = waiting[0];
+    const next = data.appointments.filter(item => item.date === today && !['Cancelada','Atendida'].includes(item.status) && item.time >= ATT.nowTime()).sort((a,b)=>a.time.localeCompare(b.time))[0];
+    const unread = data.notifications.filter(item => item.status === 'Pendiente').length;
+    const open = data.attentions.filter(item => item.commitment && !['Finalizada','Cerrada'].includes(item.status)).length;
+    document.getElementById('advancedOverview').innerHTML = [
+      ['timer', 'Mayor espera', oldest ? `${oldest.ticket} · ${oldest.arrival}` : 'Sin espera', 'turnos/index.html'],
+      ['calendar-clock', 'Próxima cita', next ? `${next.time} · ${next.person}` : 'Sin citas próximas', 'agenda/index.html'],
+      ['bell-ring', 'Notificaciones', `${unread} pendientes`, 'notificaciones/index.html'],
+      ['flag', 'Compromisos', `${open} abiertos`, 'expedientes/index.html'],
+      ['globe-2', 'Portal público', 'Reservas y autogestión', 'portal-citas/index.html'],
+      ['qr-code', 'Check-in QR', 'Registrar llegada', 'checkin/index.html']
+    ].map(item => `<a class="att-card att-card-body att-item" href="${item[3]}"><span class="att-item-icon"><i data-lucide="${item[0]}"></i></span><div><strong>${item[1]}</strong><span>${ATT.esc(item[2])}</span></div><i data-lucide="chevron-right"></i></a>`).join('');
   }
 
   function agenda() {
@@ -74,6 +90,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   function render() {
     metrics();
     quickActions();
+    advancedOverview();
     agenda();
     visitors();
     alerts();
@@ -110,10 +127,13 @@ document.addEventListener('DOMContentLoaded', async () => {
       candidate.retentionRule = data.settings.retentionRule;
 
       if (item) Object.assign(item, candidate, { updatedAt: `${ATT.nowDate()} ${ATT.nowTime()}` });
-      else data.appointments.push({ ...candidate, id: ATT.uid('CIT'), createdAt: `${ATT.nowDate()} ${ATT.nowTime()}` });
+      else data.appointments.push({ ...candidate, id: ATT.uid('CIT'), bookingCode: ATT.appointmentCode(data), source: 'Registro interno', createdAt: `${ATT.nowDate()} ${ATT.nowTime()}` });
 
+      const record = item || data.appointments.at(-1);
       ATT.upsertContact(data, values);
-      ATT.audit(data, 'Centro de Atención', item ? 'Editar cita' : 'Crear cita', 'Cita', item?.id || data.appointments.at(-1).id, `${values.date} ${values.time}`);
+      ATT.notify(data, { title: item ? 'Cita actualizada' : 'Confirmación de cita', message: `${record.service} · ${record.date} ${record.time}`, channel: 'Correo', recipient: record.email || record.person, status: 'Pendiente', relatedType: 'Cita', relatedId: record.id });
+      ATT.notify(data, { title: item ? 'Agenda modificada' : 'Nueva cita asignada', message: `${record.person} · ${record.date} ${record.time}`, channel: 'Notificación interna', recipient: record.host, status: 'Pendiente', relatedType: 'Cita', relatedId: record.id });
+      ATT.audit(data, 'Centro de Atención', item ? 'Editar cita' : 'Crear cita', 'Cita', record.id, `${values.date} ${values.time}`);
       save();
       render();
       ERP.toast(item ? 'Cita actualizada' : 'Cita registrada');
@@ -150,6 +170,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         contact.visits = Number(contact.visits || 0) + 1;
         contact.lastVisit = today;
       }
+      ATT.notify(data, { title: 'Visitante en recepción', message: `${visitor.name} llegó para ${visitor.purpose}`, channel: 'Notificación interna', recipient: visitor.host, status: 'Pendiente', relatedType: 'Visitante', relatedId: visitor.id });
       ATT.audit(data, 'Centro de Atención', 'Registrar ingreso', 'Visitante', visitor.id, visitor.host);
       save();
       render();
@@ -188,34 +209,19 @@ document.addEventListener('DOMContentLoaded', async () => {
       { name: 'channel', label: 'Canal', type: 'select', options: ['Presencial', 'Telefónica', 'Virtual', 'Correo'] },
       { name: 'service', label: 'Servicio', type: 'select', options: data.services.map(item => item.name) },
       { name: 'staff', label: 'Funcionario responsable', type: 'select', options: data.staff.filter(item => item.active !== false).map(item => item.name) },
-      { name: 'requestType', label: 'Clasificación de la solicitud', type: 'select', options: ['Orientación simple', 'Petición general', 'Solicitud de información o documentos', 'Consulta', 'Queja o reclamo', 'Denuncia', 'No aplica'] },
+      { name: 'category', label: 'Tipo de atención', type: 'select', options: ['Orientación', 'Entrega de documentos', 'Seguimiento', 'Reunión', 'Atención a proveedor', 'Otra'] },
       { name: 'outcome', label: 'Resultado de la atención', type: 'textarea', full: true, required: true },
       { name: 'commitment', label: 'Compromiso o siguiente paso', type: 'textarea', full: true },
-      { name: 'radicado', label: 'Número de radicado oficial', placeholder: 'Obligatorio cuando sea PQRSD' },
-      { name: 'status', label: 'Estado', type: 'select', options: ['Finalizada', 'Seguimiento', 'Pendiente de radicación', 'Trasladada'] },
-      { name: 'privacyNoticeAccepted', label: 'Aviso de privacidad', type: 'checkbox', checkboxLabel: 'Se informó el tratamiento de los datos personales y el canal oficial aplicable.', value: true, required: true, full: true }
+      { name: 'due', label: 'Fecha de seguimiento', type: 'date' },
+      { name: 'status', label: 'Estado', type: 'select', options: ['Finalizada', 'Seguimiento', 'Pendiente'] },
+      { name: 'privacyNoticeAccepted', label: 'Aviso de privacidad', type: 'checkbox', checkboxLabel: 'Se informó el tratamiento de los datos para la gestión de esta atención.', value: true, required: true, full: true }
     ], values => {
-      const petition = !['Orientación simple', 'No aplica'].includes(values.requestType);
-      const due = petition ? ATT.petitionDeadline(values.requestType, today) : '';
-      if (petition && !values.radicado) values.status = 'Pendiente de radicación';
-      const attention = {
-        ...values,
-        id: ATT.uid('ATE'),
-        date: today,
-        time: ATT.nowTime(),
-        due,
-        rating: '',
-        petition,
-        privacyNoticeAccepted: values.privacyNoticeAccepted === 'true',
-        informationClass: data.settings.informationClass,
-        retentionRule: data.settings.retentionRule
-      };
+      const attention = { ...values, id: ATT.uid('ATE'), date: today, time: ATT.nowTime(), rating: '', privacyNoticeAccepted: values.privacyNoticeAccepted === 'true', informationClass: data.settings.informationClass, retentionRule: data.settings.retentionRule };
       data.attentions.push(attention);
       ATT.upsertContact(data, values);
-      ATT.audit(data, 'Centro de Atención', 'Registrar atención', 'Atención', attention.id, values.requestType);
-      save();
-      ERP.toast(petition && !values.radicado ? 'Atención guardada: debe radicarse en el canal oficial' : 'Atención registrada', petition && !values.radicado ? 'error' : 'success');
-      window.location.href = 'atenciones/index.html';
+      if (values.commitment) ATT.notify(data, { title: 'Compromiso de atención', message: `${values.person} · ${values.commitment}`, channel: 'Notificación interna', recipient: values.staff, status: 'Pendiente', relatedType: 'Atención', relatedId: attention.id });
+      ATT.audit(data, 'Centro de Atención', 'Registrar atención', 'Atención', attention.id, values.category);
+      save(); ERP.toast('Atención registrada'); window.location.href = 'atenciones/index.html';
     });
   }
 
@@ -264,6 +270,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (!item) return;
       ATT.confirm(`¿Cancelar la cita de ${item.person}?`, () => {
         item.status = 'Cancelada';
+        ATT.notify(data, { title: 'Cita cancelada', message: `${item.service} · ${item.date} ${item.time}`, channel: 'Correo', recipient: item.email || item.person, status: 'Pendiente', relatedId: item.id });
         ATT.audit(data, 'Centro de Atención', 'Cancelar cita', 'Cita', item.id, item.person);
         save(); render(); ERP.toast('Cita cancelada');
       });
@@ -284,6 +291,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         ATT.audit(data, 'Centro de Atención', 'Registrar llegada desde cita', 'Visitante', visitor.id, appointment.id);
       }
       appointment.status = 'En sede';
+      ATT.notify(data, { title: 'Visitante en recepción', message: `${appointment.person} llegó para ${appointment.service}`, channel: 'Notificación interna', recipient: appointment.host, status: 'Pendiente', relatedId: appointment.id });
       save(); render(); ERP.toast('Llegada registrada');
     }
 

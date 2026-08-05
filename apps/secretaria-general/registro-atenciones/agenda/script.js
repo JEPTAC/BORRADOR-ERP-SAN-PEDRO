@@ -94,9 +94,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       candidate.informationClass = data.settings.informationClass;
       candidate.retentionRule = data.settings.retentionRule;
       if (item) Object.assign(item, candidate, { updatedAt: `${ATT.nowDate()} ${ATT.nowTime()}` });
-      else data.appointments.push({ ...candidate, id: ATT.uid('CIT'), createdAt: `${ATT.nowDate()} ${ATT.nowTime()}` });
+      else data.appointments.push({ ...candidate, id: ATT.uid('CIT'), bookingCode: ATT.appointmentCode(data), source: 'Agenda interna', createdAt: `${ATT.nowDate()} ${ATT.nowTime()}` });
+      const record = item || data.appointments.at(-1);
       ATT.upsertContact(data, values);
-      ATT.audit(data, 'Agenda', item ? 'Editar cita' : 'Crear cita', 'Cita', item?.id || data.appointments.at(-1).id, `${values.date} ${values.time}`);
+      ATT.notify(data, { title: item ? 'Cita actualizada' : 'Confirmación de cita', message: `${record.service} · ${record.date} ${record.time}`, channel: 'Correo', recipient: record.email || record.person, status: 'Pendiente', relatedType: 'Cita', relatedId: record.id });
+      ATT.notify(data, { title: item ? 'Agenda modificada' : 'Nueva cita asignada', message: `${record.person} · ${record.date} ${record.time}`, channel: 'Notificación interna', recipient: record.host, status: 'Pendiente', relatedType: 'Cita', relatedId: record.id });
+      ATT.audit(data, 'Agenda', item ? 'Editar cita' : 'Crear cita', 'Cita', record.id, `${values.date} ${values.time}`);
       save(); render(); ERP.toast(item ? 'Cita actualizada' : 'Cita agendada');
     });
   }

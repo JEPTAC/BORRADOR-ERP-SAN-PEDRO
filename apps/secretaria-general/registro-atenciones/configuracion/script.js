@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   function ruleForm(rule = null) {
     ATT.modal(rule ? 'Editar automatización' : 'Nueva automatización', [
       { name: 'name', label: 'Nombre de la regla', value: rule?.name || '', required: true },
-      { name: 'event', label: 'Evento', type: 'select', value: rule?.event || 'Nueva cita', options: ['Nueva cita', 'Antes de la cita', 'Check-in', 'Atención finalizada', 'Plazo próximo a vencer', 'PQRSD sin radicar'] },
+      { name: 'event', label: 'Evento', type: 'select', value: rule?.event || 'Nueva cita', options: ['Nueva cita', 'Antes de la cita', 'Check-in', 'Atención finalizada', 'Compromiso próximo a vencer'] },
       { name: 'channel', label: 'Canal', type: 'select', value: rule?.channel || 'Correo', options: ['Correo', 'SMS', 'Correo / SMS', 'Notificación interna'] },
       { name: 'leadTime', label: 'Anticipación o espera', value: rule?.leadTime || 'Inmediata' },
       { name: 'active', label: 'Estado', type: 'checkbox', checkboxLabel: 'Regla activa.', value: rule?.active !== false, full: true }
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     { name: 'legalBasis', label: 'Base funcional o jurídica', type: 'textarea', value: data.policy.legalBasis, full: true, required: true },
     { name: 'classification', label: 'Clasificación de información', value: data.policy.classification, required: true },
     { name: 'publicationRule', label: 'Regla de publicación', type: 'textarea', value: data.policy.publicationRule, full: true, required: true },
-    { name: 'petitionRule', label: 'Regla para PQRSD', type: 'textarea', value: data.policy.petitionRule, full: true, required: true },
+    { name: 'serviceBoundary', label: 'Límite del servicio', type: 'textarea', value: data.policy.serviceBoundary, full: true, required: true },
     { name: 'retentionRule', label: 'Regla de retención documental', type: 'textarea', value: data.policy.retentionRule, full: true, required: true }
   ], values => {
     data.policy = { ...data.policy, ...values };

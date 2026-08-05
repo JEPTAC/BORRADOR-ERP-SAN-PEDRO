@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const noShows = appointments.filter(item => item.status === 'Ausente').length;
     const ratings = attentions.filter(item => Number(item.rating));
     const average = ratings.length ? (ratings.reduce((sum, item) => sum + Number(item.rating), 0) / ratings.length).toFixed(1) : '—';
-    const petitions = attentions.filter(item => item.petition || !['Orientación simple', 'No aplica', undefined, ''].includes(item.requestType));
-    const overdue = petitions.filter(item => item.due && item.due < (data.settings.currentDate || ATT.nowDate()) && !['Finalizada', 'Cerrada'].includes(item.status));
+    const commitments = attentions.filter(item => item.commitment && !['Finalizada', 'Cerrada'].includes(item.status));
+    const overdue = commitments.filter(item => item.due && item.due < (data.settings.currentDate || ATT.nowDate()));
 
     bars(serviceChart, service);
     bars(channelChart, channel);
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     experienceStats.innerHTML = [
       ['Asistencia a citas', `${Math.round((appointments.length - noShows) / Math.max(appointments.length, 1) * 100)}%`],
       ['Tiempo medio de espera', `${avgWait} min`],
-      ['PQRSD identificadas', petitions.length],
+      ['Compromisos abiertos', commitments.length],
       ['Plazos vencidos', overdue.length]
     ].map(item => `<div class="att-stat-row"><div><strong>${item[0]}</strong><div class="att-progress"><span style="width:${typeof item[1] === 'string' && item[1].includes('%') ? item[1] : '62%'}"></span></div></div><span>${item[1]}</span></div>`).join('');
 
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const attentions = data.attentions.filter(item => dateInRange(item.date));
     ATT.exportPublic('informe-transparencia-atencion-anonimizado.csv', attentions, [
       { label: 'Fecha', key: 'date' }, { label: 'Canal', key: 'channel' }, { label: 'Servicio', key: 'service' },
-      { label: 'Clasificación', key: 'requestType' }, { label: 'Dependencia', key: 'assignedOffice' },
+      { label: 'Tipo', value: item => item.category || item.requestType || 'Orientación' }, { label: 'Dependencia', key: 'assignedOffice' },
       { label: 'Estado', key: 'status' }, { label: 'Plazo', key: 'due' }, { label: 'Satisfacción', key: 'rating' }
     ]);
   };

@@ -15,7 +15,7 @@
 
   const ARRAY_KEYS = [
     'services', 'staff', 'appointments', 'visitors', 'queue', 'attentions',
-    'contacts', 'alerts', 'counters', 'rules', 'auditLog'
+    'contacts', 'alerts', 'counters', 'rules', 'auditLog', 'notifications', 'dossierNotes', 'roles', 'permissionMatrix', 'integrationStatus'
   ];
 
   const nowDate = () => new Date().toISOString().slice(0, 10);
@@ -85,7 +85,7 @@
       legalBasis: 'Cumplimiento de funciones públicas y gestión del servicio al ciudadano.',
       classification: 'Pública clasificada – datos personales.',
       publicationRule: 'Los reportes públicos se generan anonimizados. Los datos identificables requieren autorización funcional y trazabilidad.',
-      petitionRule: 'Toda solicitud que constituya petición, PQRSD o solicitud de información debe radicarse y trasladarse al canal oficial.',
+      serviceBoundary: 'Este módulo gestiona citas, visitas, turnos y atenciones. Las PQRSD se tramitan exclusivamente en el aplicativo institucional independiente.',
       retentionRule: data.settings.retentionRule,
       ...(data.policy || {})
     };
@@ -102,6 +102,48 @@
       { id: 'R3', name: 'Aviso al anfitrión', event: 'Check-in', channel: 'Correo', active: true },
       { id: 'R4', name: 'Encuesta posterior', event: 'Atención finalizada', channel: 'Correo', active: false }
     ];
+
+
+    data.notifications = Array.isArray(data.notifications) ? data.notifications : [];
+    data.dossierNotes = Array.isArray(data.dossierNotes) ? data.dossierNotes : [];
+    data.integrationStatus = Array.isArray(data.integrationStatus) && data.integrationStatus.length ? data.integrationStatus : [
+      { id: 'INT-SUPA', name: 'Supabase', purpose: 'Datos multiusuario, autenticación y tiempo real', status: 'Preparado', connected: false },
+      { id: 'INT-DRIVE', name: 'Google Drive', purpose: 'Soportes y documentos del expediente', status: 'Preparado', connected: false },
+      { id: 'INT-MAIL', name: 'Correo institucional', purpose: 'Confirmaciones, recordatorios y avisos', status: 'Simulado', connected: false },
+      { id: 'INT-CAL', name: 'Calendario institucional', purpose: 'Sincronización de disponibilidad', status: 'Preparado', connected: false }
+    ];
+
+    data.roles = Array.isArray(data.roles) && data.roles.length ? data.roles : [
+      { id: 'ROL-ADMIN', name: 'Administrador', description: 'Configuración total y auditoría', active: true },
+      { id: 'ROL-SECRETARIO', name: 'Secretaría General', description: 'Agenda, atenciones y compromisos', active: true },
+      { id: 'ROL-RECEPCION', name: 'Recepción', description: 'Citas, visitantes y turnos', active: true },
+      { id: 'ROL-PORTERIA', name: 'Portería', description: 'Ingreso, salida y personas presentes', active: true },
+      { id: 'ROL-ANFITRION', name: 'Funcionario anfitrión', description: 'Sus citas y visitantes', active: true },
+      { id: 'ROL-CONTROL', name: 'Control Interno', description: 'Consulta de auditoría y reportes', active: true }
+    ];
+
+    data.permissionMatrix = Array.isArray(data.permissionMatrix) && data.permissionMatrix.length ? data.permissionMatrix : [
+      { role: 'Administrador', action: 'manage_all', allowed: true },
+      { role: 'Secretaría General', action: 'manage_appointments', allowed: true },
+      { role: 'Secretaría General', action: 'manage_attentions', allowed: true },
+      { role: 'Secretaría General', action: 'view_reports', allowed: true },
+      { role: 'Recepción', action: 'manage_appointments', allowed: true },
+      { role: 'Recepción', action: 'manage_visitors', allowed: true },
+      { role: 'Recepción', action: 'manage_queue', allowed: true },
+      { role: 'Portería', action: 'checkin_checkout', allowed: true },
+      { role: 'Funcionario anfitrión', action: 'view_own_visits', allowed: true },
+      { role: 'Control Interno', action: 'view_audit', allowed: true },
+      { role: 'Control Interno', action: 'view_reports', allowed: true }
+    ];
+
+    data.appointments.forEach((item, index) => {
+      if (!item.bookingCode) item.bookingCode = `SG-${String(item.id || `CIT${index + 1}`).replace(/[^A-Z0-9]/gi, '').slice(-6).toUpperCase()}-${String(index + 1).padStart(3, '0')}`;
+    });
+
+    data.settings.currentRole = data.settings.currentRole || localStorage.getItem('erp-attention-role') || 'Administrador';
+    data.settings.publicPortalEnabled = data.settings.publicPortalEnabled !== false;
+    data.settings.qrCheckinEnabled = data.settings.qrCheckinEnabled !== false;
+    data.settings.notificationMode = data.settings.notificationMode || 'Simulado';
 
     return data;
   }
@@ -219,7 +261,8 @@
     },
 
     audit(data, module, action, entity, recordId, detail = '') {
-      data.auditLog.unshift({
+      const previousHash = data.auditLog?.[0]?.hash || 'GENESIS';
+      const entry = {
         id: this.uid('AUD'),
         date: nowDate(),
         time: nowTime(),
@@ -228,10 +271,14 @@
         entity,
         recordId,
         detail,
-        actor: 'Usuario institucional',
-        result: 'Exitoso'
-      });
-      data.auditLog = data.auditLog.slice(0, 500);
+        actor: data.settings?.currentRole || 'Usuario institucional',
+        result: 'Exitoso',
+        previousHash
+      };
+      entry.hash = this.hash(`${previousHash}|${entry.id}|${entry.date}|${entry.time}|${module}|${action}|${entity}|${recordId}|${detail}|${entry.actor}`);
+      data.auditLog.unshift(entry);
+      data.auditLog = data.auditLog.slice(0, 1000);
+      return entry;
     },
 
     upsertContact(data, values = {}) {
@@ -299,7 +346,7 @@
     legalNotice(compact = false) {
       return `<div class="att-legal${compact ? ' compact' : ''}">
         <i data-lucide="shield-check"></i>
-        <div><strong>Tratamiento responsable de información</strong><span>Registre solo datos necesarios para la atención. Los reportes públicos deben ser anonimizados y las solicitudes que constituyan PQRSD o acceso a información deben trasladarse al canal oficial de radicación.</span></div>
+        <div><strong>Tratamiento responsable de información</strong><span>Registre solo datos necesarios para la atención. Los reportes públicos deben ser anonimizados. Este módulo no reemplaza ni integra el aplicativo institucional independiente de PQRSD.</span></div>
       </div>`;
     },
 
@@ -410,18 +457,159 @@
       this.icons();
     },
 
-    petitionDeadline(type, startDate = nowDate()) {
-      const businessDays = /información|documentos/i.test(type) ? 10 : /consulta/i.test(type) ? 30 : 15;
-      const date = new Date(`${startDate}T12:00:00`);
-      let count = 0;
-      while (count < businessDays) {
-        date.setDate(date.getDate() + 1);
-        const day = date.getDay();
-        if (day !== 0 && day !== 6) count += 1;
+    hash(value = '') {
+      let hash = 2166136261;
+      for (let index = 0; index < String(value).length; index += 1) {
+        hash ^= String(value).charCodeAt(index);
+        hash = Math.imul(hash, 16777619);
       }
-      return date.toISOString().slice(0, 10);
+      return `H${(hash >>> 0).toString(16).padStart(8, '0').toUpperCase()}`;
+    },
+
+    appointmentCode(data) {
+      let code = '';
+      do {
+        code = `SG-${Math.random().toString(36).slice(2, 6).toUpperCase()}-${String(Date.now()).slice(-4)}`;
+      } while (data.appointments.some(item => item.bookingCode === code));
+      return code;
+    },
+
+    notify(data, payload = {}) {
+      const notification = {
+        id: this.uid('NOT'),
+        date: nowDate(),
+        time: nowTime(),
+        title: payload.title || 'Notificación institucional',
+        message: payload.message || '',
+        channel: payload.channel || 'Notificación interna',
+        recipient: payload.recipient || 'Equipo de atención',
+        status: payload.status || 'Pendiente',
+        relatedType: payload.relatedType || '',
+        relatedId: payload.relatedId || '',
+        read: false,
+        attempts: 0
+      };
+      data.notifications.unshift(notification);
+      return notification;
+    },
+
+    currentRole(data) {
+      return data?.settings?.currentRole || localStorage.getItem('erp-attention-role') || 'Administrador';
+    },
+
+    setRole(data, role) {
+      data.settings.currentRole = role;
+      localStorage.setItem('erp-attention-role', role);
+      writeGlobal(data);
+    },
+
+    can(data, action) {
+      const role = this.currentRole(data);
+      if (role === 'Administrador') return true;
+      return data.permissionMatrix.some(item => item.role === role && item.action === action && item.allowed !== false);
+    },
+
+    guard(data, action, callback) {
+      if (!this.can(data, action)) {
+        ERP.toast(`El rol ${this.currentRole(data)} no tiene permiso para esta acción`, 'error');
+        return false;
+      }
+      callback();
+      return true;
+    },
+
+    checkinUrl(code = '') {
+      const path = window.location.pathname;
+      const marker = '/registro-atenciones/';
+      const index = path.indexOf(marker);
+      const root = index >= 0 ? path.slice(0, index + marker.length) : './';
+      return `${window.location.origin}${root}checkin/index.html?code=${encodeURIComponent(code)}`;
+    },
+
+    publicPortalUrl() {
+      const path = window.location.pathname;
+      const marker = '/registro-atenciones/';
+      const index = path.indexOf(marker);
+      const root = index >= 0 ? path.slice(0, index + marker.length) : './';
+      return `${window.location.origin}${root}portal-citas/index.html`;
+    },
+
+    downloadICS(appointment) {
+      const clean = value => String(value || '').replace(/[\,;]/g, ' ');
+      const start = `${appointment.date.replaceAll('-', '')}T${String(appointment.time || '08:00').replace(':', '')}00`;
+      const end = `${appointment.date.replaceAll('-', '')}T${String(appointment.end || appointment.time || '08:30').replace(':', '')}00`;
+      const content = [
+        'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//ERP San Pedro//Atencion 360//ES',
+        'BEGIN:VEVENT', `UID:${appointment.id}@sanpedro-valle.gov.co`, `DTSTART:${start}`, `DTEND:${end}`,
+        `SUMMARY:${clean(appointment.service)}`, `DESCRIPTION:Código de cita: ${clean(appointment.bookingCode)}. Responsable: ${clean(appointment.host)}`,
+        `LOCATION:${clean(appointment.modality === 'Virtual' ? appointment.virtualUrl || 'Reunión virtual' : 'Alcaldía de San Pedro')}`,
+        'END:VEVENT', 'END:VCALENDAR'
+      ].join('\r\n');
+      const blob = new Blob([content], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = `cita-${appointment.bookingCode || appointment.id}.ics`;
+      link.click();
+      URL.revokeObjectURL(link.href);
+    },
+
+    verifyAudit(data) {
+      const ordered = [...data.auditLog].reverse();
+      let previous = 'GENESIS';
+      for (const item of ordered) {
+        if (!item.hash) continue;
+        const expected = this.hash(`${previous}|${item.id}|${item.date}|${item.time}|${item.module}|${item.action}|${item.entity}|${item.recordId}|${item.detail}|${item.actor}`);
+        if (item.previousHash !== previous || item.hash !== expected) return { valid: false, item };
+        previous = item.hash;
+      }
+      return { valid: true };
+    },
+
+    dossierEvents(data, document) {
+      const doc = String(document || '');
+      const events = [];
+      data.appointments.filter(item => String(item.document) === doc).forEach(item => events.push({ date: item.date, time: item.time, type: 'Cita', title: item.service, status: item.status, id: item.id }));
+      data.visitors.filter(item => String(item.document) === doc).forEach(item => events.push({ date: item.date || data.settings.currentDate, time: item.checkin || item.expected, type: 'Visita', title: item.purpose, status: item.status, id: item.id }));
+      data.attentions.filter(item => String(item.document) === doc).forEach(item => events.push({ date: item.date, time: item.time, type: 'Atención', title: item.service, status: item.status, id: item.id }));
+      data.dossierNotes.filter(item => String(item.document) === doc).forEach(item => events.push({ date: item.date, time: item.time, type: 'Seguimiento', title: item.title, status: item.status, id: item.id }));
+      return events.sort((a, b) => `${b.date} ${b.time}`.localeCompare(`${a.date} ${a.time}`));
     }
   };
+
+
+  function installExtendedNavigation() {
+    const path = window.location.pathname;
+    const marker = '/registro-atenciones/';
+    const index = path.indexOf(marker);
+    if (index < 0) return;
+    const root = path.slice(0, index + marker.length);
+    const pages = [
+      ['globe-2', 'Portal público de citas', 'portal-citas/index.html'],
+      ['qr-code', 'Check-in QR', 'checkin/index.html'],
+      ['folder-user', 'Expedientes de atención', 'expedientes/index.html'],
+      ['bell-ring', 'Notificaciones', 'notificaciones/index.html'],
+      ['shield-check', 'Roles y permisos', 'permisos/index.html'],
+      ['history', 'Auditoría', 'auditoria/index.html'],
+      ['plug-zap', 'Integraciones', 'integraciones/index.html']
+    ];
+    const sidebar = document.querySelector('.att-sidebar-nav');
+    if (sidebar && !sidebar.querySelector('[data-att-extended]')) {
+      const labels = [...sidebar.querySelectorAll('.nav-label')];
+      const before = labels.find(item => item.textContent.trim() === 'Secretaría General');
+      const html = `<div class="nav-label" data-att-extended>Operación avanzada</div>${pages.map(([icon, label, url]) => {
+        const active = path.endsWith(`/${url}`) || path.endsWith(url);
+        return `<a class="nav-item${active ? ' active' : ''}" href="${root}${url}"><i data-lucide="${icon}"></i><span class="nav-text">${label}</span></a>`;
+      }).join('')}`;
+      (before || sidebar.lastElementChild)?.insertAdjacentHTML(before ? 'beforebegin' : 'afterend', html);
+    }
+    const subnav = document.querySelector('.att-subnav');
+    if (subnav && !subnav.querySelector('[data-att-advanced]')) {
+      subnav.insertAdjacentHTML('beforeend', `<a data-att-advanced href="${root}expedientes/index.html">Expedientes</a><a data-att-advanced href="${root}auditoria/index.html">Auditoría</a>`);
+    }
+    if (window.ERP?.refreshIcons) ERP.refreshIcons();
+  }
+
+  document.addEventListener('DOMContentLoaded', installExtendedNavigation);
 
   window.ATT = A;
 })();
