@@ -1,54 +1,17 @@
 {
-  "name": "Atenciones_Usuarios_Operativo_v22",
-  "version": "v22",
-  "files": [
-    "apps/secretaria-general/registro-atenciones/index.html",
-    "apps/secretaria-general/registro-atenciones/script.js",
-    "apps/secretaria-general/registro-atenciones/configuracion/index.html",
-    "apps/secretaria-general/registro-atenciones/configuracion/script.js",
-    "apps/secretaria-general/registro-atenciones/atenciones/index.html",
-    "apps/secretaria-general/registro-atenciones/atenciones/script.js",
-    "apps/secretaria-general/registro-atenciones/shared/attention-core.js",
-    "apps/secretaria-general/registro-atenciones/agenda/index.html",
-    "apps/secretaria-general/registro-atenciones/agenda/script.js",
-    "apps/secretaria-general/registro-atenciones/permisos/styles.css",
-    "apps/secretaria-general/registro-atenciones/permisos/index.html",
-    "apps/secretaria-general/registro-atenciones/permisos/data.json",
-    "apps/secretaria-general/registro-atenciones/permisos/script.js",
-    "apps/secretaria-general/registro-atenciones/reportes/index.html",
-    "apps/secretaria-general/registro-atenciones/reportes/script.js",
-    "apps/secretaria-general/registro-atenciones/auditoria/styles.css",
-    "apps/secretaria-general/registro-atenciones/auditoria/index.html",
-    "apps/secretaria-general/registro-atenciones/auditoria/data.json",
-    "apps/secretaria-general/registro-atenciones/auditoria/script.js",
-    "apps/secretaria-general/registro-atenciones/recepcion/index.html",
-    "apps/secretaria-general/registro-atenciones/recepcion/script.js",
-    "apps/secretaria-general/registro-atenciones/checkin/styles.css",
-    "apps/secretaria-general/registro-atenciones/checkin/index.html",
-    "apps/secretaria-general/registro-atenciones/checkin/data.json",
-    "apps/secretaria-general/registro-atenciones/checkin/script.js",
-    "apps/secretaria-general/registro-atenciones/directorio/index.html",
-    "apps/secretaria-general/registro-atenciones/turnos/index.html",
-    "apps/secretaria-general/registro-atenciones/notificaciones/styles.css",
-    "apps/secretaria-general/registro-atenciones/notificaciones/index.html",
-    "apps/secretaria-general/registro-atenciones/notificaciones/data.json",
-    "apps/secretaria-general/registro-atenciones/notificaciones/script.js",
-    "apps/secretaria-general/registro-atenciones/portal-citas/styles.css",
-    "apps/secretaria-general/registro-atenciones/portal-citas/index.html",
-    "apps/secretaria-general/registro-atenciones/portal-citas/data.json",
-    "apps/secretaria-general/registro-atenciones/portal-citas/script.js",
-    "apps/secretaria-general/registro-atenciones/integraciones/styles.css",
-    "apps/secretaria-general/registro-atenciones/integraciones/index.html",
-    "apps/secretaria-general/registro-atenciones/integraciones/data.json",
-    "apps/secretaria-general/registro-atenciones/integraciones/script.js",
-    "apps/secretaria-general/registro-atenciones/expedientes/styles.css",
-    "apps/secretaria-general/registro-atenciones/expedientes/index.html",
-    "apps/secretaria-general/registro-atenciones/expedientes/data.json",
-    "apps/secretaria-general/registro-atenciones/expedientes/script.js"
+  "name": "Capa_Visual_Global_Premium_ERP_v23",
+  "version": "23.0.0",
+  "new_files": [
+    "assets/css/erp-premium-v23.css"
   ],
-  "notes": [
-    "No integra PQRSD",
-    "Incluye portal público, QR, notificaciones, expedientes, permisos, auditoría e integraciones",
-    "Solo archivos nuevos o modificados"
+  "modified_files": [
+    "assets/js/shell.js"
+  ],
+  "untouched": [
+    "sidebar colors",
+    "module HTML",
+    "module JavaScript",
+    "module JSON",
+    "database configuration"
   ]
 }

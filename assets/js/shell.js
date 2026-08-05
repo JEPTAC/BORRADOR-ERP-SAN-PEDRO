@@ -1,6 +1,21 @@
 (function () {
+  function loadPremiumUI() {
+    if (document.querySelector('link[data-erp-premium-ui]')) return;
+    const source = document.currentScript?.src || document.querySelector('script[src*="assets/js/shell.js"]')?.src || '';
+    if (!source) return;
+    const href = new URL('../css/erp-premium-v23.css?v=23.0.0', source).href;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    link.dataset.erpPremiumUi = '23';
+    document.head.appendChild(link);
+  }
+
+  loadPremiumUI();
+
   const ERP = {
     init() {
+      document.documentElement.dataset.erpUi = 'premium';
       const storedTheme = localStorage.getItem('erp-theme') || 'light';
       document.documentElement.dataset.theme = storedTheme;
       document.querySelectorAll('[data-theme-toggle]').forEach(btn => btn.addEventListener('click', () => {
