@@ -1,0 +1,21 @@
+{
+  "version": "28.0.0",
+  "scope": "apps/secretaria-general/mesa-ayuda only",
+  "files": [
+    "apps/secretaria-general/mesa-ayuda/LEEME_MESA_TIC_V28.txt",
+    "apps/secretaria-general/mesa-ayuda/catalogo/index.html",
+    "apps/secretaria-general/mesa-ayuda/comunicaciones/index.html",
+    "apps/secretaria-general/mesa-ayuda/conocimiento/index.html",
+    "apps/secretaria-general/mesa-ayuda/index.html",
+    "apps/secretaria-general/mesa-ayuda/inventario/index.html",
+    "apps/secretaria-general/mesa-ayuda/mantenimientos/index.html",
+    "apps/secretaria-general/mesa-ayuda/nuevo-ticket/index.html",
+    "apps/secretaria-general/mesa-ayuda/reportes/index.html",
+    "apps/secretaria-general/mesa-ayuda/shared/itsm.css",
+    "apps/secretaria-general/mesa-ayuda/shared/itsm.js",
+    "apps/secretaria-general/mesa-ayuda/shared/san-pedro.svg",
+    "apps/secretaria-general/mesa-ayuda/tickets/index.html"
+  ],
+  "external_dependencies": [],
+  "backend_connections": []
+}

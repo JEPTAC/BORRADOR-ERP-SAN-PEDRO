@@ -1,0 +1,38 @@
+MESA DE SERVICIOS TIC — RECONSTRUCCIÓN COMPLETA V28
+
+ALCANCE EXCLUSIVO
+Este paquete contiene únicamente:
+apps/secretaria-general/mesa-ayuda/
+
+No reemplaza base.css, shell.js, launcher, login, Talento Humano, SIG,
+Calendario, Atención ni ningún otro módulo.
+
+CORRECCIÓN PRINCIPAL
+- Se elimina la arquitectura que producía “ITSM is not defined”.
+- Todas las páginas cargan un único núcleo compartido: shared/itsm.js.
+- No existen scripts de página que puedan ejecutarse antes del núcleo.
+- El CSS es autónomo y no depende de capas globales.
+
+MÓDULOS INCLUIDOS
+- Centro de control
+- Tickets
+- Nuevo ticket
+- Catálogo de servicios
+- Inventario TIC
+- Mantenimientos
+- Diseño y publicaciones
+- Base de conocimiento
+- Indicadores y reportes
+
+INSTALACIÓN
+1. Eliminar únicamente la carpeta antigua:
+   apps/secretaria-general/mesa-ayuda
+2. No eliminar ni modificar ninguna carpeta hermana.
+3. Copiar la carpeta apps incluida en el ZIP.
+4. Pegarla en la raíz del repositorio.
+5. Confirmar que existe:
+   apps/secretaria-general/mesa-ayuda/index.html
+6. Publicar.
+7. Ejecutar Ctrl + F5.
+
+No se conecta Supabase. Los cambios de demostración se guardan en localStorage.

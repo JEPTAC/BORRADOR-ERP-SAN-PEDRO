@@ -1,0 +1,32 @@
+VALIDACIÓN TÉCNICA — MESA DE SERVICIOS TIC V28
+
+ALCANCE
+- Solo se evaluó apps/secretaria-general/mesa-ayuda/.
+- No se modificaron archivos globales ni otros módulos.
+
+ESTRUCTURA
+- 9 pantallas funcionales.
+- 1 CSS autónomo.
+- 1 núcleo JavaScript compartido.
+- 1 logo local del municipio.
+- 0 dependencias externas.
+- 0 conexiones a Supabase o Firebase.
+
+PRUEBAS
+- JavaScript validado con node --check.
+- CSS analizado sin errores de sintaxis.
+- JSON de manifiesto válido.
+- 9 de 9 pantallas renderizadas en Chromium.
+- window.ITSM disponible como versión 28.0.0 en 9 de 9 pantallas.
+- 0 errores de consola o pageerror durante la prueba.
+- 0 SVG fuera de sus círculos o cuadrados evaluados.
+- 0 desbordamiento horizontal en escritorio.
+- 0 desbordamiento horizontal en móvil 390 x 844.
+- Menú móvil probado y funcional.
+- Formulario de ticket probado: crea el caso en almacenamiento local.
+- Filtros, detalle de ticket y exportación CSV conectados.
+
+CORRECCIÓN ITSM
+Las páginas ya no incluyen scripts individuales que invoquen ITSM antes de tiempo.
+Todas cargan exclusivamente shared/itsm.js con defer, y ese archivo define
+window.ITSM antes de montar la interfaz.
