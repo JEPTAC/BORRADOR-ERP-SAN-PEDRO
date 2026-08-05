@@ -1,12 +1,12 @@
 {
-  "name": "Reemplazo_DESDE_RAIZ_SIG_360_v10",
-  "version": "v10",
+  "name": "Reemplazo_DESDE_RAIZ_SIG_360_v11",
+  "version": "v11",
   "replace": [
-    "apps/secretaria-general/sig",
-    "apps/secretaria-general/index.html",
-    "apps/secretaria-general/data.json"
+    "apps/secretaria-general/sig"
   ],
-  "pages": 23,
-  "storage": "localStorage",
-  "backend": "No conectado"
+  "notes": [
+    "Mejora visual general del SIG",
+    "Aumento moderado de tamaños y espacios",
+    "Mantiene colores y estilo base del ERP"
+  ]
 }
