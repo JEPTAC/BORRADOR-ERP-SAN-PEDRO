@@ -1,0 +1,143 @@
+{
+  "mode": "requirements",
+  "metrics": [
+    {
+      "label": "Requisitos comunes",
+      "value": "7",
+      "hint": "Cláusulas 4 a 10",
+      "icon": "grid",
+      "tone": ""
+    },
+    {
+      "label": "Cobertura integrada",
+      "value": "73%",
+      "hint": "Evidencia válida y vigente",
+      "icon": "gauge",
+      "tone": "warning"
+    },
+    {
+      "label": "Brechas prioritarias",
+      "value": "18",
+      "hint": "6 de nivel alto",
+      "icon": "alert-triangle",
+      "tone": "danger"
+    },
+    {
+      "label": "Evidencias relacionadas",
+      "value": "246",
+      "hint": "Documentos y registros",
+      "icon": "files",
+      "tone": "success"
+    }
+  ],
+  "columns": [],
+  "records": [
+    {
+      "id": "REQ-4",
+      "clause": "4",
+      "title": "Contexto de la organización",
+      "coverage": 78,
+      "evidence": "Análisis de contexto, alcance, partes interesadas y mapa de procesos",
+      "owner": "Planeación",
+      "status": "Parcial",
+      "standards": [
+        "ISO 9001",
+        "ISO 14001",
+        "ISO 45001",
+        "ISO/IEC 27001",
+        "ISO 22301",
+        "ISO 37001",
+        "ISO 37301"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "clause": "5",
+      "title": "Liderazgo",
+      "coverage": 72,
+      "evidence": "Políticas, roles, rendición de cuentas y participación",
+      "owner": "Alta Dirección",
+      "status": "Parcial",
+      "standards": [
+        "ISO 9001",
+        "ISO 14001",
+        "ISO 45001",
+        "ISO/IEC 27001",
+        "ISO 37001",
+        "ISO 37301"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "clause": "6",
+      "title": "Planificación",
+      "coverage": 69,
+      "evidence": "Riesgos, oportunidades, objetivos, obligaciones y cambios",
+      "owner": "Planeación",
+      "status": "Brechas",
+      "standards": [
+        "Todas las MSS"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "clause": "7",
+      "title": "Apoyo",
+      "coverage": 81,
+      "evidence": "Recursos, competencia, comunicación e información documentada",
+      "owner": "Secretaría General",
+      "status": "Parcial",
+      "standards": [
+        "Todas las MSS"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "clause": "8",
+      "title": "Operación",
+      "coverage": 66,
+      "evidence": "Controles operacionales específicos de cada sistema",
+      "owner": "Líderes de proceso",
+      "status": "Brechas",
+      "standards": [
+        "Todas las MSS"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "clause": "9",
+      "title": "Evaluación del desempeño",
+      "coverage": 75,
+      "evidence": "Indicadores, auditorías, evaluación de cumplimiento y revisión directiva",
+      "owner": "Control Interno",
+      "status": "Parcial",
+      "standards": [
+        "Todas las MSS"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "clause": "10",
+      "title": "Mejora",
+      "coverage": 73,
+      "evidence": "No conformidad, acción correctiva y mejora continua",
+      "owner": "Secretaría General",
+      "status": "Parcial",
+      "standards": [
+        "Todas las MSS"
+      ]
+    }
+  ],
+  "filters": [],
+  "form": [],
+  "extra": {
+    "statusOptions": [
+      "Sin iniciar",
+      "Brechas",
+      "Parcial",
+      "Conforme"
+    ]
+  },
+  "title": "Matriz integrada de requisitos",
+  "description": "Cruza la estructura armonizada con las normas activas, evidencias, responsables y brechas."
+}

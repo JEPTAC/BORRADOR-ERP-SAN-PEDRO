@@ -1,0 +1,172 @@
+{
+  "mode": "table",
+  "metrics": [
+    {
+      "label": "Documentos controlados",
+      "value": "286",
+      "hint": "18 tipos documentales",
+      "icon": "files",
+      "tone": ""
+    },
+    {
+      "label": "Vigentes",
+      "value": "254",
+      "hint": "88,8 % del repositorio",
+      "icon": "file-check",
+      "tone": "success"
+    },
+    {
+      "label": "En revisión",
+      "value": "21",
+      "hint": "7 próximos a vencer",
+      "icon": "refresh-cw",
+      "tone": "warning"
+    },
+    {
+      "label": "Obsoletos controlados",
+      "value": "11",
+      "hint": "Acceso restringido",
+      "icon": "archive",
+      "tone": ""
+    }
+  ],
+  "columns": [
+    {
+      "key": "code",
+      "label": "Código"
+    },
+    {
+      "key": "name",
+      "label": "Documento"
+    },
+    {
+      "key": "process",
+      "label": "Proceso"
+    },
+    {
+      "key": "version",
+      "label": "Versión"
+    },
+    {
+      "key": "review",
+      "label": "Próxima revisión",
+      "type": "date"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "DOC-001",
+      "code": "SIG-MN-001",
+      "name": "Manual del Sistema Integrado de Gestión",
+      "process": "Direccionamiento",
+      "version": "v5",
+      "review": "2026-10-15",
+      "status": "Vigente"
+    },
+    {
+      "id": "DOC-002",
+      "code": "SIG-PR-001",
+      "name": "Control de información documentada",
+      "process": "Secretaría General",
+      "version": "v4",
+      "review": "2026-09-18",
+      "status": "Vigente"
+    },
+    {
+      "id": "DOC-003",
+      "code": "TIC-PR-004",
+      "name": "Gestión de incidentes de seguridad",
+      "process": "Gestión TIC",
+      "version": "v2",
+      "review": "2026-08-21",
+      "status": "En revisión"
+    },
+    {
+      "id": "DOC-004",
+      "code": "AMB-PR-002",
+      "name": "Identificación de aspectos ambientales",
+      "process": "Gestión Ambiental",
+      "version": "v1",
+      "review": "2026-08-30",
+      "status": "En revisión"
+    },
+    {
+      "id": "DOC-005",
+      "code": "SST-PR-008",
+      "name": "Investigación de incidentes laborales",
+      "process": "Talento Humano",
+      "version": "v3",
+      "review": "2027-01-10",
+      "status": "Vigente"
+    }
+  ],
+  "filters": [
+    {
+      "key": "process",
+      "label": "Proceso"
+    },
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "code",
+      "label": "Código",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "name",
+      "label": "Nombre del documento",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "process",
+      "label": "Proceso",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "version",
+      "label": "Versión",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "review",
+      "label": "Próxima revisión",
+      "type": "date",
+      "required": true
+    },
+    {
+      "name": "status",
+      "label": "Estado",
+      "type": "select",
+      "options": [
+        "Borrador",
+        "En revisión",
+        "Vigente",
+        "Obsoleto"
+      ],
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Borrador",
+      "En revisión",
+      "Vigente",
+      "Obsoleto"
+    ]
+  },
+  "title": "Información documentada",
+  "description": "Controla creación, revisión, aprobación, publicación, versiones, distribución, retención y obsolescencia."
+}

@@ -1,0 +1,151 @@
+{
+  "mode": "table",
+  "metrics": [
+    {
+      "label": "Roles críticos",
+      "value": "31",
+      "hint": "Con perfil de competencia",
+      "icon": "users",
+      "tone": ""
+    },
+    {
+      "label": "Cumplimiento formativo",
+      "value": "84%",
+      "hint": "Vigencia actual",
+      "icon": "graduation-cap",
+      "tone": "success"
+    },
+    {
+      "label": "Brechas abiertas",
+      "value": "17",
+      "hint": "6 de prioridad alta",
+      "icon": "alert-triangle",
+      "tone": "warning"
+    },
+    {
+      "label": "Formaciones pendientes",
+      "value": "9",
+      "hint": "Próximos 30 días",
+      "icon": "calendar",
+      "tone": "danger"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Registro"
+    },
+    {
+      "key": "role",
+      "label": "Rol / competencia"
+    },
+    {
+      "key": "standard",
+      "label": "Sistema",
+      "type": "badge"
+    },
+    {
+      "key": "person",
+      "label": "Persona / grupo"
+    },
+    {
+      "key": "validity",
+      "label": "Vigencia",
+      "type": "date"
+    },
+    {
+      "key": "progress",
+      "label": "Cumplimiento",
+      "type": "progress"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "COMP-014",
+      "role": "Auditor interno de sistemas integrados",
+      "standard": "ISO 19011",
+      "person": "Equipo auditor",
+      "validity": "2027-03-30",
+      "progress": 88,
+      "status": "Competente"
+    },
+    {
+      "id": "COMP-021",
+      "role": "Gestión de incidentes de seguridad",
+      "standard": "ISO/IEC 27001",
+      "person": "Equipo TIC",
+      "validity": "2026-11-20",
+      "progress": 72,
+      "status": "En formación"
+    },
+    {
+      "id": "COMP-028",
+      "role": "Investigación de incidentes y peligros",
+      "standard": "ISO 45001",
+      "person": "COPASST / SST",
+      "validity": "2027-01-15",
+      "progress": 91,
+      "status": "Competente"
+    },
+    {
+      "id": "COMP-033",
+      "role": "Debida diligencia y prevención del soborno",
+      "standard": "ISO 37001",
+      "person": "Contratación / Jurídica",
+      "validity": "2026-09-22",
+      "progress": 48,
+      "status": "Brecha"
+    }
+  ],
+  "filters": [
+    {
+      "key": "standard",
+      "label": "Sistema"
+    },
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "role",
+      "label": "Competencia requerida",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "standard",
+      "label": "Sistema o norma",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "person",
+      "label": "Persona o grupo",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "validity",
+      "label": "Vigencia / revisión",
+      "type": "date",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Brecha",
+      "En formación",
+      "Competente",
+      "Vencida"
+    ]
+  },
+  "title": "Competencia, formación y toma de conciencia",
+  "description": "Cruza roles, competencias ISO, formación, evaluaciones, evidencias y brechas."
+}

@@ -1,0 +1,162 @@
+{
+  "mode": "special",
+  "metrics": [
+    {
+      "label": "Peligros identificados",
+      "value": "64",
+      "hint": "11 riesgos altos",
+      "icon": "alert-triangle",
+      "tone": "danger"
+    },
+    {
+      "label": "Inspecciones ejecutadas",
+      "value": "87%",
+      "hint": "Programa anual",
+      "icon": "clipboard-check",
+      "tone": "warning"
+    },
+    {
+      "label": "Incidentes reportados",
+      "value": "8",
+      "hint": "0 accidentes graves",
+      "icon": "heart-pulse",
+      "tone": "warning"
+    },
+    {
+      "label": "Acciones SST cerradas",
+      "value": "82%",
+      "hint": "Eficacia verificada",
+      "icon": "check",
+      "tone": "success"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Peligro"
+    },
+    {
+      "key": "activity",
+      "label": "Actividad"
+    },
+    {
+      "key": "hazard",
+      "label": "Peligro / evento"
+    },
+    {
+      "key": "risk",
+      "label": "Nivel",
+      "type": "status"
+    },
+    {
+      "key": "control",
+      "label": "Controles"
+    },
+    {
+      "key": "owner",
+      "label": "Responsable"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "SST-014",
+      "activity": "Visitas técnicas de campo",
+      "hazard": "Caídas, tránsito y condiciones locativas",
+      "risk": "Alto",
+      "control": "EPP, permisos, planeación y acompañamiento",
+      "owner": "Planeación / SST",
+      "status": "Seguimiento"
+    },
+    {
+      "id": "SST-021",
+      "activity": "Trabajo administrativo",
+      "hazard": "Carga postural y riesgo psicosocial",
+      "risk": "Medio",
+      "control": "Pausas, ergonomía y vigilancia epidemiológica",
+      "owner": "Talento Humano",
+      "status": "Controlado"
+    },
+    {
+      "id": "SST-028",
+      "activity": "Mantenimiento eléctrico",
+      "hazard": "Contacto eléctrico y arco",
+      "risk": "Alto",
+      "control": "Personal autorizado, bloqueo y verificación",
+      "owner": "Servicios Generales",
+      "status": "Plan de mejora"
+    },
+    {
+      "id": "SST-034",
+      "activity": "Atención al público",
+      "hazard": "Agresión o alteración del orden",
+      "risk": "Medio",
+      "control": "Protocolos, apoyo y reporte",
+      "owner": "Gobierno / SST",
+      "status": "Controlado"
+    }
+  ],
+  "filters": [
+    {
+      "key": "risk",
+      "label": "Nivel"
+    },
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "activity",
+      "label": "Actividad",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "hazard",
+      "label": "Peligro o evento",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "risk",
+      "label": "Nivel",
+      "type": "select",
+      "options": [
+        "Bajo",
+        "Medio",
+        "Alto",
+        "Crítico"
+      ],
+      "required": true
+    },
+    {
+      "name": "control",
+      "label": "Controles",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Sin valorar",
+      "Plan de mejora",
+      "Seguimiento",
+      "Controlado"
+    ],
+    "specialTitle": "Matriz de peligros y controles"
+  },
+  "title": "Seguridad y salud en el trabajo",
+  "description": "Gestiona peligros, riesgos, controles, incidentes, inspecciones, participación y programas preventivos."
+}

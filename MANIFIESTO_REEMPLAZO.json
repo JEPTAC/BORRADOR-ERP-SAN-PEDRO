@@ -1,7 +1,12 @@
 {
-  "name": "Reemplazo_DESDE_RAIZ_Cronograma_Pulido_v09",
-  "version": "v09",
-  "replace": ["apps/secretaria-general/calendario/cronograma"],
-  "scope": "Solo cronograma",
-  "global_theme_modified": false
+  "name": "Reemplazo_DESDE_RAIZ_SIG_360_v10",
+  "version": "v10",
+  "replace": [
+    "apps/secretaria-general/sig",
+    "apps/secretaria-general/index.html",
+    "apps/secretaria-general/data.json"
+  ],
+  "pages": 23,
+  "storage": "localStorage",
+  "backend": "No conectado"
 }

@@ -1,0 +1,177 @@
+{
+  "mode": "integrity",
+  "metrics": [
+    {
+      "label": "Obligaciones de cumplimiento",
+      "value": "143",
+      "hint": "Con responsable asignado",
+      "icon": "scale",
+      "tone": ""
+    },
+    {
+      "label": "Debidas diligencias",
+      "value": "32",
+      "hint": "7 reforzadas",
+      "icon": "search",
+      "tone": "warning"
+    },
+    {
+      "label": "Conflictos declarados",
+      "value": "6",
+      "hint": "Todos gestionados",
+      "icon": "users",
+      "tone": "warning"
+    },
+    {
+      "label": "Reportes reservados",
+      "value": "3",
+      "hint": "En evaluación protegida",
+      "icon": "message-circle",
+      "tone": "danger"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Registro"
+    },
+    {
+      "key": "subject",
+      "label": "Asunto / tercero"
+    },
+    {
+      "key": "type",
+      "label": "Tipo",
+      "type": "badge"
+    },
+    {
+      "key": "risk",
+      "label": "Riesgo",
+      "type": "status"
+    },
+    {
+      "key": "control",
+      "label": "Control / diligencia"
+    },
+    {
+      "key": "owner",
+      "label": "Responsable"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "INT-014",
+      "subject": "Proveedor crítico de tecnología",
+      "type": "Debida diligencia",
+      "risk": "Alto",
+      "control": "Beneficiario final, sanciones y antecedentes",
+      "owner": "Contratación / Jurídica",
+      "status": "En evaluación"
+    },
+    {
+      "id": "INT-021",
+      "subject": "Posible conflicto en supervisión contractual",
+      "type": "Conflicto de interés",
+      "risk": "Medio",
+      "control": "Declaración, análisis y reasignación",
+      "owner": "Secretaría General",
+      "status": "Gestionado"
+    },
+    {
+      "id": "INT-028",
+      "subject": "Controles no financieros en compras",
+      "type": "Antisoborno",
+      "risk": "Alto",
+      "control": "Aprobaciones, segregación y trazabilidad",
+      "owner": "Hacienda / Contratación",
+      "status": "Seguimiento"
+    },
+    {
+      "id": "INT-034",
+      "subject": "Reporte reservado sobre conducta indebida",
+      "type": "Canal de denuncia",
+      "risk": "Alto",
+      "control": "Evaluación imparcial y protección de identidad",
+      "owner": "Control Interno",
+      "status": "Investigación"
+    }
+  ],
+  "filters": [
+    {
+      "key": "type",
+      "label": "Tipo"
+    },
+    {
+      "key": "risk",
+      "label": "Riesgo"
+    },
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "subject",
+      "label": "Asunto o tercero",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "type",
+      "label": "Tipo",
+      "type": "select",
+      "options": [
+        "Debida diligencia",
+        "Conflicto de interés",
+        "Antisoborno",
+        "Cumplimiento",
+        "Canal de denuncia",
+        "Fraude"
+      ],
+      "required": true
+    },
+    {
+      "name": "risk",
+      "label": "Riesgo",
+      "type": "select",
+      "options": [
+        "Bajo",
+        "Medio",
+        "Alto",
+        "Crítico"
+      ],
+      "required": true
+    },
+    {
+      "name": "control",
+      "label": "Control o diligencia",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Registrado",
+      "En evaluación",
+      "Investigación",
+      "Seguimiento",
+      "Gestionado",
+      "Cerrado"
+    ],
+    "specialTitle": "Controles de integridad y cumplimiento"
+  },
+  "title": "Integridad, antisoborno y cumplimiento",
+  "description": "Integra obligaciones, debida diligencia, conflictos, controles, denuncias, fraude y cultura ética."
+}

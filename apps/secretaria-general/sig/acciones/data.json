@@ -1,0 +1,142 @@
+{
+  "mode": "capa",
+  "metrics": [
+    {
+      "label": "Acciones abiertas",
+      "value": "38",
+      "hint": "12 correctivas · 26 de mejora",
+      "icon": "list-checks",
+      "tone": ""
+    },
+    {
+      "label": "Vencidas",
+      "value": "6",
+      "hint": "Escaladas a responsables",
+      "icon": "calendar-x",
+      "tone": "danger"
+    },
+    {
+      "label": "Eficacia verificada",
+      "value": "81%",
+      "hint": "Cierres de la vigencia",
+      "icon": "shield-check",
+      "tone": "success"
+    },
+    {
+      "label": "Causas recurrentes",
+      "value": "4",
+      "hint": "Priorizadas para análisis",
+      "icon": "refresh-cw",
+      "tone": "warning"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Acción"
+    },
+    {
+      "key": "action",
+      "label": "Descripción"
+    },
+    {
+      "key": "cause",
+      "label": "Causa raíz"
+    },
+    {
+      "key": "owner",
+      "label": "Responsable"
+    },
+    {
+      "key": "due",
+      "label": "Vence",
+      "type": "date"
+    },
+    {
+      "key": "progress",
+      "label": "Avance",
+      "type": "progress"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "CAPA-026",
+      "action": "Actualizar controles y permisos de expedientes reservados",
+      "cause": "Roles no revisados tras cambios de personal",
+      "owner": "TIC / Secretaría General",
+      "due": "2026-08-30",
+      "progress": 55,
+      "status": "Ejecución"
+    },
+    {
+      "id": "CAPA-031",
+      "action": "Implementar alerta de revisión documental",
+      "cause": "Seguimiento dependiente de controles manuales",
+      "owner": "Secretaría General",
+      "due": "2026-09-08",
+      "progress": 72,
+      "status": "Ejecución"
+    },
+    {
+      "id": "CAPA-036",
+      "action": "Unificar criterios para evaluación de proveedores",
+      "cause": "Formatos y responsables dispersos",
+      "owner": "Contratación",
+      "due": "2026-09-18",
+      "progress": 30,
+      "status": "Planificada"
+    },
+    {
+      "id": "CAPA-039",
+      "action": "Validar efectividad del plan de respuesta a interrupciones",
+      "cause": "Pruebas parciales sin criterios de aceptación",
+      "owner": "TIC / Planeación",
+      "due": "2026-10-02",
+      "progress": 18,
+      "status": "Planificada"
+    }
+  ],
+  "filters": [],
+  "form": [
+    {
+      "name": "action",
+      "label": "Acción",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "cause",
+      "label": "Causa raíz",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "due",
+      "label": "Fecha límite",
+      "type": "date",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Planificada",
+      "Ejecución",
+      "Verificación",
+      "Eficaz",
+      "Cerrada"
+    ]
+  },
+  "title": "CAPA y mejoramiento",
+  "description": "Gestiona correcciones, análisis de causa, acciones correctivas, preventivas, responsables y eficacia."
+}

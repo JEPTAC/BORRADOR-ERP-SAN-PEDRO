@@ -1,0 +1,145 @@
+{
+  "mode": "review",
+  "metrics": [
+    {
+      "label": "Próxima revisión",
+      "value": "28 ago",
+      "hint": "Comité institucional",
+      "icon": "calendar",
+      "tone": ""
+    },
+    {
+      "label": "Entradas preparadas",
+      "value": "12/16",
+      "hint": "75 % del paquete",
+      "icon": "files",
+      "tone": "warning"
+    },
+    {
+      "label": "Decisiones abiertas",
+      "value": "8",
+      "hint": "3 próximas a vencer",
+      "icon": "list-checks",
+      "tone": "danger"
+    },
+    {
+      "label": "Cumplimiento anterior",
+      "value": "86%",
+      "hint": "Decisiones cerradas",
+      "icon": "gauge",
+      "tone": "success"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Compromiso"
+    },
+    {
+      "key": "decision",
+      "label": "Decisión / acción"
+    },
+    {
+      "key": "owner",
+      "label": "Responsable"
+    },
+    {
+      "key": "due",
+      "label": "Fecha límite",
+      "type": "date"
+    },
+    {
+      "key": "progress",
+      "label": "Avance",
+      "type": "progress"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "RD-2026-014",
+      "decision": "Priorizar integración de riesgos de información y continuidad",
+      "owner": "TIC / Planeación",
+      "due": "2026-09-15",
+      "progress": 42,
+      "status": "En ejecución"
+    },
+    {
+      "id": "RD-2026-015",
+      "decision": "Aprobar programa de transición ambiental 2026",
+      "owner": "Gestión Ambiental",
+      "due": "2026-08-25",
+      "progress": 80,
+      "status": "En ejecución"
+    },
+    {
+      "id": "RD-2026-016",
+      "decision": "Fortalecer medición de satisfacción por trámite",
+      "owner": "Secretaría General",
+      "due": "2026-09-30",
+      "progress": 25,
+      "status": "Planificada"
+    }
+  ],
+  "filters": [],
+  "form": [
+    {
+      "name": "decision",
+      "label": "Decisión o compromiso",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "due",
+      "label": "Fecha límite",
+      "type": "date",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Planificada",
+      "En ejecución",
+      "Verificación",
+      "Cerrada"
+    ],
+    "agenda": [
+      {
+        "title": "Cambios del contexto y partes interesadas",
+        "ready": 90
+      },
+      {
+        "title": "Desempeño de procesos e indicadores",
+        "ready": 84
+      },
+      {
+        "title": "Auditorías, cumplimiento y hallazgos",
+        "ready": 78
+      },
+      {
+        "title": "Riesgos, oportunidades y recursos",
+        "ready": 66
+      },
+      {
+        "title": "Eficacia de acciones y mejora",
+        "ready": 72
+      },
+      {
+        "title": "Desempeño de sistemas especializados",
+        "ready": 63
+      }
+    ]
+  },
+  "title": "Revisión por la dirección",
+  "description": "Consolida entradas, decisiones, necesidades de recursos, cambios y seguimiento de compromisos."
+}

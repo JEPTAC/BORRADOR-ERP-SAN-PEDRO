@@ -1,0 +1,319 @@
+{
+  "mode": "standards",
+  "metrics": [
+    {
+      "label": "Normas configuradas",
+      "value": "19",
+      "hint": "12 sistemas + 7 guías",
+      "icon": "badge-check",
+      "tone": ""
+    },
+    {
+      "label": "Promedio de preparación",
+      "value": "65%",
+      "hint": "Consolidado institucional",
+      "icon": "gauge",
+      "tone": "warning"
+    },
+    {
+      "label": "Normas certificables",
+      "value": "7",
+      "hint": "Alcance configurable",
+      "icon": "shield-check",
+      "tone": "success"
+    },
+    {
+      "label": "Transiciones activas",
+      "value": "4",
+      "hint": "Versiones nuevas o en revisión",
+      "icon": "refresh-cw",
+      "tone": "warning"
+    }
+  ],
+  "columns": [],
+  "records": [
+    {
+      "id": "ISO-9001",
+      "code": "ISO 9001",
+      "version": "2015 + Amd 1:2024",
+      "name": "Gestión de la calidad",
+      "scope": "Servicios públicos y procesos institucionales",
+      "owner": "Secretaría General",
+      "status": "Implementación",
+      "progress": 82,
+      "certifiable": "Sí",
+      "transition": "Revisión 2026 en preparación"
+    },
+    {
+      "id": "ISO-18091",
+      "code": "ISO 18091",
+      "version": "2019",
+      "name": "Calidad en gobiernos locales",
+      "scope": "Aplicación de ISO 9001 al gobierno municipal",
+      "owner": "Planeación",
+      "status": "Implementación",
+      "progress": 74,
+      "certifiable": "Guía",
+      "transition": "Vigente"
+    },
+    {
+      "id": "ISO-14001",
+      "code": "ISO 14001",
+      "version": "2026",
+      "name": "Gestión ambiental",
+      "scope": "Impactos ambientales, recursos, residuos y clima",
+      "owner": "Gestión Ambiental",
+      "status": "Diagnóstico",
+      "progress": 61,
+      "certifiable": "Sí",
+      "transition": "Nueva edición 2026"
+    },
+    {
+      "id": "ISO-45001",
+      "code": "ISO 45001",
+      "version": "2018 + Amd 1:2024",
+      "name": "Seguridad y salud en el trabajo",
+      "scope": "Peligros, participación y desempeño SST",
+      "owner": "Talento Humano",
+      "status": "Implementación",
+      "progress": 76,
+      "certifiable": "Sí",
+      "transition": "Revisión internacional en curso"
+    },
+    {
+      "id": "ISO-27001",
+      "code": "ISO/IEC 27001",
+      "version": "2022 + Amd 1:2024",
+      "name": "Seguridad de la información",
+      "scope": "Información, activos, riesgos y controles",
+      "owner": "TIC",
+      "status": "Diagnóstico",
+      "progress": 57,
+      "certifiable": "Sí",
+      "transition": "Vigente"
+    },
+    {
+      "id": "ISO-22301",
+      "code": "ISO 22301",
+      "version": "2019 + Amd 1:2024",
+      "name": "Continuidad del negocio",
+      "scope": "Servicios esenciales, BIA, recuperación y pruebas",
+      "owner": "TIC / Planeación",
+      "status": "Planificación",
+      "progress": 49,
+      "certifiable": "Sí",
+      "transition": "Revisión internacional iniciada"
+    },
+    {
+      "id": "ISO-37001",
+      "code": "ISO 37001",
+      "version": "2025",
+      "name": "Gestión antisoborno",
+      "scope": "Prevención, debida diligencia y controles",
+      "owner": "Jurídica / Control Interno",
+      "status": "Diagnóstico",
+      "progress": 55,
+      "certifiable": "Sí",
+      "transition": "Nueva edición 2025"
+    },
+    {
+      "id": "ISO-37301",
+      "code": "ISO 37301",
+      "version": "2021 + Amd 1:2024",
+      "name": "Gestión del cumplimiento",
+      "scope": "Obligaciones, cultura, controles y evaluación",
+      "owner": "Jurídica",
+      "status": "Implementación",
+      "progress": 63,
+      "certifiable": "Sí",
+      "transition": "Vigente"
+    },
+    {
+      "id": "ISO-37002",
+      "code": "ISO 37002",
+      "version": "2021",
+      "name": "Canales de denuncia",
+      "scope": "Recepción, evaluación, tratamiento y cierre",
+      "owner": "Control Interno",
+      "status": "Planificación",
+      "progress": 52,
+      "certifiable": "Guía",
+      "transition": "Revisada en 2026"
+    },
+    {
+      "id": "ISO-19011",
+      "code": "ISO 19011",
+      "version": "2026",
+      "name": "Auditoría de sistemas de gestión",
+      "scope": "Programa, ejecución y competencia de auditores",
+      "owner": "Control Interno",
+      "status": "Implementación",
+      "progress": 79,
+      "certifiable": "Guía",
+      "transition": "Nueva edición 2026"
+    },
+    {
+      "id": "ISO-31000",
+      "code": "ISO 31000",
+      "version": "2018",
+      "name": "Gestión del riesgo",
+      "scope": "Principios, marco y proceso de riesgos",
+      "owner": "Planeación / Control Interno",
+      "status": "Implementación",
+      "progress": 71,
+      "certifiable": "Guía",
+      "transition": "Vigente"
+    },
+    {
+      "id": "ISO-50001",
+      "code": "ISO 50001",
+      "version": "2018 + Amd 1:2024",
+      "name": "Gestión de la energía",
+      "scope": "Desempeño energético, consumo, medición y mejora",
+      "owner": "Servicios Administrativos / Ambiental",
+      "status": "Diagnóstico",
+      "progress": 38,
+      "certifiable": "Sí",
+      "transition": "Vigente"
+    },
+    {
+      "id": "ISO-55001",
+      "code": "ISO 55001",
+      "version": "2024",
+      "name": "Gestión de activos",
+      "scope": "Ciclo de vida, valor, riesgo y desempeño de activos",
+      "owner": "Almacén / Infraestructura",
+      "status": "Diagnóstico",
+      "progress": 34,
+      "certifiable": "Sí",
+      "transition": "Nueva edición 2024"
+    },
+    {
+      "id": "ISO-20000",
+      "code": "ISO/IEC 20000-1",
+      "version": "2018 + Amd 1:2024",
+      "name": "Gestión de servicios de TI",
+      "scope": "Diseño, transición, entrega y mejora de servicios tecnológicos",
+      "owner": "TIC",
+      "status": "Planificación",
+      "progress": 46,
+      "certifiable": "Sí",
+      "transition": "Vigente"
+    },
+    {
+      "id": "ISO-30401",
+      "code": "ISO 30401",
+      "version": "2018 + Amd 1:2022 + Amd 2:2024",
+      "name": "Gestión del conocimiento",
+      "scope": "Creación, transferencia, conservación y uso del conocimiento institucional",
+      "owner": "Talento Humano / Planeación",
+      "status": "Planificación",
+      "progress": 41,
+      "certifiable": "Sí",
+      "transition": "Revisión internacional en curso"
+    },
+    {
+      "id": "ISO-37101",
+      "code": "ISO 37101",
+      "version": "2016 + Amd 1:2024",
+      "name": "Desarrollo sostenible en comunidades",
+      "scope": "Resultados ambientales, económicos y sociales del municipio",
+      "owner": "Planeación",
+      "status": "Diagnóstico",
+      "progress": 43,
+      "certifiable": "Sí",
+      "transition": "Nueva revisión en desarrollo"
+    },
+    {
+      "id": "ISO-10002",
+      "code": "ISO 10002",
+      "version": "2018",
+      "name": "Gestión de quejas y satisfacción",
+      "scope": "Diseño, operación y mejora del tratamiento de quejas",
+      "owner": "Atención Ciudadana",
+      "status": "Implementación",
+      "progress": 68,
+      "certifiable": "Guía",
+      "transition": "Vigente"
+    },
+    {
+      "id": "ISO-37000",
+      "code": "ISO 37000",
+      "version": "2021",
+      "name": "Gobernanza de las organizaciones",
+      "scope": "Principios y prácticas para el órgano de gobierno",
+      "owner": "Despacho / Secretaría General",
+      "status": "Planificación",
+      "progress": 48,
+      "certifiable": "Guía",
+      "transition": "En revisión periódica"
+    },
+    {
+      "id": "ISO-26000",
+      "code": "ISO 26000",
+      "version": "2010",
+      "name": "Responsabilidad social",
+      "scope": "Gobernanza, derechos, trabajo, ambiente, ciudadanía y comunidad",
+      "owner": "Secretaría General / Bienestar",
+      "status": "Diagnóstico",
+      "progress": 45,
+      "certifiable": "Guía",
+      "transition": "Guía no certificable"
+    }
+  ],
+  "filters": [],
+  "form": [
+    {
+      "name": "code",
+      "label": "Código de norma",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "version",
+      "label": "Versión",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "name",
+      "label": "Nombre del sistema",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "scope",
+      "label": "Alcance",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "status",
+      "label": "Estado",
+      "type": "select",
+      "options": [
+        "Diagnóstico",
+        "Planificación",
+        "Implementación",
+        "Mantenimiento"
+      ],
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Diagnóstico",
+      "Planificación",
+      "Implementación",
+      "Mantenimiento"
+    ]
+  },
+  "title": "Normas y alcance",
+  "description": "Administra las normas, marcos de referencia, versiones, alcance, responsables y nivel de preparación."
+}

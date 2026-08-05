@@ -1,176 +1,381 @@
 {
   "metrics": [
     {
-      "label": "Cumplimiento institucional",
-      "value": "78%",
-      "hint": "+4 puntos frente al trimestre",
+      "label": "Madurez integrada",
+      "value": "72%",
+      "hint": "+5 puntos frente al semestre",
       "icon": "gauge",
       "tone": "success"
     },
     {
-      "label": "Documentos vigentes",
-      "value": 126,
-      "hint": "8 en actualización",
-      "icon": "files",
+      "label": "Normas configuradas",
+      "value": "19",
+      "hint": "12 certificables · 7 guías",
+      "icon": "badge-check",
       "tone": ""
     },
     {
-      "label": "Riesgos abiertos",
-      "value": 17,
-      "hint": "2 en nivel alto",
-      "icon": "shield-alert",
-      "tone": "warning"
-    },
-    {
-      "label": "Acciones pendientes",
-      "value": 9,
-      "hint": "3 próximas a vencer",
-      "icon": "list-checks",
+      "label": "Brechas prioritarias",
+      "value": "18",
+      "hint": "6 de nivel alto",
+      "icon": "alert-triangle",
       "tone": "danger"
+    },
+    {
+      "label": "Acciones abiertas",
+      "value": "38",
+      "hint": "6 próximas a vencer",
+      "icon": "list-checks",
+      "tone": "warning"
     }
   ],
-  "documents": [
+  "standards": [
     {
-      "code": "SIG-PR-001",
-      "name": "Control de documentos y registros",
-      "type": "Procedimiento",
-      "process": "Gestión documental",
-      "version": "4",
-      "date": "2026-03-18",
-      "status": "Vigente"
-    },
-    {
-      "code": "TH-PR-003",
-      "name": "Vinculación y retiro de personal",
-      "type": "Procedimiento",
-      "process": "Talento Humano",
-      "version": "3",
-      "date": "2026-02-11",
-      "status": "Vigente"
-    },
-    {
-      "code": "TIC-PR-002",
-      "name": "Gestión de incidentes tecnológicos",
-      "type": "Procedimiento",
-      "process": "Gestión TIC",
-      "version": "2",
-      "date": "2026-06-20",
-      "status": "En revisión"
-    },
-    {
-      "code": "SIG-MN-001",
-      "name": "Manual del Sistema Integrado de Gestión",
-      "type": "Manual",
-      "process": "Direccionamiento",
-      "version": "5",
-      "date": "2026-01-30",
-      "status": "Vigente"
-    },
-    {
-      "code": "SIG-FO-019",
-      "name": "Formato de plan de mejoramiento",
-      "type": "Formato",
-      "process": "Evaluación",
-      "version": "6",
-      "date": "2026-04-08",
-      "status": "Vigente"
-    }
-  ],
-  "risks": [
-    {
-      "id": "R-2026-014",
-      "risk": "Pérdida de trazabilidad documental",
-      "process": "Gestión documental",
-      "level": "Alto",
-      "control": "Revisión mensual de expedientes",
+      "id": "ISO-9001",
+      "code": "ISO 9001",
+      "version": "2015 + Amd 1:2024",
+      "name": "Gestión de la calidad",
+      "scope": "Servicios públicos y procesos institucionales",
       "owner": "Secretaría General",
-      "progress": 58
+      "status": "Implementación",
+      "progress": 82,
+      "certifiable": "Sí",
+      "transition": "Revisión 2026 en preparación"
     },
     {
-      "id": "R-2026-021",
-      "risk": "Incumplimiento de tiempos de respuesta",
-      "process": "Atención ciudadana",
-      "level": "Medio",
-      "control": "Alertas de vencimiento",
-      "owner": "Gobierno",
-      "progress": 74
-    },
-    {
-      "id": "R-2026-027",
-      "risk": "Indisponibilidad de servicios tecnológicos",
-      "process": "Gestión TIC",
-      "level": "Alto",
-      "control": "Mantenimiento y respaldos",
-      "owner": "TIC",
-      "progress": 64
-    },
-    {
-      "id": "R-2026-032",
-      "risk": "Información desactualizada en indicadores",
-      "process": "Planeación",
-      "level": "Bajo",
-      "control": "Corte mensual automático",
+      "id": "ISO-18091",
+      "code": "ISO 18091",
+      "version": "2019",
+      "name": "Calidad en gobiernos locales",
+      "scope": "Aplicación de ISO 9001 al gobierno municipal",
       "owner": "Planeación",
-      "progress": 88
-    }
-  ],
-  "indicators": [
-    {
-      "name": "Cumplimiento del plan institucional de capacitación",
-      "owner": "Talento Humano",
-      "target": 90,
-      "actual": 82,
-      "period": "Trimestral"
+      "status": "Implementación",
+      "progress": 74,
+      "certifiable": "Guía",
+      "transition": "Vigente"
     },
     {
-      "name": "Solicitudes TIC atendidas dentro del SLA",
+      "id": "ISO-14001",
+      "code": "ISO 14001",
+      "version": "2026",
+      "name": "Gestión ambiental",
+      "scope": "Impactos ambientales, recursos, residuos y clima",
+      "owner": "Gestión Ambiental",
+      "status": "Diagnóstico",
+      "progress": 61,
+      "certifiable": "Sí",
+      "transition": "Nueva edición 2026"
+    },
+    {
+      "id": "ISO-45001",
+      "code": "ISO 45001",
+      "version": "2018 + Amd 1:2024",
+      "name": "Seguridad y salud en el trabajo",
+      "scope": "Peligros, participación y desempeño SST",
+      "owner": "Talento Humano",
+      "status": "Implementación",
+      "progress": 76,
+      "certifiable": "Sí",
+      "transition": "Revisión internacional en curso"
+    },
+    {
+      "id": "ISO-27001",
+      "code": "ISO/IEC 27001",
+      "version": "2022 + Amd 1:2024",
+      "name": "Seguridad de la información",
+      "scope": "Información, activos, riesgos y controles",
       "owner": "TIC",
-      "target": 90,
-      "actual": 86,
-      "period": "Mensual"
+      "status": "Diagnóstico",
+      "progress": 57,
+      "certifiable": "Sí",
+      "transition": "Vigente"
     },
     {
-      "name": "Acciones de mejoramiento cerradas oportunamente",
+      "id": "ISO-22301",
+      "code": "ISO 22301",
+      "version": "2019 + Amd 1:2024",
+      "name": "Continuidad del negocio",
+      "scope": "Servicios esenciales, BIA, recuperación y pruebas",
+      "owner": "TIC / Planeación",
+      "status": "Planificación",
+      "progress": 49,
+      "certifiable": "Sí",
+      "transition": "Revisión internacional iniciada"
+    },
+    {
+      "id": "ISO-37001",
+      "code": "ISO 37001",
+      "version": "2025",
+      "name": "Gestión antisoborno",
+      "scope": "Prevención, debida diligencia y controles",
+      "owner": "Jurídica / Control Interno",
+      "status": "Diagnóstico",
+      "progress": 55,
+      "certifiable": "Sí",
+      "transition": "Nueva edición 2025"
+    },
+    {
+      "id": "ISO-37301",
+      "code": "ISO 37301",
+      "version": "2021 + Amd 1:2024",
+      "name": "Gestión del cumplimiento",
+      "scope": "Obligaciones, cultura, controles y evaluación",
+      "owner": "Jurídica",
+      "status": "Implementación",
+      "progress": 63,
+      "certifiable": "Sí",
+      "transition": "Vigente"
+    },
+    {
+      "id": "ISO-37002",
+      "code": "ISO 37002",
+      "version": "2021",
+      "name": "Canales de denuncia",
+      "scope": "Recepción, evaluación, tratamiento y cierre",
       "owner": "Control Interno",
-      "target": 85,
-      "actual": 71,
-      "period": "Mensual"
+      "status": "Planificación",
+      "progress": 52,
+      "certifiable": "Guía",
+      "transition": "Revisada en 2026"
     },
     {
-      "name": "Documentos revisados en la vigencia",
-      "owner": "Secretaría General",
-      "target": 100,
-      "actual": 76,
-      "period": "Semestral"
+      "id": "ISO-19011",
+      "code": "ISO 19011",
+      "version": "2026",
+      "name": "Auditoría de sistemas de gestión",
+      "scope": "Programa, ejecución y competencia de auditores",
+      "owner": "Control Interno",
+      "status": "Implementación",
+      "progress": 79,
+      "certifiable": "Guía",
+      "transition": "Nueva edición 2026"
+    },
+    {
+      "id": "ISO-31000",
+      "code": "ISO 31000",
+      "version": "2018",
+      "name": "Gestión del riesgo",
+      "scope": "Principios, marco y proceso de riesgos",
+      "owner": "Planeación / Control Interno",
+      "status": "Implementación",
+      "progress": 71,
+      "certifiable": "Guía",
+      "transition": "Vigente"
+    },
+    {
+      "id": "ISO-50001",
+      "code": "ISO 50001",
+      "version": "2018 + Amd 1:2024",
+      "name": "Gestión de la energía",
+      "scope": "Desempeño energético, consumo, medición y mejora",
+      "owner": "Servicios Administrativos / Ambiental",
+      "status": "Diagnóstico",
+      "progress": 38,
+      "certifiable": "Sí",
+      "transition": "Vigente"
     }
   ],
-  "actions": [
+  "clauses": [
     {
-      "id": "PM-2026-018",
-      "source": "Auditoría interna",
-      "action": "Actualizar matriz de riesgos del proceso TIC",
-      "owner": "Coordinación TIC",
-      "due": "2026-08-12",
-      "status": "En proceso",
-      "progress": 65
+      "id": "REQ-4",
+      "clause": "4",
+      "title": "Contexto de la organización",
+      "coverage": 78,
+      "evidence": "Análisis de contexto, alcance, partes interesadas y mapa de procesos",
+      "owner": "Planeación",
+      "status": "Parcial",
+      "standards": [
+        "ISO 9001",
+        "ISO 14001",
+        "ISO 45001",
+        "ISO/IEC 27001",
+        "ISO 22301",
+        "ISO 37001",
+        "ISO 37301"
+      ]
     },
     {
-      "id": "PM-2026-019",
-      "source": "Revisión por la dirección",
-      "action": "Unificar formatos de inducción y reinducción",
-      "owner": "Talento Humano",
-      "due": "2026-08-20",
-      "status": "Pendiente",
-      "progress": 20
+      "id": "REQ-5",
+      "clause": "5",
+      "title": "Liderazgo",
+      "coverage": 72,
+      "evidence": "Políticas, roles, rendición de cuentas y participación",
+      "owner": "Alta Dirección",
+      "status": "Parcial",
+      "standards": [
+        "ISO 9001",
+        "ISO 14001",
+        "ISO 45001",
+        "ISO/IEC 27001",
+        "ISO 37001",
+        "ISO 37301"
+      ]
     },
     {
-      "id": "PM-2026-020",
-      "source": "Autocontrol",
-      "action": "Depurar documentos obsoletos del SIG",
+      "id": "REQ-6",
+      "clause": "6",
+      "title": "Planificación",
+      "coverage": 69,
+      "evidence": "Riesgos, oportunidades, objetivos, obligaciones y cambios",
+      "owner": "Planeación",
+      "status": "Brechas",
+      "standards": [
+        "Todas las MSS"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "clause": "7",
+      "title": "Apoyo",
+      "coverage": 81,
+      "evidence": "Recursos, competencia, comunicación e información documentada",
       "owner": "Secretaría General",
-      "due": "2026-09-05",
-      "status": "En proceso",
-      "progress": 45
+      "status": "Parcial",
+      "standards": [
+        "Todas las MSS"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "clause": "8",
+      "title": "Operación",
+      "coverage": 66,
+      "evidence": "Controles operacionales específicos de cada sistema",
+      "owner": "Líderes de proceso",
+      "status": "Brechas",
+      "standards": [
+        "Todas las MSS"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "clause": "9",
+      "title": "Evaluación del desempeño",
+      "coverage": 75,
+      "evidence": "Indicadores, auditorías, evaluación de cumplimiento y revisión directiva",
+      "owner": "Control Interno",
+      "status": "Parcial",
+      "standards": [
+        "Todas las MSS"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "clause": "10",
+      "title": "Mejora",
+      "coverage": 73,
+      "evidence": "No conformidad, acción correctiva y mejora continua",
+      "owner": "Secretaría General",
+      "status": "Parcial",
+      "standards": [
+        "Todas las MSS"
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "title": "Transición ISO 14001:2026",
+      "detail": "Completar análisis de brechas y actualización documental.",
+      "due": "15 ago",
+      "tone": "warning",
+      "href": "normas/index.html"
+    },
+    {
+      "title": "Auditoría integrada documental y ciudadanía",
+      "detail": "Preparar listas de verificación y evidencias.",
+      "due": "19 ago",
+      "tone": "info",
+      "href": "auditorias/index.html"
+    },
+    {
+      "title": "Revisión por la dirección",
+      "detail": "Faltan cuatro entradas del paquete directivo.",
+      "due": "28 ago",
+      "tone": "danger",
+      "href": "revision-direccion/index.html"
+    },
+    {
+      "title": "Tratamiento de riesgo de información",
+      "detail": "Dos controles se encuentran próximos a vencer.",
+      "due": "30 ago",
+      "tone": "danger",
+      "href": "seguridad-informacion/index.html"
+    }
+  ],
+  "quick": [
+    {
+      "name": "Matriz de requisitos",
+      "desc": "Cruce por cláusula, norma y evidencia",
+      "icon": "grid",
+      "href": "matriz-requisitos/index.html",
+      "value": "73 % cobertura"
+    },
+    {
+      "name": "Información documentada",
+      "desc": "Versiones, revisiones y aprobaciones",
+      "icon": "files",
+      "href": "documentos/index.html",
+      "value": "286 documentos"
+    },
+    {
+      "name": "Riesgos integrados",
+      "desc": "Amenazas, oportunidades y tratamientos",
+      "icon": "shield-alert",
+      "href": "riesgos/index.html",
+      "value": "46 activos"
+    },
+    {
+      "name": "Auditorías",
+      "desc": "Programa, ejecución e informes",
+      "icon": "clipboard-check",
+      "href": "auditorias/index.html",
+      "value": "18 programadas"
+    },
+    {
+      "name": "CAPA y mejoramiento",
+      "desc": "Causa, acciones y eficacia",
+      "icon": "list-checks",
+      "href": "acciones/index.html",
+      "value": "38 abiertas"
+    },
+    {
+      "name": "Sistemas especializados",
+      "desc": "Ambiente, SST, SGSI, continuidad e integridad",
+      "icon": "workflow",
+      "href": "ambiental/index.html",
+      "value": "13 sistemas y marcos"
+    }
+  ],
+  "maturity": [
+    {
+      "name": "Calidad y gobierno local",
+      "value": 82,
+      "color": "var(--brand)"
+    },
+    {
+      "name": "Gestión ambiental",
+      "value": 61,
+      "color": "var(--accent)"
+    },
+    {
+      "name": "Seguridad y salud",
+      "value": 76,
+      "color": "var(--success)"
+    },
+    {
+      "name": "Seguridad de información",
+      "value": 57,
+      "color": "var(--info)"
+    },
+    {
+      "name": "Continuidad institucional",
+      "value": 49,
+      "color": "var(--warning)"
+    },
+    {
+      "name": "Integridad y cumplimiento",
+      "value": 59,
+      "color": "var(--danger)"
     }
   ]
 }

@@ -1,0 +1,165 @@
+{
+  "mode": "processes",
+  "metrics": [
+    {
+      "label": "Procesos institucionales",
+      "value": "18",
+      "hint": "4 macroprocesos",
+      "icon": "workflow",
+      "tone": ""
+    },
+    {
+      "label": "Caracterizados",
+      "value": "16",
+      "hint": "2 pendientes de actualizar",
+      "icon": "file-check",
+      "tone": "success"
+    },
+    {
+      "label": "Madurez promedio",
+      "value": "73%",
+      "hint": "Nivel estandarizado",
+      "icon": "gauge",
+      "tone": "warning"
+    },
+    {
+      "label": "Interacciones críticas",
+      "value": "9",
+      "hint": "Con seguimiento mensual",
+      "icon": "network",
+      "tone": "warning"
+    }
+  ],
+  "columns": [],
+  "records": [
+    {
+      "id": "P-EST-01",
+      "category": "Estratégico",
+      "name": "Direccionamiento estratégico",
+      "owner": "Despacho / Planeación",
+      "inputs": "Necesidades ciudadanas, marco legal",
+      "outputs": "Planes, políticas y prioridades",
+      "maturity": 82,
+      "status": "Controlado"
+    },
+    {
+      "id": "P-MIS-01",
+      "category": "Misional",
+      "name": "Gestión de gobierno y convivencia",
+      "owner": "Secretaría de Gobierno",
+      "inputs": "Solicitudes, competencias legales",
+      "outputs": "Atenciones, actos y seguimiento",
+      "maturity": 67,
+      "status": "Estandarizado"
+    },
+    {
+      "id": "P-MIS-02",
+      "category": "Misional",
+      "name": "Planeación e infraestructura",
+      "owner": "Planeación",
+      "inputs": "PDM, proyectos y necesidades",
+      "outputs": "Proyectos, licencias y obras",
+      "maturity": 71,
+      "status": "Estandarizado"
+    },
+    {
+      "id": "P-MIS-03",
+      "category": "Misional",
+      "name": "Salud y bienestar social",
+      "owner": "Salud y Bienestar",
+      "inputs": "Caracterización y programas",
+      "outputs": "Atenciones y resultados sociales",
+      "maturity": 64,
+      "status": "En mejora"
+    },
+    {
+      "id": "P-APO-01",
+      "category": "Apoyo",
+      "name": "Gestión del talento humano",
+      "owner": "Secretaría General",
+      "inputs": "Planta, necesidades y novedades",
+      "outputs": "Personal competente y vinculado",
+      "maturity": 80,
+      "status": "Controlado"
+    },
+    {
+      "id": "P-APO-02",
+      "category": "Apoyo",
+      "name": "Gestión financiera",
+      "owner": "Hacienda",
+      "inputs": "Presupuesto y recaudo",
+      "outputs": "Ejecución y reportes",
+      "maturity": 75,
+      "status": "Controlado"
+    },
+    {
+      "id": "P-APO-03",
+      "category": "Apoyo",
+      "name": "Gestión TIC",
+      "owner": "TIC",
+      "inputs": "Requerimientos y activos",
+      "outputs": "Servicios tecnológicos",
+      "maturity": 69,
+      "status": "Estandarizado"
+    },
+    {
+      "id": "P-EVA-01",
+      "category": "Evaluación",
+      "name": "Evaluación y mejora",
+      "owner": "Control Interno",
+      "inputs": "Datos, auditorías y riesgos",
+      "outputs": "Hallazgos y mejoramiento",
+      "maturity": 72,
+      "status": "Estandarizado"
+    }
+  ],
+  "filters": [],
+  "form": [
+    {
+      "name": "category",
+      "label": "Categoría",
+      "type": "select",
+      "options": [
+        "Estratégico",
+        "Misional",
+        "Apoyo",
+        "Evaluación"
+      ],
+      "required": true
+    },
+    {
+      "name": "name",
+      "label": "Nombre del proceso",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Líder del proceso",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "inputs",
+      "label": "Entradas",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "outputs",
+      "label": "Salidas",
+      "type": "textarea",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "En diseño",
+      "En mejora",
+      "Estandarizado",
+      "Controlado"
+    ]
+  },
+  "title": "Mapa y arquitectura de procesos",
+  "description": "Modela procesos, interacciones, responsables, entradas, salidas, controles y nivel de madurez."
+}

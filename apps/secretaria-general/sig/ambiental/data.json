@@ -1,0 +1,161 @@
+{
+  "mode": "special",
+  "metrics": [
+    {
+      "label": "Aspectos evaluados",
+      "value": "38",
+      "hint": "9 significativos",
+      "icon": "leaf",
+      "tone": ""
+    },
+    {
+      "label": "Controles operacionales",
+      "value": "27",
+      "hint": "81 % verificados",
+      "icon": "shield-check",
+      "tone": "success"
+    },
+    {
+      "label": "Metas ambientales",
+      "value": "7",
+      "hint": "5 en cumplimiento",
+      "icon": "target",
+      "tone": "warning"
+    },
+    {
+      "label": "Incidentes ambientales",
+      "value": "1",
+      "hint": "Sin afectación mayor",
+      "icon": "alert-triangle",
+      "tone": "warning"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Aspecto"
+    },
+    {
+      "key": "activity",
+      "label": "Actividad / servicio"
+    },
+    {
+      "key": "aspect",
+      "label": "Aspecto ambiental"
+    },
+    {
+      "key": "impact",
+      "label": "Impacto"
+    },
+    {
+      "key": "significance",
+      "label": "Significancia",
+      "type": "status"
+    },
+    {
+      "key": "control",
+      "label": "Control operacional"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "AMB-014",
+      "activity": "Operación administrativa",
+      "aspect": "Consumo de papel y generación de residuos",
+      "impact": "Uso de recursos y residuos",
+      "significance": "Media",
+      "control": "Digitalización y separación en fuente",
+      "status": "Controlado"
+    },
+    {
+      "id": "AMB-021",
+      "activity": "Mantenimiento de vías",
+      "aspect": "Emisiones, ruido y material particulado",
+      "impact": "Calidad del aire y comunidad",
+      "significance": "Alta",
+      "control": "Plan de manejo y supervisión",
+      "status": "Seguimiento"
+    },
+    {
+      "id": "AMB-028",
+      "activity": "Parque automotor",
+      "aspect": "Consumo de combustible y emisiones",
+      "impact": "Cambio climático y aire",
+      "significance": "Alta",
+      "control": "Mantenimiento y control de consumo",
+      "status": "Plan de mejora"
+    },
+    {
+      "id": "AMB-033",
+      "activity": "Gestión de equipos tecnológicos",
+      "aspect": "Residuos de aparatos eléctricos y electrónicos",
+      "impact": "Suelo y recursos",
+      "significance": "Media",
+      "control": "Gestor autorizado y trazabilidad",
+      "status": "Controlado"
+    }
+  ],
+  "filters": [
+    {
+      "key": "significance",
+      "label": "Significancia"
+    },
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "activity",
+      "label": "Actividad o servicio",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "aspect",
+      "label": "Aspecto ambiental",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "impact",
+      "label": "Impacto",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "significance",
+      "label": "Significancia",
+      "type": "select",
+      "options": [
+        "Baja",
+        "Media",
+        "Alta"
+      ],
+      "required": true
+    },
+    {
+      "name": "control",
+      "label": "Control operacional",
+      "type": "textarea",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Sin control",
+      "Plan de mejora",
+      "Seguimiento",
+      "Controlado"
+    ],
+    "specialTitle": "Matriz de aspectos e impactos"
+  },
+  "title": "Gestión ambiental",
+  "description": "Implementa aspectos e impactos, obligaciones, controles, objetivos, emergencias y desempeño ambiental."
+}

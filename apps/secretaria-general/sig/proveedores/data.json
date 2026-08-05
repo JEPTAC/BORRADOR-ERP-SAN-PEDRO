@@ -1,0 +1,162 @@
+{
+  "mode": "table",
+  "metrics": [
+    {
+      "label": "Terceros activos",
+      "value": "86",
+      "hint": "21 críticos",
+      "icon": "handshake",
+      "tone": ""
+    },
+    {
+      "label": "Evaluados",
+      "value": "78%",
+      "hint": "Periodo actual",
+      "icon": "check",
+      "tone": "warning"
+    },
+    {
+      "label": "Riesgo alto",
+      "value": "7",
+      "hint": "Debida diligencia reforzada",
+      "icon": "shield-alert",
+      "tone": "danger"
+    },
+    {
+      "label": "Planes activos",
+      "value": "11",
+      "hint": "Mejora de desempeño",
+      "icon": "list-checks",
+      "tone": "warning"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Tercero"
+    },
+    {
+      "key": "supplier",
+      "label": "Proveedor / contratista"
+    },
+    {
+      "key": "service",
+      "label": "Bien o servicio"
+    },
+    {
+      "key": "criticality",
+      "label": "Criticidad",
+      "type": "status"
+    },
+    {
+      "key": "score",
+      "label": "Evaluación",
+      "type": "progress"
+    },
+    {
+      "key": "owner",
+      "label": "Supervisor"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "PRV-014",
+      "supplier": "Servicios tecnológicos regionales",
+      "service": "Soporte e infraestructura TI",
+      "criticality": "Alta",
+      "score": 82,
+      "owner": "Coordinación TIC",
+      "status": "Aprobado"
+    },
+    {
+      "id": "PRV-021",
+      "supplier": "Operador de programas sociales",
+      "service": "Atención territorial",
+      "criticality": "Alta",
+      "score": 74,
+      "owner": "Salud y Bienestar",
+      "status": "Plan de mejora"
+    },
+    {
+      "id": "PRV-028",
+      "supplier": "Suministros institucionales",
+      "service": "Papelería y consumibles",
+      "criticality": "Media",
+      "score": 91,
+      "owner": "Almacén",
+      "status": "Aprobado"
+    },
+    {
+      "id": "PRV-034",
+      "supplier": "Mantenimiento locativo",
+      "service": "Adecuaciones y reparaciones",
+      "criticality": "Media",
+      "score": 68,
+      "owner": "Secretaría General",
+      "status": "Condicionado"
+    }
+  ],
+  "filters": [
+    {
+      "key": "criticality",
+      "label": "Criticidad"
+    },
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "supplier",
+      "label": "Proveedor o contratista",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "service",
+      "label": "Bien o servicio",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "criticality",
+      "label": "Criticidad",
+      "type": "select",
+      "options": [
+        "Baja",
+        "Media",
+        "Alta"
+      ],
+      "required": true
+    },
+    {
+      "name": "score",
+      "label": "Resultado (%)",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Supervisor",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Por evaluar",
+      "Condicionado",
+      "Plan de mejora",
+      "Aprobado",
+      "Suspendido"
+    ]
+  },
+  "title": "Proveedores, contratistas y terceros",
+  "description": "Gestiona criticidad, homologación, evaluación, desempeño, debida diligencia y acciones."
+}

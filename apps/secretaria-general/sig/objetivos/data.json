@@ -1,0 +1,165 @@
+{
+  "mode": "table",
+  "metrics": [
+    {
+      "label": "Objetivos SIG",
+      "value": "22",
+      "hint": "9 corporativos · 13 específicos",
+      "icon": "target",
+      "tone": ""
+    },
+    {
+      "label": "Indicadores en meta",
+      "value": "68%",
+      "hint": "Corte julio 2026",
+      "icon": "chart",
+      "tone": "warning"
+    },
+    {
+      "label": "Sin reporte",
+      "value": "4",
+      "hint": "Periodo actual",
+      "icon": "circle-alert",
+      "tone": "danger"
+    },
+    {
+      "label": "Tendencia positiva",
+      "value": "15",
+      "hint": "Últimos tres periodos",
+      "icon": "trending-up",
+      "tone": "success"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Indicador"
+    },
+    {
+      "key": "name",
+      "label": "Objetivo / indicador"
+    },
+    {
+      "key": "system",
+      "label": "Sistema",
+      "type": "badge"
+    },
+    {
+      "key": "actual",
+      "label": "Resultado",
+      "type": "progress"
+    },
+    {
+      "key": "target",
+      "label": "Meta"
+    },
+    {
+      "key": "owner",
+      "label": "Responsable"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "IND-001",
+      "name": "Satisfacción con la atención institucional",
+      "system": "Calidad",
+      "actual": 84,
+      "target": "≥ 90%",
+      "owner": "Secretaría General",
+      "status": "En riesgo"
+    },
+    {
+      "id": "IND-014",
+      "name": "Acciones correctivas cerradas oportunamente",
+      "system": "Integrado",
+      "actual": 76,
+      "target": "≥ 85%",
+      "owner": "Líderes de proceso",
+      "status": "En riesgo"
+    },
+    {
+      "id": "IND-021",
+      "name": "Incidentes de seguridad tratados dentro del objetivo",
+      "system": "Seguridad de información",
+      "actual": 91,
+      "target": "≥ 90%",
+      "owner": "TIC",
+      "status": "En meta"
+    },
+    {
+      "id": "IND-027",
+      "name": "Cumplimiento del programa anual de SST",
+      "system": "SST",
+      "actual": 88,
+      "target": "≥ 90%",
+      "owner": "Talento Humano",
+      "status": "En riesgo"
+    },
+    {
+      "id": "IND-034",
+      "name": "Reducción del consumo de papel",
+      "system": "Ambiental",
+      "actual": 73,
+      "target": "≥ 70%",
+      "owner": "Secretaría General",
+      "status": "En meta"
+    }
+  ],
+  "filters": [
+    {
+      "key": "system",
+      "label": "Sistema"
+    },
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "name",
+      "label": "Nombre del indicador",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "system",
+      "label": "Sistema",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "actual",
+      "label": "Resultado actual (%)",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "target",
+      "label": "Meta",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Sin reporte",
+      "En riesgo",
+      "En meta",
+      "Superado"
+    ]
+  },
+  "title": "Objetivos e indicadores",
+  "description": "Alinea políticas, objetivos, metas, fórmulas, fuentes, responsables y planes de acción."
+}

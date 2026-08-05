@@ -1,0 +1,167 @@
+{
+  "mode": "table",
+  "metrics": [
+    {
+      "label": "Obligaciones activas",
+      "value": "143",
+      "hint": "Normativas y voluntarias",
+      "icon": "scale",
+      "tone": ""
+    },
+    {
+      "label": "Cumplimiento evaluado",
+      "value": "87%",
+      "hint": "Corte del trimestre",
+      "icon": "shield-check",
+      "tone": "success"
+    },
+    {
+      "label": "Requisitos pendientes",
+      "value": "12",
+      "hint": "4 de prioridad alta",
+      "icon": "alert-triangle",
+      "tone": "danger"
+    },
+    {
+      "label": "Cambios normativos",
+      "value": "8",
+      "hint": "Últimos 90 días",
+      "icon": "refresh-cw",
+      "tone": "warning"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Código"
+    },
+    {
+      "key": "requirement",
+      "label": "Obligación"
+    },
+    {
+      "key": "system",
+      "label": "Sistema",
+      "type": "badge"
+    },
+    {
+      "key": "frequency",
+      "label": "Evaluación"
+    },
+    {
+      "key": "owner",
+      "label": "Responsable"
+    },
+    {
+      "key": "status",
+      "label": "Cumplimiento",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "LEG-014",
+      "requirement": "Actualización de matriz legal ambiental",
+      "system": "Ambiental",
+      "frequency": "Trimestral",
+      "owner": "Gestión Ambiental",
+      "status": "Cumple"
+    },
+    {
+      "id": "LEG-026",
+      "requirement": "Evaluación de estándares mínimos SG-SST",
+      "system": "SST",
+      "frequency": "Anual",
+      "owner": "Talento Humano",
+      "status": "Parcial"
+    },
+    {
+      "id": "LEG-035",
+      "requirement": "Protección de datos personales y seguridad de bases",
+      "system": "Seguridad de información",
+      "frequency": "Semestral",
+      "owner": "TIC / Jurídica",
+      "status": "Parcial"
+    },
+    {
+      "id": "LEG-041",
+      "requirement": "Publicación y trazabilidad contractual",
+      "system": "Cumplimiento",
+      "frequency": "Mensual",
+      "owner": "Contratación",
+      "status": "Cumple"
+    },
+    {
+      "id": "LEG-052",
+      "requirement": "Plan de continuidad de servicios críticos",
+      "system": "Continuidad",
+      "frequency": "Anual",
+      "owner": "TIC / Planeación",
+      "status": "Pendiente"
+    }
+  ],
+  "filters": [
+    {
+      "key": "system",
+      "label": "Sistema"
+    },
+    {
+      "key": "status",
+      "label": "Cumplimiento"
+    }
+  ],
+  "form": [
+    {
+      "name": "requirement",
+      "label": "Obligación",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "system",
+      "label": "Sistema relacionado",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "frequency",
+      "label": "Periodicidad",
+      "type": "select",
+      "options": [
+        "Mensual",
+        "Trimestral",
+        "Semestral",
+        "Anual"
+      ],
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "status",
+      "label": "Cumplimiento",
+      "type": "select",
+      "options": [
+        "Pendiente",
+        "Parcial",
+        "Cumple",
+        "No aplica"
+      ],
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Pendiente",
+      "Parcial",
+      "Cumple",
+      "No aplica"
+    ]
+  },
+  "title": "Requisitos legales y otros compromisos",
+  "description": "Administra obligaciones, aplicabilidad, evidencia, evaluación periódica y alertas de vencimiento."
+}

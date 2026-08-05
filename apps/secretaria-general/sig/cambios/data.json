@@ -1,0 +1,167 @@
+{
+  "mode": "table",
+  "metrics": [
+    {
+      "label": "Cambios activos",
+      "value": "14",
+      "hint": "3 de impacto alto",
+      "icon": "refresh-cw",
+      "tone": ""
+    },
+    {
+      "label": "En evaluación",
+      "value": "5",
+      "hint": "Pendientes de aprobación",
+      "icon": "search",
+      "tone": "warning"
+    },
+    {
+      "label": "Implementados",
+      "value": "22",
+      "hint": "Vigencia 2026",
+      "icon": "check",
+      "tone": "success"
+    },
+    {
+      "label": "Con incidentes",
+      "value": "2",
+      "hint": "Requieren lecciones aprendidas",
+      "icon": "alert-triangle",
+      "tone": "danger"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Cambio"
+    },
+    {
+      "key": "change",
+      "label": "Descripción"
+    },
+    {
+      "key": "system",
+      "label": "Sistema",
+      "type": "badge"
+    },
+    {
+      "key": "risk",
+      "label": "Riesgo",
+      "type": "status"
+    },
+    {
+      "key": "owner",
+      "label": "Responsable"
+    },
+    {
+      "key": "date",
+      "label": "Implementación",
+      "type": "date"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "CHG-026",
+      "change": "Migración de expedientes del SIG a estructura modular",
+      "system": "Integrado",
+      "risk": "Medio",
+      "owner": "Secretaría General / TIC",
+      "date": "2026-09-01",
+      "status": "Aprobado"
+    },
+    {
+      "id": "CHG-031",
+      "change": "Adopción de criterios ISO 14001:2026",
+      "system": "Ambiental",
+      "risk": "Alto",
+      "owner": "Gestión Ambiental",
+      "date": "2026-10-15",
+      "status": "Evaluación"
+    },
+    {
+      "id": "CHG-035",
+      "change": "Nuevo procedimiento para acceso a información reservada",
+      "system": "Seguridad de información",
+      "risk": "Alto",
+      "owner": "TIC / Jurídica",
+      "date": "2026-08-29",
+      "status": "Implementación"
+    },
+    {
+      "id": "CHG-039",
+      "change": "Actualización de formato de evaluación de proveedores",
+      "system": "Calidad",
+      "risk": "Bajo",
+      "owner": "Contratación",
+      "date": "2026-09-12",
+      "status": "Planificación"
+    }
+  ],
+  "filters": [
+    {
+      "key": "system",
+      "label": "Sistema"
+    },
+    {
+      "key": "risk",
+      "label": "Riesgo"
+    },
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "change",
+      "label": "Descripción del cambio",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "system",
+      "label": "Sistema relacionado",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "risk",
+      "label": "Riesgo",
+      "type": "select",
+      "options": [
+        "Bajo",
+        "Medio",
+        "Alto"
+      ],
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "date",
+      "label": "Fecha prevista",
+      "type": "date",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Evaluación",
+      "Planificación",
+      "Aprobado",
+      "Implementación",
+      "Cerrado"
+    ]
+  },
+  "title": "Gestión del cambio",
+  "description": "Evalúa propósito, impactos, riesgos, recursos, responsables y controles antes de implementar cambios."
+}

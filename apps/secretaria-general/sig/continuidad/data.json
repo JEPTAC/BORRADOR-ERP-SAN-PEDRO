@@ -1,0 +1,165 @@
+{
+  "mode": "continuity",
+  "metrics": [
+    {
+      "label": "Servicios críticos",
+      "value": "12",
+      "hint": "Con objetivos de recuperación",
+      "icon": "activity",
+      "tone": ""
+    },
+    {
+      "label": "Planes vigentes",
+      "value": "8",
+      "hint": "4 requieren actualización",
+      "icon": "files",
+      "tone": "warning"
+    },
+    {
+      "label": "Pruebas ejecutadas",
+      "value": "67%",
+      "hint": "Programa anual",
+      "icon": "check",
+      "tone": "warning"
+    },
+    {
+      "label": "Brechas críticas",
+      "value": "3",
+      "hint": "Escaladas a dirección",
+      "icon": "alert-triangle",
+      "tone": "danger"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Servicio"
+    },
+    {
+      "key": "service",
+      "label": "Proceso / servicio crítico"
+    },
+    {
+      "key": "mtd",
+      "label": "MTPD"
+    },
+    {
+      "key": "rto",
+      "label": "RTO"
+    },
+    {
+      "key": "rpo",
+      "label": "RPO"
+    },
+    {
+      "key": "strategy",
+      "label": "Estrategia de continuidad"
+    },
+    {
+      "key": "owner",
+      "label": "Responsable"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "BCM-014",
+      "service": "Radicación y atención ciudadana",
+      "mtd": "24 h",
+      "rto": "4 h",
+      "rpo": "2 h",
+      "strategy": "Canal alterno, formatos offline y recuperación prioritaria",
+      "owner": "Secretaría General / TIC",
+      "status": "Probado"
+    },
+    {
+      "id": "BCM-021",
+      "service": "Gestión financiera y pagos",
+      "mtd": "48 h",
+      "rto": "8 h",
+      "rpo": "4 h",
+      "strategy": "Respaldo, contingencia manual y conciliación posterior",
+      "owner": "Hacienda / TIC",
+      "status": "Plan vigente"
+    },
+    {
+      "id": "BCM-027",
+      "service": "Correo y comunicaciones institucionales",
+      "mtd": "12 h",
+      "rto": "2 h",
+      "rpo": "1 h",
+      "strategy": "Canal alterno y recuperación del servicio",
+      "owner": "TIC",
+      "status": "Plan vigente"
+    },
+    {
+      "id": "BCM-033",
+      "service": "Atención a población vulnerable",
+      "mtd": "24 h",
+      "rto": "6 h",
+      "rpo": "4 h",
+      "strategy": "Listados mínimos, canales territoriales y remisión",
+      "owner": "Salud y Bienestar",
+      "status": "Revisión"
+    }
+  ],
+  "filters": [
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "service",
+      "label": "Servicio crítico",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "mtd",
+      "label": "MTPD",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "rto",
+      "label": "RTO",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "rpo",
+      "label": "RPO",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "strategy",
+      "label": "Estrategia",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Sin análisis",
+      "Revisión",
+      "Plan vigente",
+      "Probado"
+    ],
+    "specialTitle": "BIA y estrategias de recuperación"
+  },
+  "title": "Continuidad institucional",
+  "description": "Gestiona análisis de impacto, servicios críticos, estrategias, planes, pruebas, recuperación y lecciones."
+}

@@ -1,0 +1,156 @@
+{
+  "mode": "risk",
+  "metrics": [
+    {
+      "label": "Riesgos activos",
+      "value": "46",
+      "hint": "8 altos · 2 extremos",
+      "icon": "shield-alert",
+      "tone": "danger"
+    },
+    {
+      "label": "Oportunidades",
+      "value": "13",
+      "hint": "6 en implementación",
+      "icon": "sparkles",
+      "tone": "success"
+    },
+    {
+      "label": "Controles eficaces",
+      "value": "74%",
+      "hint": "Evaluación residual",
+      "icon": "shield-check",
+      "tone": "warning"
+    },
+    {
+      "label": "Tratamientos vencidos",
+      "value": "5",
+      "hint": "Requieren escalamiento",
+      "icon": "calendar-x",
+      "tone": "danger"
+    }
+  ],
+  "columns": [],
+  "records": [
+    {
+      "id": "R-026",
+      "risk": "Pérdida o exposición de información reservada",
+      "system": "ISO/IEC 27001",
+      "process": "Gestión TIC",
+      "probability": 4,
+      "impact": 5,
+      "level": "Extremo",
+      "owner": "TIC",
+      "treatment": "Fortalecer accesos, respaldos y monitoreo",
+      "progress": 58,
+      "status": "Tratamiento"
+    },
+    {
+      "id": "R-031",
+      "risk": "Interrupción de trámites y servicios esenciales",
+      "system": "ISO 22301",
+      "process": "Atención ciudadana",
+      "probability": 3,
+      "impact": 5,
+      "level": "Alto",
+      "owner": "Secretaría General",
+      "treatment": "BIA, procedimientos alternos y pruebas",
+      "progress": 46,
+      "status": "Tratamiento"
+    },
+    {
+      "id": "R-044",
+      "risk": "Incumplimiento de tiempos de respuesta al ciudadano",
+      "system": "ISO 9001",
+      "process": "PQRSD",
+      "probability": 4,
+      "impact": 4,
+      "level": "Alto",
+      "owner": "Gobierno",
+      "treatment": "Alertas y redistribución de cargas",
+      "progress": 72,
+      "status": "Seguimiento"
+    },
+    {
+      "id": "R-052",
+      "risk": "Accidente en visita técnica de infraestructura",
+      "system": "ISO 45001",
+      "process": "Infraestructura",
+      "probability": 3,
+      "impact": 4,
+      "level": "Alto",
+      "owner": "Planeación",
+      "treatment": "Permisos, EPP y supervisión de campo",
+      "progress": 81,
+      "status": "Seguimiento"
+    },
+    {
+      "id": "O-008",
+      "risk": "Digitalización de expedientes y reducción de tiempos",
+      "system": "ISO 9001",
+      "process": "Gestión documental",
+      "probability": 4,
+      "impact": 4,
+      "level": "Oportunidad",
+      "owner": "Secretaría General",
+      "treatment": "Proyecto de expediente electrónico",
+      "progress": 64,
+      "status": "Implementación"
+    }
+  ],
+  "filters": [],
+  "form": [
+    {
+      "name": "risk",
+      "label": "Riesgo u oportunidad",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "system",
+      "label": "Sistema / norma",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "process",
+      "label": "Proceso",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "probability",
+      "label": "Probabilidad (1-5)",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "impact",
+      "label": "Impacto (1-5)",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "treatment",
+      "label": "Tratamiento",
+      "type": "textarea",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Identificado",
+      "Tratamiento",
+      "Seguimiento",
+      "Cerrado"
+    ]
+  },
+  "title": "Riesgos y oportunidades",
+  "description": "Integra riesgos estratégicos, operativos, corrupción, ambientales, SST, información y continuidad."
+}

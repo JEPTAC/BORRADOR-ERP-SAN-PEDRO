@@ -1,0 +1,175 @@
+{
+  "mode": "table",
+  "metrics": [
+    {
+      "label": "Hallazgos abiertos",
+      "value": "23",
+      "hint": "5 no conformidades",
+      "icon": "triangle-alert",
+      "tone": "danger"
+    },
+    {
+      "label": "Observaciones",
+      "value": "9",
+      "hint": "En seguimiento",
+      "icon": "eye",
+      "tone": "warning"
+    },
+    {
+      "label": "Reincidentes",
+      "value": "3",
+      "hint": "Requieren análisis ampliado",
+      "icon": "refresh-cw",
+      "tone": "danger"
+    },
+    {
+      "label": "Cerrados este año",
+      "value": "31",
+      "hint": "87 % verificados",
+      "icon": "check",
+      "tone": "success"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Código"
+    },
+    {
+      "key": "finding",
+      "label": "Hallazgo"
+    },
+    {
+      "key": "source",
+      "label": "Fuente",
+      "type": "badge"
+    },
+    {
+      "key": "class",
+      "label": "Clasificación",
+      "type": "status"
+    },
+    {
+      "key": "owner",
+      "label": "Proceso responsable"
+    },
+    {
+      "key": "due",
+      "label": "Vence",
+      "type": "date"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "H-2026-021",
+      "finding": "No se evidencia revisión oportuna de tres procedimientos",
+      "source": "Auditoría interna",
+      "class": "No conformidad",
+      "owner": "Secretaría General",
+      "due": "2026-08-28",
+      "status": "Análisis"
+    },
+    {
+      "id": "H-2026-025",
+      "finding": "Controles de acceso sin revisión periódica documentada",
+      "source": "Auditoría TIC",
+      "class": "No conformidad",
+      "owner": "TIC",
+      "due": "2026-09-05",
+      "status": "Abierto"
+    },
+    {
+      "id": "H-2026-029",
+      "finding": "Oportunidad de consolidar criterios de evaluación de proveedores",
+      "source": "Autocontrol",
+      "class": "Observación",
+      "owner": "Contratación",
+      "due": "2026-09-12",
+      "status": "Tratamiento"
+    },
+    {
+      "id": "H-2026-033",
+      "finding": "Registro incompleto de simulacro de continuidad",
+      "source": "Prueba",
+      "class": "Observación",
+      "owner": "TIC / Planeación",
+      "due": "2026-08-21",
+      "status": "Verificación"
+    }
+  ],
+  "filters": [
+    {
+      "key": "source",
+      "label": "Fuente"
+    },
+    {
+      "key": "class",
+      "label": "Clasificación"
+    },
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "finding",
+      "label": "Descripción del hallazgo",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "source",
+      "label": "Fuente",
+      "type": "select",
+      "options": [
+        "Auditoría interna",
+        "Autocontrol",
+        "Queja",
+        "Incidente",
+        "Revisión por la dirección",
+        "Prueba"
+      ],
+      "required": true
+    },
+    {
+      "name": "class",
+      "label": "Clasificación",
+      "type": "select",
+      "options": [
+        "No conformidad",
+        "Observación",
+        "Oportunidad de mejora"
+      ],
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Proceso responsable",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "due",
+      "label": "Fecha límite",
+      "type": "date",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Abierto",
+      "Análisis",
+      "Tratamiento",
+      "Verificación",
+      "Cerrado"
+    ]
+  },
+  "title": "Hallazgos y no conformidades",
+  "description": "Registra fuentes, evidencia, clasificación, requisito incumplido, análisis y disposición inmediata."
+}

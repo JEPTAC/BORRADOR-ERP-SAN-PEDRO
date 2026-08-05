@@ -1,0 +1,163 @@
+{
+  "mode": "table",
+  "metrics": [
+    {
+      "label": "Grupos identificados",
+      "value": "17",
+      "hint": "Internos y externos",
+      "icon": "users",
+      "tone": ""
+    },
+    {
+      "label": "Expectativas críticas",
+      "value": "29",
+      "hint": "9 con riesgo alto",
+      "icon": "alert-triangle",
+      "tone": "warning"
+    },
+    {
+      "label": "Canales activos",
+      "value": "12",
+      "hint": "Presencial y digital",
+      "icon": "message-circle",
+      "tone": "success"
+    },
+    {
+      "label": "Revisiones vencidas",
+      "value": "2",
+      "hint": "Requieren actualización",
+      "icon": "calendar-x",
+      "tone": "danger"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Código"
+    },
+    {
+      "key": "stakeholder",
+      "label": "Parte interesada"
+    },
+    {
+      "key": "need",
+      "label": "Necesidad / expectativa"
+    },
+    {
+      "key": "influence",
+      "label": "Influencia",
+      "type": "status"
+    },
+    {
+      "key": "channel",
+      "label": "Canal"
+    },
+    {
+      "key": "owner",
+      "label": "Responsable"
+    }
+  ],
+  "records": [
+    {
+      "id": "PI-001",
+      "stakeholder": "Ciudadanía",
+      "need": "Servicios oportunos, accesibles y transparentes",
+      "influence": "Alto",
+      "channel": "Ventanilla, web y PQRSD",
+      "owner": "Todas las dependencias",
+      "status": "Activo"
+    },
+    {
+      "id": "PI-002",
+      "stakeholder": "Servidores y contratistas",
+      "need": "Roles claros, recursos, bienestar y formación",
+      "influence": "Alto",
+      "channel": "Intranet, comités y encuestas",
+      "owner": "Talento Humano",
+      "status": "Activo"
+    },
+    {
+      "id": "PI-003",
+      "stakeholder": "Entes de control",
+      "need": "Reportes íntegros, oportunos y verificables",
+      "influence": "Alto",
+      "channel": "Plataformas oficiales",
+      "owner": "Control Interno",
+      "status": "Activo"
+    },
+    {
+      "id": "PI-004",
+      "stakeholder": "Proveedores y contratistas",
+      "need": "Reglas claras, pagos y evaluación objetiva",
+      "influence": "Medio",
+      "channel": "SECOP y supervisión",
+      "owner": "Contratación",
+      "status": "Activo"
+    },
+    {
+      "id": "PI-005",
+      "stakeholder": "Comunidades rurales",
+      "need": "Acceso territorial y continuidad de servicios",
+      "influence": "Medio",
+      "channel": "Jornadas y enlaces territoriales",
+      "owner": "Gobierno",
+      "status": "Revisión"
+    }
+  ],
+  "filters": [
+    {
+      "key": "influence",
+      "label": "Influencia"
+    },
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "stakeholder",
+      "label": "Parte interesada",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "need",
+      "label": "Necesidad o expectativa",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "influence",
+      "label": "Influencia",
+      "type": "select",
+      "options": [
+        "Bajo",
+        "Medio",
+        "Alto"
+      ],
+      "required": true
+    },
+    {
+      "name": "channel",
+      "label": "Canal de relación",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Activo",
+      "Revisión",
+      "Inactivo"
+    ]
+  },
+  "title": "Partes interesadas",
+  "description": "Identifica necesidades, expectativas, obligaciones, canales y mecanismos de seguimiento."
+}

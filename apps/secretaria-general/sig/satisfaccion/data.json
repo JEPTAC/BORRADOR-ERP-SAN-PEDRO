@@ -1,0 +1,164 @@
+{
+  "mode": "table",
+  "metrics": [
+    {
+      "label": "Satisfacción general",
+      "value": "84%",
+      "hint": "Meta institucional 90 %",
+      "icon": "heart",
+      "tone": "warning"
+    },
+    {
+      "label": "Respuestas analizadas",
+      "value": "1.428",
+      "hint": "Vigencia 2026",
+      "icon": "message",
+      "tone": ""
+    },
+    {
+      "label": "Quejas recurrentes",
+      "value": "6",
+      "hint": "Con análisis de causa",
+      "icon": "alert-triangle",
+      "tone": "danger"
+    },
+    {
+      "label": "Mejoras implementadas",
+      "value": "14",
+      "hint": "Derivadas de retroalimentación",
+      "icon": "sparkles",
+      "tone": "success"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Registro"
+    },
+    {
+      "key": "service",
+      "label": "Servicio / trámite"
+    },
+    {
+      "key": "channel",
+      "label": "Canal",
+      "type": "badge"
+    },
+    {
+      "key": "score",
+      "label": "Satisfacción",
+      "type": "progress"
+    },
+    {
+      "key": "finding",
+      "label": "Principal hallazgo"
+    },
+    {
+      "key": "owner",
+      "label": "Responsable"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "EXP-026",
+      "service": "Radicación y orientación ciudadana",
+      "channel": "Presencial",
+      "score": 88,
+      "finding": "Claridad de información favorable",
+      "owner": "Secretaría General",
+      "status": "Estable"
+    },
+    {
+      "id": "EXP-031",
+      "service": "Respuesta a PQRSD",
+      "channel": "Web",
+      "score": 76,
+      "finding": "Percepción de demora en casos complejos",
+      "owner": "Gobierno",
+      "status": "Plan de mejora"
+    },
+    {
+      "id": "EXP-037",
+      "service": "Atención de programas sociales",
+      "channel": "Territorial",
+      "score": 82,
+      "finding": "Mejorar información sobre requisitos",
+      "owner": "Salud y Bienestar",
+      "status": "Seguimiento"
+    },
+    {
+      "id": "EXP-041",
+      "service": "Mesa de Servicios TIC",
+      "channel": "Intranet",
+      "score": 91,
+      "finding": "Buena trazabilidad de solicitudes",
+      "owner": "TIC",
+      "status": "Estable"
+    }
+  ],
+  "filters": [
+    {
+      "key": "channel",
+      "label": "Canal"
+    },
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "service",
+      "label": "Servicio o trámite",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "channel",
+      "label": "Canal",
+      "type": "select",
+      "options": [
+        "Presencial",
+        "Web",
+        "Correo",
+        "Telefónico",
+        "Territorial",
+        "Intranet"
+      ],
+      "required": true
+    },
+    {
+      "name": "score",
+      "label": "Satisfacción (%)",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "finding",
+      "label": "Hallazgo principal",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Crítico",
+      "Plan de mejora",
+      "Seguimiento",
+      "Estable"
+    ]
+  },
+  "title": "Satisfacción, quejas y experiencia ciudadana",
+  "description": "Analiza encuestas, PQRSD, percepción, causas, compromisos y mejora de servicios."
+}

@@ -1,0 +1,170 @@
+{
+  "mode": "table",
+  "metrics": [
+    {
+      "label": "Asuntos estratégicos",
+      "value": "24",
+      "hint": "14 externos · 10 internos",
+      "icon": "compass",
+      "tone": ""
+    },
+    {
+      "label": "Cambios recientes",
+      "value": "6",
+      "hint": "Con impacto en el SIG",
+      "icon": "refresh-cw",
+      "tone": "warning"
+    },
+    {
+      "label": "Asuntos climáticos",
+      "value": "4",
+      "hint": "Evaluados transversalmente",
+      "icon": "cloud",
+      "tone": "warning"
+    },
+    {
+      "label": "Revisiones pendientes",
+      "value": "3",
+      "hint": "Próximos 30 días",
+      "icon": "calendar",
+      "tone": "danger"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Código"
+    },
+    {
+      "key": "issue",
+      "label": "Asunto"
+    },
+    {
+      "key": "type",
+      "label": "Origen",
+      "type": "badge"
+    },
+    {
+      "key": "impact",
+      "label": "Impacto",
+      "type": "status"
+    },
+    {
+      "key": "owner",
+      "label": "Responsable"
+    },
+    {
+      "key": "review",
+      "label": "Próxima revisión",
+      "type": "date"
+    }
+  ],
+  "records": [
+    {
+      "id": "CTX-026",
+      "issue": "Actualización de requisitos de gestión ambiental",
+      "type": "Externo",
+      "impact": "Alto",
+      "owner": "Gestión Ambiental",
+      "review": "2026-08-18",
+      "status": "Abierto"
+    },
+    {
+      "id": "CTX-031",
+      "issue": "Crecimiento de trámites digitales y dependencia tecnológica",
+      "type": "Externo",
+      "impact": "Alto",
+      "owner": "TIC",
+      "review": "2026-08-22",
+      "status": "Abierto"
+    },
+    {
+      "id": "CTX-034",
+      "issue": "Rotación de contratistas en procesos críticos",
+      "type": "Interno",
+      "impact": "Medio",
+      "owner": "Talento Humano",
+      "review": "2026-09-02",
+      "status": "Seguimiento"
+    },
+    {
+      "id": "CTX-039",
+      "issue": "Eventos climáticos con afectación vial y de servicios",
+      "type": "Climático",
+      "impact": "Alto",
+      "owner": "Planeación",
+      "review": "2026-08-12",
+      "status": "Abierto"
+    },
+    {
+      "id": "CTX-041",
+      "issue": "Mayor expectativa ciudadana sobre tiempos de respuesta",
+      "type": "Externo",
+      "impact": "Medio",
+      "owner": "Secretaría General",
+      "review": "2026-09-10",
+      "status": "Seguimiento"
+    }
+  ],
+  "filters": [
+    {
+      "key": "type",
+      "label": "Origen"
+    },
+    {
+      "key": "impact",
+      "label": "Impacto"
+    }
+  ],
+  "form": [
+    {
+      "name": "issue",
+      "label": "Asunto",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "type",
+      "label": "Origen",
+      "type": "select",
+      "options": [
+        "Interno",
+        "Externo",
+        "Climático"
+      ],
+      "required": true
+    },
+    {
+      "name": "impact",
+      "label": "Impacto",
+      "type": "select",
+      "options": [
+        "Bajo",
+        "Medio",
+        "Alto"
+      ],
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Responsable",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "review",
+      "label": "Fecha de revisión",
+      "type": "date",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Abierto",
+      "Seguimiento",
+      "Cerrado"
+    ]
+  },
+  "title": "Contexto institucional",
+  "description": "Gestiona factores internos y externos, cambios del entorno, clima y asuntos estratégicos."
+}

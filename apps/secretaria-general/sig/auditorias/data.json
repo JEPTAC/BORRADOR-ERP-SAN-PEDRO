@@ -1,0 +1,151 @@
+{
+  "mode": "audit",
+  "metrics": [
+    {
+      "label": "Auditorías programadas",
+      "value": "18",
+      "hint": "Vigencia 2026",
+      "icon": "clipboard-check",
+      "tone": ""
+    },
+    {
+      "label": "Ejecutadas",
+      "value": "11",
+      "hint": "61 % del programa",
+      "icon": "check",
+      "tone": "success"
+    },
+    {
+      "label": "Próximas",
+      "value": "4",
+      "hint": "Siguientes 45 días",
+      "icon": "calendar",
+      "tone": "warning"
+    },
+    {
+      "label": "Hallazgos abiertos",
+      "value": "23",
+      "hint": "5 no conformidades",
+      "icon": "alert-triangle",
+      "tone": "danger"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Auditoría"
+    },
+    {
+      "key": "name",
+      "label": "Alcance"
+    },
+    {
+      "key": "standards",
+      "label": "Normas"
+    },
+    {
+      "key": "date",
+      "label": "Fecha",
+      "type": "date"
+    },
+    {
+      "key": "lead",
+      "label": "Auditor líder"
+    },
+    {
+      "key": "progress",
+      "label": "Avance",
+      "type": "progress"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "AUD-2026-07",
+      "name": "Gestión documental y atención ciudadana",
+      "standards": "ISO 9001 / ISO 18091",
+      "date": "2026-08-19",
+      "lead": "Equipo auditor interno",
+      "progress": 35,
+      "status": "Preparación"
+    },
+    {
+      "id": "AUD-2026-08",
+      "name": "Seguridad de la información y continuidad",
+      "standards": "ISO/IEC 27001 / ISO 22301",
+      "date": "2026-09-09",
+      "lead": "Auditor TIC",
+      "progress": 18,
+      "status": "Programada"
+    },
+    {
+      "id": "AUD-2026-05",
+      "name": "Gestión ambiental y compras sostenibles",
+      "standards": "ISO 14001",
+      "date": "2026-06-23",
+      "lead": "Auditor SIG",
+      "progress": 100,
+      "status": "Cerrada"
+    },
+    {
+      "id": "AUD-2026-06",
+      "name": "SG-SST y contratistas",
+      "standards": "ISO 45001",
+      "date": "2026-07-15",
+      "lead": "Auditor SST",
+      "progress": 88,
+      "status": "Informe"
+    }
+  ],
+  "filters": [
+    {
+      "key": "status",
+      "label": "Estado"
+    },
+    {
+      "key": "standards",
+      "label": "Norma"
+    }
+  ],
+  "form": [
+    {
+      "name": "name",
+      "label": "Alcance de auditoría",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "standards",
+      "label": "Normas / criterios",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "date",
+      "label": "Fecha",
+      "type": "date",
+      "required": true
+    },
+    {
+      "name": "lead",
+      "label": "Auditor líder",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "Programada",
+      "Preparación",
+      "Ejecución",
+      "Informe",
+      "Cerrada"
+    ]
+  },
+  "title": "Programa de auditorías",
+  "description": "Programa auditorías integradas, listas de verificación, equipos, agenda, evidencias e informes."
+}

@@ -1,0 +1,173 @@
+{
+  "mode": "isms",
+  "metrics": [
+    {
+      "label": "Activos de información",
+      "value": "96",
+      "hint": "23 críticos",
+      "icon": "database",
+      "tone": ""
+    },
+    {
+      "label": "Controles aplicables",
+      "value": "81",
+      "hint": "Declaración de aplicabilidad",
+      "icon": "shield-check",
+      "tone": "success"
+    },
+    {
+      "label": "Riesgos altos",
+      "value": "7",
+      "hint": "2 con tratamiento vencido",
+      "icon": "shield-alert",
+      "tone": "danger"
+    },
+    {
+      "label": "Incidentes del mes",
+      "value": "4",
+      "hint": "Todos contenidos",
+      "icon": "alert-triangle",
+      "tone": "warning"
+    }
+  ],
+  "columns": [
+    {
+      "key": "id",
+      "label": "Activo / control"
+    },
+    {
+      "key": "asset",
+      "label": "Activo de información"
+    },
+    {
+      "key": "classification",
+      "label": "Clasificación",
+      "type": "badge"
+    },
+    {
+      "key": "risk",
+      "label": "Riesgo",
+      "type": "status"
+    },
+    {
+      "key": "control",
+      "label": "Control / tratamiento"
+    },
+    {
+      "key": "owner",
+      "label": "Propietario"
+    },
+    {
+      "key": "status",
+      "label": "Estado",
+      "type": "status"
+    }
+  ],
+  "records": [
+    {
+      "id": "SGSI-014",
+      "asset": "Base de datos de ciudadanos y expedientes",
+      "classification": "Reservada",
+      "risk": "Alto",
+      "control": "Acceso por rol, trazabilidad y respaldo",
+      "owner": "Secretaría General / TIC",
+      "status": "Implementado"
+    },
+    {
+      "id": "SGSI-021",
+      "asset": "Correo institucional",
+      "classification": "Interna",
+      "risk": "Alto",
+      "control": "MFA, formación y filtrado",
+      "owner": "TIC",
+      "status": "Seguimiento"
+    },
+    {
+      "id": "SGSI-028",
+      "asset": "Información financiera y presupuestal",
+      "classification": "Confidencial",
+      "risk": "Medio",
+      "control": "Segregación, perfiles y conciliación",
+      "owner": "Hacienda",
+      "status": "Implementado"
+    },
+    {
+      "id": "SGSI-035",
+      "asset": "Portal institucional",
+      "classification": "Pública",
+      "risk": "Medio",
+      "control": "Gestión de cambios, respaldos y monitoreo",
+      "owner": "TIC / Comunicaciones",
+      "status": "Plan de mejora"
+    }
+  ],
+  "filters": [
+    {
+      "key": "classification",
+      "label": "Clasificación"
+    },
+    {
+      "key": "risk",
+      "label": "Riesgo"
+    },
+    {
+      "key": "status",
+      "label": "Estado"
+    }
+  ],
+  "form": [
+    {
+      "name": "asset",
+      "label": "Activo de información",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "classification",
+      "label": "Clasificación",
+      "type": "select",
+      "options": [
+        "Pública",
+        "Interna",
+        "Confidencial",
+        "Reservada"
+      ],
+      "required": true
+    },
+    {
+      "name": "risk",
+      "label": "Riesgo",
+      "type": "select",
+      "options": [
+        "Bajo",
+        "Medio",
+        "Alto",
+        "Crítico"
+      ],
+      "required": true
+    },
+    {
+      "name": "control",
+      "label": "Control o tratamiento",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "owner",
+      "label": "Propietario",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "extra": {
+    "statusOptions": [
+      "No implementado",
+      "Plan de mejora",
+      "Seguimiento",
+      "Implementado"
+    ],
+    "specialTitle": "Activos, riesgos y controles del SGSI"
+  },
+  "title": "Seguridad de la información",
+  "description": "Administra activos, riesgos, controles, aplicabilidad, incidentes, accesos y mejora del SGSI."
+}

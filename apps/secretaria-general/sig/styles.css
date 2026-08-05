@@ -1,6 +1,1 @@
-@import url('../../../assets/css/base.css');
-.compliance-ring { width:124px;height:124px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--accent) 0 78%,var(--surface-3) 78%);position:relative; }
-.compliance-ring::after{content:'';position:absolute;width:94px;height:94px;border-radius:50%;background:var(--surface)}
-.compliance-ring strong{position:relative;z-index:1;font-size:24px}.compliance-ring span{position:absolute;z-index:1;margin-top:38px;font-size:10px;color:var(--muted)}
-.indicator-row { padding:14px 0;border-bottom:1px solid var(--line); }.indicator-row:last-child{border-bottom:0}.indicator-top{display:flex;justify-content:space-between;gap:12px;margin-bottom:8px}.indicator-top p{margin:3px 0 0;color:var(--muted);font-size:11px}
-.risk-card{padding:16px}.risk-card h3{margin:7px 0 5px;font-size:14px}.risk-card p{margin:0 0 13px;color:var(--muted);font-size:12px}.risk-meta{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px;font-size:11px;color:var(--muted)}
+@import url('shared/sig-core.css');
