@@ -1,11 +1,6 @@
 {
-  "name": "Registro de Atenciones y Usuarios 360",
-  "version": "v17",
-  "new": [
-    "apps/secretaria-general/registro-atenciones"
-  ],
-  "modified": [
-    "apps/secretaria-general/index.html",
-    "apps/secretaria-general/data.json"
-  ]
+  "version": "v18",
+  "module": "Registro de Atenciones y Usuarios 360",
+  "scope": "solo archivos modificados",
+  "replaceRoot": "apps/secretaria-general/registro-atenciones/"
 }

@@ -1,17 +1,302 @@
-document.addEventListener('DOMContentLoaded',async()=>{
-const KEY='erp-attention-center-v17';let data=await ATT.load('data.json',KEY);let filter='all';
-const today=data.settings?.currentDate||new Date().toISOString().slice(0,10);
-function save(){ATT.save(KEY,data)}
-function metrics(){const ap=data.appointments.filter(a=>a.date===today), onsite=data.visitors.filter(v=>v.status==='En sede'), done=data.attentions.filter(a=>a.date===today&&a.status==='Finalizada');const waits=data.queue.filter(q=>q.status==='En espera');const avg=waits.length?Math.round(waits.reduce((s,q)=>s+18,0)/waits.length):0;document.getElementById('metrics').innerHTML=[['calendar-check',ap.length,'Citas de hoy','Agenda confirmada y pendiente'],['users',onsite.length,'Personas en sede','Visitantes registrados'],['check-circle',done.length,'Atenciones cerradas','Registro del día'],['clock',avg+' min','Espera promedio','Cola presencial']].map(x=>`<div class="att-kpi"><div class="att-kpi-icon"><i data-lucide="${x[0]}"></i></div><div class="att-kpi-copy"><span>${x[2]}</span><strong>${x[1]}</strong><small>${x[3]}</small></div></div>`).join('')}
-function quick(){document.getElementById('quickActions').innerHTML=[['calendar-plus','Agendar cita','Separar un espacio','newAppointment'],['user-plus','Ingreso espontáneo','Registrar visitante','registerVisitor'],['list-ordered','Generar turno','Añadir a la sala','newTicket'],['clipboard-list','Registrar atención','Dejar trazabilidad','newAttention']].map(x=>`<button class="att-quick-card" id="${x[3]}"><span class="att-item-icon"><i data-lucide="${x[0]}"></i></span><span><strong>${x[1]}</strong><span>${x[2]}</span></span></button>`).join('')}
-function agenda(){let rows=data.appointments.filter(a=>a.date===today);const q=document.getElementById('agendaSearch').value.toLowerCase();if(q)rows=rows.filter(a=>[a.person,a.service,a.host].some(v=>v.toLowerCase().includes(q)));if(filter==='pending')rows=rows.filter(a=>!['Atendida','Cancelada'].includes(a.status));if(filter==='onsite'){const names=new Set(data.visitors.filter(v=>v.status==='En sede').map(v=>v.name));rows=rows.filter(a=>names.has(a.person))}rows.sort((a,b)=>a.time.localeCompare(b.time));document.getElementById('todayAgenda').innerHTML=rows.length?`<div class="att-table-wrap"><table class="att-table"><thead><tr><th>Hora</th><th>Persona</th><th>Servicio</th><th>Responsable</th><th>Modalidad</th><th>Estado</th><th></th></tr></thead><tbody>${rows.map(a=>`<tr><td><strong>${a.time}</strong><small>${a.end}</small></td><td><strong>${ATT.esc(a.person)}</strong><small>${ATT.esc(a.document)}</small></td><td>${ATT.esc(a.service)}</td><td>${ATT.esc(a.host)}</td><td>${ATT.esc(a.modality)}</td><td>${ATT.badge(a.status)}</td><td><div class="att-row-actions"><button class="icon-btn" data-view="${a.id}" title="Detalle"><i data-lucide="eye"></i></button><button class="icon-btn" data-arrive="${a.id}" title="Registrar llegada"><i data-lucide="log-in"></i></button></div></td></tr>`).join('')}</tbody></table></div>`:'<div class="att-empty">No hay citas para este filtro.</div>';ATT.icons()}
-function visitors(){const rows=data.visitors.filter(v=>v.status==='En sede');document.getElementById('liveVisitors').innerHTML=rows.length?rows.map(v=>`<div class="att-item"><span class="att-item-icon"><i data-lucide="user"></i></span><div><strong>${ATT.esc(v.name)}</strong><span>${ATT.esc(v.host)} · ingreso ${v.checkin}</span></div><button class="btn btn-secondary btn-sm" data-checkout="${v.id}">Salida</button></div>`).join(''):'<div class="att-empty">No hay visitantes en sede.</div>'}
-function alerts(){document.getElementById('alerts').innerHTML=data.alerts.map(a=>`<div class="att-item"><span class="att-item-icon"><i data-lucide="alert-triangle"></i></span><div><strong>${ATT.esc(a.title)}</strong><span>${ATT.esc(a.detail)}</span></div>${ATT.badge(a.tone==='danger'?'Crítico':a.tone==='warning'?'Revisar':'Activo')}</div>`).join('')}
-function render(){metrics();quick();agenda();visitors();alerts();ATT.icons();bindQuick()}
-function appointmentForm(){ATT.modal('Nueva cita',[{name:'person',label:'Nombre completo',required:True},{name:'document',label:'Documento',required:True},{name:'date',label:'Fecha',type:'date',value:today,required:True},{name:'time',label:'Hora',type:'time',required:True},{name:'service',label:'Servicio',type:'select',options:data.services.map(s=>s.name)},{name:'host',label:'Responsable',type:'select',options:data.staff.map(s=>s.name)},{name:'modality',label:'Modalidad',type:'select',options:['Presencial','Virtual','Telefónica']},{name:'phone',label:'Teléfono'},{name:'email',label:'Correo',type:'email'},{name:'notes',label:'Observaciones',type:'textarea',full:True}],f=>{const dur=data.services.find(s=>s.name===f.service)?.duration||30;const [h,m]=f.time.split(':').map(Number);const end=new Date(2000,0,1,h,m+dur).toTimeString().slice(0,5);data.appointments.push({...f,id:ATT.uid('CIT'),end,status:'Programada'});save();render();ERP.toast('Cita registrada')})}
-function visitorForm(){ATT.modal('Registrar visitante',[{name:'name',label:'Nombre completo',required:True},{name:'document',label:'Documento',required:True},{name:'company',label:'Entidad o procedencia',value:'Particular'},{name:'host',label:'Funcionario anfitrión',type:'select',options:data.staff.map(s=>s.name)},{name:'purpose',label:'Motivo de la visita',required:True},{name:'expected',label:'Hora',type:'time',required:True}],f=>{data.visitors.push({...f,id:ATT.uid('VIS'),checkin:new Date().toTimeString().slice(0,5),checkout:'',status:'En sede',badge:'V-'+String(data.visitors.length+84).padStart(3,'0'),consent:True});save();render();ERP.toast('Ingreso registrado')})}
-function ticketForm(){ATT.modal('Generar turno',[{name:'person',label:'Nombre completo',required:True},{name:'service',label:'Servicio',type:'select',options:data.services.map(s=>s.name)},{name:'priority',label:'Prioridad',type:'select',options:['Normal','Prioritaria']}],f=>{data.queue.push({...f,id:ATT.uid('T'),ticket:'A'+String(data.queue.length+24).padStart(3,'0'),arrival:new Date().toTimeString().slice(0,5),status:'En espera',counter:''});save();ERP.toast('Turno generado');location.href='turnos/index.html'})}
-function attentionForm(){ATT.modal('Registrar atención',[{name:'person',label:'Nombre completo',required:True},{name:'document',label:'Documento',required:True},{name:'channel',label:'Canal',type:'select',options:['Presencial','Telefónica','Virtual','Correo']},{name:'service',label:'Servicio',type:'select',options:data.services.map(s=>s.name)},{name:'staff',label:'Funcionario',type:'select',options:data.staff.map(s=>s.name)},{name:'outcome',label:'Resultado',type:'textarea',full:True,required:True},{name:'commitment',label:'Compromiso o siguiente paso',type:'textarea',full:True}],f=>{data.attentions.push({...f,id:ATT.uid('ATE'),date:today,time:new Date().toTimeString().slice(0,5),due:'',status:'Finalizada',rating:''});save();ERP.toast('Atención registrada');location.href='atenciones/index.html'})}
-function bindQuick(){document.getElementById('newAppointment').onclick=appointmentForm;document.getElementById('registerVisitor').onclick=visitorForm;document.getElementById('newTicket').onclick=ticketForm;document.getElementById('newAttention').onclick=attentionForm}
-document.getElementById('agendaSearch').addEventListener('input',agenda);document.getElementById('agendaTabs').onclick=e=>{const b=e.target.closest('[data-filter]');if(!b)return;filter=b.dataset.filter;document.querySelectorAll('.att-tab').forEach(x=>x.classList.toggle('active',x===b));agenda()};document.getElementById('exportToday').onclick=()=>ATT.csv('agenda-atencion.csv',data.appointments.filter(a=>a.date===today));document.addEventListener('click',e=>{const v=e.target.closest('[data-view]');if(v){const a=data.appointments.find(x=>x.id===v.dataset.view);ATT.detail(a.id,`<div class="att-grid att-grid-2"><div class="att-card-body"><strong>Persona</strong><p>${ATT.esc(a.person)} · ${ATT.esc(a.document)}</p></div><div class="att-card-body"><strong>Horario</strong><p>${ATT.fmtDate(a.date)} · ${a.time}–${a.end}</p></div><div class="att-card-body"><strong>Servicio</strong><p>${ATT.esc(a.service)}</p></div><div class="att-card-body"><strong>Responsable</strong><p>${ATT.esc(a.host)}</p></div></div><div class="att-notice">${ATT.esc(a.notes||'Sin observaciones.')}</div>`)}const ar=e.target.closest('[data-arrive]');if(ar){const a=data.appointments.find(x=>x.id===ar.dataset.arrive);if(!data.visitors.some(v=>v.name===a.person&&v.status==='En sede'))data.visitors.push({id:ATT.uid('VIS'),name:a.person,document:a.document,company:'Particular',host:a.host,purpose:a.service,expected:a.time,checkin:new Date().toTimeString().slice(0,5),checkout:'',status:'En sede',badge:'V-'+String(data.visitors.length+84).padStart(3,'0'),consent:True});a.status='En sede';save();render();ERP.toast('Llegada registrada')}const co=e.target.closest('[data-checkout]');if(co){const v=data.visitors.find(x=>x.id===co.dataset.checkout);v.status='Finalizada';v.checkout=new Date().toTimeString().slice(0,5);save();render();ERP.toast('Salida registrada')}});render();
+document.addEventListener('DOMContentLoaded', async () => {
+  'use strict';
+
+  const LEGACY_KEY = 'erp-attention-center-v17';
+  const data = await ATT.load('data.json', LEGACY_KEY);
+  let filter = 'all';
+  const today = data.settings.currentDate || ATT.nowDate();
+  const save = () => ATT.save(LEGACY_KEY, data);
+
+  ATT.insertLegalNotice('.page-heading');
+
+  function metrics() {
+    const appointments = data.appointments.filter(item => item.date === today);
+    const onsite = data.visitors.filter(item => item.status === 'En sede');
+    const completed = data.attentions.filter(item => item.date === today && item.status === 'Finalizada');
+    const waiting = data.queue.filter(item => item.status === 'En espera');
+    const avgWait = waiting.length ? Math.max(5, Math.round(waiting.reduce((sum, item) => sum + Number(item.waitMinutes || 18), 0) / waiting.length)) : 0;
+
+    document.getElementById('metrics').innerHTML = [
+      ['calendar-check', appointments.length, 'Citas de hoy', 'Agenda programada'],
+      ['users', onsite.length, 'Personas en sede', 'Ingresos activos'],
+      ['check-circle', completed.length, 'Atenciones cerradas', 'Registro del día'],
+      ['clock', `${avgWait} min`, 'Espera promedio', 'Sala presencial']
+    ].map(item => `<div class="att-kpi"><div class="att-kpi-icon"><i data-lucide="${item[0]}"></i></div><div class="att-kpi-copy"><span>${item[2]}</span><strong>${item[1]}</strong><small>${item[3]}</small></div></div>`).join('');
+  }
+
+  function quickActions() {
+    document.getElementById('quickActions').innerHTML = [
+      ['calendar-plus', 'Agendar cita', 'Reservar un espacio', 'appointment'],
+      ['user-plus', 'Registrar ingreso', 'Visitante o atención espontánea', 'visitor'],
+      ['list-ordered', 'Generar turno', 'Añadir a sala de espera', 'ticket'],
+      ['clipboard-list', 'Registrar atención', 'Resultado, compromiso o PQRSD', 'attention']
+    ].map(item => `<button class="att-quick-card" data-quick="${item[3]}" type="button"><span class="att-item-icon"><i data-lucide="${item[0]}"></i></span><span><strong>${item[1]}</strong><span>${item[2]}</span></span></button>`).join('');
+  }
+
+  function agenda() {
+    let rows = data.appointments.filter(item => item.date === today);
+    const query = document.getElementById('agendaSearch').value.trim().toLowerCase();
+    if (query) rows = rows.filter(item => [item.person, item.service, item.host, item.document].some(value => String(value || '').toLowerCase().includes(query)));
+    if (filter === 'pending') rows = rows.filter(item => !['Atendida', 'Cancelada', 'Ausente'].includes(item.status));
+    if (filter === 'onsite') {
+      const onsiteNames = new Set(data.visitors.filter(item => item.status === 'En sede').map(item => item.name));
+      rows = rows.filter(item => onsiteNames.has(item.person));
+    }
+    rows.sort((a, b) => a.time.localeCompare(b.time));
+
+    document.getElementById('todayAgenda').innerHTML = rows.length ? `<div class="att-table-wrap"><table class="att-table"><thead><tr><th>Hora</th><th>Persona</th><th>Servicio</th><th>Responsable</th><th>Modalidad</th><th>Estado</th><th>Acciones</th></tr></thead><tbody>${rows.map(item => `<tr>
+      <td><strong>${ATT.esc(item.time)}</strong><small>${ATT.esc(item.end)}</small></td>
+      <td><strong>${ATT.esc(item.person)}</strong><small>${ATT.maskDocument(item.document)}</small></td>
+      <td>${ATT.esc(item.service)}</td><td>${ATT.esc(item.host)}</td><td>${ATT.esc(item.modality)}</td><td>${ATT.badge(item.status)}</td>
+      <td><div class="att-action-menu">
+        <button class="icon-btn" data-view-appointment="${item.id}" title="Ver detalle"><i data-lucide="eye"></i></button>
+        ${item.modality === 'Presencial' && !['En sede', 'Atendida', 'Cancelada'].includes(item.status) ? `<button class="icon-btn" data-arrive="${item.id}" title="Registrar llegada"><i data-lucide="log-in"></i></button>` : ''}
+        ${!['Atendida', 'Cancelada'].includes(item.status) ? `<button class="icon-btn" data-edit-appointment="${item.id}" title="Editar"><i data-lucide="pencil"></i></button>` : ''}
+        ${!['Atendida', 'Cancelada'].includes(item.status) ? `<button class="icon-btn" data-cancel-appointment="${item.id}" title="Cancelar"><i data-lucide="calendar-x"></i></button>` : ''}
+      </div></td></tr>`).join('')}</tbody></table></div>` : '<div class="att-empty">No hay citas para este filtro.</div>';
+  }
+
+  function visitors() {
+    const rows = data.visitors.filter(item => item.status === 'En sede');
+    document.getElementById('liveVisitors').innerHTML = rows.length ? rows.map(item => `<div class="att-item"><span class="att-item-icon"><i data-lucide="user"></i></span><div><strong>${ATT.esc(item.name)}</strong><span>${ATT.esc(item.host)} · ingreso ${ATT.esc(item.checkin)}</span></div><button class="btn btn-secondary btn-sm" data-checkout="${item.id}">Registrar salida</button></div>`).join('') : '<div class="att-empty">No hay visitantes en sede.</div>';
+  }
+
+  function alerts() {
+    const commitments = data.attentions.filter(item => item.status !== 'Finalizada' && item.due && item.due <= today).map(item => ({
+      title: `Seguimiento vencido: ${item.person}`,
+      detail: `${item.service} · plazo ${ATT.fmtDate(item.due)}`,
+      tone: 'danger'
+    }));
+    const items = [...commitments, ...(data.alerts || [])].slice(0, 8);
+    document.getElementById('alerts').innerHTML = items.length ? items.map(item => `<div class="att-item"><span class="att-item-icon"><i data-lucide="alert-triangle"></i></span><div><strong>${ATT.esc(item.title)}</strong><span>${ATT.esc(item.detail)}</span></div>${ATT.badge(item.tone === 'danger' ? 'Crítico' : item.tone === 'warning' ? 'Revisar' : 'Activo')}</div>`).join('') : '<div class="att-empty">Sin alertas pendientes.</div>';
+  }
+
+  function render() {
+    metrics();
+    quickActions();
+    agenda();
+    visitors();
+    alerts();
+    bindQuickActions();
+    ATT.icons();
+  }
+
+  function appointmentFields(item = {}) {
+    return [
+      { name: 'person', label: 'Nombre completo', value: item.person || '', required: true },
+      { name: 'document', label: 'Documento de identificación', value: item.document || '', required: true, help: 'Se muestra enmascarado en las vistas operativas.' },
+      { name: 'date', label: 'Fecha', type: 'date', value: item.date || today, required: true },
+      { name: 'time', label: 'Hora', type: 'time', value: item.time || '', required: true },
+      { name: 'service', label: 'Servicio', type: 'select', value: item.service || '', options: data.services.filter(service => service.active !== false).map(service => service.name) },
+      { name: 'host', label: 'Responsable', type: 'select', value: item.host || '', options: data.staff.filter(person => person.active !== false).map(person => person.name) },
+      { name: 'modality', label: 'Modalidad', type: 'select', value: item.modality || 'Presencial', options: ['Presencial', 'Virtual', 'Telefónica'] },
+      { name: 'phone', label: 'Teléfono', value: item.phone || '' },
+      { name: 'email', label: 'Correo', type: 'email', value: item.email || '' },
+      { name: 'status', label: 'Estado', type: 'select', value: item.status || 'Programada', options: ['Programada', 'Confirmada', 'Por llegar', 'En sede', 'Atendida', 'Ausente', 'Cancelada'] },
+      { name: 'notes', label: 'Observaciones necesarias para la cita', type: 'textarea', value: item.notes || '', full: true, help: 'No registre información sensible que no sea indispensable.' },
+      { name: 'privacyNoticeAccepted', label: 'Aviso de privacidad', type: 'checkbox', checkboxLabel: 'Se informó la finalidad del tratamiento y el uso institucional de los datos.', value: item.privacyNoticeAccepted !== false, required: true, full: true }
+    ];
+  }
+
+  function appointmentForm(item = null) {
+    ATT.modal(item ? 'Editar cita' : 'Nueva cita', appointmentFields(item || {}), values => {
+      const service = data.services.find(entry => entry.name === values.service);
+      const end = ATT.addMinutes(values.time, service?.duration || 30);
+      const candidate = { ...values, end };
+      const conflict = ATT.appointmentConflict(data, candidate, item?.id || '');
+      if (conflict) throw new Error(`El responsable ya tiene la cita ${conflict.time}–${conflict.end}. Seleccione otro horario.`);
+      candidate.privacyNoticeAccepted = values.privacyNoticeAccepted === 'true';
+      candidate.informationClass = data.settings.informationClass;
+      candidate.retentionRule = data.settings.retentionRule;
+
+      if (item) Object.assign(item, candidate, { updatedAt: `${ATT.nowDate()} ${ATT.nowTime()}` });
+      else data.appointments.push({ ...candidate, id: ATT.uid('CIT'), createdAt: `${ATT.nowDate()} ${ATT.nowTime()}` });
+
+      ATT.upsertContact(data, values);
+      ATT.audit(data, 'Centro de Atención', item ? 'Editar cita' : 'Crear cita', 'Cita', item?.id || data.appointments.at(-1).id, `${values.date} ${values.time}`);
+      save();
+      render();
+      ERP.toast(item ? 'Cita actualizada' : 'Cita registrada');
+    });
+  }
+
+  function visitorForm() {
+    ATT.modal('Registrar visitante', [
+      { name: 'name', label: 'Nombre completo', required: true },
+      { name: 'document', label: 'Documento de identificación', required: true },
+      { name: 'company', label: 'Entidad o procedencia', value: 'Particular' },
+      { name: 'host', label: 'Funcionario anfitrión', type: 'select', options: data.staff.filter(item => item.active !== false).map(item => item.name) },
+      { name: 'purpose', label: 'Motivo general de la visita', required: true, help: 'Use una descripción general; evite incluir datos sensibles.' },
+      { name: 'expected', label: 'Hora esperada', type: 'time', value: ATT.nowTime(), required: true },
+      { name: 'phone', label: 'Teléfono de contacto' },
+      { name: 'privacyNoticeAccepted', label: 'Aviso de privacidad', type: 'checkbox', checkboxLabel: 'La persona fue informada sobre el registro de ingreso, seguridad y atención institucional.', value: true, required: true, full: true }
+    ], values => {
+      const visitor = {
+        ...values,
+        id: ATT.uid('VIS'),
+        date: today,
+        checkin: ATT.nowTime(),
+        checkout: '',
+        status: 'En sede',
+        badge: `V-${String(data.visitors.length + 84).padStart(3, '0')}`,
+        consent: values.privacyNoticeAccepted === 'true',
+        privacyNoticeAccepted: values.privacyNoticeAccepted === 'true',
+        informationClass: data.settings.informationClass,
+        retentionRule: data.settings.retentionRule
+      };
+      data.visitors.push(visitor);
+      const contact = ATT.upsertContact(data, values);
+      if (contact) {
+        contact.visits = Number(contact.visits || 0) + 1;
+        contact.lastVisit = today;
+      }
+      ATT.audit(data, 'Centro de Atención', 'Registrar ingreso', 'Visitante', visitor.id, visitor.host);
+      save();
+      render();
+      ERP.toast('Ingreso registrado');
+    });
+  }
+
+  function ticketForm() {
+    ATT.modal('Generar turno', [
+      { name: 'person', label: 'Nombre completo o identificador', required: true },
+      { name: 'service', label: 'Servicio', type: 'select', options: data.services.filter(item => item.active !== false).map(item => item.name) },
+      { name: 'priority', label: 'Prioridad', type: 'select', options: ['Normal', 'Prioritaria'] },
+      { name: 'priorityReason', label: 'Motivo de prioridad', placeholder: 'Solo cuando aplique' }
+    ], values => {
+      const ticket = {
+        ...values,
+        id: ATT.uid('T'),
+        ticket: `A${String(data.queue.length + 24).padStart(3, '0')}`,
+        arrival: ATT.nowTime(),
+        status: 'En espera',
+        counter: '',
+        waitMinutes: 0
+      };
+      data.queue.push(ticket);
+      ATT.audit(data, 'Centro de Atención', 'Generar turno', 'Turno', ticket.id, ticket.ticket);
+      save();
+      ERP.toast(`Turno ${ticket.ticket} generado`);
+      window.location.href = 'turnos/index.html';
+    });
+  }
+
+  function attentionForm() {
+    ATT.modal('Registrar atención', [
+      { name: 'person', label: 'Nombre completo', required: true },
+      { name: 'document', label: 'Documento', required: true },
+      { name: 'channel', label: 'Canal', type: 'select', options: ['Presencial', 'Telefónica', 'Virtual', 'Correo'] },
+      { name: 'service', label: 'Servicio', type: 'select', options: data.services.map(item => item.name) },
+      { name: 'staff', label: 'Funcionario responsable', type: 'select', options: data.staff.filter(item => item.active !== false).map(item => item.name) },
+      { name: 'requestType', label: 'Clasificación de la solicitud', type: 'select', options: ['Orientación simple', 'Petición general', 'Solicitud de información o documentos', 'Consulta', 'Queja o reclamo', 'Denuncia', 'No aplica'] },
+      { name: 'outcome', label: 'Resultado de la atención', type: 'textarea', full: true, required: true },
+      { name: 'commitment', label: 'Compromiso o siguiente paso', type: 'textarea', full: true },
+      { name: 'radicado', label: 'Número de radicado oficial', placeholder: 'Obligatorio cuando sea PQRSD' },
+      { name: 'status', label: 'Estado', type: 'select', options: ['Finalizada', 'Seguimiento', 'Pendiente de radicación', 'Trasladada'] },
+      { name: 'privacyNoticeAccepted', label: 'Aviso de privacidad', type: 'checkbox', checkboxLabel: 'Se informó el tratamiento de los datos personales y el canal oficial aplicable.', value: true, required: true, full: true }
+    ], values => {
+      const petition = !['Orientación simple', 'No aplica'].includes(values.requestType);
+      const due = petition ? ATT.petitionDeadline(values.requestType, today) : '';
+      if (petition && !values.radicado) values.status = 'Pendiente de radicación';
+      const attention = {
+        ...values,
+        id: ATT.uid('ATE'),
+        date: today,
+        time: ATT.nowTime(),
+        due,
+        rating: '',
+        petition,
+        privacyNoticeAccepted: values.privacyNoticeAccepted === 'true',
+        informationClass: data.settings.informationClass,
+        retentionRule: data.settings.retentionRule
+      };
+      data.attentions.push(attention);
+      ATT.upsertContact(data, values);
+      ATT.audit(data, 'Centro de Atención', 'Registrar atención', 'Atención', attention.id, values.requestType);
+      save();
+      ERP.toast(petition && !values.radicado ? 'Atención guardada: debe radicarse en el canal oficial' : 'Atención registrada', petition && !values.radicado ? 'error' : 'success');
+      window.location.href = 'atenciones/index.html';
+    });
+  }
+
+  function bindQuickActions() {
+    document.getElementById('newAppointment').onclick = () => appointmentForm();
+    document.getElementById('registerVisitor').onclick = visitorForm;
+    document.getElementById('quickActions').onclick = event => {
+      const button = event.target.closest('[data-quick]');
+      if (!button) return;
+      const actions = { appointment: () => appointmentForm(), visitor: visitorForm, ticket: ticketForm, attention: attentionForm };
+      actions[button.dataset.quick]?.();
+    };
+  }
+
+  document.getElementById('agendaSearch').addEventListener('input', agenda);
+  document.getElementById('agendaTabs').onclick = event => {
+    const button = event.target.closest('[data-filter]');
+    if (!button) return;
+    filter = button.dataset.filter;
+    document.querySelectorAll('.att-tab').forEach(item => item.classList.toggle('active', item === button));
+    agenda();
+  };
+
+  document.getElementById('exportToday').onclick = () => ATT.exportPublic('agenda-publica-anonimizada.csv', data.appointments.filter(item => item.date === today), [
+    { label: 'Fecha', key: 'date' }, { label: 'Hora', key: 'time' }, { label: 'Servicio', key: 'service' },
+    { label: 'Responsable', key: 'host' }, { label: 'Modalidad', key: 'modality' }, { label: 'Estado', key: 'status' }
+  ]);
+
+  document.addEventListener('click', event => {
+    const view = event.target.closest('[data-view-appointment]');
+    if (view) {
+      const item = data.appointments.find(entry => entry.id === view.dataset.viewAppointment);
+      if (!item) return;
+      ATT.detail(item.id, `<div class="att-grid att-grid-2"><div class="att-card-body"><strong>Persona</strong><p>${ATT.esc(item.person)} · ${ATT.maskDocument(item.document)}</p></div><div class="att-card-body"><strong>Horario</strong><p>${ATT.fmtDate(item.date)} · ${item.time}–${item.end}</p></div><div class="att-card-body"><strong>Servicio</strong><p>${ATT.esc(item.service)}</p></div><div class="att-card-body"><strong>Responsable</strong><p>${ATT.esc(item.host)}</p></div></div><div class="att-notice">${ATT.esc(item.notes || 'Sin observaciones.')}</div><div class="att-audit-mini"><i data-lucide="shield-check"></i> ${ATT.esc(item.informationClass || data.settings.informationClass)}</div>`);
+    }
+
+    const edit = event.target.closest('[data-edit-appointment]');
+    if (edit) {
+      const item = data.appointments.find(entry => entry.id === edit.dataset.editAppointment);
+      if (item) appointmentForm(item);
+    }
+
+    const cancel = event.target.closest('[data-cancel-appointment]');
+    if (cancel) {
+      const item = data.appointments.find(entry => entry.id === cancel.dataset.cancelAppointment);
+      if (!item) return;
+      ATT.confirm(`¿Cancelar la cita de ${item.person}?`, () => {
+        item.status = 'Cancelada';
+        ATT.audit(data, 'Centro de Atención', 'Cancelar cita', 'Cita', item.id, item.person);
+        save(); render(); ERP.toast('Cita cancelada');
+      });
+    }
+
+    const arrive = event.target.closest('[data-arrive]');
+    if (arrive) {
+      const appointment = data.appointments.find(item => item.id === arrive.dataset.arrive);
+      if (!appointment) return;
+      if (!data.visitors.some(item => item.document === appointment.document && item.status === 'En sede')) {
+        const visitor = {
+          id: ATT.uid('VIS'), name: appointment.person, document: appointment.document, company: 'Particular', host: appointment.host,
+          purpose: appointment.service, expected: appointment.time, checkin: ATT.nowTime(), checkout: '', status: 'En sede',
+          badge: `V-${String(data.visitors.length + 84).padStart(3, '0')}`, consent: true, privacyNoticeAccepted: true,
+          informationClass: data.settings.informationClass, retentionRule: data.settings.retentionRule
+        };
+        data.visitors.push(visitor);
+        ATT.audit(data, 'Centro de Atención', 'Registrar llegada desde cita', 'Visitante', visitor.id, appointment.id);
+      }
+      appointment.status = 'En sede';
+      save(); render(); ERP.toast('Llegada registrada');
+    }
+
+    const checkout = event.target.closest('[data-checkout]');
+    if (checkout) {
+      const visitor = data.visitors.find(item => item.id === checkout.dataset.checkout);
+      if (!visitor) return;
+      visitor.status = 'Finalizada';
+      visitor.checkout = ATT.nowTime();
+      ATT.audit(data, 'Centro de Atención', 'Registrar salida', 'Visitante', visitor.id, visitor.name);
+      save(); render(); ERP.toast('Salida registrada');
+    }
+  });
+
+  render();
 });
