@@ -1,0 +1,74 @@
+{
+  "version": "V05",
+  "scope": "Ajuste visual compacto de Mesa TIC",
+  "files": [
+    {
+      "path": "LEEME_REEMPLAZO_V05.txt",
+      "bytes": 708
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/activos/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/cambios/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/catalogo/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/configuracion/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/conocimiento/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/equipo/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/incidentes/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/mantenimiento/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/mi-portal/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/problemas/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/reportes/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/shared/itsm.css",
+      "bytes": 21802
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/sla/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/solicitudes/styles.css",
+      "bytes": 39
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/styles.css",
+      "bytes": 36
+    },
+    {
+      "path": "apps/secretaria-general/mesa-ayuda/tickets/styles.css",
+      "bytes": 897
+    }
+  ]
+}
