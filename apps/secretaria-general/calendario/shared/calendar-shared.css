@@ -1,5 +1,12 @@
 @import url('../../../../assets/css/base.css');
 
+
+/* Primitivas de iconografía del calendario */
+:where(.brand-mark,.agenda-icon,.event-icon,.calendar-icon,.avatar,.person-chip){overflow:hidden;line-height:1}
+:where(.agenda-icon,.event-icon,.calendar-icon)>:is(svg,img){display:block;width:16px;height:16px;max-width:16px;max-height:16px;object-fit:contain;margin:auto}
+.brand-mark{width:50px;height:38px;border-radius:11px}
+.brand-mark>img{width:86%;height:86%;object-fit:contain;margin:auto}
+
 :root{
   --sidebar:238px;
   --topbar:62px;
@@ -9,7 +16,7 @@
 body{font-size:13px;overflow-x:hidden}
 .sidebar{width:var(--sidebar)}
 .brand-block{padding:15px 15px 11px}
-.brand-mark{width:36px;height:36px;border-radius:11px;font-size:12px}
+.brand-mark{width:50px;height:38px;border-radius:11px;font-size:10px;overflow:hidden;line-height:1}
 .brand-copy strong{font-size:12.5px}.brand-copy span{font-size:10.5px}
 .sidebar-context{margin:0 10px 8px;padding:8px 10px;border-radius:10px}
 .sidebar-context small{font-size:9px}.sidebar-context strong{font-size:11px}

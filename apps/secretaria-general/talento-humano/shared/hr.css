@@ -1,4 +1,15 @@
 @import url('../../../../assets/css/base.css');
+
+/* Primitivas de iconografía y avatares de Talento Humano */
+.hr-shell :where(.module-icon,.doc-icon,.avatar,.step-circle,.check-icon){display:grid;place-items:center;overflow:hidden;line-height:1;text-align:center}
+.hr-shell :where(.module-icon,.doc-icon,.check-icon)>:is(svg,img){display:block;width:46%;height:46%;max-width:46%;max-height:46%;object-fit:contain;margin:auto}
+.hr-shell .module-icon{width:38px!important;height:38px!important;border-radius:12px!important}
+.hr-shell .module-icon svg{width:17px!important;height:17px!important;max-width:17px!important;max-height:17px!important}
+.hr-shell .doc-icon{width:38px;height:38px;border-radius:11px}
+.hr-shell .avatar{font-size:clamp(9px,1.3vw,18px);white-space:nowrap}
+.hr-shell .avatar>img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
+.hr-shell .step-circle{width:32px;height:32px;font-size:10px}
+
 .hr-shell .sidebar{width:286px}.hr-shell .main-area{margin-left:286px}.hr-shell .content{max-width:1680px}.hr-sidebar-nav{padding-bottom:80px}.hr-nav-section{margin-top:8px}.hr-nav-section summary{list-style:none;padding:9px 10px;color:#87a9c2;text-transform:uppercase;font-size:10px;font-weight:850;letter-spacing:.12em;cursor:pointer;display:flex;align-items:center;justify-content:space-between}.hr-nav-section summary::-webkit-details-marker{display:none}.hr-nav-section summary:after{content:'›';font-size:15px;transform:rotate(90deg);transition:.18s}.hr-nav-section:not([open]) summary:after{transform:rotate(0)}
 .hr-hero{position:relative;overflow:hidden;padding:24px;border-radius:22px;background:linear-gradient(130deg,#103c60 0%,#0f5d78 58%,#168b83 120%);color:#fff;box-shadow:0 18px 46px rgba(15,76,129,.18);margin-bottom:18px}.hr-hero:before,.hr-hero:after{content:'';position:absolute;border-radius:50%;background:rgba(255,255,255,.08)}.hr-hero:before{width:220px;height:220px;right:-64px;top:-112px}.hr-hero:after{width:130px;height:130px;right:130px;bottom:-90px}.hr-hero-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,.7fr);gap:24px;position:relative;z-index:1}.hr-hero h1{font-size:clamp(27px,3vw,38px);margin:0 0 8px;letter-spacing:-.04em}.hr-hero p{margin:0;color:#d9eaf4;max-width:760px}.hr-hero-actions{display:flex;align-items:center;justify-content:flex-end;gap:9px;flex-wrap:wrap}.hr-hero .btn-primary{background:#fff;color:#0f4c81;box-shadow:none}.hr-hero .btn-secondary{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.18)}
 .hr-overline{display:flex;align-items:center;gap:8px;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:850;color:#b7d9e8;margin-bottom:8px}.hr-overline:before{content:'';width:20px;height:2px;border-radius:999px;background:#7de0d4}.hr-section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:24px 0 12px}.hr-section-title h2{margin:0;font-size:19px;letter-spacing:-.02em}.hr-section-title p{margin:4px 0 0;color:var(--muted);font-size:12px}

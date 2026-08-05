@@ -1,6 +1,13 @@
 @import url('../../../../assets/css/base.css');
 @import url('hr.css');
 
+
+/* Primitivas de iconografía de operaciones TH */
+.hr-shell :where(.ops-icon,.ops-section-btn,.ops-row-actions,.ops-kpis .metric-icon){line-height:0}
+.hr-shell .ops-icon{display:grid;place-items:center;overflow:hidden;width:30px;height:30px;border-radius:9px}
+.hr-shell .ops-icon>:is(svg,img){display:block;width:14px;height:14px;max-width:14px;max-height:14px;object-fit:contain;margin:auto}
+.hr-shell .ops-section-btn svg{width:14px;height:14px;max-width:14px;max-height:14px}
+
 /* V15 — capa visual sobria para los módulos operativos de Talento Humano */
 .ops-hero{
   display:flex;align-items:flex-end;justify-content:space-between;gap:18px;

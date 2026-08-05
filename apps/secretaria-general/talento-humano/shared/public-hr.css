@@ -1,5 +1,13 @@
 
 @import url('hr.css');
+
+/* Primitivas de iconografía del portal público TH */
+.hr-shell :where(.public-record-icon,.public-check-icon,.public-section-btn){line-height:0}
+.hr-shell :where(.public-record-icon,.public-check-icon){display:grid;place-items:center;overflow:hidden}
+.hr-shell :where(.public-record-icon,.public-check-icon)>:is(svg,img){display:block;width:16px;height:16px;max-width:16px;max-height:16px;object-fit:contain;margin:auto}
+.hr-shell .public-record-icon,.hr-shell .public-check-icon{width:34px;height:34px;border-radius:10px}
+.hr-shell .public-section-btn svg{width:14px;height:14px;max-width:14px;max-height:14px;flex:0 0 auto}
+
 .public-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:18px;padding:21px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,var(--surface),var(--surface-2));margin-bottom:16px;align-items:center}
 .public-hero .eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);font-weight:850;margin-bottom:7px}.public-hero h1{font-size:27px;margin:0 0 6px;letter-spacing:-.035em}.public-hero p{font-size:12px;color:var(--muted);line-height:1.55;margin:0;max-width:820px}.public-hero-actions{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap}
 .public-metrics{margin-bottom:16px}.public-kpi{min-height:112px}.public-kpi .metric-copy strong{font-size:26px}.public-kpi .metric-copy small{white-space:normal;line-height:1.35}

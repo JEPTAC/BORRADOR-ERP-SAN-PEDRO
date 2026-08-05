@@ -33,20 +33,60 @@ const S={
  circle:'<circle cx="12" cy="12" r="9"/><path d="M12 8v4m0 4h.01"/>',
  sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'
 };
-function pick(n){
- if(n==='menu')return S.menu;if(n.includes('search'))return S.search;if(n.includes('bell'))return S.bell;if(n==='x')return S.x;if(n.includes('plus')||n==='plus')return S.plus;
- if(n.includes('chevron-left')||n==='arrow-left')return S.left;if(n.includes('chevron-right')||n.includes('arrow-right'))return S.right;
- if(n.includes('sun')||n.includes('moon'))return S.sun;if(n.includes('layout')||n.includes('grid')||n.includes('blocks')||n.includes('panels'))return S.grid;
- if(n.includes('building')||n.includes('landmark'))return S.building;if(n.includes('user')||n.includes('person')||n.includes('accessibility'))return S.users;
- if(n.includes('calendar')||n.includes('date'))return S.calendar;if(n.includes('file')||n.includes('clipboard')||n.includes('receipt')||n.includes('book')||n.includes('archive'))return S.file;
- if(n.includes('shield')||n.includes('badge-check')||n.includes('circle-check'))return S.shield;if(n.includes('heart')||n.includes('activity'))return S.heart;
- if(n.includes('wallet')||n.includes('dollar')||n.includes('calculator')||n.includes('coins'))return S.wallet;if(n.includes('briefcase'))return S.briefcase;
- if(n.includes('scale')||n.includes('gavel')||n.includes('handshake'))return S.scale;if(n.includes('headset')||n.includes('ticket')||n.includes('circle-help'))return S.headset;
- if(n.includes('workflow')||n.includes('network')||n.includes('route')||n.includes('refresh'))return S.workflow;if(n.includes('monitor')||n.includes('laptop'))return S.monitor;
- if(n.includes('download')||n.includes('down'))return S.download;if(n.includes('upload')||n.includes('up'))return S.upload;if(n.includes('check')||n.includes('list-todo')||n.includes('list-check'))return S.check;
- if(n.includes('alert')||n.includes('warning')||n.includes('triangle'))return S.alert;if(n.includes('folder'))return S.folder;if(n.includes('map')||n.includes('compass')||n.includes('construction')||n.includes('scan'))return S.map;
- if(n.includes('tool')||n.includes('cog')||n.includes('paint'))return S.tool;if(n.includes('message')||n.includes('mail'))return S.message;if(n.includes('chart')||n.includes('gauge')||n.includes('presentation'))return S.chart;
- if(n.includes('arrow'))return S.arrow;return S.circle;
+function pick(name){
+ const n=String(name||'').toLowerCase();
+ if(S[n])return S[n];
+ if(/chevron-left|arrow-left|move-left/.test(n))return S.left;
+ if(/chevron-right|arrow-right|external|log-in|log-out/.test(n))return S.right;
+ if(/calendar|date|clock/.test(n))return S.calendar;
+ if(/user|contact|people|team/.test(n))return S.users;
+ if(/building|landmark|bank|home/.test(n))return S.building;
+ if(/shield|lock|key|security/.test(n))return S.shield;
+ if(/heart|health|activity/.test(n))return S.heart;
+ if(/wallet|money|credit|dollar|banknote/.test(n))return S.wallet;
+ if(/briefcase|work|job/.test(n))return S.briefcase;
+ if(/scale|gavel|law/.test(n))return S.scale;
+ if(/headset|support|phone/.test(n))return S.headset;
+ if(/workflow|route|git|network/.test(n))return S.workflow;
+ if(/monitor|laptop|computer|tv/.test(n))return S.monitor;
+ if(/download/.test(n))return S.download;
+ if(/upload/.test(n))return S.upload;
+ if(/check|done|success/.test(n))return S.check;
+ if(/alert|warning|triangle/.test(n))return S.alert;
+ if(/folder|archive/.test(n))return S.folder;
+ if(/map|location|pin/.test(n))return S.map;
+ if(/tool|settings|wrench|cog/.test(n))return S.tool;
+ if(/message|mail|chat/.test(n))return S.message;
+ if(/chart|analytics|bar-chart|pie-chart/.test(n))return S.chart;
+ if(/file|document|clipboard|book/.test(n))return S.file;
+ if(/grid|apps|layout/.test(n))return S.grid;
+ if(/plus|add/.test(n))return S.plus;
+ if(/search/.test(n))return S.search;
+ if(/bell|notification/.test(n))return S.bell;
+ if(/menu/.test(n))return S.menu;
+ if(/close|x/.test(n))return S.x;
+ return S.circle;
 }
-window.lucide={createIcons:function(options){const attrs=(options&&options.attrs)||{};document.querySelectorAll('[data-lucide]').forEach(el=>{const n=el.getAttribute('data-lucide')||'';const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('fill','none');svg.setAttribute('stroke','currentColor');svg.setAttribute('stroke-linecap','round');svg.setAttribute('stroke-linejoin','round');svg.setAttribute('stroke-width',attrs['stroke-width']||'1.8');svg.setAttribute('aria-hidden','true');svg.innerHTML=pick(n);for(const c of el.classList)svg.classList.add(c);el.replaceWith(svg);});}};
+window.lucide={createIcons:function(){
+ document.querySelectorAll('[data-lucide]').forEach(function(el){
+  if(el.tagName&&el.tagName.toLowerCase()==='svg')return;
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  const classes=Array.from(el.classList||[]).filter(Boolean);
+  classes.push('erp-icon');
+  svg.setAttribute('viewBox','0 0 24 24');
+  svg.setAttribute('width','24');
+  svg.setAttribute('height','24');
+  svg.setAttribute('fill','none');
+  svg.setAttribute('stroke','currentColor');
+  svg.setAttribute('stroke-width','1.8');
+  svg.setAttribute('stroke-linecap','round');
+  svg.setAttribute('stroke-linejoin','round');
+  svg.setAttribute('focusable','false');
+  svg.setAttribute('aria-hidden','true');
+  svg.setAttribute('class',classes.join(' '));
+  svg.dataset.lucide=el.dataset.lucide||'';
+  svg.innerHTML=pick(el.dataset.lucide);
+  el.replaceWith(svg);
+ });
+}};
 })();

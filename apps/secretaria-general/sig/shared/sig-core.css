@@ -1,9 +1,16 @@
 @import url('../../../../assets/css/base.css');
+
+/* Primitivas de iconografía SIG */
+:where(.sig-kpi-icon,.quick-icon,.risk-icon,.process-icon,.brand-mark){display:grid;place-items:center;overflow:hidden;line-height:1;text-align:center}
+:where(.sig-kpi-icon,.quick-icon,.risk-icon,.process-icon)>:is(svg,img){display:block;width:46%;height:46%;max-width:46%;max-height:46%;object-fit:contain;margin:auto}
+.brand-mark{width:50px;height:38px;border-radius:11px}
+.brand-mark>img{width:86%;height:86%;object-fit:contain;margin:auto}
+
 :root{--sig-sidebar:278px;--sig-topbar:70px}
 *{min-width:0;box-sizing:border-box}
 body{font-size:14px;overflow-x:hidden}
 .sidebar{width:var(--sig-sidebar)}.main-area{margin-left:var(--sig-sidebar)}
-.brand-block{padding:20px 18px 14px}.brand-mark{width:40px;height:40px}.brand-copy strong{font-size:14px}.brand-copy span{font-size:11px}
+.brand-block{padding:20px 18px 14px}.brand-mark{width:50px;height:38px;overflow:hidden;line-height:1}.brand-copy strong{font-size:14px}.brand-copy span{font-size:11px}
 .sidebar-context{margin:0 12px 12px;padding:11px 12px}.sidebar-context small{font-size:9.5px}.sidebar-context strong{font-size:11.5px;line-height:1.35}
 .sidebar-nav{padding:0 10px 16px}.nav-label{padding:11px 9px 5px;font-size:8.7px}.nav-item{min-height:40px;padding:8px 10px;margin:3px 0;border-radius:10px;gap:10px;font-size:11.2px}.nav-item i,.nav-item svg{width:16px;height:16px}.sidebar-footer{padding:11px}.user-mini{padding:8px}.user-mini .avatar{width:31px;height:31px;font-size:9.5px}.user-mini strong{font-size:10.8px}.user-mini span{font-size:9.4px}
 .topbar{height:var(--sig-topbar);padding:0 22px}.topbar-title strong{font-size:13.5px}.topbar-title span{font-size:10.5px}.icon-btn{width:36px;height:36px;border-radius:10px}.icon-btn svg{width:16px;height:16px}
