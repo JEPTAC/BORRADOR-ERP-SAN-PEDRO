@@ -1,0 +1,54 @@
+VALIDACIÓN MESA DE SERVICIOS TIC V29
+
+ALCANCE
+Se validó exclusivamente apps/secretaria-general/mesa-ayuda/.
+
+ESTRUCTURA
+- 9 pantallas HTML.
+- 1 hoja CSS autónoma.
+- 1 núcleo JavaScript autónomo.
+- 1 logo SVG local optimizado.
+- 0 dependencias externas.
+- 0 conexiones con Supabase, Firebase o API.
+
+VALIDACIONES TÉCNICAS
+- JavaScript validado con node --check: aprobado.
+- CSS analizado con tinycss2: 0 errores.
+- SVG validado como XML: aprobado.
+- 9 de 9 páginas con referencias locales válidas.
+- 9 de 9 páginas actualizadas a v=29.0.0.
+- 0 referencias a v=28.0.0 en HTML.
+- window.ITSM disponible en las 9 pantallas durante prueba DOM en Chromium.
+- 0 errores JavaScript durante el renderizado de las 9 pantallas.
+- 0 desbordamiento horizontal de la página en escritorio.
+- 0 desbordamiento horizontal de la página en móvil de 390 px.
+
+CONTRASTE
+- Botón Nuevo ticket: texto rgb(255,255,255) sobre fondo rgb(11,100,160).
+- Botón Ver tickets: texto rgb(255,255,255) sobre fondo rgb(11,100,160).
+- Regla CSS obligatoria para botones y superficies azules.
+- Excepción controlada para tarjetas internas blancas sobre el hero azul.
+
+FLUJO DE TICKETS PROBADO
+- Apertura del popup de gestión.
+- Asignación de responsable.
+- Registro de nota de trabajo.
+- Registro de tiempo invertido.
+- Resolución con solución obligatoria.
+- Cambio de estado a Resuelto.
+- Cierre técnico con solución.
+- Cambio de estado a Cerrado.
+- Reapertura del ticket.
+- Retorno a estado En proceso.
+- Actualización de tabla, métricas e historial.
+- Exportación CSV ampliada con tiempo y solución.
+
+RENDIMIENTO
+- Sin frameworks ni librerías externas.
+- Sin backdrop-filter.
+- Sin observadores de scroll.
+- Sin animaciones continuas.
+- Animaciones limitadas a 140–180 ms.
+- Logo SVG reducido de 1.443.990 a 606.313 bytes: reducción aproximada del 58 %.
+- CSS: 29.064 bytes.
+- JavaScript: 49.785 bytes.

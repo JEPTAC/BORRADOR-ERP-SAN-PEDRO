@@ -1,0 +1,78 @@
+{
+  "name": "Mesa de Servicios TIC",
+  "version": "29.0.0",
+  "scope": "apps/secretaria-general/mesa-ayuda/",
+  "backend": "none",
+  "files": [
+    {
+      "path": "LEEME_MESA_TIC_V29.txt",
+      "bytes": 1137,
+      "sha256": "551078652e3a0664f10fef38d395af9802b427cc8a1cb2946887a0bc7758c7a1"
+    },
+    {
+      "path": "VALIDACION_MESA_TIC_V29.txt",
+      "bytes": 1897,
+      "sha256": "e63ffab5b7f8b1e926b82dc9ca2ddfbab09af4f7f844271b0b2493703f6b7b09"
+    },
+    {
+      "path": "catalogo/index.html",
+      "bytes": 616,
+      "sha256": "3db2d54368bc156a187fed8a5ddd2cb8250b6e68b4c4034cce4d10ad460699b8"
+    },
+    {
+      "path": "comunicaciones/index.html",
+      "bytes": 637,
+      "sha256": "0a9aaf85bcfdaf9e0f1bc402503ec1d26ac38f67e3a2b074f586640fb6197942"
+    },
+    {
+      "path": "conocimiento/index.html",
+      "bytes": 629,
+      "sha256": "c6025e121d90b62c093f5df52d5ad4467d6ed379d5dc1538cd30f6a9ef502c2d"
+    },
+    {
+      "path": "index.html",
+      "bytes": 616,
+      "sha256": "5c9ee5516b290aabb0f40662837a39b98a526dfbebb5b8411f5a33b7f74679d5"
+    },
+    {
+      "path": "inventario/index.html",
+      "bytes": 620,
+      "sha256": "8f74e05266945d77d7e5c93c6d99a7b79cdbbe491a7d838b8ac8c41811ac027e"
+    },
+    {
+      "path": "mantenimientos/index.html",
+      "bytes": 625,
+      "sha256": "9cb4099941a2b998970725071e87a79932b9c8daa4eb619c38fd0888c01ab19a"
+    },
+    {
+      "path": "nuevo-ticket/index.html",
+      "bytes": 615,
+      "sha256": "32d99967689cd11e5058403f3e2a8142414d1adcf406ea02c86ea390c7653cc8"
+    },
+    {
+      "path": "reportes/index.html",
+      "bytes": 618,
+      "sha256": "6b4382709c250ca6e90a89006b53e62dd42dec6e1c27fd5f341c86a299242201"
+    },
+    {
+      "path": "shared/itsm.css",
+      "bytes": 29064,
+      "sha256": "2282be047feb3f704eab4e2414e2536578eac17d28173e50e2e6f812cba75ca5"
+    },
+    {
+      "path": "shared/itsm.js",
+      "bytes": 49785,
+      "sha256": "f6571cc1cff681c238a658f647ddad50bcdc8f78977d8bc37e1825819af09a43"
+    },
+    {
+      "path": "shared/san-pedro.svg",
+      "bytes": 606313,
+      "sha256": "7a6f19cd0439bab2c506f5470775617f9111310ca9e167d12872961d5ce06c93"
+    },
+    {
+      "path": "tickets/index.html",
+      "bytes": 614,
+      "sha256": "2baf7c4450f2e1c08a16bd4607354379f516f58a31444daca7596c45bd8057ca"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+MESA DE SERVICIOS TIC — V29
+
+REEMPLAZO AISLADO
+Esta entrega reemplaza exclusivamente:
+apps/secretaria-general/mesa-ayuda/
+
+CAMBIOS PRINCIPALES
+- Contraste obligatorio: todo botón o superficie azul utiliza texto blanco.
+- Corrección específica de Nuevo ticket y Ver tickets.
+- Gestión completa de tickets en ventana modal central.
+- Asignación de responsable.
+- Cambio de estado operativo.
+- Registro de notas de trabajo.
+- Registro de tiempo invertido.
+- Resolución con solución obligatoria.
+- Cierre técnico con trazabilidad.
+- Reapertura de tickets resueltos o cerrados.
+- Migración automática de datos locales de V28 a V29.
+- Panel lateral de detalle eliminado y reemplazado por popup accesible.
+- Rediseño visual de las nueve pantallas sin frameworks ni librerías externas.
+
+INSTALACIÓN
+1. Eliminar únicamente apps/secretaria-general/mesa-ayuda/
+2. Copiar la carpeta apps incluida en este paquete a la raíz del repositorio.
+3. Publicar.
+4. Ejecutar Ctrl + F5.
+
+NO MODIFICA
+- base.css
+- shell.js
+- launcher
+- acceso
+- perfil
+- SIG
+- Calendario
+- Talento Humano
+- Atención y Visitantes
+- Supabase o cualquier backend
