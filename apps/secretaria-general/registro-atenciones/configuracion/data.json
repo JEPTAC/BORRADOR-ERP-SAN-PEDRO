@@ -1,0 +1,112 @@
+{
+  "services": [
+    {
+      "id": "SER-01",
+      "name": "Cita con Secretaría General",
+      "duration": 30,
+      "modality": "Presencial / virtual",
+      "color": "#0f4c81"
+    },
+    {
+      "id": "SER-02",
+      "name": "Orientación institucional",
+      "duration": 20,
+      "modality": "Presencial",
+      "color": "#168b83"
+    },
+    {
+      "id": "SER-03",
+      "name": "Recepción de documentos",
+      "duration": 15,
+      "modality": "Presencial",
+      "color": "#7c3aed"
+    },
+    {
+      "id": "SER-04",
+      "name": "Seguimiento a solicitud",
+      "duration": 20,
+      "modality": "Presencial / telefónica",
+      "color": "#c97b16"
+    },
+    {
+      "id": "SER-05",
+      "name": "Atención a proveedor",
+      "duration": 30,
+      "modality": "Presencial",
+      "color": "#b23a48"
+    }
+  ],
+  "staff": [
+    {
+      "id": "FUN-01",
+      "name": "María Fernanda López",
+      "role": "Secretaria General",
+      "office": "Secretaría General",
+      "active": true
+    },
+    {
+      "id": "FUN-02",
+      "name": "Laura Gómez",
+      "role": "Auxiliar administrativa",
+      "office": "Secretaría General",
+      "active": true
+    },
+    {
+      "id": "FUN-03",
+      "name": "Andrés Rojas",
+      "role": "Profesional universitario",
+      "office": "Secretaría General",
+      "active": true
+    },
+    {
+      "id": "FUN-04",
+      "name": "Paula Mendoza",
+      "role": "Recepción",
+      "office": "Secretaría General",
+      "active": true
+    }
+  ],
+  "schedule": {
+    "weekdays": [
+      "Lunes",
+      "Martes",
+      "Miércoles",
+      "Jueves",
+      "Viernes"
+    ],
+    "open": "08:00",
+    "close": "17:00",
+    "lunchStart": "12:00",
+    "lunchEnd": "13:30"
+  },
+  "rules": [
+    {
+      "id": "R1",
+      "name": "Confirmación inmediata",
+      "event": "Nueva cita",
+      "channel": "Correo",
+      "active": true
+    },
+    {
+      "id": "R2",
+      "name": "Recordatorio 24 horas",
+      "event": "Antes de la cita",
+      "channel": "Correo / SMS",
+      "active": true
+    },
+    {
+      "id": "R3",
+      "name": "Aviso al anfitrión",
+      "event": "Check-in",
+      "channel": "Correo",
+      "active": true
+    },
+    {
+      "id": "R4",
+      "name": "Encuesta posterior",
+      "event": "Atención finalizada",
+      "channel": "Correo",
+      "active": false
+    }
+  ]
+}

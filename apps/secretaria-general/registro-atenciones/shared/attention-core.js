@@ -1,0 +1,18 @@
+(function(){
+const A={
+ esc(v=''){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));},
+ async load(path,key){const base=await ERP.fetchJSON(path,{});try{const stored=localStorage.getItem(key);return stored?JSON.parse(stored):base}catch(e){return base}},
+ save(key,data){localStorage.setItem(key,JSON.stringify(data));},
+ uid(prefix='REG'){return ERP.uid(prefix)},
+ fmtDate(v,opts={weekday:'short',day:'2-digit',month:'short'}){if(!v)return'—';return new Intl.DateTimeFormat('es-CO',opts).format(new Date(v+'T12:00:00'))},
+ fmtTime(v){return v||'—'},
+ badge(status=''){const s=status.toLowerCase();let c='info';if(/confirm|atendid|finaliz|activo|ingres/.test(s))c='success';else if(/esper|pend|program|por llegar/.test(s))c='warning';else if(/cancel|ausente|bloque|rechaz/.test(s))c='danger';return `<span class="att-badge ${c}">${this.esc(status)}</span>`},
+ initials(name=''){return ERP.initials(name)},
+ csv(name,rows){ERP.csv(name,rows)},
+ icons(){ERP.refreshIcons()},
+ modal(title,fields,onSubmit){let el=document.getElementById('attDynamicModal');if(!el){el=document.createElement('div');el.id='attDynamicModal';el.className='modal-backdrop hidden att-modal';el.innerHTML='<div class="modal"><div class="modal-header"><div><h2 id="attModalTitle"></h2><p>Registro almacenado localmente durante la fase de diseño.</p></div><button class="icon-btn" data-close="attDynamicModal"><i data-lucide="x"></i></button></div><form id="attDynamicForm"><div class="modal-body"><div class="att-form-grid" id="attModalFields"></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-close="attDynamicModal">Cancelar</button><button class="btn btn-primary">Guardar</button></div></form></div>';document.body.appendChild(el)}
+ document.getElementById('attModalTitle').textContent=title;const box=document.getElementById('attModalFields');box.innerHTML=fields.map(f=>{const cls=f.full?' full':'';let input='';if(f.type==='select')input=`<select name="${f.name}" ${f.required?'required':''}>${(f.options||[]).map(o=>`<option value="${this.esc(typeof o==='string'?o:o.value)}">${this.esc(typeof o==='string'?o:o.label)}</option>`).join('')}</select>`;else if(f.type==='textarea')input=`<textarea name="${f.name}" ${f.required?'required':''} placeholder="${this.esc(f.placeholder||'')}">${this.esc(f.value||'')}</textarea>`;else input=`<input type="${f.type||'text'}" name="${f.name}" value="${this.esc(f.value||'')}" ${f.required?'required':''} placeholder="${this.esc(f.placeholder||'')}">`;return `<div class="att-form-group${cls}"><label>${this.esc(f.label)}</label>${input}</div>`}).join('');
+ const form=document.getElementById('attDynamicForm');form.onsubmit=e=>{e.preventDefault();const data=Object.fromEntries(new FormData(form).entries());onSubmit(data);ERP.close('attDynamicModal')};ERP.open('attDynamicModal');this.icons()},
+ detail(title,html){let el=document.getElementById('attDetailModal');if(!el){el=document.createElement('div');el.id='attDetailModal';el.className='modal-backdrop hidden att-modal';el.innerHTML='<div class="modal"><div class="modal-header"><div><h2 id="attDetailTitle"></h2><p>Detalle del registro seleccionado.</p></div><button class="icon-btn" data-close="attDetailModal"><i data-lucide="x"></i></button></div><div class="modal-body" id="attDetailBody"></div><div class="modal-footer"><button class="btn btn-secondary" data-close="attDetailModal">Cerrar</button></div></div>';document.body.appendChild(el)}document.getElementById('attDetailTitle').textContent=title;document.getElementById('attDetailBody').innerHTML=html;ERP.open('attDetailModal');this.icons()}
+};window.ATT=A;
+})();

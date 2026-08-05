@@ -1,25 +1,11 @@
 {
-  "name": "Reemplazo_SOLO_CSS_MODIFICADO_Talento_Humano_Visual_v15",
-  "version": "v15",
-  "replace_only": [
-    "apps/secretaria-general/talento-humano/analitica/styles.css",
-    "apps/secretaria-general/talento-humano/auditoria/styles.css",
-    "apps/secretaria-general/talento-humano/centro-operaciones/styles.css",
-    "apps/secretaria-general/talento-humano/expediente-laboral/styles.css",
-    "apps/secretaria-general/talento-humano/flujos/styles.css",
-    "apps/secretaria-general/talento-humano/generador-documentos/styles.css",
-    "apps/secretaria-general/talento-humano/integraciones-oficiales/styles.css",
-    "apps/secretaria-general/talento-humano/mi-portal/styles.css",
-    "apps/secretaria-general/talento-humano/permisos/styles.css",
-    "apps/secretaria-general/talento-humano/shared/operations.css",
-    "apps/secretaria-general/talento-humano/vencimientos/styles.css"
+  "name": "Registro de Atenciones y Usuarios 360",
+  "version": "v17",
+  "new": [
+    "apps/secretaria-general/registro-atenciones"
   ],
-  "unchanged_not_included": [
-    "HTML",
-    "JavaScript",
-    "JSON",
-    "datos",
-    "otros módulos del ERP"
-  ],
-  "purpose": "Corrección visual sobria, compacta y navegable de los módulos operativos V14."
+  "modified": [
+    "apps/secretaria-general/index.html",
+    "apps/secretaria-general/data.json"
+  ]
 }

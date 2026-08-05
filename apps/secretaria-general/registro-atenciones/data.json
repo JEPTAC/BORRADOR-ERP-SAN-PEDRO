@@ -1,0 +1,330 @@
+{
+  "settings": {
+    "currentDate": "2026-08-05",
+    "office": "Secretaría General",
+    "open": "08:00",
+    "close": "17:00"
+  },
+  "services": [
+    {
+      "id": "SER-01",
+      "name": "Cita con Secretaría General",
+      "duration": 30,
+      "modality": "Presencial / virtual",
+      "color": "#0f4c81"
+    },
+    {
+      "id": "SER-02",
+      "name": "Orientación institucional",
+      "duration": 20,
+      "modality": "Presencial",
+      "color": "#168b83"
+    },
+    {
+      "id": "SER-03",
+      "name": "Recepción de documentos",
+      "duration": 15,
+      "modality": "Presencial",
+      "color": "#7c3aed"
+    },
+    {
+      "id": "SER-04",
+      "name": "Seguimiento a solicitud",
+      "duration": 20,
+      "modality": "Presencial / telefónica",
+      "color": "#c97b16"
+    },
+    {
+      "id": "SER-05",
+      "name": "Atención a proveedor",
+      "duration": 30,
+      "modality": "Presencial",
+      "color": "#b23a48"
+    }
+  ],
+  "staff": [
+    {
+      "id": "FUN-01",
+      "name": "María Fernanda López",
+      "role": "Secretaria General",
+      "office": "Secretaría General",
+      "active": true
+    },
+    {
+      "id": "FUN-02",
+      "name": "Laura Gómez",
+      "role": "Auxiliar administrativa",
+      "office": "Secretaría General",
+      "active": true
+    },
+    {
+      "id": "FUN-03",
+      "name": "Andrés Rojas",
+      "role": "Profesional universitario",
+      "office": "Secretaría General",
+      "active": true
+    },
+    {
+      "id": "FUN-04",
+      "name": "Paula Mendoza",
+      "role": "Recepción",
+      "office": "Secretaría General",
+      "active": true
+    }
+  ],
+  "appointments": [
+    {
+      "id": "CIT-1041",
+      "date": "2026-08-05",
+      "time": "08:30",
+      "end": "09:00",
+      "person": "Carlos Ramírez",
+      "document": "16.745.221",
+      "service": "Orientación institucional",
+      "host": "Laura Gómez",
+      "modality": "Presencial",
+      "status": "Confirmada",
+      "phone": "300 445 1832",
+      "email": "carlos@example.com",
+      "notes": "Consulta sobre trámite interno."
+    },
+    {
+      "id": "CIT-1042",
+      "date": "2026-08-05",
+      "time": "09:30",
+      "end": "10:00",
+      "person": "Ana Lucía Torres",
+      "document": "38.112.907",
+      "service": "Cita con Secretaría General",
+      "host": "María Fernanda López",
+      "modality": "Presencial",
+      "status": "Por llegar",
+      "phone": "312 889 1074",
+      "email": "ana@example.com",
+      "notes": "Reunión previamente autorizada."
+    },
+    {
+      "id": "CIT-1043",
+      "date": "2026-08-05",
+      "time": "11:00",
+      "end": "11:30",
+      "person": "Jorge Medina",
+      "document": "94.306.118",
+      "service": "Atención a proveedor",
+      "host": "Andrés Rojas",
+      "modality": "Virtual",
+      "status": "Confirmada",
+      "phone": "315 221 4478",
+      "email": "jorge@proveedor.co",
+      "notes": "Seguimiento contractual."
+    },
+    {
+      "id": "CIT-1044",
+      "date": "2026-08-05",
+      "time": "14:00",
+      "end": "14:20",
+      "person": "Diana Patricia Ruiz",
+      "document": "31.908.776",
+      "service": "Seguimiento a solicitud",
+      "host": "Laura Gómez",
+      "modality": "Presencial",
+      "status": "Programada",
+      "phone": "301 522 8830",
+      "email": "diana@example.com",
+      "notes": "Traer número de radicado."
+    },
+    {
+      "id": "CIT-1045",
+      "date": "2026-08-06",
+      "time": "08:00",
+      "end": "08:30",
+      "person": "Luis Hernando Paz",
+      "document": "6.482.990",
+      "service": "Cita con Secretaría General",
+      "host": "María Fernanda López",
+      "modality": "Presencial",
+      "status": "Confirmada",
+      "phone": "316 775 4032",
+      "email": "luis@example.com",
+      "notes": ""
+    },
+    {
+      "id": "CIT-1046",
+      "date": "2026-08-06",
+      "time": "10:00",
+      "end": "10:15",
+      "person": "Sofía Mejía",
+      "document": "1.114.209.774",
+      "service": "Recepción de documentos",
+      "host": "Paula Mendoza",
+      "modality": "Presencial",
+      "status": "Programada",
+      "phone": "300 776 3201",
+      "email": "sofia@example.com",
+      "notes": "Entrega de oficio."
+    }
+  ],
+  "visitors": [
+    {
+      "id": "VIS-081",
+      "name": "Carlos Ramírez",
+      "document": "16.745.221",
+      "company": "Particular",
+      "host": "Laura Gómez",
+      "purpose": "Orientación institucional",
+      "expected": "08:30",
+      "checkin": "08:24",
+      "checkout": "",
+      "status": "En sede",
+      "badge": "V-081",
+      "consent": true
+    },
+    {
+      "id": "VIS-082",
+      "name": "Mónica Salazar",
+      "document": "29.488.311",
+      "company": "Aguas del Centro",
+      "host": "Andrés Rojas",
+      "purpose": "Entrega de documentos",
+      "expected": "09:00",
+      "checkin": "08:56",
+      "checkout": "09:18",
+      "status": "Finalizada",
+      "badge": "V-082",
+      "consent": true
+    },
+    {
+      "id": "VIS-083",
+      "name": "Ana Lucía Torres",
+      "document": "38.112.907",
+      "company": "Particular",
+      "host": "María Fernanda López",
+      "purpose": "Cita programada",
+      "expected": "09:30",
+      "checkin": "",
+      "checkout": "",
+      "status": "Esperada",
+      "badge": "V-083",
+      "consent": true
+    }
+  ],
+  "queue": [
+    {
+      "id": "T-021",
+      "ticket": "A021",
+      "person": "Pedro José García",
+      "service": "Orientación institucional",
+      "arrival": "08:40",
+      "priority": "Normal",
+      "status": "En espera",
+      "counter": ""
+    },
+    {
+      "id": "T-022",
+      "ticket": "A022",
+      "person": "Lucía Hernández",
+      "service": "Recepción de documentos",
+      "arrival": "08:46",
+      "priority": "Prioritaria",
+      "status": "En espera",
+      "counter": ""
+    },
+    {
+      "id": "T-023",
+      "ticket": "A023",
+      "person": "Ricardo Vélez",
+      "service": "Seguimiento a solicitud",
+      "arrival": "08:52",
+      "priority": "Normal",
+      "status": "Llamado",
+      "counter": "Puesto 2"
+    }
+  ],
+  "attentions": [
+    {
+      "id": "ATE-301",
+      "date": "2026-08-05",
+      "time": "08:10",
+      "person": "Mónica Salazar",
+      "document": "29.488.311",
+      "channel": "Presencial",
+      "service": "Recepción de documentos",
+      "staff": "Paula Mendoza",
+      "outcome": "Documentos recibidos",
+      "commitment": "Remitir a dependencia competente",
+      "due": "2026-08-06",
+      "status": "Finalizada",
+      "rating": 5
+    },
+    {
+      "id": "ATE-302",
+      "date": "2026-08-05",
+      "time": "08:35",
+      "person": "Carlos Ramírez",
+      "document": "16.745.221",
+      "channel": "Presencial",
+      "service": "Orientación institucional",
+      "staff": "Laura Gómez",
+      "outcome": "Orientación entregada",
+      "commitment": "Usuario enviará soporte adicional",
+      "due": "2026-08-08",
+      "status": "Seguimiento",
+      "rating": 4
+    }
+  ],
+  "contacts": [
+    {
+      "id": "USR-001",
+      "name": "Carlos Ramírez",
+      "document": "16.745.221",
+      "type": "Ciudadano",
+      "phone": "300 445 1832",
+      "email": "carlos@example.com",
+      "visits": 4,
+      "lastVisit": "2026-08-05",
+      "consent": true,
+      "notes": "Prefiere contacto telefónico."
+    },
+    {
+      "id": "USR-002",
+      "name": "Ana Lucía Torres",
+      "document": "38.112.907",
+      "type": "Ciudadana",
+      "phone": "312 889 1074",
+      "email": "ana@example.com",
+      "visits": 2,
+      "lastVisit": "2026-07-22",
+      "consent": true,
+      "notes": ""
+    },
+    {
+      "id": "USR-003",
+      "name": "Jorge Medina",
+      "document": "94.306.118",
+      "type": "Proveedor",
+      "phone": "315 221 4478",
+      "email": "jorge@proveedor.co",
+      "visits": 6,
+      "lastVisit": "2026-07-29",
+      "consent": true,
+      "notes": "Representante de proveedor."
+    }
+  ],
+  "alerts": [
+    {
+      "title": "Cita sin confirmar",
+      "detail": "Diana Patricia Ruiz · 2:00 p. m.",
+      "tone": "warning"
+    },
+    {
+      "title": "Visitante en sede",
+      "detail": "Carlos Ramírez espera a Laura Gómez",
+      "tone": "info"
+    },
+    {
+      "title": "Compromiso próximo",
+      "detail": "ATE-301 vence mañana",
+      "tone": "danger"
+    }
+  ]
+}

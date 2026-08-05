@@ -1,0 +1,107 @@
+{
+  "settings": {
+    "currentDate": "2026-08-05",
+    "office": "Secretaría General",
+    "open": "08:00",
+    "close": "17:00"
+  },
+  "services": [
+    {
+      "id": "SER-01",
+      "name": "Cita con Secretaría General",
+      "duration": 30,
+      "modality": "Presencial / virtual",
+      "color": "#0f4c81"
+    },
+    {
+      "id": "SER-02",
+      "name": "Orientación institucional",
+      "duration": 20,
+      "modality": "Presencial",
+      "color": "#168b83"
+    },
+    {
+      "id": "SER-03",
+      "name": "Recepción de documentos",
+      "duration": 15,
+      "modality": "Presencial",
+      "color": "#7c3aed"
+    },
+    {
+      "id": "SER-04",
+      "name": "Seguimiento a solicitud",
+      "duration": 20,
+      "modality": "Presencial / telefónica",
+      "color": "#c97b16"
+    },
+    {
+      "id": "SER-05",
+      "name": "Atención a proveedor",
+      "duration": 30,
+      "modality": "Presencial",
+      "color": "#b23a48"
+    }
+  ],
+  "staff": [
+    {
+      "id": "FUN-01",
+      "name": "María Fernanda López",
+      "role": "Secretaria General",
+      "office": "Secretaría General",
+      "active": true
+    },
+    {
+      "id": "FUN-02",
+      "name": "Laura Gómez",
+      "role": "Auxiliar administrativa",
+      "office": "Secretaría General",
+      "active": true
+    },
+    {
+      "id": "FUN-03",
+      "name": "Andrés Rojas",
+      "role": "Profesional universitario",
+      "office": "Secretaría General",
+      "active": true
+    },
+    {
+      "id": "FUN-04",
+      "name": "Paula Mendoza",
+      "role": "Recepción",
+      "office": "Secretaría General",
+      "active": true
+    }
+  ],
+  "attentions": [
+    {
+      "id": "ATE-301",
+      "date": "2026-08-05",
+      "time": "08:10",
+      "person": "Mónica Salazar",
+      "document": "29.488.311",
+      "channel": "Presencial",
+      "service": "Recepción de documentos",
+      "staff": "Paula Mendoza",
+      "outcome": "Documentos recibidos",
+      "commitment": "Remitir a dependencia competente",
+      "due": "2026-08-06",
+      "status": "Finalizada",
+      "rating": 5
+    },
+    {
+      "id": "ATE-302",
+      "date": "2026-08-05",
+      "time": "08:35",
+      "person": "Carlos Ramírez",
+      "document": "16.745.221",
+      "channel": "Presencial",
+      "service": "Orientación institucional",
+      "staff": "Laura Gómez",
+      "outcome": "Orientación entregada",
+      "commitment": "Usuario enviará soporte adicional",
+      "due": "2026-08-08",
+      "status": "Seguimiento",
+      "rating": 4
+    }
+  ]
+}

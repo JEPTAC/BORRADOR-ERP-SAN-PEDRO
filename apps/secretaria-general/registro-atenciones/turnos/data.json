@@ -1,0 +1,100 @@
+{
+  "settings": {
+    "currentDate": "2026-08-05",
+    "office": "Secretaría General",
+    "open": "08:00",
+    "close": "17:00"
+  },
+  "services": [
+    {
+      "id": "SER-01",
+      "name": "Cita con Secretaría General",
+      "duration": 30,
+      "modality": "Presencial / virtual",
+      "color": "#0f4c81"
+    },
+    {
+      "id": "SER-02",
+      "name": "Orientación institucional",
+      "duration": 20,
+      "modality": "Presencial",
+      "color": "#168b83"
+    },
+    {
+      "id": "SER-03",
+      "name": "Recepción de documentos",
+      "duration": 15,
+      "modality": "Presencial",
+      "color": "#7c3aed"
+    },
+    {
+      "id": "SER-04",
+      "name": "Seguimiento a solicitud",
+      "duration": 20,
+      "modality": "Presencial / telefónica",
+      "color": "#c97b16"
+    },
+    {
+      "id": "SER-05",
+      "name": "Atención a proveedor",
+      "duration": 30,
+      "modality": "Presencial",
+      "color": "#b23a48"
+    }
+  ],
+  "queue": [
+    {
+      "id": "T-021",
+      "ticket": "A021",
+      "person": "Pedro José García",
+      "service": "Orientación institucional",
+      "arrival": "08:40",
+      "priority": "Normal",
+      "status": "En espera",
+      "counter": ""
+    },
+    {
+      "id": "T-022",
+      "ticket": "A022",
+      "person": "Lucía Hernández",
+      "service": "Recepción de documentos",
+      "arrival": "08:46",
+      "priority": "Prioritaria",
+      "status": "En espera",
+      "counter": ""
+    },
+    {
+      "id": "T-023",
+      "ticket": "A023",
+      "person": "Ricardo Vélez",
+      "service": "Seguimiento a solicitud",
+      "arrival": "08:52",
+      "priority": "Normal",
+      "status": "Llamado",
+      "counter": "Puesto 2"
+    }
+  ],
+  "counters": [
+    {
+      "id": "P1",
+      "name": "Puesto 1",
+      "staff": "Paula Mendoza",
+      "status": "Disponible",
+      "current": ""
+    },
+    {
+      "id": "P2",
+      "name": "Puesto 2",
+      "staff": "Laura Gómez",
+      "status": "Atendiendo",
+      "current": "A023"
+    },
+    {
+      "id": "P3",
+      "name": "Secretaría",
+      "staff": "María Fernanda López",
+      "status": "Disponible",
+      "current": ""
+    }
+  ]
+}

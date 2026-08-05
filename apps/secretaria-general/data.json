@@ -9,8 +9,8 @@
     },
     {
       "label": "Acciones SIG abiertas",
-      "value": 38,
-      "hint": "6 próximas a vencer",
+      "value": 9,
+      "hint": "3 próximas a vencer",
       "icon": "workflow",
       "tone": "warning"
     },
@@ -39,11 +39,11 @@
       "progress": 86
     },
     {
-      "name": "SIG 360",
-      "desc": "Normas ISO, procesos, documentos, riesgos, indicadores, auditorías, cumplimiento y sistemas especializados.",
+      "name": "Sistema Integrado de Gestión",
+      "desc": "Documentos, riesgos, indicadores, auditorías y planes de mejoramiento.",
       "icon": "workflow",
       "href": "sig/index.html",
-      "value": "22 componentes",
+      "value": "9 acciones",
       "progress": 72
     },
     {
@@ -61,6 +61,14 @@
       "href": "calendario/index.html",
       "value": "18 esta semana",
       "progress": 68
+    },
+    {
+      "name": "Atenciones y visitantes",
+      "desc": "Citas, recepción presencial, turnos, usuarios, historial de atenciones y reportes de servicio.",
+      "icon": "contact",
+      "href": "registro-atenciones/index.html",
+      "value": "8 atenciones hoy",
+      "progress": 84
     }
   ],
   "tasks": [
