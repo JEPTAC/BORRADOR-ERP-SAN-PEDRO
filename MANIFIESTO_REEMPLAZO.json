@@ -1,14 +1,7 @@
 {
-  "name": "Reemplazo_DESDE_RAIZ_Calendario_Navegable_v08",
-  "version": "v08",
-  "base_visual": "V06 original",
-  "replace": ["apps/secretaria-general/calendario"],
-  "changed_files": [
-    "apps/secretaria-general/calendario/index.html",
-    "apps/secretaria-general/calendario/styles.css",
-    "apps/secretaria-general/calendario/script.js",
-    "apps/secretaria-general/calendario/cronograma/index.html",
-    "apps/secretaria-general/calendario/cronograma/styles.css",
-    "apps/secretaria-general/calendario/cronograma/script.js"
-  ]
+  "name": "Reemplazo_DESDE_RAIZ_Cronograma_Pulido_v09",
+  "version": "v09",
+  "replace": ["apps/secretaria-general/calendario/cronograma"],
+  "scope": "Solo cronograma",
+  "global_theme_modified": false
 }

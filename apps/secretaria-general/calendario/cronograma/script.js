@@ -28,18 +28,45 @@ function items(){return Agenda.data.events.filter(e=>{
  return (!T.office||e.office===T.office)&&(!T.status||e.status===T.status)&&(!T.query||haystack.includes(T.query))&&e.date<=T.to&&(e.endDate||e.date)>=T.from
  }).sort((a,b)=>a.date.localeCompare(b.date))}
 function daysBetween(a,b){return Math.max(1,Math.round((Agenda.parseDate(b)-Agenda.parseDate(a))/86400000)+1)}
+function monthGroups(totalDays){
+ const groups=[];
+ for(let i=0;i<totalDays;i++){
+  const d=Agenda.addDays(T.from,i),date=Agenda.parseDate(d),key=`${date.getFullYear()}-${date.getMonth()}`;
+  if(!groups.length||groups[groups.length-1].key!==key){
+   groups.push({key,count:1,label:Agenda.dateLabel(d,{month:'long',year:'numeric'})});
+  }else groups[groups.length-1].count++;
+ }
+ return groups
+}
+function timelineHeader(totalDays,unit){
+ const months=monthGroups(totalDays).map(g=>`<div class="month-band" style="grid-column:span ${g.count}">${Agenda.escape(g.label)}</div>`).join('');
+ const days=Array.from({length:totalDays},(_,i)=>{
+  const d=Agenda.addDays(T.from,i),date=Agenda.parseDate(d),weekend=[0,6].includes(date.getDay()),today=d===Agenda.data.today;
+  const weekday=Agenda.dateLabel(d,{weekday:'short'}).replace('.','');
+  return `<div class="timeline-unit ${weekend?'weekend':''} ${today?'today':''}" title="${Agenda.dateLabel(d,{weekday:'long',day:'2-digit',month:'long',year:'numeric'})}"><span>${weekday}</span><strong>${String(date.getDate()).padStart(2,'0')}</strong></div>`
+ }).join('');
+ return `<div class="timeline-header-stack"><div class="month-bands" style="grid-template-columns:repeat(${totalDays},${unit}px)">${months}</div><div class="timeline-units" style="grid-template-columns:repeat(${totalDays},${unit}px)">${days}</div></div>`
+}
+function trackGuides(totalDays,unit){
+ let html='';
+ for(let i=0;i<totalDays;i++){
+  const d=Agenda.addDays(T.from,i),date=Agenda.parseDate(d);
+  if([0,6].includes(date.getDay()))html+=`<span class="track-weekend" style="left:${i*unit}px;width:${unit}px"></span>`;
+  if(date.getDate()===1&&i>0)html+=`<span class="month-separator" style="left:${i*unit}px"></span>`;
+ }
+ return html
+}
 function render(){
- const list=items(),totalDays=daysBetween(T.from,T.to),scale=document.getElementById('timelineScale').value,base=scale==='day'?34:scale==='week'?22:15,unit=Math.max(10,Math.round(base*T.zoom)),over=list.filter(e=>(e.endDate||e.date)<Agenda.data.today&&e.status!=='Cumplida'),blocked=list.filter(e=>(e.dependencies||[]).some(id=>Agenda.data.events.find(x=>x.id===id)?.status!=='Cumplida')),critical=list.filter(e=>e.priority==='Crítica'||e.status==='En riesgo'),milestones=list.filter(e=>e.type==='deadline');
+ const list=items(),totalDays=daysBetween(T.from,T.to),scale=document.getElementById('timelineScale').value,base=scale==='day'?48:scale==='week'?42:36,unit=Math.max(30,Math.round(base*T.zoom)),over=list.filter(e=>(e.endDate||e.date)<Agenda.data.today&&e.status!=='Cumplida'),blocked=list.filter(e=>(e.dependencies||[]).some(id=>Agenda.data.events.find(x=>x.id===id)?.status!=='Cumplida')),critical=list.filter(e=>e.priority==='Crítica'||e.status==='En riesgo'),milestones=list.filter(e=>e.type==='deadline');
  T.unit=unit;document.getElementById('zoomValue').textContent=`${Math.round(T.zoom*100)}%`;
  document.getElementById('timelineKpis').innerHTML=[['calendar-range',list.length,'Elementos del cronograma'],['flag',milestones.length,'Hitos'],['git-branch',blocked.length,'Bloqueados'],['alert-triangle',over.length,'Retrasados'],['route',critical.length,'Ruta crítica']].map(([i,v,l])=>`<div class="kpi"><div class="kpi-icon"><i data-lucide="${i}"></i></div><div><strong>${v}</strong><span>${l}</span></div></div>`).join('');
- const ticks=[];for(let i=0;i<totalDays;i++){const d=Agenda.addDays(T.from,i);if(i===0||Agenda.parseDate(d).getDay()===1||i===totalDays-1)ticks.push({i,d})}
- const timelineHeader=`<div class="timeline-units" style="grid-template-columns:repeat(${totalDays},${unit}px)">${Array.from({length:totalDays},(_,i)=>{const d=Agenda.addDays(T.from,i),date=Agenda.parseDate(d),day=date.getDate(),dow=date.getDay();let label='';if(scale==='day')label=day===1||i===0?Agenda.dateLabel(d,{day:'2-digit',month:'short'}):day;else if(scale==='week')label=i===0||dow===1?Agenda.dateLabel(d,{day:'2-digit',month:'short'}):'';else label=i===0||day===1||day===15?Agenda.dateLabel(d,{day:'2-digit',month:'short'}):'';return `<div class="timeline-unit">${label}</div>`}).join('')}</div>`;
- let html=`<div class="gantt-head">Actividad</div><div class="gantt-head">Responsable</div><div class="gantt-head timeline">${timelineHeader}</div>`;
+ let html=`<div class="gantt-head activity-head">Actividad</div><div class="gantt-head owner-head">Responsable</div><div class="gantt-head timeline">${timelineHeader(totalDays,unit)}</div>`;
+ const guides=trackGuides(totalDays,unit);
  list.forEach(e=>{
-  const start=Math.max(0,daysBetween(T.from,e.date)-1),duration=daysBetween(e.date,e.endDate||e.date),left=start*unit,width=Math.max(e.type==='deadline'?18:duration*unit-4,18),p=Agenda.person((e.assignees||[])[0]),color=Agenda.calendar(e.calendar).color,criticalClass=T.critical&&(e.priority==='Crítica'||e.status==='En riesgo')?'critical':'',milestone=e.type==='deadline'&&duration===1;
-  html+=`<div class="gantt-row"><div class="gantt-name" data-event="${e.id}" title="Abrir ${Agenda.escape(e.title)}"><span class="color-dot" style="background:${color}"></span><div><strong>${Agenda.escape(e.title)}</strong><span>${Agenda.escape(Agenda.office(e.office).name)} · ${e.status} · ${e.progress||0}%</span></div></div><div class="gantt-owner"><span class="person-chip"><span class="avatar">${p.avatar}</span>${Agenda.escape(p.name.split(' ')[0])}</span></div><div class="gantt-track" style="--unit:${unit}px;width:${totalDays*unit}px"><button data-event="${e.id}" class="gantt-bar ${criticalClass} ${milestone?'milestone':''}" style="left:${left}px;width:${width}px;--bar:${color}" title="${Agenda.escape(e.title)}"><span class="progress-handle" style="width:${e.progress||0}%"></span>${milestone?'':`<strong>${Agenda.escape(e.title)}</strong><span>${Agenda.dateLabel(e.date,{day:'2-digit',month:'short'})} – ${Agenda.dateLabel(e.endDate||e.date,{day:'2-digit',month:'short'})}</span>`}</button>${todayLine(totalDays,unit)}</div></div>`
+  const start=Math.max(0,daysBetween(T.from,e.date)-1),duration=daysBetween(e.date,e.endDate||e.date),left=start*unit,width=Math.max(e.type==='deadline'?20:duration*unit-8,20),p=Agenda.person((e.assignees||[])[0]),color=Agenda.calendar(e.calendar).color,criticalClass=T.critical&&(e.priority==='Crítica'||e.status==='En riesgo')?'critical':'',milestone=e.type==='deadline'&&duration===1;
+  html+=`<div class="gantt-row"><div class="gantt-name" data-event="${e.id}" title="Abrir ${Agenda.escape(e.title)}"><span class="color-dot" style="background:${color}"></span><div><strong>${Agenda.escape(e.title)}</strong><span>${Agenda.escape(Agenda.office(e.office).name)} · ${e.status} · ${e.progress||0}%</span></div></div><div class="gantt-owner"><span class="person-chip"><span class="avatar">${p.avatar}</span>${Agenda.escape(p.name.split(' ')[0])}</span></div><div class="gantt-track" style="--unit:${unit}px;width:${totalDays*unit}px">${guides}<button data-event="${e.id}" class="gantt-bar ${criticalClass} ${milestone?'milestone':''}" style="left:${left}px;width:${width}px;--bar:${color}" title="${Agenda.escape(e.title)}"><span class="progress-handle" style="width:${e.progress||0}%"></span>${milestone?'':`<strong>${Agenda.escape(e.title)}</strong><span>${Agenda.dateLabel(e.date,{day:'2-digit',month:'short'})} – ${Agenda.dateLabel(e.endDate||e.date,{day:'2-digit',month:'short'})}</span>`}</button>${todayLine(totalDays,unit)}</div></div>`
  });
- const gantt=document.getElementById('gantt');gantt.style.gridTemplateColumns=`260px 105px ${totalDays*unit}px`;gantt.innerHTML=html;
+ const gantt=document.getElementById('gantt');gantt.style.gridTemplateColumns=`300px 130px ${totalDays*unit}px`;gantt.innerHTML=html;
  gantt.querySelectorAll('[data-event]').forEach(x=>x.onclick=()=>location.href=`../index.html?event=${x.dataset.event}`);
  renderDependencies(blocked);renderMilestones(milestones);ERP.refreshIcons()
 }
