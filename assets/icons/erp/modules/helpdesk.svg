@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title-helpdesk" data-icon="helpdesk" data-category="modules">
+  <title id="title-helpdesk">Mesa de ayuda</title>
+  <style>
+    .line{fill:none;stroke:#0891B2;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .thin{fill:none;stroke:#0891B2;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .fill{fill:#0891B2}
+    .accent{fill:#F4B400}
+    .tertiary{fill:#14B8A6}
+    .soft{fill:#0891B2;opacity:.12}
+    .soft-line{fill:none;stroke:#0891B2;stroke-width:6;opacity:.12;stroke-linecap:round}
+    .white{fill:#fff}
+    </style>
+  <rect x="6" y="8" width="52" height="50" rx="14" fill="#071A38" opacity=".14"/>
+  <rect x="6" y="5" width="52" height="50" rx="14" fill="#FFFFFF" stroke="#0891B2" stroke-width="2.5"/>
+  <path d="M16 10h24c7.7 0 13 4.7 13 12" fill="none" stroke="#0891B2" opacity=".10" stroke-width="8" stroke-linecap="round"/>
+  <g class="icon-body"><circle class="line" cx="32" cy="31" r="15"/><path class="line" d="M17 31v7c0 4 3 7 7 7h2V34h-9M47 31v7c0 4-3 7-7 7h-2V34h9"/><path class="line" d="M28 48h8"/><circle class="accent" cx="32" cy="26" r="4"/></g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title-edit" data-icon="edit" data-category="actions">
+  <title id="title-edit">Editar</title>
+  <style>
+    .line{fill:none;stroke:#1D4ED8;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .thin{fill:none;stroke:#1D4ED8;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .fill{fill:#1D4ED8}
+    .accent{fill:#F4B400}
+    .tertiary{fill:#14B8A6}
+    .soft{fill:#1D4ED8;opacity:.12}
+    .soft-line{fill:none;stroke:#1D4ED8;stroke-width:6;opacity:.12;stroke-linecap:round}
+    .white{fill:#fff}
+    </style><path class="line" d="M18 44l4-11 18-18 8 8-18 18-12 3Z"/><path class="line" d="M37 18l8 8"/><circle class="accent" cx="48" cy="16" r="3"/>
+</svg>

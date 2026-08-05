@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Selector de transacciones del ERP Municipal de San Pedro">
+  <title>Mis transacciones · ERP Municipal</title>
+  <link rel="stylesheet" href="styles.css?v=24.0.0">
+</head>
+<body>
+  <div class="launcher-shell">
+    <aside class="launcher-rail" aria-label="Navegación principal">
+      <a class="rail-brand" href="../launcher/index.html" aria-label="Inicio del ERP">
+        <span>SP</span>
+      </a>
+      <nav class="rail-nav">
+        <button class="rail-button active" type="button" data-view="all" title="Inicio">
+          <img src="../assets/icons/erp/modules/dashboard.svg" alt=""><span>Inicio</span>
+        </button>
+        <button class="rail-button" type="button" data-view="favorites" title="Favoritos">
+          <img src="../assets/icons/erp/modules/functions.svg" alt=""><span>Favoritos</span>
+        </button>
+        <button class="rail-button" type="button" data-view="recent" title="Recientes">
+          <img src="../assets/icons/erp/modules/audit.svg" alt=""><span>Recientes</span>
+        </button>
+      </nav>
+      <div class="rail-bottom">
+        <a class="rail-button" href="../perfil/index.html" title="Mi perfil">
+          <img src="../assets/icons/erp/modules/settings.svg" alt=""><span>Perfil</span>
+        </a>
+        <button class="rail-avatar" id="railProfile" type="button" title="Cuenta"><span id="railInitials">US</span></button>
+      </div>
+    </aside>
+
+    <main class="launcher-main">
+      <header class="launcher-topbar">
+        <div class="topbar-brand">
+          <img src="../assets/branding/san-pedro.svg" alt="San Pedro, donde nacen los sueños">
+          <div><strong>ERP Municipal</strong><span>Centro de transacciones</span></div>
+        </div>
+
+        <div class="global-search">
+          <img src="../assets/icons/erp/actions/search.svg" alt="">
+          <input id="transactionSearch" type="search" placeholder="Buscar una transacción o proceso…" autocomplete="off">
+          <kbd>Ctrl K</kbd>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="date-block"><strong id="currentTime">--:--</strong><span id="currentDate">Cargando fecha…</span></div>
+          <button class="top-icon" id="notificationButton" type="button" aria-label="Notificaciones">
+            <img src="../assets/icons/erp/modules/notifications.svg" alt=""><span class="notification-dot"></span>
+          </button>
+          <button class="profile-trigger" id="profileTrigger" type="button" aria-haspopup="menu" aria-expanded="false">
+            <span class="profile-photo" id="profilePhoto"><span id="profileInitials">US</span></span>
+            <span class="profile-copy"><strong id="profileName">Usuario</strong><small id="profileRole">Perfil</small></span>
+            <span class="profile-chevron">⌄</span>
+          </button>
+        </div>
+
+        <div class="profile-menu hidden" id="profileMenu" role="menu">
+          <div class="profile-menu-head">
+            <span class="profile-photo large" id="menuPhoto"><span id="menuInitials">US</span></span>
+            <div><strong id="menuName">Usuario</strong><span id="menuEmail">correo</span></div>
+          </div>
+          <a href="../perfil/index.html" role="menuitem">Editar perfil y foto</a>
+          <button id="changeProfile" type="button" role="menuitem">Cambiar perfil de demostración</button>
+          <button id="logout" class="danger" type="button" role="menuitem">Cerrar sesión</button>
+        </div>
+      </header>
+
+      <div class="launcher-content">
+        <section class="welcome-row">
+          <div>
+            <span class="welcome-kicker">ESPACIO PERSONAL DE TRABAJO</span>
+            <h1 id="welcomeTitle">Buenos días</h1>
+            <p id="welcomeCopy">Estas son las transacciones disponibles para tu perfil.</p>
+          </div>
+          <div class="access-summary">
+            <article><span id="availableCount">0</span><small>procesos habilitados</small></article>
+            <article><span id="favoriteCount">0</span><small>favoritos</small></article>
+            <article><span id="recentCount">0</span><small>recientes</small></article>
+          </div>
+        </section>
+
+        <section id="spotlightSection" class="spotlight-section" aria-label="Acceso destacado"></section>
+
+        <section class="transactions-section">
+          <div class="section-topline">
+            <div>
+              <h2 id="sectionTitle">Tus transacciones</h2>
+              <p id="sectionDescription">Accesos disponibles de acuerdo con el perfil seleccionado.</p>
+            </div>
+            <div id="categoryFilters" class="category-filters" aria-label="Filtrar transacciones"></div>
+          </div>
+
+          <div id="transactionGrid" class="transaction-grid"></div>
+          <div id="emptyState" class="empty-state hidden">
+            <span class="empty-icon"><img src="../assets/icons/erp/modules/functions.svg" alt=""></span>
+            <h3>No encontramos transacciones</h3>
+            <p>Cambia el filtro o intenta con otro término de búsqueda.</p>
+            <button id="clearFilters" type="button">Mostrar todas</button>
+          </div>
+        </section>
+
+        <footer class="launcher-footer">
+          <span>Alcaldía de San Pedro · Valle del Cauca</span>
+          <span>Prototipo sin Supabase · Los permisos son simulados localmente</span>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <aside class="notification-panel hidden" id="notificationPanel" aria-label="Notificaciones">
+    <header><div><strong>Notificaciones</strong><span>Resumen de demostración</span></div><button id="closeNotifications" type="button">×</button></header>
+    <div class="notification-list">
+      <article><span class="notice-icon"><img src="../assets/icons/erp/modules/calendar.svg" alt=""></span><div><strong>Agenda institucional</strong><p>Tienes actividades programadas para hoy.</p><small>Hace 12 minutos</small></div></article>
+      <article><span class="notice-icon"><img src="../assets/icons/erp/modules/helpdesk.svg" alt=""></span><div><strong>Mesa TIC</strong><p>Hay solicitudes que requieren seguimiento.</p><small>Hace 35 minutos</small></div></article>
+      <article><span class="notice-icon"><img src="../assets/icons/erp/modules/quality.svg" alt=""></span><div><strong>Sistema de Gestión</strong><p>Revisa los compromisos de mejora pendientes.</p><small>Hoy</small></div></article>
+    </div>
+  </aside>
+  <div id="panelBackdrop" class="panel-backdrop hidden"></div>
+  <div id="toast" class="toast hidden" role="status"></div>
+
+  <script src="script.js?v=24.0.0"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title-save" data-icon="save" data-category="actions">
+  <title id="title-save">Guardar</title>
+  <style>
+    .line{fill:none;stroke:#1D4ED8;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .thin{fill:none;stroke:#1D4ED8;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .fill{fill:#1D4ED8}
+    .accent{fill:#F4B400}
+    .tertiary{fill:#14B8A6}
+    .soft{fill:#1D4ED8;opacity:.12}
+    .soft-line{fill:none;stroke:#1D4ED8;stroke-width:6;opacity:.12;stroke-linecap:round}
+    .white{fill:#fff}
+    </style><rect class="line" x="17" y="16" width="30" height="32" rx="4"/><path class="line" d="M23 16v11h17V16M23 48V35h18v13"/><circle class="accent" cx="37" cy="21" r="2"/>
+</svg>

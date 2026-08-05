@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title-dashboard" data-icon="dashboard" data-category="modules">
+  <title id="title-dashboard">Panel principal</title>
+  <style>
+    .line{fill:none;stroke:#1D4ED8;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .thin{fill:none;stroke:#1D4ED8;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .fill{fill:#1D4ED8}
+    .accent{fill:#F4B400}
+    .tertiary{fill:#14B8A6}
+    .soft{fill:#1D4ED8;opacity:.12}
+    .soft-line{fill:none;stroke:#1D4ED8;stroke-width:6;opacity:.12;stroke-linecap:round}
+    .white{fill:#fff}
+    </style>
+  <rect x="6" y="8" width="52" height="50" rx="14" fill="#071A38" opacity=".14"/>
+  <rect x="6" y="5" width="52" height="50" rx="14" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2.5"/>
+  <path d="M16 10h24c7.7 0 13 4.7 13 12" fill="none" stroke="#1D4ED8" opacity=".10" stroke-width="8" stroke-linecap="round"/>
+  <g class="icon-body"><rect class="soft" x="16" y="17" width="13" height="10" rx="3"/><rect class="accent" x="35" y="17" width="13" height="18" rx="3"/><rect class="tertiary" x="16" y="33" width="13" height="15" rx="3"/><rect class="soft" x="35" y="39" width="13" height="9" rx="3"/><rect class="line" x="16" y="17" width="13" height="10" rx="3"/><rect class="line" x="35" y="17" width="13" height="18" rx="3"/><rect class="line" x="16" y="33" width="13" height="15" rx="3"/><rect class="line" x="35" y="39" width="13" height="9" rx="3"/></g>
+</svg>

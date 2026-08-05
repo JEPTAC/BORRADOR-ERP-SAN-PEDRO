@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title-security" data-icon="security" data-category="modules">
+  <title id="title-security">Seguridad</title>
+  <style>
+    .line{fill:none;stroke:#0F2C5C;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .thin{fill:none;stroke:#0F2C5C;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .fill{fill:#0F2C5C}
+    .accent{fill:#F4B400}
+    .tertiary{fill:#14B8A6}
+    .soft{fill:#0F2C5C;opacity:.12}
+    .soft-line{fill:none;stroke:#0F2C5C;stroke-width:6;opacity:.12;stroke-linecap:round}
+    .white{fill:#fff}
+    </style>
+  <rect x="6" y="8" width="52" height="50" rx="14" fill="#071A38" opacity=".14"/>
+  <rect x="6" y="5" width="52" height="50" rx="14" fill="#FFFFFF" stroke="#0F2C5C" stroke-width="2.5"/>
+  <path d="M16 10h24c7.7 0 13 4.7 13 12" fill="none" stroke="#0F2C5C" opacity=".10" stroke-width="8" stroke-linecap="round"/>
+  <g class="icon-body"><polygon class="line" points="32,14 46,20 44,36 32,49 20,36 18,20"/><path class="thin" d="M26 31l4 4 9-11"/><circle class="accent" cx="44" cy="18" r="3"/></g>
+</svg>

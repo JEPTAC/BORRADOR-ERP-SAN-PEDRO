@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title-arrow-right" data-icon="arrow-right" data-category="actions">
+  <title id="title-arrow-right">Siguiente</title>
+  <style>
+    .line{fill:none;stroke:#1D4ED8;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .thin{fill:none;stroke:#1D4ED8;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .fill{fill:#1D4ED8}
+    .accent{fill:#F4B400}
+    .tertiary{fill:#14B8A6}
+    .soft{fill:#1D4ED8;opacity:.12}
+    .soft-line{fill:none;stroke:#1D4ED8;stroke-width:6;opacity:.12;stroke-linecap:round}
+    .white{fill:#fff}
+    </style><path class="line" d="M21 32h24M35 22l10 10-10 10"/><circle class="accent" cx="46" cy="18" r="3"/>
+</svg>

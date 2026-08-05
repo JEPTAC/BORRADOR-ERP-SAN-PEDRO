@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title-settings" data-icon="settings" data-category="modules">
+  <title id="title-settings">Configuración</title>
+  <style>
+    .line{fill:none;stroke:#64748B;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .thin{fill:none;stroke:#64748B;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .fill{fill:#64748B}
+    .accent{fill:#F4B400}
+    .tertiary{fill:#14B8A6}
+    .soft{fill:#64748B;opacity:.12}
+    .soft-line{fill:none;stroke:#64748B;stroke-width:6;opacity:.12;stroke-linecap:round}
+    .white{fill:#fff}
+    </style>
+  <rect x="6" y="8" width="52" height="50" rx="14" fill="#071A38" opacity=".14"/>
+  <rect x="6" y="5" width="52" height="50" rx="14" fill="#FFFFFF" stroke="#64748B" stroke-width="2.5"/>
+  <path d="M16 10h24c7.7 0 13 4.7 13 12" fill="none" stroke="#64748B" opacity=".10" stroke-width="8" stroke-linecap="round"/>
+  <g class="icon-body"><circle class="soft" cx="32" cy="32" r="7"/><circle class="line" cx="32" cy="32" r="7"/><path class="line" d="M32 14v5M32 45v5M14 32h5M45 32h5M19 19l4 4M41 41l4 4M45 19l-4 4M23 41l-4 4"/><circle class="accent" cx="47" cy="17" r="3"/></g>
+</svg>

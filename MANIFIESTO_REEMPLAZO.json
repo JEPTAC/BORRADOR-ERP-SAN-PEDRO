@@ -1,17 +1,224 @@
 {
-  "name": "Capa_Visual_Global_Premium_ERP_v23",
-  "version": "23.0.0",
-  "new_files": [
-    "assets/css/erp-premium-v23.css"
+  "version": "24.0.0",
+  "name": "Acceso y Launcher ERP Municipal San Pedro",
+  "supabase": false,
+  "existing_files_modified": [
+    "index.html"
   ],
-  "modified_files": [
-    "assets/js/shell.js"
+  "new_directories": [
+    "acceso",
+    "launcher",
+    "perfil",
+    "assets/branding",
+    "assets/icons/erp"
   ],
-  "untouched": [
-    "sidebar colors",
-    "module HTML",
-    "module JavaScript",
-    "module JSON",
-    "database configuration"
+  "package_file_count_including_manifest": 42,
+  "manifest_self_excluded_from_hash_list": true,
+  "files": [
+    {
+      "path": "ARCHIVOS_ANTIGUOS_OPCIONALES_PARA_ELIMINAR.txt",
+      "bytes": 251,
+      "sha256": "2709a863a697a7815d307b4d4b40b804212c771539ae2eaad72fe912302127da"
+    },
+    {
+      "path": "LEEME_REEMPLAZO.txt",
+      "bytes": 1198,
+      "sha256": "5d9c94146bed4e65f512a9be4aa9875d243d8c0f5d6a8b0f5099092a350a845b"
+    },
+    {
+      "path": "VALIDACION.txt",
+      "bytes": 604,
+      "sha256": "da58b0392e788c0e1b863dcf984ba7620519ac2d0217d8ad3245b9dfc9f1a73d"
+    },
+    {
+      "path": "acceso/data.json",
+      "bytes": 2360,
+      "sha256": "755d2b7649e2417fdce8c595a0de5729907b3f247c0ca45cedbee92f91833210"
+    },
+    {
+      "path": "acceso/index.html",
+      "bytes": 5442,
+      "sha256": "d1083d4c12f077cd4b861b384d0930c755aff87ac1d48df14684a8cd38eaa6e9"
+    },
+    {
+      "path": "acceso/script.js",
+      "bytes": 5451,
+      "sha256": "e296a1d699154a8f8bdf1cd54ea465ba488dd1eab8deab680a1446e8dd10f02a"
+    },
+    {
+      "path": "acceso/styles.css",
+      "bytes": 10634,
+      "sha256": "07b993fd83c9f21888e64fce0b3ffcc868d85a36fd30877cd1f48570224d8f93"
+    },
+    {
+      "path": "assets/branding/san-pedro.svg",
+      "bytes": 1443990,
+      "sha256": "0f9268559825a0bfd81f4670df54380b45e8ec797907cf6ee6b3b9b3d2a0abd5"
+    },
+    {
+      "path": "assets/icons/erp/actions/add.svg",
+      "bytes": 757,
+      "sha256": "5625c866733d19fedfdcc18f0b06250d0400de86ea6a1e331ff627448f860e76"
+    },
+    {
+      "path": "assets/icons/erp/actions/arrow-right.svg",
+      "bytes": 748,
+      "sha256": "5ad982a9692530a0da23aca1f436414d520e500370ce8703252b6216ee82fd33"
+    },
+    {
+      "path": "assets/icons/erp/actions/back.svg",
+      "bytes": 715,
+      "sha256": "4e52d5599c43c929b0e7d1675eea957747347a4138f39b63479bca85ee12bb33"
+    },
+    {
+      "path": "assets/icons/erp/actions/check.svg",
+      "bytes": 809,
+      "sha256": "3197d66548c70e6e6920f214d519043db39585f94df5cc0be1389c7c27090e47"
+    },
+    {
+      "path": "assets/icons/erp/actions/close.svg",
+      "bytes": 724,
+      "sha256": "a75d671f865337af6dce4368ce547eba7f1bb1d59fe9316d1896bb02c54cc789"
+    },
+    {
+      "path": "assets/icons/erp/actions/edit.svg",
+      "bytes": 765,
+      "sha256": "e77ec0b7aafeefb5bc15fb980383c99e70f0ca5e3eac8a0957ef10abf2319a44"
+    },
+    {
+      "path": "assets/icons/erp/actions/save.svg",
+      "bytes": 792,
+      "sha256": "d0da2f3d5795ea9d0766f6bfa1bb4fd7861a8c93f7f858b946e2b31ebdd8d4b9"
+    },
+    {
+      "path": "assets/icons/erp/actions/search.svg",
+      "bytes": 760,
+      "sha256": "403e4181b05de66ad383d669a1e706c03a045d6436ec4a6460fc9552149e1598"
+    },
+    {
+      "path": "assets/icons/erp/modules/analytics.svg",
+      "bytes": 1171,
+      "sha256": "9d07725894f944fea99ba7e8df148449bcc0e7e26a92a89ab530837546163d43"
+    },
+    {
+      "path": "assets/icons/erp/modules/audit.svg",
+      "bytes": 1296,
+      "sha256": "1faff927ded58091c07be447b077891df55d8373ab7b3912ec73f644860b1c43"
+    },
+    {
+      "path": "assets/icons/erp/modules/calendar.svg",
+      "bytes": 1340,
+      "sha256": "36443bccff4de00647aed6f71aa1ba868c0f281fda0a299785cb0377a46436dc"
+    },
+    {
+      "path": "assets/icons/erp/modules/customers.svg",
+      "bytes": 1259,
+      "sha256": "2986bb7afa706626d01462cdd4a08ad9eb78ce1deb60ebd6e47e8b3a984cf43d"
+    },
+    {
+      "path": "assets/icons/erp/modules/dashboard.svg",
+      "bytes": 1506,
+      "sha256": "e3fdac8cc4cb781db9638e99afd3df67df352fa13a736f23ae885999a9ceec72"
+    },
+    {
+      "path": "assets/icons/erp/modules/documents.svg",
+      "bytes": 1234,
+      "sha256": "369632ab1f96d471513633c7de8f1d1199318c6903defa365bf4afeb8aadb5c6"
+    },
+    {
+      "path": "assets/icons/erp/modules/functions.svg",
+      "bytes": 1185,
+      "sha256": "2cab59fabcbbcf0ecd80ba0376de17c8de2133f58968f167f43a7bb63bd60735"
+    },
+    {
+      "path": "assets/icons/erp/modules/helpdesk.svg",
+      "bytes": 1190,
+      "sha256": "7b44d66576b4335515b0b02c1eca67132f049dd2752d9a2815b98b5d595dd0bb"
+    },
+    {
+      "path": "assets/icons/erp/modules/integrations.svg",
+      "bytes": 1320,
+      "sha256": "c769f57f1df8ba70493a0ebf20a24b8554fcd979391835035a762eab454903a4"
+    },
+    {
+      "path": "assets/icons/erp/modules/notifications.svg",
+      "bytes": 1213,
+      "sha256": "3e89bee8084631bb6059c636dc6dead29ff426ae2d6d77f1567f3a0cb2558888"
+    },
+    {
+      "path": "assets/icons/erp/modules/quality.svg",
+      "bytes": 1155,
+      "sha256": "d810bbaac1c7e803b4c808071e383d5e867f71d71f684a77d6f860a9caba8c9d"
+    },
+    {
+      "path": "assets/icons/erp/modules/reports.svg",
+      "bytes": 1182,
+      "sha256": "0210e14f76fdc2ab3de76022650ef03efc8c700cc7d57f69edc6d945d0726af6"
+    },
+    {
+      "path": "assets/icons/erp/modules/roles.svg",
+      "bytes": 1290,
+      "sha256": "27706d3254905bad609a3eef949b6bf2a0c80fffb02c603faed936011ea0fb46"
+    },
+    {
+      "path": "assets/icons/erp/modules/security.svg",
+      "bytes": 1135,
+      "sha256": "4256d29bd7fe4bbe8ded047a8520c0541c9647ce39b27d1c446ec0343035fa14"
+    },
+    {
+      "path": "assets/icons/erp/modules/settings.svg",
+      "bytes": 1219,
+      "sha256": "f7333e09ab92cfb181aea2f1ce5a062621084d4d8acbad41e631db7395b550f6"
+    },
+    {
+      "path": "assets/icons/erp/modules/users.svg",
+      "bytes": 1212,
+      "sha256": "9700f8bbfebc4020e195668c6387ae9802affd9d4ac8c2d48f3b89bbc7b90301"
+    },
+    {
+      "path": "index.html",
+      "bytes": 611,
+      "sha256": "5da384c02eaaecb62bef02befbce1b1d6d8fe788c8d9bf6e28d57f3a98231744"
+    },
+    {
+      "path": "launcher/data.json",
+      "bytes": 7404,
+      "sha256": "34a6ea9fd6efa75efd035486fb318b5545bae0af942e9809314a7956ebc8817d"
+    },
+    {
+      "path": "launcher/index.html",
+      "bytes": 6760,
+      "sha256": "d9fea376aa0ab96be54505f89da82833d333da476133f986acabefbe82477f41"
+    },
+    {
+      "path": "launcher/script.js",
+      "bytes": 14774,
+      "sha256": "5b57293957d9eb2c2313b54101a7303893924ca69a2a1ce29199a8a798bd409d"
+    },
+    {
+      "path": "launcher/styles.css",
+      "bytes": 20612,
+      "sha256": "b96032d0cdd6b180caa16baf8f63efa218cec831be9e5d339323b43edb5e3c01"
+    },
+    {
+      "path": "perfil/data.json",
+      "bytes": 980,
+      "sha256": "b3fc2109e65d46e5ef102036c1339babcf572db1d65f1e99f80e65bda0a3fd9f"
+    },
+    {
+      "path": "perfil/index.html",
+      "bytes": 4699,
+      "sha256": "6d28affd66ac28353deec3ec695fc6c64f6013e2a2571e6a1b9f13f3b9635259"
+    },
+    {
+      "path": "perfil/script.js",
+      "bytes": 8791,
+      "sha256": "e19e2775c9637d3e1743dbc9b8301d1763a9d049bf17f00fc29b6d302d486e4a"
+    },
+    {
+      "path": "perfil/styles.css",
+      "bytes": 9021,
+      "sha256": "3fcb8e0e80e871d2b65e37a10a9567cfe06e1e0244f92284791fa9544b6f195f"
+    }
   ]
 }

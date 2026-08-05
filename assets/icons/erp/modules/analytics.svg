@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title-analytics" data-icon="analytics" data-category="modules">
+  <title id="title-analytics">Analítica</title>
+  <style>
+    .line{fill:none;stroke:#2563EB;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .thin{fill:none;stroke:#2563EB;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .fill{fill:#2563EB}
+    .accent{fill:#F4B400}
+    .tertiary{fill:#14B8A6}
+    .soft{fill:#2563EB;opacity:.12}
+    .soft-line{fill:none;stroke:#2563EB;stroke-width:6;opacity:.12;stroke-linecap:round}
+    .white{fill:#fff}
+    </style>
+  <rect x="6" y="8" width="52" height="50" rx="14" fill="#071A38" opacity=".14"/>
+  <rect x="6" y="5" width="52" height="50" rx="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"/>
+  <path d="M16 10h24c7.7 0 13 4.7 13 12" fill="none" stroke="#2563EB" opacity=".10" stroke-width="8" stroke-linecap="round"/>
+  <g class="icon-body"><path class="line" d="M17 46V34M26 46V26M35 46V31M44 46V18"/><path class="line" d="M15 46h34"/><path class="line" d="M18 27l9-7 8 5 11-10"/><circle class="accent" cx="46" cy="15" r="3"/></g>
+</svg>

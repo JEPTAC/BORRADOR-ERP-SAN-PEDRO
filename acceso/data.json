@@ -1,0 +1,70 @@
+{
+  "application": {
+    "name": "ERP Municipal",
+    "municipality": "Alcaldía de San Pedro · Valle del Cauca",
+    "environment": "Prototipo local sin Supabase",
+    "version": "24.0.0"
+  },
+  "profiles": [
+    {
+      "id": "admin",
+      "name": "Administrador del ERP",
+      "email": "administrador@sanpedro-valle.gov.co",
+      "title": "Administración general",
+      "department": "Administración del sistema",
+      "role": "administrator",
+      "initials": "AD",
+      "permissions": ["*"]
+    },
+    {
+      "id": "secretaria-general",
+      "name": "Secretaría General",
+      "email": "secretaria.general@sanpedro-valle.gov.co",
+      "title": "Secretaría General",
+      "department": "Secretaría General",
+      "role": "secretaria-general",
+      "initials": "SG",
+      "permissions": ["sg-hub", "talento-humano", "sig", "mesa-tic", "calendario", "atenciones", "notificaciones", "expedientes", "auditoria-atenciones"]
+    },
+    {
+      "id": "talento-humano",
+      "name": "Gestión de Talento Humano",
+      "email": "talento.humano@sanpedro-valle.gov.co",
+      "title": "Equipo de Talento Humano",
+      "department": "Secretaría General",
+      "role": "talento-humano",
+      "initials": "TH",
+      "permissions": ["talento-humano", "calendario", "atenciones"]
+    },
+    {
+      "id": "mesa-tic",
+      "name": "Equipo TIC",
+      "email": "soporte.tic@sanpedro-valle.gov.co",
+      "title": "Mesa de Ayuda TIC",
+      "department": "Secretaría General",
+      "role": "mesa-tic",
+      "initials": "TI",
+      "permissions": ["mesa-tic", "calendario", "reportes-sg"]
+    },
+    {
+      "id": "recepcion",
+      "name": "Recepción Institucional",
+      "email": "recepcion@sanpedro-valle.gov.co",
+      "title": "Recepción y atención al usuario",
+      "department": "Secretaría General",
+      "role": "recepcion",
+      "initials": "RC",
+      "permissions": ["atenciones", "calendario", "expedientes", "notificaciones"]
+    },
+    {
+      "id": "control-interno",
+      "name": "Control Interno",
+      "email": "control.interno@sanpedro-valle.gov.co",
+      "title": "Auditoría y seguimiento",
+      "department": "Oficina de Control Interno",
+      "role": "control-interno",
+      "initials": "CI",
+      "permissions": ["sig", "control-interno", "calendario", "auditoria-atenciones", "reportes-sg"]
+    }
+  ]
+}

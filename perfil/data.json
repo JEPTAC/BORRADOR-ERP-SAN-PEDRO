@@ -1,0 +1,21 @@
+{
+  "permissionLabels": {
+    "*": "Acceso total al prototipo",
+    "sg-hub": "Panel de Secretaría General",
+    "talento-humano": "Talento Humano",
+    "sig": "Sistema Integrado de Gestión",
+    "mesa-tic": "Mesa de Ayuda TIC",
+    "calendario": "Agenda Institucional",
+    "atenciones": "Atención y Visitantes",
+    "notificaciones": "Notificaciones de Atención",
+    "expedientes": "Expedientes de Atención",
+    "auditoria-atenciones": "Auditoría de Atenciones",
+    "reportes-sg": "Reportes de Secretaría General",
+    "control-interno": "Control Interno"
+  },
+  "preferences": [
+    {"id":"compact","label":"Vista compacta","description":"Reduce ligeramente el espacio entre tarjetas y registros."},
+    {"id":"animations","label":"Animaciones suaves","description":"Mantiene las microinteracciones visuales del launcher."},
+    {"id":"rememberFilters","label":"Recordar filtros","description":"Conserva las últimas selecciones realizadas en este navegador."}
+  ]
+}

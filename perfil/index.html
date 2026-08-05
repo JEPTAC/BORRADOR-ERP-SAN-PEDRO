@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Perfil local del usuario del ERP Municipal">
+  <title>Mi perfil · ERP Municipal</title>
+  <link rel="stylesheet" href="styles.css?v=24.0.0">
+</head>
+<body>
+  <header class="profile-topbar">
+    <a class="back-link" href="../launcher/index.html"><img src="../assets/icons/erp/actions/back.svg" alt="">Volver al panel</a>
+    <div class="topbar-logo"><img src="../assets/branding/san-pedro.svg" alt="San Pedro"><div><strong>ERP Municipal</strong><span>Preferencias del usuario</span></div></div>
+    <button id="logout" class="logout-button" type="button">Cerrar sesión</button>
+  </header>
+
+  <main class="profile-page">
+    <section class="profile-hero">
+      <div class="hero-copy"><span>CUENTA DE DEMOSTRACIÓN</span><h1>Tu perfil de trabajo</h1><p>Edita la información visual que se muestra en el launcher. Estos datos se guardan únicamente en este navegador.</p></div>
+      <div class="hero-orbit" aria-hidden="true"><img src="../assets/icons/erp/modules/users.svg" alt=""></div>
+    </section>
+
+    <div class="profile-layout">
+      <aside class="profile-summary card">
+        <div class="photo-editor">
+          <span class="photo" id="profilePhoto"><span id="profileInitials">US</span></span>
+          <label class="photo-button" for="photoInput"><img src="../assets/icons/erp/actions/edit.svg" alt="">Cambiar foto</label>
+          <input id="photoInput" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+          <button id="removePhoto" class="remove-photo" type="button">Quitar foto</button>
+        </div>
+        <h2 id="summaryName">Usuario</h2>
+        <p id="summaryTitle">Perfil institucional</p>
+        <div class="summary-data"><span id="summaryDepartment">Dependencia</span><span id="summaryEmail">correo</span></div>
+        <div class="demo-note"><img src="../assets/icons/erp/modules/security.svg" alt=""><div><strong>Información local</strong><small>No reemplaza la cuenta ni la autenticación institucional.</small></div></div>
+      </aside>
+
+      <section class="profile-content">
+        <article class="card form-card">
+          <header><div><h2>Información del perfil</h2><p>Datos visibles en el selector de transacciones.</p></div><span class="status-badge">Editable</span></header>
+          <form id="profileForm" class="form-body">
+            <div class="form-grid">
+              <label><span>Nombre visible</span><input id="name" required maxlength="80"></label>
+              <label><span>Correo institucional</span><input id="email" type="email" required maxlength="120"></label>
+              <label><span>Cargo o función</span><input id="title" required maxlength="80"></label>
+              <label><span>Dependencia</span><input id="department" required maxlength="100"></label>
+            </div>
+            <div class="form-actions"><button class="secondary" type="button" id="resetProfile">Restablecer</button><button class="primary" type="submit"><img src="../assets/icons/erp/actions/save.svg" alt="">Guardar cambios</button></div>
+          </form>
+        </article>
+
+        <div class="two-column">
+          <article class="card">
+            <header><div><h2>Accesos habilitados</h2><p>Permisos simulados para este perfil.</p></div></header>
+            <div id="permissions" class="permission-list"></div>
+          </article>
+
+          <article class="card">
+            <header><div><h2>Preferencias visuales</h2><p>Configuración local del launcher.</p></div></header>
+            <div id="preferences" class="preference-list"></div>
+          </article>
+        </div>
+
+        <article class="card password-card">
+          <header><div><h2>Cambio de contraseña</h2><p>Interfaz preparada para la futura autenticación. No modifica una contraseña real.</p></div><span class="status-badge warning">Simulación</span></header>
+          <form id="passwordForm" class="form-body password-form">
+            <label><span>Contraseña actual</span><input id="currentPassword" type="password" minlength="4" required></label>
+            <label><span>Nueva contraseña</span><input id="newPassword" type="password" minlength="8" required></label>
+            <label><span>Confirmar contraseña</span><input id="confirmPassword" type="password" minlength="8" required></label>
+            <button class="primary" type="submit">Simular cambio</button>
+          </form>
+        </article>
+      </section>
+    </div>
+  </main>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script src="script.js?v=24.0.0"></script>
+</body>
+</html>
