@@ -151,7 +151,6 @@
 
     $('#emptyState').classList.toggle('hidden', items.length > 0);
     grid.classList.toggle('hidden', items.length === 0);
-    bindCardInteractions();
     updateSummary();
   };
 
@@ -201,48 +200,20 @@
     window.location.href = href;
   };
 
-  const bindCardInteractions = () => {
-    $$('.transaction-card').forEach(card => {
-      card.addEventListener('click', (event) => {
-        if (event.target.closest('[data-favorite]')) return;
-        openTransaction(card.dataset.id, card.dataset.href);
-      });
-      card.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          event.preventDefault();
-          openTransaction(card.dataset.id, card.dataset.href);
-        }
-      });
-    });
-    bindTilt();
-  };
-
-  const bindTilt = () => {
-    const canTilt = matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion:reduce)').matches;
-    if (!canTilt) return;
-    $$('.transaction-card').forEach(card => {
-      let frame = null;
-      card.addEventListener('pointermove', (event) => {
-        const rect = card.getBoundingClientRect();
-        const x = (event.clientX - rect.left) / rect.width;
-        const y = (event.clientY - rect.top) / rect.height;
-        cancelAnimationFrame(frame);
-        frame = requestAnimationFrame(() => {
-          card.classList.add('tilting');
-          card.style.setProperty('--ry', `${(x - 0.5) * 5}deg`);
-          card.style.setProperty('--rx', `${(0.5 - y) * 4}deg`);
-        });
-      });
-      card.addEventListener('pointerleave', () => {
-        cancelAnimationFrame(frame);
-        card.classList.remove('tilting');
-        card.style.setProperty('--ry', '0deg');
-        card.style.setProperty('--rx', '0deg');
-      });
-    });
-  };
-
   const bindEvents = () => {
+    const transactionGrid = $('#transactionGrid');
+    transactionGrid.addEventListener('click', (event) => {
+      if (event.target.closest('[data-favorite]')) return;
+      const card = event.target.closest('.transaction-card');
+      if (card) openTransaction(card.dataset.id, card.dataset.href);
+    });
+    transactionGrid.addEventListener('keydown', (event) => {
+      const card = event.target.closest('.transaction-card');
+      if (!card || (event.key !== 'Enter' && event.key !== ' ')) return;
+      event.preventDefault();
+      openTransaction(card.dataset.id, card.dataset.href);
+    });
+
     $('#categoryFilters').addEventListener('click', (event) => {
       const button = event.target.closest('[data-category]');
       if (!button) return;
@@ -328,10 +299,10 @@
     resolveProfile();
     applyProfile();
     updateClock();
-    setInterval(updateClock, 30000);
+    setInterval(updateClock, 60000);
 
     try {
-      const response = await fetch('data.json', { cache: 'no-store' });
+      const response = await fetch('data.json');
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       data = await response.json();
       allowedTransactions = data.transactions.filter(isAllowed);

@@ -1,160 +1,245 @@
 {
-  "version": "25.0.0",
-  "name": "Sistema visual nativo ERP Municipal San Pedro",
-  "generated_at": "2026-08-05",
-  "project_files_modified_or_new": 27,
-  "documentation_files": 3,
-  "total_files_before_manifest": 30,
+  "version": "26.0.0",
   "files": [
     {
-      "path": "ARCHIVO_ANTIGUO_PARA_ELIMINAR.txt",
-      "bytes": 228,
-      "sha256": "fa6a76c7524acdab797f0fc74ae52ee898d94a09e8723b32cf63308ab4e07946"
+      "path": "apps/secretaria-general/index.html",
+      "bytes": 4136,
+      "sha256": "91d4276586080e0e0b71270f7af6a48d878084cf67e712798850c6d68b3c2198"
     },
     {
-      "path": "LEEME_REEMPLAZO.txt",
-      "bytes": 1301,
-      "sha256": "5f40e72b3d5c1a7d2faa190cc38c14e9594619a0e3c8cb14b9b867303b55f50e"
+      "path": "apps/secretaria-general/mesa-ayuda/index.html",
+      "bytes": 5800,
+      "sha256": "994a5144f7606ce78094ecbedc1acea35b79f37f87f32c9e153a1bb6199f8db5"
     },
     {
-      "path": "VALIDACION.txt",
-      "bytes": 726,
-      "sha256": "e677fd82371928222bb1318e53eeb0642248d574edaa1d111ec2d521ec6b344e"
+      "path": "apps/secretaria-general/talento-humano/activos/index.html",
+      "bytes": 7883,
+      "sha256": "25d4dd9eb54ccace50e9f72c90c3ec9b962206692bd27eba685df3070cb7b327"
     },
     {
-      "path": "apps/contratacion/styles.css",
-      "bytes": 124,
-      "sha256": "14c0ebedc3179e20ff82461026e341e281563f14734c7c915932fb3b1d80d37e"
+      "path": "apps/secretaria-general/talento-humano/asistencia/index.html",
+      "bytes": 7633,
+      "sha256": "0fa770b54a0ddc0b4ececf4b4bd21f00190c27264988cfb9ff107ebcc55214f1"
     },
     {
-      "path": "apps/control-interno/styles.css",
-      "bytes": 124,
-      "sha256": "9678a65de081361bc08517d18187fcd533a3e10e8c2162403b497e0cf9479b8d"
+      "path": "apps/secretaria-general/talento-humano/ausencias/index.html",
+      "bytes": 8038,
+      "sha256": "e0f9a11a271f5f8b0e7bc8bbbd25ca3f708688ecf1cd9009cf865243f0fe9f7c"
     },
     {
-      "path": "apps/despacho/styles.css",
-      "bytes": 124,
-      "sha256": "2235c525ba21687b9e6a82a5d5c641144a7ab20ae7d8cba4c3a4e37153b14dbb"
+      "path": "apps/secretaria-general/talento-humano/bienestar-sst/index.html",
+      "bytes": 8759,
+      "sha256": "1af2f474d02fbaf709873d1bc058dc6b795bf8cd9e146e3e41e60a16b57965bc"
     },
     {
-      "path": "apps/gobierno/styles.css",
-      "bytes": 124,
-      "sha256": "1dd9a740a589812b9359bcc9d602f6a3787a3cda384b23e56f3a97014af05b38"
+      "path": "apps/secretaria-general/talento-humano/canal-etico/index.html",
+      "bytes": 8106,
+      "sha256": "215b15e14f562e37d1f3fc24bb1f9d4e7090b18c0e4ddbeddd6c716f0008b254"
     },
     {
-      "path": "apps/hacienda/styles.css",
-      "bytes": 124,
-      "sha256": "5f1cfaf12bef29f041ac8b5021b9a1d576ca5b350f04f85044ce860e66beed9e"
+      "path": "apps/secretaria-general/talento-humano/capacitacion/index.html",
+      "bytes": 7934,
+      "sha256": "8d9ecb3eb10d718ea599e4a943ffef1ea66648c942f1567dd00c303cf9b6395e"
     },
     {
-      "path": "apps/juridica/styles.css",
-      "bytes": 124,
-      "sha256": "313158435a16ceed4011bed34cbba3bc7a61b0282268014c7757a9478420eb24"
+      "path": "apps/secretaria-general/talento-humano/comunicaciones/index.html",
+      "bytes": 7771,
+      "sha256": "60fee5b02ec3d007f88689e3207214e717f340c7f2138ba41e53e0a02583ff4a"
     },
     {
-      "path": "apps/planeacion/styles.css",
-      "bytes": 124,
-      "sha256": "6113d5b7c27fbc3e322765ca97912bac99fe1e63cb7bf7ba9aa523e4fd24738f"
+      "path": "apps/secretaria-general/talento-humano/desempeno/index.html",
+      "bytes": 8771,
+      "sha256": "1b51771f46bfe3ec45f2cbfebef3b526f63051e761cf68a46b732764940062c1"
     },
     {
-      "path": "apps/salud-bienestar/styles.css",
-      "bytes": 124,
-      "sha256": "23be74e93384166a865af706de53f052ab2dabd7a915533a24098e027b69801c"
+      "path": "apps/secretaria-general/talento-humano/documentos/index.html",
+      "bytes": 8051,
+      "sha256": "c96a6755156e85cd3f9b7916681e0cd4304eff5ea1526306921bc8f5a7151a87"
     },
     {
-      "path": "apps/secretaria-general/calendario/shared/calendar-shared.css",
-      "bytes": 9768,
-      "sha256": "40e297b5ff5a77ae3d17be1e6c25a68460fd55cb3baa96979b0c75978c6a56f7"
+      "path": "apps/secretaria-general/talento-humano/empleo-publico/index.html",
+      "bytes": 8756,
+      "sha256": "f1a86d6fcf8ac45675f40fe01c21b20e9b94f0580a153e52c5b58abd065b011b"
     },
     {
-      "path": "apps/secretaria-general/calendario/styles.css",
-      "bytes": 16239,
-      "sha256": "9a20f94f7e2f25eb1451cbcd1b14287cc8ccf3c0e159aca4084127ee9aa3a147"
+      "path": "apps/secretaria-general/talento-humano/index.html",
+      "bytes": 7983,
+      "sha256": "0904d6dd9753b70ebfa9ebe7aaedcdd002ff945a57df3c67178e8a8e3cd24dbf"
     },
     {
-      "path": "apps/secretaria-general/mesa-ayuda/shared/itsm.css",
-      "bytes": 13911,
-      "sha256": "241272623a00fe1b6dc6d52c01bf13289f9df43fb85a3beef3fa1f645665f578"
+      "path": "apps/secretaria-general/talento-humano/integridad-publica/index.html",
+      "bytes": 8777,
+      "sha256": "1dcfc0a86016b1373679a0174982cbe1d56c98f3cbdeb1a2d49d6f83547ed884"
     },
     {
-      "path": "apps/secretaria-general/mesa-ayuda/styles.css",
-      "bytes": 2279,
-      "sha256": "bab9d1da9737792fea21c09ce0dd3e7293c8fb67a3863c5bf4e22e52aafbdb6a"
+      "path": "apps/secretaria-general/talento-humano/nomina/index.html",
+      "bytes": 8838,
+      "sha256": "67726869755a00df3bba979dd6ef2112e4a1f8bfe4e678def214596423eb805f"
     },
     {
-      "path": "apps/secretaria-general/registro-atenciones/checkin/styles.css",
-      "bytes": 3290,
-      "sha256": "b68dfa1c68e30f5cb41f56c31906b077d6b3bc74b86173477a13d5e846fd9940"
+      "path": "apps/secretaria-general/talento-humano/onboarding/index.html",
+      "bytes": 7385,
+      "sha256": "6b10b160d54d39e49bf25c99a5d413f8e5981f4377024b11df497804a29165a1"
     },
     {
-      "path": "apps/secretaria-general/registro-atenciones/portal-citas/styles.css",
-      "bytes": 9419,
-      "sha256": "acf30868632d5802d08e364492f095c3987b4aa757b62847cd9a3b68e5846530"
+      "path": "apps/secretaria-general/talento-humano/organizacion/index.html",
+      "bytes": 8292,
+      "sha256": "403c9435a9d59ee52c1fa97a0625e81f6c93adc11a7eac046b350ddcfe683bfc"
     },
     {
-      "path": "apps/secretaria-general/registro-atenciones/shared/attention-core.css",
-      "bytes": 25151,
-      "sha256": "44dda81a3a3d78893dd7eca55a40e6b8ee38f240359ad32436089d22ea66a0fa"
+      "path": "apps/secretaria-general/talento-humano/personas/index.html",
+      "bytes": 8447,
+      "sha256": "d1012d083e2e1dbe77895b0b19230245f4f111b58924b3b1bfdd2bb8ec98b2d9"
     },
     {
-      "path": "apps/secretaria-general/sig/shared/sig-core.css",
-      "bytes": 16967,
-      "sha256": "959e717481ba4e6c1526a059715acd85eabcca26bea06e7cd08109abe590658d"
+      "path": "apps/secretaria-general/talento-humano/planeacion-th/index.html",
+      "bytes": 8813,
+      "sha256": "57182d0a82b710dd29bfbcfb7f6d9838303cd934e94216dc0645ec912c200bee"
     },
     {
-      "path": "apps/secretaria-general/styles.css",
-      "bytes": 2353,
-      "sha256": "15a75f15bf63ff21c6897e9b86052169c981bdc6ce2ef385559e92460aeb528a"
+      "path": "apps/secretaria-general/talento-humano/retiro/index.html",
+      "bytes": 8834,
+      "sha256": "d452007e6235b5623a61619efe6a14e408ee63c0b1ca6f41044921ae4142ff96"
     },
     {
-      "path": "apps/secretaria-general/talento-humano/shared/hr.css",
-      "bytes": 18675,
-      "sha256": "ae4a77d9d84de30935c8015024e1d659df46f276299ea7d09bacab2888354577"
+      "path": "apps/secretaria-general/talento-humano/seleccion/index.html",
+      "bytes": 7825,
+      "sha256": "52c1670bbbc705ba9bd58efe0bed57307a236f2737e77a2889ce5514bbd30f57"
     },
     {
-      "path": "apps/secretaria-general/talento-humano/shared/operations.css",
-      "bytes": 13637,
-      "sha256": "cc5a045cbc78867585f868e3e4f0798982f8d18d3dcec5139cacceb056254ec2"
+      "path": "apps/secretaria-general/talento-humano/sigep/index.html",
+      "bytes": 8232,
+      "sha256": "0da211ca804dc7d6b2b1eae3eff5903306b10cc6858feffa67497ac1037608e5"
     },
     {
-      "path": "apps/secretaria-general/talento-humano/shared/public-hr.css",
-      "bytes": 10458,
-      "sha256": "b381b754d82e224f039c1a49f94b9dcc13e78f78d769d9a055d03dc2f3349c15"
+      "path": "apps/secretaria-general/talento-humano/situaciones-administrativas/index.html",
+      "bytes": 8782,
+      "sha256": "5d575770b49a365b491956fda2d910904535fe41452a62d7f3fb3e10969384f7"
     },
     {
-      "path": "apps/secretaria-general/talento-humano/styles.css",
-      "bytes": 1181,
-      "sha256": "f1439539e98b2dce472b09dc31c08ebe4c4db84242602fc163b00835bb52204e"
+      "path": "assets/branding/san-pedro.svg",
+      "bytes": 605697,
+      "sha256": "30e53a54f5c2936f94697a6d35d39255655af2bc6e3dc7d56c0947f457e8daeb"
     },
     {
       "path": "assets/css/base.css",
-      "bytes": 24240,
-      "sha256": "10d42db315cac1b2a00f23c8d4148190d6ac1f5ffc70c1db19f7f63621b1bdd8"
-    },
-    {
-      "path": "assets/css/module-shell.css",
-      "bytes": 2792,
-      "sha256": "35b27ac54ac74883150bf8678857f9690c4fa664da53e3e8faa19bbc5e7f8fe4"
-    },
-    {
-      "path": "assets/css/portal.css",
-      "bytes": 2421,
-      "sha256": "e7012baab85dfd657c0032336edea8e6fbbd153197b80a2861b7291eda580552"
+      "bytes": 23820,
+      "sha256": "6c3be51135029b9b5866496dc7b739f389013484348ca90c53548790d1848d47"
     },
     {
       "path": "assets/js/shell.js",
-      "bytes": 6230,
-      "sha256": "49040aef80fc79da99603beb7fe56d7303dde1532524ed1189260b1800ac6d92"
+      "bytes": 5550,
+      "sha256": "78e15c7337545c88af2ee1c39eab8816cc7c111b285af943388b663647c8a5ac"
+    },
+    {
+      "path": "launcher/index.html",
+      "bytes": 6760,
+      "sha256": "8715fc72ab1b2c29c88616c18d2c8f80e95eb4680a58a8b33d5cec05190254c4"
+    },
+    {
+      "path": "launcher/script.js",
+      "bytes": 13808,
+      "sha256": "d098fce02a61675e1315c50eaf3d282b4dd0157a3c2ef7cf6207cecc23dbec60"
     },
     {
       "path": "launcher/styles.css",
-      "bytes": 23213,
-      "sha256": "56c26375affb01d1e71ac7484cf7fb2fdeb0e159c722a3c52a97806c2eb292f1"
+      "bytes": 16128,
+      "sha256": "7bfce8d9ee75fc0f958c4c29d6b02a92715286a9770ae000d4dbf59286a9aac7"
     },
     {
-      "path": "perfil/styles.css",
-      "bytes": 10401,
-      "sha256": "6e021057a8ba37513a45c12f00d0bab59a6a4020ce5217f353feb632c73695a8"
+      "path": "talento-humano/activos/index.html",
+      "bytes": 7837,
+      "sha256": "79eac364a52586ffd52262c6e098474da04a9073f986d31b237e4a5c8d782eeb"
+    },
+    {
+      "path": "talento-humano/analitica/index.html",
+      "bytes": 7095,
+      "sha256": "c7dc2508bc155c656136e6b9f0f0b4b0fb6a5624478766769207024f48c5bb23"
+    },
+    {
+      "path": "talento-humano/asistencia/index.html",
+      "bytes": 7587,
+      "sha256": "a12aa1fa21ec5dfb0fc77064edde6e91952db1bd4d7d0700d670ce2754fdc91e"
+    },
+    {
+      "path": "talento-humano/ausencias/index.html",
+      "bytes": 7992,
+      "sha256": "b3a55cc0609dad4d00024d50bdfef0435282fb7b3a7214e833fe916d6914a55a"
+    },
+    {
+      "path": "talento-humano/bienestar-sst/index.html",
+      "bytes": 8185,
+      "sha256": "567b9640883149bcd8944af80f025ed2c17ac4d827cf2078f1decc07a49e7a77"
+    },
+    {
+      "path": "talento-humano/canal-etico/index.html",
+      "bytes": 8060,
+      "sha256": "d6115ecacf931ada079e473b79ae65bafd5b09e3c70345d16ae6b544354a0943"
+    },
+    {
+      "path": "talento-humano/capacitacion/index.html",
+      "bytes": 7888,
+      "sha256": "7bbff323c2c2b2f3249e52406473b334c6a61c0a4fef2714e057a7e3ce323f19"
+    },
+    {
+      "path": "talento-humano/comunicaciones/index.html",
+      "bytes": 7725,
+      "sha256": "4ea0ae52c79ae6f3e5382ab66d426299af45b864d7095e3580b2c145690b4bc7"
+    },
+    {
+      "path": "talento-humano/desempeno/index.html",
+      "bytes": 7537,
+      "sha256": "2301cc96d41211f7fa8a97f616adea26dff9cde4330d41d3e58b390c5a1a3918"
+    },
+    {
+      "path": "talento-humano/documentos/index.html",
+      "bytes": 8005,
+      "sha256": "f92ccce2fa02f8518b4375cabf3445d40152fd89b598c0b4d322d7c9992d2d09"
+    },
+    {
+      "path": "talento-humano/flujos/index.html",
+      "bytes": 7476,
+      "sha256": "c84041ab1264068dbcf7aff0c740d6be54df8c286e94012dcae57b802fd51f58"
+    },
+    {
+      "path": "talento-humano/index.html",
+      "bytes": 7877,
+      "sha256": "3229f0b5087f5a83760781a2775bbf1693a31921ba9e62013603f1830788e309"
+    },
+    {
+      "path": "talento-humano/mi-portal/index.html",
+      "bytes": 9486,
+      "sha256": "4744857d67d022dc418f21aa1a5b16135135f127cd5f7259f987daea5f83e7cd"
+    },
+    {
+      "path": "talento-humano/nomina/index.html",
+      "bytes": 8471,
+      "sha256": "79d53ab103c5c90fff4615c0ef36ac6b0156b11f079d7ffbcc0bb423c25a3463"
+    },
+    {
+      "path": "talento-humano/onboarding/index.html",
+      "bytes": 7339,
+      "sha256": "0bcceb88e0d4efd0ca3d2fa5a682fd6c051a0db7aee58ca50c0a547d6c205b54"
+    },
+    {
+      "path": "talento-humano/organizacion/index.html",
+      "bytes": 8246,
+      "sha256": "09c6081aded1152985ae2e7c88729dfc0069c07fed3c9c934175f20cf4d6ca4d"
+    },
+    {
+      "path": "talento-humano/personas/index.html",
+      "bytes": 8401,
+      "sha256": "22d8a6241608d840fdd03f7fdc7cc7bd77b3564630aa9f466c6a18e053fdfd27"
+    },
+    {
+      "path": "talento-humano/seleccion/index.html",
+      "bytes": 7779,
+      "sha256": "3593dd454e4f0f527fba1411a22bd12b7f4e26ba0203072e1c49ad7bc079a9d1"
+    },
+    {
+      "path": "talento-humano/sigep/index.html",
+      "bytes": 8186,
+      "sha256": "262273f81d827a5f92019d1a91b9a10215888a21cbb92cf5b512002b9666dd34"
     }
   ]
 }

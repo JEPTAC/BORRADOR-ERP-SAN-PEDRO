@@ -1,4 +1,5 @@
 (function () {
+  const SHELL_URL = document.currentScript?.src || '';
   const ERP = {
     init() {
       document.documentElement.dataset.erpUi = 'native-v25';
@@ -31,7 +32,7 @@
       this.bindTabs();
       this.refreshIcons();
       this.setToday();
-      this.bindRevealMotion();
+      this.normalizeDependencyLinks();
     },
 
     refreshIcons() {
@@ -59,31 +60,12 @@
       });
     },
 
-    bindRevealMotion() {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      const nodes = [...document.querySelectorAll(
-        '.content > .card, .content > section, .content > .grid, .metric-card, .module-card, .process-card, .process-tile, .ticket-card, .att-card, .att-kpi, .hr-module-card, .sig-card'
-      )].filter((el, index, arr) => arr.indexOf(el) === index).slice(0, 60);
-
-      if (!nodes.length) return;
-      nodes.forEach(el => el.classList.add('ui-reveal'));
-
-      if (!('IntersectionObserver' in window)) {
-        nodes.forEach(el => el.classList.add('is-visible'));
-        return;
-      }
-
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        });
-      }, { threshold: 0.05, rootMargin: '0px 0px -24px' });
-
-      nodes.forEach((el, index) => {
-        el.style.transitionDelay = `${Math.min(index % 8, 5) * 28}ms`;
-        observer.observe(el);
+    normalizeDependencyLinks() {
+      if (!SHELL_URL) return;
+      const launcherUrl = new URL('../../launcher/index.html', SHELL_URL).href;
+      document.querySelectorAll('a').forEach(link => {
+        const label = link.textContent.replace(/\s+/g, ' ').trim().toLowerCase();
+        if (label === 'todas las dependencias') link.href = launcherUrl;
       });
     },
 
