@@ -1,1 +1,14 @@
 @import url('../shared/sig-core.css');
+
+/* Normas: catálogo amplio, legible y con jerarquía clara */
+.standard-grid{grid-template-columns:repeat(2,minmax(360px,1fr));gap:14px}
+.standard-card{min-height:300px;padding:17px;gap:12px;transition:border-color .16s,box-shadow .16s,transform .16s}
+.standard-card:hover{border-color:color-mix(in srgb,var(--brand) 30%,var(--line));box-shadow:var(--shadow);transform:translateY(-1px)}
+.standard-top{padding-bottom:10px;border-bottom:1px solid var(--line)}
+.standard-code{gap:10px}.standard-code i,.standard-code svg{width:20px;height:20px}.standard-code strong{font-size:12.5px}.standard-code span{font-size:9.5px;margin-top:2px}
+.standard-card h3{font-size:14px;line-height:1.3;margin-top:2px}
+.standard-card p{font-size:10.2px;line-height:1.58;min-height:48px}
+.standard-meta{gap:9px;margin-top:2px}.standard-meta div{padding:10px;border-radius:10px}.standard-meta span{font-size:8.4px}.standard-meta strong{font-size:9.8px;line-height:1.45}
+.standard-foot{padding-top:4px;gap:11px}.standard-progress{height:8px}.standard-foot .btn{min-width:72px}
+@media(max-width:1100px){.standard-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.standard-card{min-height:auto}.standard-meta{grid-template-columns:1fr}}

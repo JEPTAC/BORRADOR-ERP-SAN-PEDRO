@@ -1,1 +1,12 @@
 @import url('../shared/sig-core.css');
+
+/* Riesgos: matriz protagonista y tabla separada */
+.risk-layout{grid-template-columns:360px minmax(0,1fr);gap:16px;align-items:start}
+.risk-layout>aside{position:sticky;top:calc(var(--sig-topbar) + 14px)}
+.risk-layout .sig-card-head{padding:15px 16px}.risk-layout .sig-card-body{padding:17px}
+.risk-matrix{grid-template-columns:34px repeat(5,1fr);grid-template-rows:repeat(5,58px) 28px;gap:5px}
+.risk-cell{border-radius:10px;font-size:9px;transition:transform .14s,filter .14s}.risk-cell:hover{transform:scale(1.04);filter:saturate(1.08)}
+.risk-count{width:24px;height:24px;font-size:9px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.risk-axis{font-size:8.5px;font-weight:750}.risk-legend{gap:10px;margin-top:13px}.risk-legend span{font-size:8.8px}.risk-legend i{width:10px;height:10px}
+.risk-layout>div>.sig-table-wrap{border-radius:15px}.risk-layout .sig-table{min-width:1060px}.risk-layout .sig-cell-main{max-width:400px}
+@media(max-width:1180px){.risk-layout{grid-template-columns:1fr}.risk-layout>aside{position:static}.risk-layout .sig-card-body{max-width:430px}}

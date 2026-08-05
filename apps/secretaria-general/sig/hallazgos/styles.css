@@ -1,1 +1,8 @@
 @import url('../shared/sig-core.css');
+
+/* Hallazgos: descripción amplia y criticidad fácil de identificar */
+.sig-table{min-width:1180px}.sig-table th,.sig-table td{padding:13px}
+.sig-table td:nth-child(1){width:100px;font-weight:850;color:var(--brand)}
+.sig-table td:nth-child(2){min-width:360px}.sig-table td:nth-child(2) .sig-cell-main strong{font-size:11.2px;line-height:1.45}.sig-table td:nth-child(2) .sig-cell-main small{font-size:9.2px;line-height:1.5;margin-top:4px}
+.sig-table td:nth-child(3){min-width:145px}.sig-table td:nth-child(4){min-width:150px}.sig-table td:nth-child(5){min-width:200px}.sig-table td:nth-child(6){white-space:nowrap}.sig-table td:last-child{width:82px}
+.sig-table tbody tr{transition:box-shadow .14s}.sig-table tbody tr:hover{box-shadow:inset 4px 0 0 var(--brand)}

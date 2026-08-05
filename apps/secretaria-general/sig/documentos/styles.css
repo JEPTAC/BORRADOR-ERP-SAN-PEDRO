@@ -1,1 +1,15 @@
 @import url('../shared/sig-core.css');
+
+/* Documentos: repositorio cómodo, con columnas clave visibles */
+.sig-table-wrap{border-radius:15px;box-shadow:var(--shadow-sm)}
+.sig-table{min-width:1080px}
+.sig-table th,.sig-table td{padding:13px 14px}
+.sig-table th:nth-child(1),.sig-table td:nth-child(1){position:sticky;left:0;z-index:3;background:var(--surface);width:110px;min-width:110px}
+.sig-table th:nth-child(1){background:var(--surface-2);z-index:5}
+.sig-table th:nth-child(2),.sig-table td:nth-child(2){position:sticky;left:110px;z-index:2;background:var(--surface);min-width:300px;box-shadow:8px 0 12px -12px rgba(0,0,0,.4)}
+.sig-table th:nth-child(2){background:var(--surface-2);z-index:4}
+.sig-table td:nth-child(1){font-weight:800;color:var(--brand);font-size:9.8px}
+.sig-table td:nth-child(2){font-weight:700;line-height:1.4}
+.sig-table td:nth-child(3){min-width:210px}.sig-table td:nth-child(5){white-space:nowrap}.sig-table td:last-child{width:82px}
+.sig-table tbody tr:hover td:nth-child(1),.sig-table tbody tr:hover td:nth-child(2){background:color-mix(in srgb,var(--brand-soft) 28%,var(--surface))}
+@media(max-width:760px){.sig-table th:nth-child(2),.sig-table td:nth-child(2){position:static;box-shadow:none}.sig-table th:nth-child(1),.sig-table td:nth-child(1){position:static}}

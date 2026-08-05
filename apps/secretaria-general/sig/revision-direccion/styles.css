@@ -1,1 +1,9 @@
 @import url('../shared/sig-core.css');
+
+/* Revisión por la Dirección: paquete ejecutivo y compromisos */
+.review-agenda{grid-template-columns:repeat(3,minmax(250px,1fr));gap:12px;margin-bottom:16px}
+.review-item{min-height:116px;padding:14px;border-radius:14px;display:flex;flex-direction:column;justify-content:center}
+.review-item strong{font-size:11.4px;line-height:1.45;min-height:34px}.review-item .sig-progress-line{height:8px;margin:12px 0 7px}.review-item small{font-size:8.8px;color:var(--muted);font-weight:750}
+.sig-table{min-width:1120px}.sig-table th,.sig-table td{padding:13px 14px}.sig-table td:nth-child(1){width:115px;font-weight:850;color:var(--brand)}.sig-table td:nth-child(2){min-width:380px}.sig-table td:nth-child(2) .sig-cell-main strong{font-size:11.2px;line-height:1.45}.sig-table td:nth-child(3){min-width:190px}.sig-table td:nth-child(4){white-space:nowrap}.sig-table td:nth-child(5){min-width:135px}.sig-table td:last-child{width:82px}
+@media(max-width:1100px){.review-agenda{grid-template-columns:repeat(2,minmax(250px,1fr))}}
+@media(max-width:650px){.review-agenda{grid-template-columns:1fr}.review-item{min-height:auto}}

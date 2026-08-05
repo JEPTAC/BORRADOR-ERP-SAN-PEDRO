@@ -1,1 +1,11 @@
 @import url('../shared/sig-core.css');
+
+/* Auditorías: programa por etapas y tabla de seguimiento */
+.audit-timeline{gap:12px;margin-bottom:15px}
+.audit-stage{min-height:118px;padding:14px;border-radius:14px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.audit-stage::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--brand)}
+.audit-stage span{font-size:8.8px;text-transform:uppercase;letter-spacing:.06em}.audit-stage strong{font-size:13px;margin:6px 0}.audit-stage p{font-size:9.4px;line-height:1.5}
+.sig-table{min-width:1180px}.sig-table th,.sig-table td{padding:12px 13px}.sig-table td:nth-child(2){min-width:290px}.sig-table td:nth-child(3){min-width:190px}.sig-table td:nth-child(5){min-width:160px}.sig-table td:nth-child(6){min-width:130px}
+.sig-progress{display:grid;grid-template-columns:minmax(85px,1fr) 32px;gap:7px;align-items:center}.sig-progress small{margin:0;text-align:right}
+@media(max-width:900px){.audit-timeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.audit-timeline{grid-template-columns:1fr}.audit-stage{min-height:auto}}

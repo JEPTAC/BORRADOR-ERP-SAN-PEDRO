@@ -1,1 +1,12 @@
 @import url('../shared/sig-core.css');
+
+/* Requisitos: lectura por cláusula, evidencia y cobertura */
+.req-list{gap:13px}
+.req-card{grid-template-columns:64px minmax(0,1.4fr) minmax(235px,.75fr) 138px;gap:16px;padding:16px;border-radius:15px;align-items:stretch}
+.req-card:hover{border-color:color-mix(in srgb,var(--brand) 24%,var(--line));box-shadow:var(--shadow-sm)}
+.req-clause{width:54px;height:54px;border-radius:14px;font-size:19px;align-self:start;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--brand) 12%,transparent)}
+.req-copy{padding-right:8px}.req-copy strong{font-size:12.4px;line-height:1.35}.req-copy p{font-size:9.8px;line-height:1.55;margin:6px 0 9px}.req-copy .sig-chip-list{gap:6px}.req-copy .sig-badge{font-size:8.7px;padding:4px 8px}
+.req-evidence{padding:10px 12px;border-radius:11px;background:var(--surface-2);align-self:center}.req-evidence>span{font-size:8.4px;text-transform:uppercase;letter-spacing:.05em}.req-evidence>strong{display:block;font-size:10px;line-height:1.45;margin-top:4px}
+.req-score{display:flex;flex-direction:column;justify-content:center;padding-left:13px;border-left:1px solid var(--line)}.req-score>strong{text-align:left;font-size:20px}.req-score .sig-progress-line{height:8px;margin-top:7px}.req-score .btn{width:100%;margin-top:10px!important}
+@media(max-width:1050px){.req-card{grid-template-columns:58px minmax(0,1fr) 145px}.req-evidence{grid-column:2}.req-score{grid-column:3;grid-row:1/3}}
+@media(max-width:720px){.req-card{grid-template-columns:52px minmax(0,1fr)}.req-evidence,.req-score{grid-column:2;grid-row:auto}.req-score{border-left:0;border-top:1px solid var(--line);padding:10px 0 0}}
