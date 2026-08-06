@@ -1,0 +1,64 @@
+{
+  "name": "Calendario Institucional estilo Outlook Teams",
+  "version": "32.0.0",
+  "scope": "apps/secretaria-general/calendario/",
+  "files": [
+    {
+      "path": "apps/secretaria-general/calendario/LEEME_CALENDARIO_V32.txt",
+      "bytes": 1236,
+      "sha256": "c7f5f8a6e7beb77ee4457e2db0980048df7cfb9d1022179f38a64154565fc24e"
+    },
+    {
+      "path": "apps/secretaria-general/calendario/VALIDACION_CALENDARIO_V32.txt",
+      "bytes": 846,
+      "sha256": "92e547a8417cc459ebd745e023521e8abfb68e858069d15da8520c0c9c9b6235"
+    },
+    {
+      "path": "apps/secretaria-general/calendario/agenda/index.html",
+      "bytes": 711,
+      "sha256": "90564791be6be03441cb3c00b3985e932c74c48f062e50852bd9aa5615e0661f"
+    },
+    {
+      "path": "apps/secretaria-general/calendario/compromisos/index.html",
+      "bytes": 716,
+      "sha256": "e24d8fef3bd679e724973cb1280120e885bff16fb72dd699d8c4ccb53836ce56"
+    },
+    {
+      "path": "apps/secretaria-general/calendario/espacios/index.html",
+      "bytes": 714,
+      "sha256": "a92c57374322a19a7f64012634188a388d9dcd07691f8039e0b9f0f40f92e845"
+    },
+    {
+      "path": "apps/secretaria-general/calendario/eventos/index.html",
+      "bytes": 711,
+      "sha256": "21586ec3c4d3b235dd96269be6bb8dbd8adc002c314931ac18f973bb528beac2"
+    },
+    {
+      "path": "apps/secretaria-general/calendario/index.html",
+      "bytes": 708,
+      "sha256": "5e2f3ee5a93efd0247ba8eadce3a603ccfcb607b516d7a08f276983cbd84aa19"
+    },
+    {
+      "path": "apps/secretaria-general/calendario/nuevo-evento/index.html",
+      "bytes": 708,
+      "sha256": "1691a6d7a6842780a7c141b067472ffc1a7664e29e063325d3d3b48ca3696d94"
+    },
+    {
+      "path": "apps/secretaria-general/calendario/reportes/index.html",
+      "bytes": 712,
+      "sha256": "d5ebb5745cd5740d3d4d74ed2e5c2eb0c3f5aff75e1b14af35e6354d13cc8e60"
+    },
+    {
+      "path": "apps/secretaria-general/calendario/shared/calendar.css",
+      "bytes": 32122,
+      "sha256": "416e873d61cba7e9fb1f1a826f22967a5eb2317cb487b075e255c773441b0b1d"
+    },
+    {
+      "path": "apps/secretaria-general/calendario/shared/calendar.js",
+      "bytes": 68495,
+      "sha256": "9be2ef4525b6e7af30a190cd7d8236fd4984691bdd43705121b1bd8e52ff3d51"
+    }
+  ],
+  "connections_added": 0,
+  "frameworks_added": 0
+}

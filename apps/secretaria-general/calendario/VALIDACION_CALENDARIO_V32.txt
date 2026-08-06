@@ -1,0 +1,25 @@
+VALIDACIÓN CALENDARIO INSTITUCIONAL V32
+
+Estructura:
+- 7 páginas HTML verificadas.
+- 0 referencias CSS o JavaScript rotas.
+- 0 errores de análisis CSS.
+- JavaScript validado con node --check.
+- 0 llamadas fetch.
+- 0 librerías externas.
+- 0 conexiones nuevas.
+
+Pruebas de interfaz:
+- 7 de 7 pantallas renderizadas sin errores de ejecución.
+- Vistas Día, Semana, Mes y Agenda comprobadas.
+- Creación rápida comprobada.
+- Popup de detalle comprobado.
+- Apertura y cierre de ventanas comprobados.
+- Búsqueda y filtros incorporados.
+- 7 de 7 pantallas comprobadas a 390 px sin desbordamiento del documento.
+
+Optimización:
+- Módulo V30 aproximado: 695.433 bytes sin comprimir.
+- Módulo V32 aproximado: 105.597 bytes sin documentación.
+- Reducción aproximada del módulo: 84,8 %.
+- El logo municipal ya no se duplica dentro de Calendario.

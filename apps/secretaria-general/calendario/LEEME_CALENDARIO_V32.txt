@@ -1,0 +1,32 @@
+CALENDARIO INSTITUCIONAL V32 — ESTILO OUTLOOK / TEAMS
+
+ALCANCE
+Esta entrega reemplaza únicamente:
+apps/secretaria-general/calendario/
+
+INSTALACIÓN
+1. Elimine únicamente la carpeta antigua:
+   apps/secretaria-general/calendario/
+2. Descomprima este ZIP.
+3. Copie la carpeta apps en la raíz del repositorio.
+4. Confirme el reemplazo de archivos.
+5. Publique el commit en GitHub.
+6. Espere el despliegue de Vercel y realice Ctrl + F5.
+
+IMPORTANTE
+- No modifica ningún otro módulo del ERP.
+- No requiere Supabase, Firebase, Node, frameworks ni librerías externas.
+- Conserva los eventos, recursos y compromisos guardados por la V30 mediante las mismas claves de localStorage.
+- Reutiliza assets/branding/san-pedro.svg del ERP para evitar duplicar un SVG pesado dentro del módulo.
+
+FUNCIONES PRINCIPALES
+- Vistas Día, Semana, Mes y Agenda.
+- Mini calendario y navegación temporal.
+- Calendarios visibles por dependencia.
+- Búsqueda global.
+- Creación rápida y formulario completo.
+- Gestión, edición, duplicación y eliminación de eventos.
+- Reservas de espacios y recursos con control de cruces.
+- Compromisos organizados por estado.
+- Reportes y exportación CSV.
+- Diseño responsive y soporte para movimiento reducido.
