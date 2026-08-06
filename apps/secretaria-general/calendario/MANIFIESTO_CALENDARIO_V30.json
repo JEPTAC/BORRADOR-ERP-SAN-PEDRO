@@ -1,0 +1,67 @@
+{
+  "name": "Calendario Institucional autónomo",
+  "version": "30.0.0",
+  "scope": "apps/secretaria-general/calendario/",
+  "files": [
+    {
+      "path": "LEEME_CALENDARIO_V30.txt",
+      "bytes": 1132,
+      "sha256": "a0f316688b4fa4088c8a4c7f3383f216a6abf248a04143d8832020756227e181"
+    },
+    {
+      "path": "VALIDACION_CALENDARIO_V30.txt",
+      "bytes": 1087,
+      "sha256": "a6303b68df2c1898b098f15a4d1e0c485cedc14057e70e4f45169b4814901ce2"
+    },
+    {
+      "path": "agenda/index.html",
+      "bytes": 583,
+      "sha256": "6c40cded8f77404084da5b3d9e57b4359c2cce7051b28efa4605f9fe0f5f5980"
+    },
+    {
+      "path": "compromisos/index.html",
+      "bytes": 588,
+      "sha256": "0d61adb6a26f25e4fe163990641613f76ef83f1ef95fa1d0b081c706179670b0"
+    },
+    {
+      "path": "espacios/index.html",
+      "bytes": 586,
+      "sha256": "53b5d6b691fe2caf0c6509268d845e1731add78fcf3b673427ab2d125ad5e34a"
+    },
+    {
+      "path": "eventos/index.html",
+      "bytes": 583,
+      "sha256": "3490f14bda18fc1b425120d0f868ba3b58ddda446c0772d360bd5b234dc8571b"
+    },
+    {
+      "path": "index.html",
+      "bytes": 580,
+      "sha256": "6e47674c0b874ca60375ec2dc37ea291100075e7cc558a14f1e1a9fe010df4a1"
+    },
+    {
+      "path": "nuevo-evento/index.html",
+      "bytes": 580,
+      "sha256": "32fbf31da785e6bdee6ac219bbce51cd8b8e7663b01697c6929044e1692c5759"
+    },
+    {
+      "path": "reportes/index.html",
+      "bytes": 584,
+      "sha256": "a760aed41f5d4fe372e88deda48fedfb8a1f622e5f09ed58d1c4b0a7f5890a38"
+    },
+    {
+      "path": "shared/calendar.css",
+      "bytes": 27356,
+      "sha256": "8bf4064c09f5c8068b4149441046590b04e656ba055078e1ec812227e066bd24"
+    },
+    {
+      "path": "shared/calendar.js",
+      "bytes": 53466,
+      "sha256": "80dfb6047a4fe898aae7815fa2f219cba9be9184e1d78733135d245513a19e5d"
+    },
+    {
+      "path": "shared/san-pedro.svg",
+      "bytes": 606313,
+      "sha256": "7a6f19cd0439bab2c506f5470775617f9111310ca9e167d12872961d5ce06c93"
+    }
+  ]
+}

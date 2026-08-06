@@ -1,0 +1,36 @@
+CALENDARIO INSTITUCIONAL — RECONSTRUCCIÓN COMPLETA V30
+
+ALCANCE
+Esta entrega reemplaza exclusivamente:
+apps/secretaria-general/calendario/
+
+INSTALACIÓN CORRECTA
+1. Elimine únicamente la carpeta antigua:
+   apps/secretaria-general/calendario/
+2. No elimine ninguna carpeta hermana.
+3. Copie la carpeta apps contenida en este ZIP en la raíz del repositorio.
+4. Publique y realice Ctrl + F5.
+
+ESTRUCTURA
+- Centro de agenda
+- Calendario mensual
+- Gestión de eventos
+- Nuevo evento
+- Espacios y recursos
+- Compromisos
+- Reportes
+
+ARQUITECTURA
+- CSS propio: shared/calendar.css
+- JavaScript propio: shared/calendar.js
+- Logo propio: shared/san-pedro.svg
+- Almacenamiento local temporal mediante localStorage
+- Sin Supabase, Firebase, APIs ni librerías externas
+
+CAMBIOS PRINCIPALES
+- Módulo autosuficiente; no depende de base.css, shell.js ni icons.js.
+- Ventanas centrales para detalle, edición, reservas y compromisos.
+- Control de conflictos de horario para espacios y recursos.
+- Contraste obligatorio: fondo azul con texto blanco.
+- SVG con dimensiones explícitas.
+- Diseño responsive y soporte para movimiento reducido.

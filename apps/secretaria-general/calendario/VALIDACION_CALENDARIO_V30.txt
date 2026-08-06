@@ -1,0 +1,36 @@
+VALIDACIÓN CALENDARIO INSTITUCIONAL V30
+
+Resultado: CORRECTO
+
+Estructura:
+- 7 pantallas HTML.
+- 1 hoja CSS autónoma.
+- 1 núcleo JavaScript autónomo.
+- 1 logo SVG optimizado.
+- 0 referencias locales rotas.
+- 0 errores de sintaxis JavaScript.
+- 0 errores de análisis CSS.
+
+Pruebas visuales y funcionales:
+- 7/7 pantallas renderizadas en escritorio.
+- 7/7 pantallas comprobadas en móvil.
+- 0 errores JavaScript durante renderizado.
+- 0 desbordamiento horizontal en escritorio.
+- 0 desbordamiento horizontal en móvil.
+- 0 SVG sin width/height explícitos.
+- Popup de gestión de eventos probado.
+- Cambio de estado y nota de seguimiento probado.
+- Creación de evento probada.
+- Reserva de recurso probada.
+- Control de conflictos incorporado.
+- Completar y reabrir compromisos probado.
+- Creación de compromisos probada.
+- Exportación CSV incorporada.
+
+Aislamiento:
+- No modifica Mesa TIC.
+- No modifica SIG.
+- No modifica Talento Humano.
+- No modifica Atención y Visitantes.
+- No modifica launcher, login, perfil ni estilos globales.
+- No incorpora Supabase ni otras conexiones.
