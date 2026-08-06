@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0c3559">
+  <link rel="manifest" href="manifest.webmanifest">
+  <title>ERP Municipal · San Pedro</title>
+  <style>
+    body{margin:0;min-height:100vh;display:grid;place-items:center;background:#eef4fb;color:#123a77;font-family:Inter,system-ui,sans-serif}
+    a{color:inherit;font-weight:750}
+  </style>
+</head>
+<body>
+  <p>Abriendo el acceso del ERP… <a href="acceso/index.html">continuar</a></p>
+  <script>
+    (async function(){
+      try{
+        if ('serviceWorker' in navigator) {
+          const base = new URL('./', location.href).href;
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(registrations.filter(reg => reg.scope.startsWith(base)).map(reg => reg.unregister()));
+          await navigator.serviceWorker.register('service-worker.js?v=31', {scope:'./', updateViaCache:'none'});
+        }
+      } catch (error) {
+        console.warn('No fue posible actualizar el service worker:', error);
+      } finally {
+        location.replace('acceso/index.html?v=31');
+      }
+    })();
+  </script>
+</body>
+</html>

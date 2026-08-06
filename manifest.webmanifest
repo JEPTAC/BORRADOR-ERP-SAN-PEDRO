@@ -1,0 +1,11 @@
+{
+  "name": "ERP Municipal de San Pedro",
+  "short_name": "ERP San Pedro",
+  "description": "Centro de transacciones de la Alcaldía Municipal de San Pedro, Valle del Cauca",
+  "lang": "es-CO",
+  "start_url": "./acceso/index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#eef4fb",
+  "theme_color": "#0c3559"
+}
